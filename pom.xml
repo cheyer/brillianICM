@@ -95,7 +95,7 @@
 		<resources>
 			<!-- The XML file //TODO move to correct location -->
 			<resource>
-				<directory>src/org/dhbw/imbit11</directory>
+				<directory>src/main/java/org/dhbw/imbit11</directory>
 			</resource>
 			<!-- Whatever ... -->
 			<resource>
