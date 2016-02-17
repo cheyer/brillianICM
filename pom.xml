@@ -95,13 +95,13 @@
 		<resources>
 			<!-- The XML file //TODO move to correct location -->
 			<resource>
-				<directory>src/main/resources</directory>
+				<directory>src/main/java/org/dhbw/imbit11</directory>
 			</resource>
-			<!-- Whatever ... 
+			<!-- Whatever ... -->
 			<resource>
 				<directory>WebContent</directory>
 			</resource>
-			-->
+			
 		</resources>
 		<!-- <testResources> <testResource> <directory>src/test/resources</directory> 
 			</testResource> </testResources> -->
