@@ -187,6 +187,7 @@
 						<version>2.10.1</version>
 						<configuration>
 							<encoding>UTF-8</encoding>
+							<use>false</use> <!-- please remove -->
 							<doclet>ydoc.doclets.YStandard</doclet>
 							<docletPath>${yworks.uml.path}/lib/ydoc.jar:${yworks.uml.path}/lib/class2svg:${yworks.uml.path}/resources</docletPath>
 							<sourcepath>${basedir}/target/finalName/WEB-INF/org</sourcepath>
