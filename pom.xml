@@ -96,12 +96,15 @@
 			<!-- The XML file //TODO move to correct location -->
 			<resource>
 				<directory>src/main/java/org/dhbw/imbit11</directory>
+				<includes>
+					<!-- just include masterfile -->
+					<include>masterfile.xml</include>
+				</includes>
 			</resource>
 			<!-- Whatever ... -->
 			<resource>
 				<directory>WebContent</directory>
 			</resource>
-			
 		</resources>
 		<!-- <testResources> <testResource> <directory>src/test/resources</directory> 
 			</testResource> </testResources> -->
