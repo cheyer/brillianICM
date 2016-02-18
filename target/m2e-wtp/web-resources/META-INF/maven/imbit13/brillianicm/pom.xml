@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>imbit13</groupId>
 	<artifactId>brillianicm</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
 	<!-- https://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->
 
@@ -73,7 +73,7 @@
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-javadoc-plugin</artifactId>
-			<version>2.10.1</version>
+			<version>2.10.3</version>
 			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
@@ -86,16 +86,20 @@
 		<!-- Basic Config -->
 		<directory>target</directory>
 		<outputDirectory>target/classes</outputDirectory>
-		<finalName>${project.artifactId}##${project.version}</finalName>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<testOutputDirectory>target/test-classes</testOutputDirectory>
-		<sourceDirectory>src/</sourceDirectory>
+		<sourceDirectory>src/main/java</sourceDirectory>
 		<!-- unsure -->
 		<scriptSourceDirectory>WebContent</scriptSourceDirectory>
 		<!-- <testSourceDirectory>src/test</testSourceDirectory> -->
 		<resources>
 			<!-- The XML file //TODO move to correct location -->
 			<resource>
-				<directory>src/org/dhbw/imbit11</directory>
+				<directory>src/main/java/org/dhbw/imbit11</directory>
+				<includes>
+					<!-- just include masterfile -->
+					<include>masterfile.xml</include>
+				</includes>
 			</resource>
 			<!-- Whatever ... -->
 			<resource>
@@ -126,13 +130,13 @@
 			</plugin>
 		</plugins>
 	</build>
-	<name>brillianCRM rebirth</name>
+	<name>brillianicm</name>
 	<organization>
 		<name>DHBW-Mannheim</name>
 		<url>http://www.imbit.dhbw-mannheim.de/</url>
 	</organization>
 	<issueManagement>
-		<url>https://github.com/Illuminae/brillianCRM</url>
+		<url>https://github.com/cheyer/brillianicm</url>
 	</issueManagement>
 
 	<!-- Javadoc generation uses yWorks doclet when available -->
@@ -149,7 +153,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.1</version>
+						<version>2.10.3</version>
 						<executions>
 							<execution>
 								<id>attach-javadoc</id>
@@ -184,7 +188,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.1</version>
+						<version>2.10.3</version>
 						<configuration>
 							<encoding>UTF-8</encoding>
 							<doclet>ydoc.doclets.YStandard</doclet>
