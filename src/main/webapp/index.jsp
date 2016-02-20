@@ -222,7 +222,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p class="text-margin">brillianICM 2016 - Development Console - {{version}} - 19.02.2016 - developed with <span class="heart">♥</span> in Mannheim</p>
+            <p class="text-margin">brillianICM 2016 - Development Console - {{version}} - 20.02.2016 - developed with <span class="heart">♥</span> in Mannheim</p>
         </div>
     </footer>
     <script>

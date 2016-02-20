@@ -3,16 +3,28 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<!-- WebApp_ID is NOT related to the version ID it is the servlet version to be used -->
+	<!-- WebApp_ID is NOT related to the version ID it is the servlet version 
+		to be used -->
 	<display-name>2.2.4</display-name>
-	
+
 	<!-- Backend Servlets start here -->
-        <welcome-file-list>
-                <welcome-file>login.jsp</welcome-file>
-        </welcome-file-list>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
 
-	<!-- Servlets und Mapping-->
+	<!-- Servlets und Mapping -->
 
+	<!--Development Console -->	
+	<servlet>
+		<servlet-name>dev-console</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dev-console</servlet-name>
+		<url-pattern>/development</url-pattern>
+	</servlet-mapping>
+
+	<!-- Servlets -->
 	<servlet>
 		<servlet-name>uploadfile</servlet-name>
 		<servlet-class>org.dhbw.imbit11.UploadServlet</servlet-class>
@@ -120,54 +132,47 @@ realmA.credentialsMatcher = $passwordMatcher
 		<param-name>domain</param-name>
 		<param-value>https://brillianicm.com</param-value>
 	</context-param>
-	
-	<!-- Context Parameter for Mail -->	
-	
+
+	<!-- Context Parameter for Mail -->
+
 	<context-param>
 		<description>Mail-Server for outgoing mails</description>
 		<param-name>mailserver</param-name>
 		<param-value>smtp.1und1.de</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<description>Mailport for SMTP-Server</description>
 		<param-name>mailport</param-name>
 		<param-value>587</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<description>Mail-User for mailserver</description>
 		<param-name>mailuser</param-name>
 		<param-value>no-reply@brillianICM.com</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<description>Password for Mail-User</description>
 		<param-name>mailpw</param-name>
 		<param-value>mail@wimbit12!</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<description>Setting for SMTP authentification</description>
 		<param-name>smtpauth</param-name>
 		<param-value>true</param-value>
 	</context-param>
-	
+
 	<context-param>
 		<description>Setting for SMTP TLS</description>
 		<param-name>smtptls</param-name>
 		<param-value>true</param-value>
 	</context-param>
-	
-<!--  
-	<security-constraint>
-		<web-resource-collection>
-			<web-resource-name>SSL</web-resource-name>
-			<url-pattern>/*</url-pattern>
-		</web-resource-collection>
-		<user-data-constraint>
-			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
-		</user-data-constraint>
-	</security-constraint>
-	-->
+
+	<!-- <security-constraint> <web-resource-collection> <web-resource-name>SSL</web-resource-name> 
+		<url-pattern>/*</url-pattern> </web-resource-collection> <user-data-constraint> 
+		<transport-guarantee>CONFIDENTIAL</transport-guarantee> </user-data-constraint> 
+		</security-constraint> -->
 </web-app>
