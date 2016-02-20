@@ -11,7 +11,7 @@
 
 				</div>
 			</div>
-			<video id="background-video">
+			<video id="background-video" controls>
 				<source src="" type="video/mp4">
 			</video>		
 			<div class="dialogMoodContainer">
