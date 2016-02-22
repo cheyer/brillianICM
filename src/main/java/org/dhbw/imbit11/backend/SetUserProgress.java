@@ -73,7 +73,16 @@ import org.apache.shiro.subject.Subject;
 			try{ 
 				ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
 				for(String userid:users){
+				if(realm.getUserGenderByID(userid) == 0){
 				realm.setUserProgress(userid, cost, quality, time, lvlId);	
+				}
+				else{
+				String lvlIdShort = lvlId.substring(0, lvlId.length()-1);
+				char c =  '1';
+				String newlvlId = lvlIdShort + c;
+				realm.setUserProgress(userid, cost, quality, time, newlvlId);	
+				}
+				
 				}
 				request.setAttribute("status", "Progress set.");
 				}

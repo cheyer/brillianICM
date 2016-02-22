@@ -29,6 +29,7 @@ public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
 	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE `group` = ?";
+	protected String getUserGenderByID = "SELECT `gender` FROM `user` WHERE `user_id` = ?";
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
@@ -48,8 +49,7 @@ public class UserRealm extends JdbcRealm {
 	protected String resetCountriesQuery = "UPDATE `user_progress` SET l1=FALSE, l2=FALSE, l3=FALSE, l4=FALSE, l5=FALSE, l6=FALSE, l7=FALSE WHERE `user_id` = ?";
 	protected String getProgressQuery = "SELECT `last_name`, `first_name`, `gender`,`cost`, `quality`, `time`, `path` FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
 	protected String getVisitedCountriesQuery =  "SELECT l1, l2, l3, l4, l5, l6, l7 FROM `user_progress`, `user` WHERE `user_progress`.`user_id`= `user`.`user_id` AND `user_progress`.`user_id`=?";
-
-
+	
 	protected String getStudentsForProfessorQuery = "SELECT `first_name`, `last_name`, `cost`, `quality`, `time` , `group_name`, `email`, `group`  FROM `user`, `user_progress` , `group` WHERE `user`.`user_id` = `user_progress`.`user_id` AND`user`.`group` IN (SELECT `group_id` FROM `group` WHERE `professor_id` = (SELECT `user_id` FROM`user` WHERE `email` = ?)) AND `user`.`group` = `group`.`group_id` ORDER BY `last_name` ASC";
 	protected String getGroupsForProfessorQuery = "SELECT * FROM `group`WHERE `professor_id`= (SELECT `user_id` FROM `user` WHERE `email` = ?)ORDER BY `group_name` ASC";
 	protected String groupExistsQuery = "SELECT COUNT(`group_id`) FROM `group` WHERE `group_id`=?";
@@ -58,6 +58,9 @@ public class UserRealm extends JdbcRealm {
 	protected String getSettings = "SELECT * FROM `settings`";
 	protected String setSettings = "UPDATE `settings` SET `audio`=?, `video`=?, `tts`=?, `subtitles`=?";
 
+	
+	
+	
 	/**
 	 * Invokes the constructor of parent class (superclass) function looks up an
 	 * insert in the database
@@ -786,6 +789,31 @@ public class UserRealm extends JdbcRealm {
 		}
 		return userid;
 	}
+	
+	public int getUserGenderByID(String user_id) throws SQLException {
+
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String gender = "";
+		try {
+			ps = conn.prepareStatement(getUserGenderByID);
+			ps.setString(1, user_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				gender += rs.getString(1);
+			}
+			// System.out.println("executed the following statement on DB: " +
+			// getUserByEmail);
+			// System.out.println("the userid was "+userid);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		int genderint = Integer.parseInt(gender);
+		return genderint;
+	}
+	
 
 	/**
 	 * 

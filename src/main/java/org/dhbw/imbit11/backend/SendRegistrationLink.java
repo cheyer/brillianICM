@@ -19,6 +19,8 @@ import javax.servlet.annotation.WebServlet;
    static final long serialVersionUID = 1L;
  	
    /**
+    * Is now done by RegistrationPage
+    * 
     * Saves the registration link to the request object and forwards the request and response to
     * the backend sendRegistrationLink.jsp
     * 
@@ -73,6 +75,7 @@ import javax.servlet.annotation.WebServlet;
 		//request.setAttribute("status", "Repeated password does not match.");
 			
 	     // forward the request and response to the view
+		request.setAttribute("link", request.getParameter("link"));
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         
         dispatcher.forward(request, response);   

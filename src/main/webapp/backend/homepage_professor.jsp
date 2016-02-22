@@ -70,9 +70,11 @@
 											out.println(groups.get(i).get(1));
 											out.println("</big></td><td>");
 											//send email invitation button
-											out.println("<form action=\""+ application.getContextPath()+"/SendRegistrationLink\" method=\"get\"><input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "+
-												"value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>");
-											out.println("<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/></form></td><td>");
+											out.println("<form action=\""+ application.getContextPath()+"/RegistrationPage\" method=\"post\">"
+												+ "<input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "
+												+ "value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>"
+												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/>"
+												+ "</form></td><td>");
 											//delete group without members button
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
 												+ "<input style=\"display:none\" id=\"deleteGroupButton"+i+"\" type=\"submit\" value=\"Delete Group\"/> <a class= \"easyui-linkbutton\" onclick=checker("+i+",\""+groups.get(i).get(1)+"\")>delete group</a>"
@@ -91,12 +93,14 @@
 												+ "<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
 												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
 												+ "<select name=\"lvlId\" id=\"lvlId\">"
-												+ "<option value=\"l204e000\">Budget Planning</option>"
-												+ "<option value=\"l290e000\">Critical Path</option>"
-												+ "<option value=\"l009e013\">Project Management Phasen</option>"
-												+ "<option value=\"l022e000\">Risk Analysis</option>"
-												+ "<option value=\"l031e000\">Stakeholder Analysis</option>"								
-												+ "<option value=\"l201e000\">Work Breakdown Structure</option>"
+												+ "<option value=\"l700e000\">Tutorial</option>"
+												+ "<option value=\"l100e000\">Brazil</option>"
+												+ "<option value=\"l300e000\">China</option>"
+												+ "<option value=\"l600e000\">India</option>"
+												+ "<option value=\"l200e000\">Spain</option>"								
+												+ "<option value=\"l500e000\">Sweden</option>"
+												+ "<option value=\"l400e000\">USA</option>"
+												+ "<option value=\"l800e000\">anderes Land</option>"
 												+ "</select>"								
 												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
 												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>");
@@ -119,14 +123,14 @@
 												if(studentsFiltered.isEmpty()){
 													out.println("<p style='color: red'>There are currently no students in this group. Invite students by sending a registration email.</p>");
 												}else{
-													out.println("<table id=\"students\" class=\"easyui-datagrid\" style=\"width: 800px\" data-options=\"fitColumns:true,singleSelect:true\">"
+													out.println("<table id=\"students\" class=\"easyui-datagrid\" style=\"width: 1000px\" data-options=\"fitColumns:true,singleSelect:true\">"
 															+"<thead><tr><th data-options=\"field:'delete',width:47,resizable:false\"></th>"
 															+"<th data-options=\"field:'reset',width:47,resizable:false\"></th>"
 															+"<th data-options=\"field:'lastname',width:100,resizable:false\">Last name</th>"
 															+"<th data-options=\"field:'firstname',width:100,resizable:false\">First name</th>"
-															+"<th data-options=\"field:'cost',width:40,resizable:false,styler:cellStyler\">Cost</th>"
-															+"<th data-options=\"field:'time',width:40,resizable:false,styler:cellStyler\">Time</th>"
-															+"<th data-options=\"field:'quality',width:40,resizable:false,styler:cellStyler\">Quality</th>"
+															+"<th data-options=\"field:'cost',width:70,resizable:false,styler:cellStyler\">Behavior</th>"
+															+"<th data-options=\"field:'time',width:100,resizable:false,styler:cellStyler\">Communication</th>"
+															+"<th data-options=\"field:'quality',width:100,resizable:false,styler:cellStyler\">Competence</th>"
 															+"<th data-options=\"field:'finished',width:60,resizable:false\">Finished</th>"
 															+"<th data-options=\"field:'email',width:200,resizable:false\">Email</th>"
 															+"</tr></thead><tbody>");
@@ -183,7 +187,7 @@
 			</div>
 
 
-			<div style="width: 800px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
+			<div style="width: 1000px; background-color: white; border-width:1px; border-style:solid; border-color:black; padding: 2px">
 				<div style="width: 390px; float: left;">
 					<h4>Create New Group</h4>
 					<form action="NewUsergroup" method="post">
