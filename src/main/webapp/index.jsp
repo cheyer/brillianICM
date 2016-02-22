@@ -203,7 +203,24 @@ body {
 						</div>
 					</div>
 				</div>
-			</a> <a href="<%out.print(application.getContextPath());%>/Main">
+			</a>
+			<a
+				href="http://ec2-54-191-39-238.us-west-2.compute.amazonaws.com:8080/"
+				target="_blank">
+				<div class="col-md-2 col-sm-3 ">
+					<div class="card">
+						<div class="card-image">
+							<img class="img-responsive center-block" src="logo/jenkins.png">
+						</div>
+						<div class="card-content">
+							<p>Jenkins</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			
+			 <a href="<%out.print(application.getContextPath());%>/Main">
 				<div class="col-md-2 col-sm-3 ">
 					<div class="card">
 						<div class="card-image">
