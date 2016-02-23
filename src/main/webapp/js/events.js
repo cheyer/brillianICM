@@ -562,13 +562,15 @@ function loadConversation(){
 	//text to speech for HTML5 support
 	if(ttsSettings == "true" && readVoice =="male" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 		var tts = new SpeechSynthesisUtterance(text);
-		tts.native = false;
-		tts.lang = 'en-GB';
+		var voices = speechSynthesis.getVoices();
+		tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
 		//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
 		speechSynthesis.speak(tts);
 	}
 	if(ttsSettings == "true" && readVoice =="female" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 			var tts = new SpeechSynthesisUtterance(text);
+			var voices = speechSynthesis.getVoices();
+			tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 			speechSynthesis.speak(tts);
 	}
 		
@@ -576,6 +578,7 @@ function loadConversation(){
 		/*		var audio = new Audio();
 			audio.src ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
 			audio.play(); */
+		
 				var messageBoxContainer = $('.dialogBox');
 			
 				messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
@@ -605,7 +608,8 @@ function loadConversation(){
 					//check for tts-cookie
 					var ttsSettings="false";
 					ttsSettings=getCookie("tts");
-					
+		
+	
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
 		// NEW LINE 688
 		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
@@ -615,15 +619,20 @@ function loadConversation(){
 		//text to speech for HTML5 support
 		if(ttsSettings == "true" && readVoice =="male" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 			var tts = new SpeechSynthesisUtterance(text);
-			tts.native = false;
-			tts.lang = 'en-GB';
+			var voices = speechSynthesis.getVoices();
+			console.log(voices);
+			tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+
 			//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
 			speechSynthesis.speak(tts);
 		}
 		if(ttsSettings == "true" && readVoice =="female" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 				var tts = new SpeechSynthesisUtterance(text);
+				var voices = speechSynthesis.getVoices();
+				console.log(voices);
+				tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 				speechSynthesis.speak(tts);
-		}
+		} 
 		
 
 		var messageBoxContainer = $('.dialogBox');
