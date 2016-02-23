@@ -418,6 +418,15 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 		<div class= container-fluid>
 	<!-- 	<div class="row"> -->
 	<!-- 		<div class="col-md-8" style="background-color:#D5ECF2;" -->
+	
+				<div style="float:right">
+					<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
+					<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
+					<p><img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü"></p>
+				</div>
+				
+				<div>
+	
 					<div id="titletext" class="title-factsheet"></div>
 					<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
 				
@@ -528,6 +537,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 						<a href="www.facebook.com" id="moreinfo" class="txt-link" target="_blank">Hallo</a>
 					</div>
 				</div>
+			</div>
 	<!--	</div> -->
 <!-- 	</div> -->
 	</div>
