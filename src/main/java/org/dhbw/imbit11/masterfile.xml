@@ -764,9 +764,26 @@
 
 	<!-- Start Brazil -->
 	<!-- Start male -->
-	<event level="0" element="1" id="l100e001" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="1" id="l100e001" eventtype="28" imcost="0" imqual="0" imtime="0" loc="4">
+		<title>Brazil</title>
+		<capital>Brasília</capital>
+		<officiallang>Portuguese</officiallang>
+		<currency>Real R$ (BRL)</currency>
+		<government>Federal Republic</government>
+		<areainkm2>8,515,770</areainkm2>
+		<population>202,656,788</population>
+		<ethgroups>47.73% White, 43.13% Pardo, 7.61% Black, 1.09% Asian, 0.43% Amerindian</ethgroups>
+		<natholiday>September 7th, Independence Day</natholiday>
+		<natsport>Soccer</natsport>
+		<uheardof>Pelé (world's most popular soccer player)</uheardof>
+		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
+		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
+		<infolink>www.cia.gov</infolink>
+		<titleimg>BR_flag_02.jpg</titleimg>
+		<sideimg1>BR_jesus_02.jpg</sideimg1>
+		<sideimg2>BR_pele_02.jpg</sideimg2>
+		<sideimg3>BR_frau_02.jpg</sideimg3>
 		<nextevent href="l100e050"/>
-		<bgimg>BR_facts.jpg</bgimg>
 	</event>
 
 	<event level="worldmap" element="0" id="l100e050" eventtype="25" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1540,9 +1557,25 @@
 	<!-- End male -->
 	<!-- Start female -->
 
-	<event level="0" element="1" id="l100e000" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="1" id="l100e000" eventtype="28" imcost="0" imqual="0" imtime="0" loc="4">
+		<title>Brazil</title>
+		<capital>Brasília</capital>
+		<officiallang>Portuguese</officiallang>
+		<currency>Real R$ (BRL)</currency>
+		<government>Federal Republic</government>
+		<areainkm2>8,515,770</areainkm2>
+		<population>202,656,788</population>
+		<ethgroups>47.73% White, 43.13% Pardo, 7.61% Black, 1.09% Asian, 0.43% Amerindian</ethgroups>
+		<natholiday>September 7th, Independence Day</natholiday>
+		<natsport>Soccer</natsport>
+		<uheardof>Pelé (world's most popular soccer player)</uheardof>
+		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
+		<infolink href="www.cia.gov">www.cia.gov (The World Factbook)</infolink>
+		<titleimg>BR_flag_02.jpg</titleimg>
+		<sideimg1>BR_jesus_02.jpg</sideimg1>
+		<sideimg2>BR_pele_02.jpg</sideimg2>
+		<sideimg3>BR_frau_02.jpg</sideimg3>
 		<nextevent href="l100e010"/>
-		<bgimg>BR_facts.jpg</bgimg>
 	</event>
 
 	<event level="worldmap" element="0" id="l100e010" eventtype="25" imcost="0" imqual="0" imtime="0" loc="4">

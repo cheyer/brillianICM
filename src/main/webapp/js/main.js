@@ -59,6 +59,7 @@
 		hideWorldmap();
 		hideScrollBar();
 		hideMatrixAllocationAlternate();
+		hideFactsheet();
 		
 		showLocation();
 if(id == lastEvent){
