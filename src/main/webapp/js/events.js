@@ -620,7 +620,6 @@ function loadConversation(){
 		if(ttsSettings == "true" && readVoice =="male" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 			var tts = new SpeechSynthesisUtterance(text);
 			var voices = speechSynthesis.getVoices();
-			console.log(voices);
 			tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
 
 			//tts.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == 'Alex'; });
@@ -629,7 +628,6 @@ function loadConversation(){
 		if(ttsSettings == "true" && readVoice =="female" && typeof SpeechSynthesisUtterance !== 'undefined') {	
 				var tts = new SpeechSynthesisUtterance(text);
 				var voices = speechSynthesis.getVoices();
-				console.log(voices);
 				tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 				speechSynthesis.speak(tts);
 		} 
