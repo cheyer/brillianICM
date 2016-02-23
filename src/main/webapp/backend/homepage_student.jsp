@@ -112,15 +112,23 @@
 	$('#imprint').bind('click', function() {
 		showImprint();
 	});
-	function confirmPasswordChange()
-	{
-		var box = window.confirm("Click OK if you want to change password. You will be logged out. ");
-		if(box)
-		{
-			$('#updatePassword').trigger('click');
+	function confirmPasswordChange(){
+		
+	    if (confirm("Click OK if you want to change password. You will be logged out. ") == true) {
+	    	$('#updatePassword').trigger('click');
+	    	
 			sessionStorage.removeItem('userid');
-			window.location.href = 'LogoutUser';
-		}
+			console.out("Ich wurde ausgeführt");
+
+			
+			
+		 	//window.location.href = 'LogoutUser';
+		 	
+			} else {
+		
+				window.location.href="meineseite.html";
+	
+    }
 	}
 	
 	function changeViewUserProgress() {
