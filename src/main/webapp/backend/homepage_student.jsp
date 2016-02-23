@@ -139,7 +139,6 @@
 		document.getElementById('setUserProgressForm').style.display = "none";
 	}
 	}
-	
 </script>
 </body>
 </html>
