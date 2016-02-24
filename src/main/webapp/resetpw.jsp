@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta charset="UTF-8">
 <title><%=ApplicationConstants.PAGETITLE_STUDENT%></title>
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
