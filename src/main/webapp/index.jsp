@@ -6,7 +6,7 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf8">
+<meta charset="UTF-8">
 <title>brillianICM - Development Konsole</title>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
