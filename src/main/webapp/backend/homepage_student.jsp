@@ -63,19 +63,32 @@
 			<div>
 				<h4 style="text-align:center">Change Password</h4>
 					<p style="color: red; padding-left: 32px; ">${error}</p>
-				<form action="ResetPassword" method="post">				
+				<form action="ResetPassword" method="post">	
 					<input class="form-control" type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
 					<input class="form-control" type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
 					<!--  Password check -->
-					<div >Old Password:</div>
-					<input class="form-control" type="password" name="oldpassword" maxlength="50"/><br /><br />
-					<div >Password:</div>
-					<input class="form-control" type="password" name="password" maxlength="50"/><br /><br />
-					<div>Repeat Password:</div>
-					<input class="form-control" type="password" name="password_repeat" maxlength="50" /><br /><br />
+					<div class="form-group">
+    					<label for="oldPassword">Old Password:</label>
+    					<input type="text" class="form-control" id="oldPassword" placeholder="Old Password">
+ 					</div>	
+ 					<div class="form-group">
+    					<label for="password">Password:</label>
+    					<input type="password" class="form-control" id="password" placeholder="Password">
+ 					</div>	
+ 					<div class="form-group">
+    					<label for="password_repeat">Repeat Password:</label>
+    					<input type="password" class="form-control" id="password_repeat" placeholder="Repeat Password">
+ 					</div>
+ 					<br><br>			
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
+					<div class="form-group">
 					<a  class="btn btn-default" onclick=confirmPasswordChange()>Update Password</a>
-					<br></br>
+					</div>
+				</form>
+				<form action="deleteAccount" method="post">
+					<input id="deleteAccount" type="submit" name="deleteAccount" value="Delete Account" hidden="hidden"/>
+					<a  class="btn btn-default" onclick=confirmDeleteAccount()>Delete Account</a>
+					<br><br>
 					<a href='login.jsp'>Back to Login</a>
 				</form>
 			</div>
@@ -118,17 +131,18 @@
 	    	$('#updatePassword').trigger('click');
 	    	
 			sessionStorage.removeItem('userid');
-			console.out("Ich wurde ausgeführt");
-
 			
 			
-		 	//window.location.href = 'LogoutUser';
 		 	
-			} else {
-		
-				window.location.href="meineseite.html";
+			}
+	}
 	
-    }
+	function confirmDeleteAccount(){
+		  if (confirm("Click OK if you want to delete your account. This action is permanantly and cannot be revoked!") == true) {
+			 $('#deleteAccount').trigger('click');
+			 sessionStorage.removeItem('userid');
+			  
+	}
 	}
 	
 	function changeViewUserProgress() {
