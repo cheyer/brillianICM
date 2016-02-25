@@ -3,7 +3,7 @@
 <html>
 <head>
 <title><%=ApplicationConstants.PAGETITLE_MAIN%></title>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
