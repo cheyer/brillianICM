@@ -778,7 +778,7 @@
 		<uheardof>Pelé (world's most popular soccer player)</uheardof>
 		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
 		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
-		<infolink>www.cia.gov</infolink>
+		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/br.html</infolink>
 		<titleimg>BR_flag_02.jpg</titleimg>
 		<sideimg1>BR_jesus_02.jpg</sideimg1>
 		<sideimg2>BR_pele_02.jpg</sideimg2>
@@ -1570,7 +1570,8 @@
 		<natsport>Soccer</natsport>
 		<uheardof>Pelé (world's most popular soccer player)</uheardof>
 		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
-		<infolink href="www.cia.gov">www.cia.gov (The World Factbook)</infolink>
+		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
+		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/br.html</infolink>
 		<titleimg>BR_flag_02.jpg</titleimg>
 		<sideimg1>BR_jesus_02.jpg</sideimg1>
 		<sideimg2>BR_pele_02.jpg</sideimg2>

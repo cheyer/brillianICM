@@ -1436,52 +1436,55 @@ div.description26{
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 60px;
-	font-weight: bold;
 	margin: 20px 0 20px 30px;
 	float:left;
 			
 }
 		
 img.img-factsheet2 {
-	.img-responsive();
 	width:320px;
 	height:200px;
-	margin: 15px 20px 0 0;
+	margin:20px 20px 0 0;
 	float:right;	
 }
 		
 img.img-factsheet1 {
 	width: 150px;
 	height: 100px;
+	font-weight: bold;
 	margin: 20px 100px 50px 30px;
 }
 
 div .txt-factsheet1 {
 	text-align: left;
+	vertical-align: top;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	padding: 3px 0 0 30px;
+	padding: 3px 0 7px 30px;
 }
 
 div .txt-factsheet2 {
 	text-align: left;
+	vertical-align: top;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	padding: 3px 0 5px 100px;
+	padding: 3px 25px 7px 50px;
 }
 
 a.link-factsheet {
 	text-align: left;
+	vertical-align: top;
 	color: blue;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	margin: 3px 0 3px 0px;
-	padding: 3px 0 30px 100px;
+	padding: 3px 25px 50px 50px;
+	display: block;
 }
 
 .factsheetContainer{
 	display: none;
 }
+	
    

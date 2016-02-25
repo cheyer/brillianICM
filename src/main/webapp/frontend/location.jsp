@@ -415,7 +415,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 	
 			<!-- eventtype 28: Factsheet-->
 	<div class="factsheetContainer easyui-panel" style="background-color:#D5ECF2;" data-options="fit:true,border:false">
-	
+		
 		<div style="float:right">
 			<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
 			<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
@@ -445,7 +445,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 				</tr>
 				<tr>
 					<td class="txt-factsheet1">Area</td>
-					<td><div id="area" class="txt-factsheet2" style="float:left"></div><div class="txt-factsheet2">&nbsp;km<sup>2</sup></div></td>
+					<td><div id="area" class="txt-factsheet2" style="float:left; padding-right: 10px"></div><div class="txt-factsheet2">km<sup>2</sup></div></td>
 				</tr>
 				<tr>
 					<td class="txt-factsheet1">Population</td>
@@ -473,12 +473,18 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 				</tr>
 				<tr>
 					<td class="txt-factsheet1">More information on...</td>
-					<td><a href="www.facebook.com" id="moreinfo" class="link-factsheet" target="_blank">Hallo</a></td>
+					<td><a href="" id="moreinfo" class="link-factsheet" target="_blank"></a></td>
 				</tr>
 			</table>
 		</div>
+		
+		<div class="buttonContainer">
+			<div id="continueButtonFactsheet" class="easyui-linkbutton allocationButton">Done</div>
+		</div>
+		
 				
 	</div>
+</div>
 	
 			
 

@@ -37,17 +37,17 @@ function loadFactsheet(){
 	container.find("#natsport").html(natsport);
 	container.find("#uheardof").html(uheardof);
 	container.find("#diduknow").html(diduknow);
-	container.find("#moreinfo").attr("href",infolink).attr("title",infolinktext);
+	container.find("#moreinfo").attr("href",infolink).html(infolinktext);
 	
 	container.find('#flag').attr("src",titleimg);
 	container.find('#sideimg1').attr("src", uri1);
 	container.find('#sideimg2').attr("src", uri2);
 	container.find('#sideimg3').attr("src", uri3);
 
-	var continueButtonTextBox = $('#continueButtonTextBox');
+	var continueButton = $('#continueButtonFactsheet');
 	
-	continueButtonTextBox.unbind('click');
-	continueButtonTextBox.bind('click', function(){
+	continueButton.unbind('click');
+	continueButton.bind('click', function(){
 		getXml(href);	
 	});
 	
