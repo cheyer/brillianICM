@@ -1453,23 +1453,23 @@ img.img-factsheet2 {
 img.img-factsheet1 {
 	width: 150px;
 	height: 100px;
-	margin: 20px 500px 30px 30px;
+	margin: 20px 100px 50px 30px;
 }
 
-div.txt-factsheet1 {
+div .txt-factsheet1 {
 	text-align: left;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	margin: 3px 0 3px 30px;
+	padding: 3px 0 0 30px;
 }
 
-div.txt-factsheet2 {
+div .txt-factsheet2 {
 	text-align: left;
 	color: black;
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
-	margin: 3px 0 3px 0px;
+	padding: 3px 0 5px 100px;
 }
 
 a.link-factsheet {
@@ -1478,6 +1478,7 @@ a.link-factsheet {
 	font-family: "Times New Roman", Times, serif;
 	font-size: 20px;
 	margin: 3px 0 3px 0px;
+	padding: 3px 0 30px 100px;
 }
 
 .factsheetContainer{

@@ -415,146 +415,72 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 	
 			<!-- eventtype 28: Factsheet-->
 	<div class="factsheetContainer easyui-panel" style="background-color:#D5ECF2;" data-options="fit:true,border:false">
-		<div class= container-fluid>
-	<!-- 	<div class="row"> -->
-	<!-- 		<div class="col-md-8" style="background-color:#D5ECF2;" -->
 	
-				<div style="float:right">
-					<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
-					<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
-					<p><img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü"></p>
-				</div>
+		<div style="float:right">
+			<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
+			<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
+			<p><img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü"></p>
+		</div>
+		
+		<div id="titletext" class="title-factsheet"></div>
+		<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
+		
+		<div>		
+			<table >
+				<tr>
+					<td class="txt-factsheet1">Capital</td>
+					<td id="capitaltext" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Official Languages</td>
+					<td id="langtext" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Currency</td>
+					<td id="currency" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Government</td>
+					<td id="government" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Area</td>
+					<td><div id="area" class="txt-factsheet2" style="float:left"></div><div class="txt-factsheet2">&nbsp;km<sup>2</sup></div></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Population</td>
+					<td id="population" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Ethnic Groups</td>
+					<td id="ethgroups" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">National Holiday</td>
+					<td id="natholiday" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">National Sport</td>
+					<td id="natsport" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">You should have heard of...</td>
+					<td id="uheardof" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Did you know...</td>
+					<td id="diduknow" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">More information on...</td>
+					<td><a href="www.facebook.com" id="moreinfo" class="link-factsheet" target="_blank">Hallo</a></td>
+				</tr>
+			</table>
+		</div>
 				
-				<div>
-	
-					<div id="titletext" class="title-factsheet"></div>
-					<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
-				
-					<div class="row">
-						<div class="col-xs-5 col-sm-5">
-							<div class="txt-factsheet1">Capital</div>
-						</div>
-						<div class="col-xs-7 col-sm-7">
-							<div id="capitaltext" class="txt-factsheet2"></div>
-						</div>
-					</div>
-				
-					<div class="row">
-						<div class="col-xs-5 col-sm-5">
-							<div class="txt-factsheet1">Official Languages</div>
-						</div>
-						<div class="col-xs-7 col-sm-7">
-							<div id="langtext" class="txt-factsheet2"></div>
-						</div>
-					</div>
-					
-					<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Currency</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="currency" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Government</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="government" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Area</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="area" class="txt-factsheet2" style="float:left"></div><div class="txt-factsheet2">&nbsp;km<sup>2</sup></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Population</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="population" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Ethnic Groups</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="ethgroups" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">National Holiday</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="natholiday" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">National Sport</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="natsport" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">You should have heard of...</div>
-					</div>
-					<div class="col-xs-5 col-sm-5">
-						<div id="uheardof" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">Did you know...</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<div id="diduknow" class="txt-factsheet2"></div>
-					</div>
-				</div>
-				
-				<div class="row">
-					<div class="col-xs-5 col-sm-5">
-						<div class="txt-factsheet1">More information on...</div>
-					</div>
-					<div class="col-xs-7 col-sm-7">
-						<a href="www.facebook.com" id="moreinfo" class="txt-link" target="_blank">Hallo</a>
-					</div>
-				</div>
-			</div>
-	<!--	</div> -->
-<!-- 	</div> -->
 	</div>
+	
 			
-			<!--
-				<div class="col-md-4" style="background-color:#D5ECF2;">
-					<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
-					<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
-					<p><img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü"></p>
-				</div>
-			
-		
-			<div class="buttonContainer button-bottom">
-				<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
-			</div> 
-			
-			-->
+
 		
 		
-</div>
