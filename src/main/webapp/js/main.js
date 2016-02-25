@@ -71,7 +71,7 @@ if(id == lastEvent){
 
 function modifyPathsDependingOnGender(xml){
 	if (gameData.gender == 1){
-		var countryStartingPointRegex = new RegExp('l[1-7]{1}0{2}e0{3}');
+		var countryStartingPointRegex = new RegExp('l[1-9]{1}0{2}e0{3}');
 		$(xml).find("option").each(function(){
 			var href = $(this).attr('href');
 			if (href.match(countryStartingPointRegex)){
