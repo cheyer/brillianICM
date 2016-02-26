@@ -412,6 +412,78 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 			</div>
 		</div>
 	</div>
+	
+	<!-- eventtype 28: Factsheet-->
+	<div class="factsheetContainer easyui-panel" style="background-color:#D5ECF2;" data-options="fit:true,border:false">
+		
+		<div style="float:right">
+			<p><img id="sideimg1" src="" class="img-factsheet2" alt="Jesus"></p>
+			<p><img id="sideimg2" src="" class="img-factsheet2" alt="Pele"></p>
+			<p><img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü"></p>
+		</div>
+		
+		<div id="titletext" class="title-factsheet"></div>
+		<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
+		
+		<div>		
+			<table >
+				<tr>
+					<td class="txt-factsheet1">Capital</td>
+					<td id="capitaltext" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Official Languages</td>
+					<td id="langtext" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Currency</td>
+					<td id="currency" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Government</td>
+					<td id="government" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Area</td>
+					<td><div id="area" class="txt-factsheet2" style="float:left; padding-right: 10px"></div><div class="txt-factsheet2">km<sup>2</sup></div></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Population</td>
+					<td id="population" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Ethnic Groups</td>
+					<td id="ethgroups" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">National Holiday</td>
+					<td id="natholiday" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">National Sport</td>
+					<td id="natsport" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">You should have heard of...</td>
+					<td id="uheardof" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">Did you know...</td>
+					<td id="diduknow" class="txt-factsheet2"></td>
+				</tr>
+				<tr>
+					<td class="txt-factsheet1">More information on...</td>
+					<td><a href="" id="moreinfo" class="link-factsheet" target="_blank"></a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="buttonContainer">
+			<div id="continueButtonFactsheet" class="easyui-linkbutton allocationButton">Done</div>
+		</div>
+		
+				
+	</div>
 </div> 
 
 
