@@ -69,7 +69,7 @@
 					<!--  Password check -->
 					<div class="form-group">
     					<label for="oldPassword">Old Password:</label>
-    					<input type="text" class="form-control" id="oldPassword" placeholder="Old Password">
+    					<input type="password" class="form-control" id="oldPassword" placeholder="Old Password">
  					</div>	
  					<div class="form-group">
     					<label for="password">Password:</label>
