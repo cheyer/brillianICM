@@ -69,15 +69,15 @@
 					<!--  Password check -->
 					<div class="form-group">
     					<label for="oldPassword">Old Password:</label>
-    					<input type="password" class="form-control" id="oldPassword" placeholder="Old Password">
+    					<input class="form-control" type="password" name="oldpassword" maxlength="50" placeholder="Old Password"/>
  					</div>	
  					<div class="form-group">
     					<label for="password">Password:</label>
-    					<input type="password" class="form-control" id="password" placeholder="Password">
+    					<input class="form-control" type="password" name="password" maxlength="50" placeholder="New Password"/>
  					</div>	
  					<div class="form-group">
     					<label for="password_repeat">Repeat Password:</label>
-    					<input type="password" class="form-control" id="password_repeat" placeholder="Repeat Password">
+    					<input class="form-control" type="password" name="password_repeat" maxlength="50" placeholder="Please repeat your new Password"/>
  					</div>
  					<br><br>			
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
