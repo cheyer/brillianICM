@@ -8,7 +8,7 @@
 				<div class="dialogPartner panel-header">
 					<div class="dialogPartnerName panel-title"></div>
 					<div class="dialogPartnerText"></div>
-
+ 
 				</div>
 			</div>
 			<video id="background-video" controls>
