@@ -413,7 +413,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 		</div>
 	</div>
 	
-			<!-- eventtype 28: Factsheet-->
+	<!-- eventtype 28: Factsheet-->
 	<div class="factsheetContainer easyui-panel" style="background-color:#D5ECF2;" data-options="fit:true,border:false">
 		
 		<div style="float:right">
@@ -484,9 +484,8 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 		
 				
 	</div>
-</div>
-	
-			
+</div> 
 
-		
-		
+
+
+
