@@ -65,7 +65,7 @@ public class MailClient extends HttpServlet
 				message.setSubject(subject);
 				message.setContent(content, "text/html; charset=utf-8");
 			   // messageBodyPart.setText(html, "UTF-8", "html");
-	 
+
 				Transport.send(message);
 	 
 				//System.out.println("Done");
@@ -76,6 +76,6 @@ public class MailClient extends HttpServlet
 	        } catch (MessagingException e) {
 	        	e.printStackTrace();
 				//System.out.println("Sending email failed, message could not be sent.");
-		}
+	        }
 		}
 }

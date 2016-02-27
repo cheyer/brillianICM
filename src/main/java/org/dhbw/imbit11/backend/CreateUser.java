@@ -289,14 +289,14 @@ import javax.servlet.http.HttpServletResponse;
 	 */
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
-        String msgBody = "Dear "+ firstname + " " + lastname + ",\r\n\r\n welcome to brillianICM. Please confirm your registration by clicking on the following link: \r\n"
+        String msgBody = "Dear "+ firstname + " " + lastname + ",<br><br> welcome to brillianICM. Please confirm your registration by clicking on the following link: <br>"
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
         
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
-        msgBody += "\r\n\r\n With best regards, \r\n\r\n" +
-					"your brillianICM team \r\n\r\n\r\n Note that this is a system generated e-mail. Please do not reply.";
+        msgBody += "<br><br> With best regards, <br><br>" +
+					"your brillianICM team <br><br><br> Note that this is a system generated e-mail. Please do not reply.";
 
 	try {
 			MailClient mailclient = new MailClient();
