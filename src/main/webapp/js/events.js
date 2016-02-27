@@ -1,4 +1,58 @@
+//eventtype 28
 
+function loadFactsheet(){
+		
+	//XML auslesen	
+	var href = $xml.find('nextevent').attr('href');
+	var title = $xml.find('title').text();
+	var capital = $xml.find('capital').text();
+	var officiallang = $xml.find('officiallang').text();
+	var currency = $xml.find('currency').text();
+	var government = $xml.find('government').text();
+	var areainkm2 = $xml.find('areainkm2').text();
+	var population = $xml.find('population').text();
+	var ethgroups = $xml.find('ethgroups').text();
+	var natholiday = $xml.find('natholiday').text();
+	var natsport = $xml.find('natsport').text();
+	var uheardof = $xml.find('uheardof').text();
+	var diduknow = $xml.find('diduknow').text();
+	var infolinktext = $xml.find('infolinktext').text();
+	var infolink = $xml.find('infolink').text();
+	var titleimg = 'images/'+ $xml.find('titleimg').text();
+	var uri1 = 'images/'+ $xml.find('sideimg1').text();
+	var uri2 = 'images/'+ $xml.find('sideimg2').text();
+	var uri3 = 'images/'+ $xml.find('sideimg3').text();
+	
+	//location.jsp auslesen und xml text dort einsetzen
+	var container = $('.factsheetContainer');
+	container.find('#titletext').html(title);
+	container.find('#capitaltext').html(capital);
+	container.find('#langtext').html(officiallang);
+	container.find('#currency').html(currency);
+	container.find("#government").html(government);
+	container.find("#area").html(areainkm2);
+	container.find("#population").html(population);
+	container.find("#ethgroups").html(ethgroups);
+	container.find("#natholiday").html(natholiday);
+	container.find("#natsport").html(natsport);
+	container.find("#uheardof").html(uheardof);
+	container.find("#diduknow").html(diduknow);
+	container.find("#moreinfo").attr("href",infolink).html(infolinktext);
+	
+	container.find('#flag').attr("src",titleimg);
+	container.find('#sideimg1').attr("src", uri1);
+	container.find('#sideimg2').attr("src", uri2);
+	container.find('#sideimg3').attr("src", uri3);
+
+	var continueButton = $('#continueButtonFactsheet');
+	
+	continueButton.unbind('click');
+	continueButton.bind('click', function(){
+		getXml(href);	
+	});
+	
+	showFactsheet();
+}
 
 //Loading the Worldmapmatrix 4x4
 // eventtype 25
