@@ -1253,7 +1253,6 @@ div.dialogBox{
 div.messageBoxA{
 	width: 100%;
  	float: left;
- 	padding: 10px;
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
@@ -1264,7 +1263,6 @@ div.messageBoxA{
 div.messageBoxB{
 	width: 100%;
 	float: right;
-	padding: 10px;
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
@@ -1391,7 +1389,6 @@ border-color:transparent;
   
    
   input.text{
-  padding: 10px;
   width:260px; 
   border:none;
   font-weight: bold;
