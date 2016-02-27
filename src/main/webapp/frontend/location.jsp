@@ -1,6 +1,6 @@
 <div class="locationBackgroundContainer easyui-panel" data-options="fit:true,border:false">
 	
-		<!-- eventtyp 3: Selection-->
+	<!-- eventtyp 3: Selection-->
 	<div class="dialogContainer easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer">	
@@ -20,7 +20,8 @@
 			</div>
 		</div>
 	</div>
-			<!-- eventtyp 2: Start Page -->
+	
+	<!-- eventtyp 2: Start Page -->
 	<div class="pictureContainer" style="background-color:#d5edf3; width:100%; height:100%;" data-options="fit:true,border:false">
 		<div class="bgimg" style=" width:60% !important;  float: right !important;"></div>
 		     <h4 style="text-transform:none; text-align: center; <!--  position: relative;
@@ -82,7 +83,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 
 
 
-<!-- eventtyp 18: zwei Spalten mit drag und drop -->
+	<!-- eventtyp 18: zwei Spalten mit drag und drop -->
 	<div class="allocationContainerTwo easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer margin-left">
@@ -105,6 +106,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 			</div>
 		</div>
 	</div>
+	
 	<!-- eventtyp 19: zwei Zeilen mit drag und drop (iceberg) -->
 	<div class="allocationContainerThree easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
@@ -127,85 +129,87 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 
 
 	<!-- eventtyp 21: 4 Ohren Modell -->
-<div class="matrixAllocationContainer easyui-panel panel-body" data-options="fit:true,border:false">
-	<div class="bgimg"></div>
-	<div class="centerContainer">
-		<div class="description">conversation</div>	
-		<div class="tileAcceptorContainer">
-				<div class="bc BorderHorizontalVertical"></div>
-				<div class="bc BorderHorizontal"></div>
-				<div class="bc BorderHorizontal">Self Revelation Side</div>
-				<div class="bc BorderHorizontal"></div>
-				<div class="bc BorderHorizontalVertical"></div>
-			
-				<div style="clear: both;"></div>
+	<div class="matrixAllocationContainer easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer">
+			<div class="description">conversation</div>	
+			<div class="tileAcceptorContainer">
+					<div class="bc BorderHorizontalVertical"></div>
+					<div class="bc BorderHorizontal"></div>
+					<div class="bc BorderHorizontal">Self Revelation Side</div>
+					<div class="bc BorderHorizontal"></div>
+					<div class="bc BorderHorizontalVertical"></div>
 				
-				<div class="bc BorderVertical"></div>
-				<div class="bc tileAcceptorTransparent"></div>
-				<div class="bc tileAcceptor"></div>
-				<div class="bc tileAcceptorTransparent"></div>
-				<div class="bc BorderVertical"></div>
-				
-				<div style="clear: both;"></div>
+					<div style="clear: both;"></div>
 					
-				<div class="bc BorderVertical"><div class="outerrightMessage">Relationship</div></div>
-				<div class="bc tileAcceptor"></div>
-				<div class="bc tileAcceptorTransparent"><div class="Message">Message</div></div>
-				<div class="bc tileAcceptor"></div>	 
-				<div class="bc BorderVertical"><div class="outerleftMessage">Appeal</div></div>
-				
-				<div style="clear: both;"></div>
-				
-				<div class="bc BorderVertical"></div>
-			    <div class="bc tileAcceptorTransparent"></div>
-				<div class="bc tileAcceptor"></div>
-				<div class="bc tileAcceptorTransparent"></div>
-				<div class="bc BorderVertical"></div>
-				
-				<div style="clear: both;"></div>
-				
-				<div class="bc BorderHorizontalVertical"></div>
-				<div class="bc BorderHorizontal"></div>
-				<div class="bc BorderHorizontal">Factual Information</div>
-				<div class="bc BorderHorizontal"></div>
-				<div class="bc BorderHorizontalVertical"></div>
-				
-				<div style="clear: both;"></div>	
-				<div class="draggableTilesContainer bc"></div>
-			<div class="buttonContainer">
-				<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton">Done</div>
+					<div class="bc BorderVertical"></div>
+					<div class="bc tileAcceptorTransparent"></div>
+					<div class="bc tileAcceptor"></div>
+					<div class="bc tileAcceptorTransparent"></div>
+					<div class="bc BorderVertical"></div>
+					
+					<div style="clear: both;"></div>
+						
+					<div class="bc BorderVertical"><div class="outerrightMessage">Relationship</div></div>
+					<div class="bc tileAcceptor"></div>
+					<div class="bc tileAcceptorTransparent"><div class="Message">Message</div></div>
+					<div class="bc tileAcceptor"></div>	 
+					<div class="bc BorderVertical"><div class="outerleftMessage">Appeal</div></div>
+					
+					<div style="clear: both;"></div>
+					
+					<div class="bc BorderVertical"></div>
+				    <div class="bc tileAcceptorTransparent"></div>
+					<div class="bc tileAcceptor"></div>
+					<div class="bc tileAcceptorTransparent"></div>
+					<div class="bc BorderVertical"></div>
+					
+					<div style="clear: both;"></div>
+					
+					<div class="bc BorderHorizontalVertical"></div>
+					<div class="bc BorderHorizontal"></div>
+					<div class="bc BorderHorizontal">Factual Information</div>
+					<div class="bc BorderHorizontal"></div>
+					<div class="bc BorderHorizontalVertical"></div>
+					
+					<div style="clear: both;"></div>	
+					<div class="draggableTilesContainer bc"></div>
+				<div class="buttonContainer">
+					<div id="continueButtonMatrix" class="easyui-linkbutton allocationButton">Done</div>
+				</div>
 			</div>
 		</div>
-	</div>
-				
-</div>
-<!--eventtyp: 23 Conversation-->
-<div class="conversation easyui-panel panel-body" data-options="fit:true,border:false">
-	<div class="bgimg"></div>	
-	<div class ="centerContainer">
-	<div class="description"></div>
-	<div class="bc dialogBox">	
-	</div>
-	<div class="buttonContainer">
-	</div>
-	</div>
-</div>
-<!--eventtyp: 24 textBox-->
-<div class="textBox easyui-panel panel-body" data-options="fit:true,border:false">
-	<div class="bgimg"></div>
-	<div class ="centerContainer">
-		<div class="description"></div>
-		<div class="messageBox"></div>
-		<div class="buttonContainer button-bottom">
-		<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
-	</div>
+					
 	</div>
 	
-</div>
-
-<!-- eventtyp 20: 9x9 Matrix-->
-<div class="matrixAllocationContainerStandard easyui-panel panel-body" data-options="fit:true,border:false">
- 	<div class="bgimg">	</div>
+	<!--eventtyp: 23 Conversation-->
+	<div class="conversation easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>	
+		<div class ="centerContainer">
+		<div class="description"></div>
+		<div class="bc dialogBox">	
+		</div>
+		<div class="buttonContainer">
+		</div>
+		</div>
+	</div>
+	
+	<!--eventtyp: 24 textBox-->
+	<div class="textBox easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class ="centerContainer">
+			<div class="description"></div>
+			<div class="messageBox"></div>
+			<div class="buttonContainer button-bottom">
+			<div id="continueButtonTextBox" class="easyui-linkbutton allocationButton">Done</div>
+		</div>
+		</div>
+		
+	</div>
+	
+	<!-- eventtyp 20: 9x9 Matrix-->
+	<div class="matrixAllocationContainerStandard easyui-panel panel-body" data-options="fit:true,border:false">
+	 	<div class="bgimg">	</div>
 		<div class="centerContainer">
 			<div class="description"></div>
 			<div style="clear: both;"></div>
@@ -214,7 +218,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
-				<div style="noshade: size='1'";></div>
+				<div style="noshade: size='1';"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>
 				<div class="bc tileAcceptorStandard"></div>	    
@@ -232,8 +236,8 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 			</div>
 		</div>
 	</div>
-	
-	
+		
+		
 	<!--  eventtype 25 Worldmap -->
 	<div class="worldmap easyui-panel panel-body" data-options="fit:true,border:false" style="overflow-y:auto;">
 		<div style="height:900px; position:absolute;"></div>
@@ -259,85 +263,85 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 			</div>
 		</div>
 	</div>
-		
-		
+			
+			
 	<!--eventtyp: 26 ScrollBar-->
-<div class="scrollBar easyui-panel panel-body" data-options="fit:true,border:false">
-	<div class="bgimg"></div>
-	<div class ="centerContainer">
-		<div class="description"></div>
-		<div class="description26"></div>
-	
-		<div class="scrollBarContent">
-			<div class="description2">1 (weak) &nbsp;&nbsp; &nbsp; to&nbsp; &nbsp;&nbsp; 7 (strong)</div >
-			<div class="description3">Solution</div >
-				<div class="inputRowPD">
-					<input class="text" type="textbox" value="Power Distance:" readonly />
-					<input class="input" type="textbox" id="powerDistance" value="1" readonly />
-					<input class="value" type="range" id="powerDistanceUserValue" min="1" max="7" value="1" step=".5" onchange="document.getElementById('powerDistance').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowInsC">
-					<input class="text" type="textbox" value="Institutional Collectivism:" readonly />
-					<input class="input" type="textbox" id="institutionalCollectivism" value="1" readonly />
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('institutionalCollectivism').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowGE">
-					<input class="text" type="textbox" value="Gender Egalitarism:" readonly/>
-					<input class="input" type="textbox" id="genderEgalitarism" value="1" readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('genderEgalitarism').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowIngC">
-					<input class="text" type="textbox" value="Ingroup Collectivism:" readonly/>
-					<input class="input" type="textbox" id="ingroupCollectivism" value="1"readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('ingroupCollectivism').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowPO">
-					<input class="text" type="textbox" value="Performance Orientation:"readonly/>
-					<input class="input" type="textbox" id="performanceOrientation" value="1"readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('performanceOrientation').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowFO">
-					<input class="text" type="textbox" value="Future Orientation:" readonly/>
-					<input class="input" type="textbox" id="futureOrientation" value="1"readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('futureOrientation').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowUA">
-					<input class="text" type="textbox" value="Uncertainty Avoidance:"readonly/>
-					<input class="input" type="textbox" id="uncertaintyAvoidance" value="1"readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('uncertaintyAvoidance').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowA">
-					<input class="text" type="textbox" value="Assertiveness:"readonly />
-					<input class="input" type="textbox" id="assertiveness" value="1" readonly/>
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('assertiveness').value = this.value" style="width: 250px;"/>
-				</div>
-				
-				<div class="inputRowHO">
-					<input class="text" type="textbox" id="text" value="Humane Orientation:" readonly />
-					<input class="input" type="textbox" id="humaneOrientation" value="1"readonly />
-					<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('humaneOrientation').value = this.value" style="width: 250px;"/>
-				</div>
+	<div class="scrollBar easyui-panel panel-body" data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class ="centerContainer">
+			<div class="description"></div>
+			<div class="description26"></div>
+		
+			<div class="scrollBarContent">
+				<div class="description2">1 (weak) &nbsp;&nbsp; &nbsp; to&nbsp; &nbsp;&nbsp; 7 (strong)</div >
+				<div class="description3">Solution</div >
+					<div class="inputRowPD">
+						<input class="text" type="textbox" value="Power Distance:" readonly />
+						<input class="input" type="textbox" id="powerDistance" value="1" readonly />
+						<input class="value" type="range" id="powerDistanceUserValue" min="1" max="7" value="1" step=".5" onchange="document.getElementById('powerDistance').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowInsC">
+						<input class="text" type="textbox" value="Institutional Collectivism:" readonly />
+						<input class="input" type="textbox" id="institutionalCollectivism" value="1" readonly />
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('institutionalCollectivism').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowGE">
+						<input class="text" type="textbox" value="Gender Egalitarism:" readonly/>
+						<input class="input" type="textbox" id="genderEgalitarism" value="1" readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('genderEgalitarism').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowIngC">
+						<input class="text" type="textbox" value="Ingroup Collectivism:" readonly/>
+						<input class="input" type="textbox" id="ingroupCollectivism" value="1"readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('ingroupCollectivism').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowPO">
+						<input class="text" type="textbox" value="Performance Orientation:"readonly/>
+						<input class="input" type="textbox" id="performanceOrientation" value="1"readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('performanceOrientation').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowFO">
+						<input class="text" type="textbox" value="Future Orientation:" readonly/>
+						<input class="input" type="textbox" id="futureOrientation" value="1"readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('futureOrientation').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowUA">
+						<input class="text" type="textbox" value="Uncertainty Avoidance:"readonly/>
+						<input class="input" type="textbox" id="uncertaintyAvoidance" value="1"readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('uncertaintyAvoidance').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowA">
+						<input class="text" type="textbox" value="Assertiveness:"readonly />
+						<input class="input" type="textbox" id="assertiveness" value="1" readonly/>
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('assertiveness').value = this.value" style="width: 250px;"/>
+					</div>
+					
+					<div class="inputRowHO">
+						<input class="text" type="textbox" id="text" value="Humane Orientation:" readonly />
+						<input class="input" type="textbox" id="humaneOrientation" value="1"readonly />
+						<input class="value" type="range" min="1" max="7" value="1" step=".5" onchange="document.getElementById('humaneOrientation').value = this.value" style="width: 250px;"/>
+					</div>
+			</div>
+		
+			<div class="buttonContainer button-bottom">
+				<div id="continueButtonScrollButton" class="easyui-linkbutton allocationButton">Done</div>
+			</div>
 		</div>
-	
-		<div class="buttonContainer button-bottom">
-			<div id="continueButtonScrollButton" class="easyui-linkbutton allocationButton">Done</div>
-		</div>
-	</div>
-</div>	
-		
-		
-		
-		
-		
-		
-		<!-- eventtyp 27: 4 Ohren Modell alternativ -->
+	</div>	
+			
+			
+			
+			
+			
+			
+	<!-- eventtyp 27: 4 Ohren Modell alternativ -->
 	<div class="matrixAllocationContainerAlternate easyui-panel panel-body" data-options="fit:true,border:false">
 		<div class="bgimg"></div>
 		<div class="centerContainer">
@@ -412,7 +416,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 			</div>
 		</div>
 	</div>
-	
+		
 	<!-- eventtype 28: Factsheet-->
 	<div class="factsheetContainer easyui-panel" style="background-color:#D5ECF2;" data-options="fit:true,border:false">
 		
@@ -426,7 +430,7 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 		<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
 		
 		<div>		
-			<table >
+			<table>
 				<tr>
 					<td class="txt-factsheet1">Capital</td>
 					<td id="capitaltext" class="txt-factsheet2"></td>
@@ -484,8 +488,8 @@ top: 50%;-->">Please select the country from the drop-down list above</h4>
 		
 				
 	</div>
-</div> 
 
+</div>
 
 
 
