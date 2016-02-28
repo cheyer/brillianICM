@@ -1253,6 +1253,7 @@ div.dialogBox{
 div.messageBoxA{
 	width: 100%;
  	float: left;
+ 	padding: 10px;
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
@@ -1263,6 +1264,7 @@ div.messageBoxA{
 div.messageBoxB{
 	width: 100%;
 	float: right;
+	padding: 10px;
 		-webkit-border-radius: 20px;  
 		-moz-border-radius: 20px;
 	border-width: 2px;
@@ -1389,6 +1391,7 @@ border-color:transparent;
   
    
   input.text{
+  padding: 10px;
   width:260px; 
   border:none;
   font-weight: bold;
@@ -1431,4 +1434,60 @@ div.description26{
   div.numberTwo{
   float:right;
   }
+  
+   div.title-factsheet {
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 60px;
+	margin: 20px 0 20px 30px;
+	float:left;
+			
+}
+		
+img.img-factsheet2 {
+	width:320px;
+	height:200px;
+	margin:20px 20px 0 0;
+	float:right;	
+}
+		
+img.img-factsheet1 {
+	width: 150px;
+	height: 100px;
+	font-weight: bold;
+	margin: 20px 100px 50px 30px;
+}
+
+div .txt-factsheet1 {
+	text-align: left;
+	vertical-align: top;
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding: 3px 0 7px 30px;
+}
+
+div .txt-factsheet2 {
+	text-align: left;
+	vertical-align: top;
+	color: black;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding: 3px 25px 7px 50px;
+}
+
+a.link-factsheet {
+	text-align: left;
+	vertical-align: top;
+	color: blue;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding: 3px 25px 50px 50px;
+	display: block;
+}
+
+.factsheetContainer{
+	display: none;
+}
+	
    

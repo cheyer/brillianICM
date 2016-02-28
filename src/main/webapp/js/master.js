@@ -26,6 +26,7 @@ function showLocation () {
 		hideScrollBar();
 		hideWorldmap();
 		hideMatrixAllocationAlternate();
+		hideFactsheet();
 		
 	    			// Musik am Anfang
 					/* if(eventtype=="1"){
@@ -75,6 +76,8 @@ function showLocation () {
 										loadMatrixAllocationAlternate();
 									}else if (eventtype=='2'){
 										loadPictureContainer();
+									}else if (eventtype=='28'){
+										loadFactsheet();
 									}
 									
 	    				//	},1500);					
@@ -328,6 +331,14 @@ function hideSelection () {
 
 function showSelection () {
 	$('.selectionContainer').show();
+}
+
+function hideFactsheet (){
+	$('.factsheetContainer').hide();
+}
+
+function showFactsheet (){
+	$('.factsheetContainer').show();
 }
 
 function hideAllocation () {
