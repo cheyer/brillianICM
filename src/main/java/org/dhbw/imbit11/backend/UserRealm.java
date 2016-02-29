@@ -25,6 +25,12 @@ import java.util.regex.Pattern;
  * @version 1.0
  * 
  */
+/*
+ * Philipp K.
+ * 29.2.16
+ * Update new ProgressQuery so users start with 0,0,0 progress  
+ */
+
 public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
@@ -33,7 +39,7 @@ public class UserRealm extends JdbcRealm {
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
-	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,50,50,50,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
+	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,0,0,0,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
 
 	protected String deleteUserQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String deleteGroupQuery = "DELETE FROM `group` WHERE `group_id`=?";
@@ -897,15 +903,21 @@ public class UserRealm extends JdbcRealm {
 	 * @throws SQLException
 	 *             - returns a database access error
 	 */
+	/*
+	* Philipp K.
+	* 29.2.16
+	* Update so user start with 0,0,0 progress after reset
+	*/
 	public void resetUserProgress(String userEmail) throws SQLException {
 
 		String userid = getUserByEmail(userEmail);
-		setUserProgress(userid, 50, 50, 50, "l000e000");
+		setUserProgress(userid, 0, 0, 0, "l000e000");
 		resetUserCountry(userid);
 
 
 	}
-
+	/*end*/ 
+	
 	/**
 	 * 
 	 * gets the User Progress and checks whether the path ends with the ending
