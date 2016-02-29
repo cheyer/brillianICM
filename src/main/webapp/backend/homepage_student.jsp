@@ -95,7 +95,7 @@
 				Philipp K.
 				29.2.16
 				Hinzufügen des deleteAccount Button
-				 -->"
+				 -->
 				<form action="deleteAccount" method="post">
 					<input id="deleteAccount" type="submit" name="deleteAccount" value="Delete Account" hidden="hidden"/>
 					<a  class="btn btn-default" onclick=confirmDeleteAccount()>Delete Account</a>
