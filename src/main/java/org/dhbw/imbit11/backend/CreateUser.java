@@ -287,16 +287,21 @@ import javax.servlet.http.HttpServletResponse;
 	 * @param unverifiedEmail - contains the e-Mail address of the new user that needs confirmation
 	 * @param request - contains the request of the user (send user information)
 	 */
+	
+	/*Joana Haase
+	 * 29.02.2016, 23:33 Uhr
+	 * \n durch <br> ersetzt als Zeilenumbruch -> Inhalt der Mail ist nämlich in HTML
+	 */
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
-        String msgBody = "Dear "+ firstname + " " + lastname + ",\n\n welcome to brillianICM. Please confirm your registration by clicking on the following link: \n"
+        String msgBody = "Dear "+ firstname + " " + lastname + ",<br><br> welcome to BrillianICM. Please confirm your registration by clicking on the following link: <br>"
         + request.getServletContext().getInitParameter("domain")+ request.getContextPath() + "/ConfirmRegistration?email=";
         
         msgBody += email;
         msgBody += "&ue=";
         msgBody += unverifiedEmail;
-        msgBody += "\n\n With best regards, \n\n" +
-					"your brillianICM team \n\n\n Note that this is a system generated e-mail. Please do not reply.";
+        msgBody += "<br><br> With best regards, <br><br>" +
+					"your BrillianICM Team <br><br><br><br> Note that this is a system generated e-mail. Please do not reply.";
 
 	try {
 			MailClient mailclient = new MailClient();
