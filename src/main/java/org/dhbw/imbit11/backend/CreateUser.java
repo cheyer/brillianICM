@@ -290,7 +290,7 @@ import javax.servlet.http.HttpServletResponse;
 	
 	/*Joana Haase
 	 * 29.02.2016, 23:33 Uhr
-	 * \n durch <br> ersetzt als Zeilenumbruch -> Inhalt der Mail ist nämlich in HTML
+	 * \n durch <br> ersetzt als Zeilenumbruch. Inhalt der Mail ist in HTML
 	 */
 	protected void sendConfirmationMail(String email, String firstname, String lastname, String unverifiedEmail, HttpServletRequest request){
         
