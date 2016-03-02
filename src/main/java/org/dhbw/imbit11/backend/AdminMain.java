@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Class contains the doGet and doPost methods for the Admin homepage and associates
  * students to a certain professor
  * 
- * @author Mary
+ * @author Mary, ckrah
  *
  */
  public class AdminMain extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
