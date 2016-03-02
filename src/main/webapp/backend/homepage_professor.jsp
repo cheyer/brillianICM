@@ -88,14 +88,11 @@
 											//set progress dropdown and button with set TCQ progress
 											/*
 											* Philipp K.
-											* 29.1.16
-											* Updatet cost time and quality to 0 so the progress is reset
+											* 3.3.16
+											* Deleted Cost Time and Quality because its not needed to be updated when beeing set to a new country
 											*/
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
 												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+ "<input type=\"text\" name=\"cost\" value=\"0\" style=\"display:none\"/>" 
-												+ "<input type=\"text\" name=\"time\" value=\"0\" style=\"display:none\"/>"
-												+ "<input type=\"text\" name=\"quality\" value=\"0\" style=\"display:none\"/>"
 												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
 												+ "<select name=\"lvlId\" id=\"lvlId\">"
 												+ "<option value=\"l700e000\">Tutorial</option>"
