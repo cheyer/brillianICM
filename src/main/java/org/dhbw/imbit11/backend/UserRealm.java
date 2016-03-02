@@ -29,7 +29,11 @@ import java.util.regex.Pattern;
  * Philipp K.
  * 29.2.16
  * Update new ProgressQuery so users start with 0,0,0 progress  
+ *
+ * 3.3.16
+ * Insert new setProgressQueryWithoutKPI so the user KPI's are not effected anymore
  */
+
 
 public class UserRealm extends JdbcRealm {
 
@@ -50,6 +54,7 @@ public class UserRealm extends JdbcRealm {
 	protected String updateEmailQuery = "UPDATE `user`SET `email`=? WHERE `email`=?";
 	protected String updatePasswordQuery = "UPDATE `user`SET `password`=? WHERE `email`=?";
 	protected String setProgressQuery = "UPDATE `user_progress` SET `cost`=?, `quality`=?, `time`=?, `path`=? WHERE `user_id` = ?";
+	protected String setProgressQueryWithoutKPI = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setCountryTrueQuery = "UPDATE `user_progress` SET %%=true WHERE `user_id` = ?";
 	protected String resetCountriesQuery = "UPDATE `user_progress` SET l1=FALSE, l2=FALSE, l3=FALSE, l4=FALSE, l5=FALSE, l6=FALSE, l7=FALSE WHERE `user_id` = ?";
@@ -599,6 +604,28 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 
+	/*
+	 * Philipp K.
+	 * 3.3.16
+	 * New function to set the User progress without KPIs 
+	 */
+	public void setUserProgressWithoutKPI(String userid, String path) throws SQLException {
+		//TODO rename with correct parameter name according to database scheme #402
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		try {
+			ps = conn.prepareStatement(setProgressQueryWithoutKPI);
+			ps.setString(1, path);
+			ps.setString(2, userid);
+			ps.executeUpdate();
+			// System.out.println("executed the following statement on DB: " +
+			// setProgressQuery);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+	}
+	
 	public void setUserCountry(String userId, String gamepath) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
@@ -617,6 +644,7 @@ public class UserRealm extends JdbcRealm {
 		JdbcUtils.closeStatement(ps);
 		conn.close();
 	}
+	
 	public void resetUserCountry(String userid) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;

@@ -64,9 +64,6 @@ import org.apache.shiro.subject.Subject;
 			//TODO: Validate and catch Integer to String conversion #403
 			String lvlId = request.getParameter("lvlId");
 			String group_id = request.getParameter("group_id");
-			int cost = new Integer(request.getParameter("cost"));
-			int time = new Integer(request.getParameter("time"));
-			int quality = new Integer(request.getParameter("quality"));
 			
 			UserRealm realm = new UserRealm();
 			
@@ -74,13 +71,13 @@ import org.apache.shiro.subject.Subject;
 				ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
 				for(String userid:users){
 				if(realm.getUserGenderByID(userid) == 0){
-				realm.setUserProgress(userid, cost, quality, time, lvlId);	
+				realm.setUserProgressWithoutKPI(userid,lvlId);	
 				}
 				else{
 				String lvlIdShort = lvlId.substring(0, lvlId.length()-1);
 				char c =  '1';
 				String newlvlId = lvlIdShort + c;
-				realm.setUserProgress(userid, cost, quality, time, newlvlId);	
+				realm.setUserProgressWithoutKPI(userid,newlvlId);	
 				}
 				
 				}
