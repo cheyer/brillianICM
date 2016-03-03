@@ -105,6 +105,7 @@ realmA.credentialsMatcher = $passwordMatcher
 				/index.jsp = authc, roles[admin]
 				/uploadfile.jsp = authc, roles[admin]
 				/viewfile.jsp = authc, roles[admin]
+				/development = authc, roles[admin]
 				
 				/Professor = authc, roles[professor]
 				/backend/homepage_professor.jsp = authc, roles[professor]
