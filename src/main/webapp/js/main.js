@@ -60,6 +60,12 @@
 		hideScrollBar();
 		hideMatrixAllocationAlternate();
 		hideFactsheet();
+		/*
+		 *Christian Heyer
+		 *02.03.2016
+		 */
+		hideMapAllocation();
+		/* END */
 		
 		showLocation();
 if(id == lastEvent){
