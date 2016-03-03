@@ -38,6 +38,12 @@ function showLocation() {
 			 */
 			hideMapAllocation();
 			/* END */
+			/*
+			 *Anastasia reimer
+			 *03.03.2016
+			 */
+			hideAllocationFour();
+			/* END */
 			
 			
 
@@ -98,6 +104,15 @@ function showLocation() {
 				 */
 				else if (eventtype == '29') {
 					loadMapAllocation();
+				}
+				/* END */
+				
+				/*
+				 *Anastasia Reimer
+				 *03.03.2016
+				 */
+				else if (eventtype == '30') {
+					loadAllocationFour();
 				}
 				/* END */
 
@@ -381,6 +396,18 @@ function showMapAllocation() {
 }
 /* END */
 
+/*
+ *Anastasia Reimer
+ *03.03.2016
+ */
+
+function hideAllocationFour() {
+	$('.allocationContainerFour').hide();
+}
+function showAllocationFour() {
+	$('.allocationContainerFour').show();
+}
+/* END */
 
 
 
