@@ -625,6 +625,36 @@ top: 50%;-->">Please
 		</div>
 	</div>
 
-</div>
-<!-- END -->
+
+	<!-- END -->
+	<!--  Anastasia Reimer 03.03.2016 -->
+	<!-- eventtype 30: AllocationFour-->
+	<div class="allocationContainerFour easyui-panel"
+		style="background-color: #D5ECF2;"
+		data-options="fit:true,border:false">
+		<div class="bgimg"></div>
+		<div class="centerContainer margin-left">
+			<div class="description"></div>
+			<div class="container">
+				<div class="phaseTitleContainerFour">
+					<div class="phaseTitleFour bc panel-header panel-title"></div>
+					<div class="phaseTitleFour bc panel-header panel-title"></div>
+					<div class="phaseTitleFour bc panel-header panel-title"></div>
+				</div>
+				<div class="phaseContainerFour">
+					<div class="phaseFour bc"></div>
+					<div class="phaseFour bc"></div>
+					<div class="phaseFour bc"></div>
+				</div>
+			</div>
+			<div class="draggableContainerFour bc"></div>
+			<div class="dragInfoContainerTwo"></div>
+			<div class="buttonContainer">
+				<div id="continueButtonAllocationFour"
+					class="easyui-linkbutton allocationButton">Done</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- END -->
 </div>

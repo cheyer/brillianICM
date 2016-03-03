@@ -322,8 +322,56 @@
 		<sideimg1>DE_facts_img1.jpg</sideimg1>
 		<sideimg2>DE_facts_img2.jpg</sideimg2>
 		<sideimg3>DE_facts_img3.jpg</sideimg3>
-		<nextevent href="l700e206"/>
+		<nextevent href="l700e202"/>
 	</event>
+
+<!-- Christian Heyer 02.03.2016 Drag and Drop Map Event Type -->
+	<event level="0" element="1" id="l700e202" eventtype="29" imcost="0"
+		imqual="0" imtime="0" loc="4">
+		<title>Drag the soccer clubs to the right position in the map!</title>
+		<mapBackground>DE_SoccerMap.jpg</mapBackground>
+		<items>
+			<item>
+				<name>BVB</name>
+				<picture>DE_Soccer_BVB.png</picture>
+				<targets>
+					<targetID>tid0</targetID>
+					<targetID>tid1</targetID>
+					<targetID>tid10</targetID>
+					<targetID>tid11</targetID>
+				</targets>
+			</item>
+			<item>
+				<name>S04</name>
+				<picture>DE_Soccer_S04.png</picture>
+				<targets>
+					<targetID>tid40</targetID>
+					<targetID>tid41</targetID>
+					<targetID>tid50</targetID>
+					<targetID>tid51</targetID>
+				</targets>
+			</item>
+		</items>
+		<nextevent href="l700e203" />
+	</event>
+	<!-- END -->
+	<!-- Anastasia Reimer 03.03.2016 Drag and Drop Map Event Type -->
+	<event level="0" element="1" id="l700e203" eventtype="30" imcost="0"
+		imqual="0" imtime="0" loc="4">
+		<title>Drag and Drop rockt!</title>
+		<description>At the cafeteria you sit down and imagine which topics could be appropriate to talk about with Mr. Weiss.</description>
+		<column>Uncritical</column>
+		<column>Attention required</column>
+		<column>Taboo topic</column>
+		<option column="1" title="weather">weather</option>
+		<option column="3" title="journey">journey</option>
+		<option column="2" title="family">family</option>
+		<option column="1" title="food">food</option>
+		<bgimg>DE_1_Canteen.jpg</bgimg>
+		<nextevent href="l700e206" />
+	</event>
+	<!-- END -->
+
 
 
 	<event level="0" element="42" id="l700e206" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">

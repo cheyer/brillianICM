@@ -1,8 +1,135 @@
 /*
- *Christian Heyer
- *02.03.2016
+ *Anastasia reimer
+ *03.03.2016
  */
-//eventtype 29
+//eventtype 30
+function loadAllocationFour() {
+
+	// XML auslesen
+	var href = $xml.find('nextevent').attr('href');
+	var title = $xml.find('title').text();
+
+	// location.jsp auslesen und xml text dort einsetzen
+	var container = $('.allocationContainerFour');
+	container.find('.description').html(title);
+	var continueButton = $('#continueButtonAllocationFour');
+	var phaseTitleContainerFour = container.find('.phaseTitleFour');
+	var draggableContainerFour = $('.draggableContainerFour');
+
+	$xml.find('column').each(function(index) {
+		// *** code needed for tooltip finction
+		var itemTitle = $(this).text();
+		phaseTitleContainerFour.eq(index).text(itemTitle);
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			// ***
+			phaseTitleContainerFour[index].setAttribute('title', itemTitle);
+		}
+	});
+
+	$xml.find('option').each(
+			function(index) {
+				var itemText = $(this).text();
+				var itemColumn = $(this).attr('column');
+
+				// ***code needed for tooltip function
+				var itemTitle = $(this).attr('title');
+				var itemHoverTitle = '';
+				if ((itemTitle !== '') && (itemTitle !== undefined)) {
+					var itemHoverTitle = ' title="' + itemTitle + '"';
+				}
+				// ***
+				draggableContainerFour
+						.append('<div class="drag bc bph" data-column="'
+								+ itemColumn + '">' + itemText + '</div>');
+			});
+
+	// click button to invoke checking method
+	continueButton.unbind('click');
+	continueButton.bind('click', function() {
+		var check = true;
+		var allDragged = true;
+		var dragItems = $('.drag');
+		
+		$('.phaseFour').css('background-color', '');
+
+		// Check if Items are allocated in the right column
+		$('.phaseFour').each(function(index) {
+			$(this).find('.drag').each(function(i) {
+				if ($(this).attr('data-column') - 1 != index) {
+					check = false;
+					$(this).addClass('dragIncorrect');
+				}
+			});
+		});
+		
+		$('.draggableContainerFour').find('.drag').each(function() {
+			check = false;
+			allDragged = false;
+		});
+
+		if (check) {
+			getXml(href);
+		} else if (allDragged == false) {
+			showMsg('Info', 'You have not allocated all elements');
+		} else if (check == false) {
+			showMsg('Info', 'Incorrect Allocation');
+		}
+
+	});
+
+	showAllocationFour();
+
+	// Drag Funktionalität
+	$('.drag').draggable(
+			{
+				proxy : 'clone',
+				revert : true,
+				cursor : 'auto',
+				onStartDrag : function() {
+					$(this).draggable('options').cursor = 'not-allowed';
+					$(this).draggable('proxy').addClass('dp');
+
+					$('.dragInfoContainerTwo').html('');
+					/*if ((itemInfo !== '') && (itemInfo !== undefined)) {
+						loadInfoButton($('.dragInfoContainerTwo'), itemInfo,
+								itemDescription);
+					}*/
+
+					$(this).removeClass('dragIncorrect');
+				},
+				onStopDrag : function() {
+					$(this).draggable('options').cursor = 'auto';
+				}
+			});
+
+	// Drop Funktionalität
+	$('.phaseFour').droppable({
+		accept : '.drag',
+		onDragEnter : function(e, source) {
+			$(source).draggable('options').cursor = 'auto';
+			$(source).draggable('proxy').css('border', '1px solid red');
+			$(this).addClass('elementHighlight');
+		},
+		onDragLeave : function(e, source) {
+			$(source).draggable('options').cursor = 'not-allowed';
+			$(source).draggable('proxy').css('border', '1px solid #ccc');
+			// elementHighlight can be found in master.css
+			$(this).removeClass('elementHighlight');
+		},
+		onDrop : function(e, source) {
+			$(this).append(source);
+			$(this).removeClass('elementHighlight');
+		}
+	});
+
+}
+
+/* END */
+
+/*
+ * Christian Heyer 02.03.2016
+ */
+// eventtype 29
 function loadMapAllocation() {
 
 	// XML auslesen
@@ -42,7 +169,8 @@ function loadMapAllocation() {
 					};
 					targets.push(targetid);
 				});
-				// create item object with name, id and targets array and push this new object to the items array
+				// create item object with name, id and targets array and push
+				// this new object to the items array
 				var item = {
 					name : name,
 					id : "item" + index,
@@ -51,7 +179,7 @@ function loadMapAllocation() {
 				items.push(item);
 
 			});
-	//console.log(items);
+	// console.log(items);
 
 	// location.jsp auslesen und xml text dort einsetzen
 	var container = $('.mapAllocationContainer');
@@ -67,30 +195,31 @@ function loadMapAllocation() {
 
 		// get all items with class .dragsquare
 		var dragitems = $('.dragsquare');
-		//console.log(dragitems);
+		// console.log(dragitems);
 
 		for (var i = 0; i < items.length; i++) {
 
-			//console.log(items[i].id);
+			// console.log(items[i].id);
 
 			var item = dragitems[i];
 			// get id of parent element, which is defined in the input field
 			var parentId = item.closest('.target').id;
 
-			//console.log(item.id + " in " + parentId);
+			// console.log(item.id + " in " + parentId);
 
 			for (j = 0; j < items[i].targets.length; j++) {
 				var target = items[i].targets[j];
-				//console.log(parentId + " + " + target.tid);
-				// if location is correct, removeClass false, set checkMap to true and break from inner loop
+				// console.log(parentId + " + " + target.tid);
+				// if location is correct, removeClass false, set checkMap to
+				// true and break from inner loop
 				// else addClass false and show Notification
 				if (parentId == target.tid) {
-					//console.log("richtig");
+					// console.log("richtig");
 					$("#" + item.id).removeClass('false');
 					checkMap = true;
 					break;
 				} else {
-					//console.log("falsch");
+					// console.log("falsch");
 					$("#" + item.id).addClass('false');
 					showMsg('Info', 'Incorrect Allocation');
 				}
@@ -158,8 +287,9 @@ function loadMapAllocation() {
 						onDrop : function(e, source) {
 
 							// console.log("->onDrop");
-							//console.log($(this).attr('id'));
-							//console.log("src: "+ $('#src').hasClass('occupied'));
+							// console.log($(this).attr('id'));
+							// console.log("src: "+
+							// $('#src').hasClass('occupied'));
 
 							if ((!$(this).hasClass('occupied'))
 									|| ($(this).attr('id') === "src")) {
