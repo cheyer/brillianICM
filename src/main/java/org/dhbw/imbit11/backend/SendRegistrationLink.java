@@ -63,7 +63,7 @@ import javax.servlet.annotation.WebServlet;
 		String toMail [] = new String [101]; 
 		
 		/*
-		 * N!k0l@s K.
+		 * Nikolas K.
 		 * 29.02.2016
 		 * Seperate the mailAddress String in single mail adresses, seperated by ";"
 
@@ -73,7 +73,7 @@ import javax.servlet.annotation.WebServlet;
 
 
 	    /*
-		 * N!k0l@s K.
+		 * Nikolas K.
 		 * 29.02.2016
 		 * Send the registration mail seperated to every mail address provided
 
@@ -82,7 +82,7 @@ import javax.servlet.annotation.WebServlet;
 		for (int i=0; i<=101; i++){
 			
 			//email without using HTML
-			String content = "Dear project manager, \n\n please use the following link to register to your course: " + link + "\n\n With best regards, \n\n" +
+			String content = "Welcome to brillianICM!\n\n Please use the following link to register to your course: " + link + "\n\n With best regards, \n\n" +
 			"your brillianCRM team \n\n\n Note that this is a system generated e-mail. Please do not reply.";
 			
 			//send the mail
