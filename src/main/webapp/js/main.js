@@ -67,6 +67,12 @@
 		hideMapAllocation();
 		/* END */
 		
+		/*
+		 *Anastasia Reimer
+		 *03.03.2016
+		 */
+		hideAllocationFour();
+		/* END */
 		showLocation();
 if(id == lastEvent){
 			showResult();

@@ -1232,6 +1232,22 @@
 				</targets>
 			</item>
 		</items>
+		<nextevent href="l100e048" />
+	</event>
+	<!-- END -->
+	<!-- Anastasia Reimer 03.03.2016 Drag and Drop Map Event Type -->
+	<event level="0" element="1" id="l100e048" eventtype="30" imcost="0"
+		imqual="0" imtime="0" loc="4">
+		<title>Drag and Drop rockt!</title>
+		<description>At the cafeteria you sit down and imagine which topics could be appropriate to talk about with Mr. Weiss.</description>
+		<column>Uncritical</column>
+		<column>Attention required</column>
+		<column>Taboo topic</column>
+		<option column="1" title="weather">weather</option>
+		<option column="3" title="journey">journey</option>
+		<option column="2" title="family">family</option>
+		<option column="1" title="food">food</option>
+		<bgimg>DE_1_Canteen.jpg</bgimg>
 		<nextevent href="l100e050" />
 	</event>
 	<!-- END -->
