@@ -63,21 +63,27 @@
 			<div>
 				<h4 style="text-align:center">Change Password</h4>
 					<p style="color: red; padding-left: 32px; ">${error}</p>
+				<!-- 
+					Philipp K.
+					29.2.16
+					Abänderung des Formulars auf Bootstrap
+				-->
+		
 				<form action="ResetPassword" method="post">	
 					<input class="form-control" type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
 					<input class="form-control" type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
 					<!--  Password check -->
 					<div class="form-group">
     					<label for="oldPassword">Old Password:</label>
-    					<input type="text" class="form-control" id="oldPassword" placeholder="Old Password">
+    					<input class="form-control" type="password" name="oldpassword" maxlength="50" placeholder="Old Password">
  					</div>	
  					<div class="form-group">
     					<label for="password">Password:</label>
-    					<input type="password" class="form-control" id="password" placeholder="Password">
+    					<input class="form-control" type="password" name="password" maxlength="50" placeholder="Password">
  					</div>	
  					<div class="form-group">
     					<label for="password_repeat">Repeat Password:</label>
-    					<input type="password" class="form-control" id="password_repeat" placeholder="Repeat Password">
+    					<input class="form-control" type="password" name="password_repeat" maxlength="50" placeholder="Repeat Password">
  					</div>
  					<br><br>			
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
@@ -85,6 +91,11 @@
 					<a  class="btn btn-default" onclick=confirmPasswordChange()>Update Password</a>
 					</div>
 				</form>
+				<!--
+				Philipp K.
+				29.2.16
+				Hinzufügen des deleteAccount Button
+				 -->
 				<form action="deleteAccount" method="post">
 					<input id="deleteAccount" type="submit" name="deleteAccount" value="Delete Account" hidden="hidden"/>
 					<a  class="btn btn-default" onclick=confirmDeleteAccount()>Delete Account</a>
