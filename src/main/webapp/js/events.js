@@ -960,9 +960,9 @@ function loadConversation() {
 		 */
 		if(window.SpeechSynthesisUtterance === undefined) {
 			console.log("Text to speech is not available");
-		}else {
+		}else if(text =! undefined){
 			if(ttsSettings == "true" && readVoice =="male") {	
-				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
 				for(var i=0; i < ttstext.length; i++){
 					console.log(ttstext[i]);
 					var tts = new SpeechSynthesisUtterance(ttstext[i]);
@@ -972,7 +972,7 @@ function loadConversation() {
 				}
 			}
 			if(ttsSettings == "true" && readVoice =="female") {	
-				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
 				for(var i=0; i < ttstext.length; i++){
 					console.log(ttstext[i]);
 					var tts = new SpeechSynthesisUtterance(ttstext[i]);
@@ -1025,7 +1025,7 @@ function loadConversation() {
 		 */
 		if(window.SpeechSynthesisUtterance === undefined) {
 			console.log("Text to speech is not available");
-		}else {
+		}else if(text =! undefined){
 			if(ttsSettings == "true" && readVoice =="male") {	
 				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
 				for(var i=0; i < ttstext.length; i++){
