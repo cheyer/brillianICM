@@ -39,6 +39,7 @@
 			<a id="logout" class="easyui-linkbutton" data-options="plain:true"
 				onclick="window.location.href='LogoutUser'"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
 			<a id="imprint" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.IMPRINT_BUTTON_TEXT%></a>
+			<a id="content" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.CONTENT_BUTTON_TEXT%></a>
 		</div>
 	</div>
 	<div class="center mainWindow" data-options="region:'center'">
@@ -184,6 +185,14 @@
 	$('body').show();
 	$('#imprint').bind('click', function() {
 		showImprint();
+	});
+	$('#content').bind('click', function(){
+		
+		var url = "<%=request.getRequestURL()%>";
+		console.log(url);
+		var res = url.replace("backend/homepage_admin.jsp", "index.jsp");
+		console.log(res);
+		window.location.replace(res);
 	});
 	function confirmPasswordChange()
 	{

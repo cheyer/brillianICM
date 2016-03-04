@@ -1,8 +1,135 @@
 /*
- *Christian Heyer
- *02.03.2016
+ *Anastasia reimer
+ *03.03.2016
  */
-//eventtype 29
+//eventtype 30
+function loadAllocationFour() {
+
+	// XML auslesen
+	var href = $xml.find('nextevent').attr('href');
+	var title = $xml.find('title').text();
+
+	// location.jsp auslesen und xml text dort einsetzen
+	var container = $('.allocationContainerFour');
+	container.find('.description').html(title);
+	var continueButton = $('#continueButtonAllocationFour');
+	var phaseTitleContainerFour = container.find('.phaseTitleFour');
+	var draggableContainerFour = $('.draggableContainerFour');
+
+	$xml.find('column').each(function(index) {
+		// *** code needed for tooltip finction
+		var itemTitle = $(this).text();
+		phaseTitleContainerFour.eq(index).text(itemTitle);
+		if ((itemTitle !== '') && (itemTitle !== undefined)) {
+			// ***
+			phaseTitleContainerFour[index].setAttribute('title', itemTitle);
+		}
+	});
+
+	$xml.find('option').each(
+			function(index) {
+				var itemText = $(this).text();
+				var itemColumn = $(this).attr('column');
+
+				// ***code needed for tooltip function
+				var itemTitle = $(this).attr('title');
+				var itemHoverTitle = '';
+				if ((itemTitle !== '') && (itemTitle !== undefined)) {
+					var itemHoverTitle = ' title="' + itemTitle + '"';
+				}
+				// ***
+				draggableContainerFour
+						.append('<div class="drag bc bph" data-column="'
+								+ itemColumn + '">' + itemText + '</div>');
+			});
+
+	// click button to invoke checking method
+	continueButton.unbind('click');
+	continueButton.bind('click', function() {
+		var check = true;
+		var allDragged = true;
+		var dragItems = $('.drag');
+		
+		$('.phaseFour').css('background-color', '');
+
+		// Check if Items are allocated in the right column
+		$('.phaseFour').each(function(index) {
+			$(this).find('.drag').each(function(i) {
+				if ($(this).attr('data-column') - 1 != index) {
+					check = false;
+					$(this).addClass('dragIncorrect');
+				}
+			});
+		});
+		
+		$('.draggableContainerFour').find('.drag').each(function() {
+			check = false;
+			allDragged = false;
+		});
+
+		if (check) {
+			getXml(href);
+		} else if (allDragged == false) {
+			showMsg('Info', 'You have not allocated all elements');
+		} else if (check == false) {
+			showMsg('Info', 'Incorrect Allocation');
+		}
+
+	});
+
+	showAllocationFour();
+
+	// Drag Funktionalität
+	$('.drag').draggable(
+			{
+				proxy : 'clone',
+				revert : true,
+				cursor : 'auto',
+				onStartDrag : function() {
+					$(this).draggable('options').cursor = 'not-allowed';
+					$(this).draggable('proxy').addClass('dp');
+
+					$('.dragInfoContainerTwo').html('');
+					/*if ((itemInfo !== '') && (itemInfo !== undefined)) {
+						loadInfoButton($('.dragInfoContainerTwo'), itemInfo,
+								itemDescription);
+					}*/
+
+					$(this).removeClass('dragIncorrect');
+				},
+				onStopDrag : function() {
+					$(this).draggable('options').cursor = 'auto';
+				}
+			});
+
+	// Drop Funktionalität
+	$('.phaseFour').droppable({
+		accept : '.drag',
+		onDragEnter : function(e, source) {
+			$(source).draggable('options').cursor = 'auto';
+			$(source).draggable('proxy').css('border', '1px solid red');
+			$(this).addClass('elementHighlight');
+		},
+		onDragLeave : function(e, source) {
+			$(source).draggable('options').cursor = 'not-allowed';
+			$(source).draggable('proxy').css('border', '1px solid #ccc');
+			// elementHighlight can be found in master.css
+			$(this).removeClass('elementHighlight');
+		},
+		onDrop : function(e, source) {
+			$(this).append(source);
+			$(this).removeClass('elementHighlight');
+		}
+	});
+
+}
+
+/* END */
+
+/*
+ * Christian Heyer 02.03.2016
+ */
+// eventtype 29
 function loadMapAllocation() {
 
 	// XML auslesen
@@ -42,7 +169,8 @@ function loadMapAllocation() {
 					};
 					targets.push(targetid);
 				});
-				// create item object with name, id and targets array and push this new object to the items array
+				// create item object with name, id and targets array and push
+				// this new object to the items array
 				var item = {
 					name : name,
 					id : "item" + index,
@@ -51,7 +179,7 @@ function loadMapAllocation() {
 				items.push(item);
 
 			});
-	//console.log(items);
+	// console.log(items);
 
 	// location.jsp auslesen und xml text dort einsetzen
 	var container = $('.mapAllocationContainer');
@@ -67,30 +195,31 @@ function loadMapAllocation() {
 
 		// get all items with class .dragsquare
 		var dragitems = $('.dragsquare');
-		//console.log(dragitems);
+		// console.log(dragitems);
 
 		for (var i = 0; i < items.length; i++) {
 
-			//console.log(items[i].id);
+			// console.log(items[i].id);
 
 			var item = dragitems[i];
 			// get id of parent element, which is defined in the input field
 			var parentId = item.closest('.target').id;
 
-			//console.log(item.id + " in " + parentId);
+			// console.log(item.id + " in " + parentId);
 
 			for (j = 0; j < items[i].targets.length; j++) {
 				var target = items[i].targets[j];
-				//console.log(parentId + " + " + target.tid);
-				// if location is correct, removeClass false, set checkMap to true and break from inner loop
+				// console.log(parentId + " + " + target.tid);
+				// if location is correct, removeClass false, set checkMap to
+				// true and break from inner loop
 				// else addClass false and show Notification
 				if (parentId == target.tid) {
-					//console.log("richtig");
+					// console.log("richtig");
 					$("#" + item.id).removeClass('false');
 					checkMap = true;
 					break;
 				} else {
-					//console.log("falsch");
+					// console.log("falsch");
 					$("#" + item.id).addClass('false');
 					showMsg('Info', 'Incorrect Allocation');
 				}
@@ -158,8 +287,9 @@ function loadMapAllocation() {
 						onDrop : function(e, source) {
 
 							// console.log("->onDrop");
-							//console.log($(this).attr('id'));
-							//console.log("src: "+ $('#src').hasClass('occupied'));
+							// console.log($(this).attr('id'));
+							// console.log("src: "+
+							// $('#src').hasClass('occupied'));
 
 							if ((!$(this).hasClass('occupied'))
 									|| ($(this).attr('id') === "src")) {
@@ -782,6 +912,9 @@ function loadInfoButton(dragInfoContainerDiv, info, description) {
 
 // eventtyp 23
 function loadConversation() {
+	//Stop all TTS when reloading
+	if(window.SpeechSynthesisUtterance !=undefined) {
+	speechSynthesis.cancel();}
 
 	var hrefNumber = $xml.find('messageBoxB').length;
 
@@ -818,99 +951,135 @@ function loadConversation() {
 		ttsSettings = getCookie("tts");
 
 		var text = $xml.find('messageBoxA').eq(indexAB).text();
-
-		// NEW LINE 657
 		var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-
 		var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');
-		// text to speech for HTML5 support
-		if (ttsSettings == "true" && readVoice == "male"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Alex';
-			})[0];
-			// tts.voice = speechSynthesis.getVoices().filter(function(voice) {
-			// return voice.name == 'Alex'; });
-			speechSynthesis.speak(tts);
-		}
-		if (ttsSettings == "true" && readVoice == "female"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Samantha';
-			})[0];
-			speechSynthesis.speak(tts);
-		}
-
-		// google voice
+		
+		//text to speech for HTML5 support
 		/*
-		 * var audio = new Audio(); audio.src
-		 * ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
-		 * audio.play();
+		 * Philipp K.
+		 * 4.3.16
+		 * Updated TTS so it speaks every sentence as a single object. 
+		 * If Speech Syntehsis is undefined the user gets a console log
+		 * If the browser cannot load the voices, the user gets an console log instead of a wrong voice
+		 * Updated Voices for Mac and Windows 
 		 */
+		
+		if(window.SpeechSynthesisUtterance === undefined) {
+			console.log("Text to speech is not available");
+		}else if(text != undefined){
+			var ttstext = text.split(".");
+			var voices = speechSynthesis.getVoices();
+			if(voices[0] != undefined){
+				if(ttsSettings == "true" && readVoice =="male") {	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
+						speechSynthesis.speak(tts);
+					}
+				}
+				if(ttsSettings == "true" && readVoice =="female") {	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
+						speechSynthesis.speak(tts);
+				}
+				}
+			}else{
+					console.log("Could not load voices - Text2Speech disabled"); 
+				}
+		}
 
 		var messageBoxContainer = $('.dialogBox');
-
-		messageBoxContainer
-				.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+		
+		messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
 		$('.messageBoxA').eq(indexAB).text(text);
+
 
 		// NEW LINE 672 - 681
 		var dialogButton = $('.messageBoxA').eq(indexAB);
-
-		if (href == undefined) {
-
-		} else {
-			dialogButton.linkbutton({
-				text : text
-			});
-			dialogButton.bind('click', function() {
-				getXml(href);
-				if (ttsSettings == "true"
-						&& typeof SpeechSynthesisUtterance !== 'undefined') {
-					speechSynthesis.cancel();
-				}
-			});
+	
+		if(href == undefined){
+				
+		}else{
+		dialogButton.linkbutton({
+			text:text
+		});
+		dialogButton.bind('click', function(){	
+		getXml(href);
+		if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+			speechSynthesis.cancel();
 		}
-	}
+		});	
+		} 
+	 }
 
-	function messageBoxB() {
-		// check for tts-cookie
-		var ttsSettings = "false";
-		ttsSettings = getCookie("tts");
-
+	function messageBoxB(){
+		//check for tts-cookie
+		var ttsSettings="false";
+		ttsSettings=getCookie("tts");
+		
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
-		// NEW LINE 688
 		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
-
 		var readVoice = $xml.find('messageBoxB').eq(indexAB).attr('voice');
-
-		// text to speech for HTML5 support
-		if (ttsSettings == "true" && readVoice == "male"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
+		
+		//Implementing TTS for message Box B
+		/*
+		 * Philipp K.
+		 * 4.3.16
+		 * Updated TTS so it speaks every sentence as a single object. 
+		 * If Speech Syntehsis is undefined the user gets a console log
+		 * If the browser cannot load the voices, the user gets a console log instead of a wrong voice
+		 */
+		if(window.SpeechSynthesisUtterance === undefined) {
+			console.log("Text to speech is not available");
+		}else if(text != undefined){
+			var ttstext = text.split(".");
 			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Alex';
-			})[0];
-
-			// tts.voice = speechSynthesis.getVoices().filter(function(voice) {
-			// return voice.name == 'Alex'; });
-			speechSynthesis.speak(tts);
+			console.log(voices);
+			if(voices[0] != undefined){
+				if(ttsSettings == "true" && readVoice =="male") {
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
+						speechSynthesis.speak(tts);
+					}
+				}
+				if(ttsSettings == "true" && readVoice =="female"){	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
+						speechSynthesis.speak(tts);
+				}
+				}
+			}else{
+				console.log("Could not load voices - Text2Speech disabled"); 
+			}
 		}
-		if (ttsSettings == "true" && readVoice == "female"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Samantha';
-			})[0];
-			speechSynthesis.speak(tts);
-		}
-
+		
 		var messageBoxContainer = $('.dialogBox');
 		messageBoxContainer
 				.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
@@ -921,7 +1090,8 @@ function loadConversation() {
 		var dialogButton = $('.messageBoxB').eq(indexAB);
 		if (hrefB == undefined) {
 			i++;
-			if (i == hrefNumber) {
+
+			if (i == hrefNumber) {	
 				var nextButton = $('.buttonContainer');
 				nextButton.append('<div class="nextButton">NEXT</div>');
 				nextButton.linkbutton({});
@@ -955,8 +1125,8 @@ function loadConversation() {
 			});
 		}
 	}
-
 	if (hrefNumber == "0") {
+		
 		var nextButton = $('.buttonContainer');
 
 		nextButton.append('<div class="nextButton">NEXT</div>');
@@ -966,7 +1136,7 @@ function loadConversation() {
 		});
 		nextButton.bind('click', function() {
 			getXml(href);
-			// // speechSynthesis.cancel();
+			speechSynthesis.cancel();
 		});
 	}
 
