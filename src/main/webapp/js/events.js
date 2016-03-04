@@ -912,6 +912,9 @@ function loadInfoButton(dragInfoContainerDiv, info, description) {
 
 // eventtyp 23
 function loadConversation() {
+	//Stop all TTS when reloading
+	if(window.SpeechSynthesisUtterance !=undefined) {
+	speechSynthesis.cancel();}
 
 	var hrefNumber = $xml.find('messageBoxB').length;
 
@@ -958,6 +961,7 @@ function loadConversation() {
 		 * Updated TTS so it speaks every sentence as a single object. 
 		 * If Speech Syntehsis is undefined the user gets a console log
 		 * If the browser cannot load the voices, the user gets an console log instead of a wrong voice
+		 * Updated Voices for Mac and Windows 
 		 */
 		
 		if(window.SpeechSynthesisUtterance === undefined) {
@@ -965,23 +969,37 @@ function loadConversation() {
 		}else if(text != undefined){
 			var ttstext = text.split(".");
 			var voices = speechSynthesis.getVoices();
-			console.log(voices);
 			if(voices[0] != undefined){
 				if(ttsSettings == "true" && readVoice =="male") {	
 					for(var j=0; j < ttstext.length; j++){
 						var tts = new SpeechSynthesisUtterance(ttstext[j]);
-						tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 					}
 				}
 				if(ttsSettings == "true" && readVoice =="female") {	
 					for(var j=0; j < ttstext.length; j++){
 						var tts = new SpeechSynthesisUtterance(ttstext[j]);
-						tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 				}
-			}
-		}}
+				}
+			}else{
+					console.log("Could not load voices - Text2Speech disabled"); 
+				}
+		}
 
 		var messageBoxContainer = $('.dialogBox');
 		
@@ -1029,22 +1047,34 @@ function loadConversation() {
 		}else if(text != undefined){
 			var ttstext = text.split(".");
 			var voices = speechSynthesis.getVoices();
+			console.log(voices);
 			if(voices[0] != undefined){
-			if(ttsSettings == "true" && readVoice =="male") {	
-				for(var j=0; j < ttstext.length; j++){
-					var tts = new SpeechSynthesisUtterance(ttstext[j]);
-						tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+				if(ttsSettings == "true" && readVoice =="male") {
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Male'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
 						speechSynthesis.speak(tts);
-						
+					}
 				}
-			}
-			if(ttsSettings == "true" && readVoice =="female") {	
-				for(var j=0; j < ttstext.length; j++){
-					var tts = new SpeechSynthesisUtterance(ttstext[j]);
-					tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
-					speechSynthesis.speak(tts);
+				if(ttsSettings == "true" && readVoice =="female"){	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						if(voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0] != undefined){
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Google UK English Female'; })[0];
+						} else {
+							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						}
+						console.log(ttstext[j]);
+						console.log(tts.voice);
+						speechSynthesis.speak(tts);
 				}
-			}
+				}
 			}else{
 				console.log("Could not load voices - Text2Speech disabled"); 
 			}
