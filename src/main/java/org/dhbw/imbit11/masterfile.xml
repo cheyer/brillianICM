@@ -14737,12 +14737,11 @@
 		<natholiday>12th of October</natholiday>
 		<natsport>Football</natsport>
 		<uheardof>Penélope Cruz</uheardof>
-		<diduknow></diduknow>
+		<diduknow>...that Spanish is the second most popular language in the world?</diduknow>
 		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
-		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/sp.html
-		</infolink>
+		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/sp.html</infolink>
 		<titleimg>ES_Flag.jpg</titleimg>
-		<sideimg1></sideimg1>
+		<sideimg1>ES_bullfight.jpg</sideimg1>
 		<sideimg2>ES_SpainTeamFootball.jpg</sideimg2>
 		<sideimg3>ES_penelopecruz.jpg</sideimg3>
 		<nextevent href="l200e005" />
@@ -15919,12 +15918,11 @@
 		<natholiday>12th of October</natholiday>
 		<natsport>Football</natsport>
 		<uheardof>Penélope Cruz</uheardof>
-		<diduknow></diduknow>
+		<diduknow>...that Spanish is the second most popular language in the world?</diduknow>
 		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
-		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/sp.html
-		</infolink>
+		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/sp.html</infolink>
 		<titleimg>ES_Flag.jpg</titleimg>
-		<sideimg1></sideimg1>
+		<sideimg1>ES_bullfight.jpg</sideimg1>
 		<sideimg2>ES_SpainTeamFootball.jpg</sideimg2>
 		<sideimg3>ES_penelopecruz.jpg</sideimg3>
 		<nextevent href="l210e005" />
@@ -21570,19 +21568,17 @@
 		<government>Federal Presidential Constitutional Republic</government>
 		<areainkm2>9.826.675</areainkm2>
 		<population>322.262.226 (Dec. 1st 2015)</population>
-		<ethgroups>72.41 % White, 12.61% Black, 9.11% other, 4.75% Asian,
-			1.12% Native</ethgroups>
+		<ethgroups>72.41 % White, 12.61% Black, 9.11% other, 4.75% Asian, 1.12% Native</ethgroups>
 		<natholiday>4th of July, Independence Day</natholiday>
 		<natsport>American Football</natsport>
-		<uheardof>Banjamin Franklin (Founding father of the USA, signee of the
-			Declaration of Independence, Inventor, Revolutionary)
-		</uheardof>
-		<diduknow>Washington, D.C. stands for Washington, District of Columbia
-		</diduknow>
+		<uheardof>Banjamin Franklin (Founding father of the USA, signee of the Declaration of Independence, Inventor, Revolutionary)</uheardof>
+		<diduknow>Washington, D.C. stands for Washington, District of Columbia</diduknow>
 		<infolinktext>For more information...</infolinktext>
 		<infolink>https://en.wikipedia.org/wiki/United_States</infolink>
-		<titleimg>US_400000.jpg</titleimg>
+		<titleimg>US_Flag.png</titleimg>
+		<sideimg1>US_400000.jpg</sideimg1>
 		<sideimg2>US_Superbowl.jpg</sideimg2>
+		<sideimg3>US_San_Fran.jpg</sideimg3>
 		<nextevent href="l433e003" />
 	</event>
 
@@ -23404,19 +23400,17 @@
 		<government>Federal Presidential Constitutional Republic</government>
 		<areainkm2>9.826.675</areainkm2>
 		<population>322.262.226 (Dec. 1st 2015)</population>
-		<ethgroups>72.41 % White, 12.61% Black, 9.11% other, 4.75% Asian,
-			1.12% Native</ethgroups>
+		<ethgroups>72.41 % White, 12.61% Black, 9.11% other, 4.75% Asian, 1.12% Native</ethgroups>
 		<natholiday>4th of July, Independence Day</natholiday>
 		<natsport>American Football</natsport>
-		<uheardof>Banjamin Franklin (Founding father of the USA, signee of the
-			Declaration of Independence, Inventor, Revolutionary)
-		</uheardof>
-		<diduknow>Washington, D.C. stands for Washington, District of Columbia
-		</diduknow>
+		<uheardof>Banjamin Franklin (Founding father of the USA, signee of the Declaration of Independence, Inventor, Revolutionary)</uheardof>
+		<diduknow>Washington, D.C. stands for Washington, District of Columbia</diduknow>
 		<infolinktext>For more information...</infolinktext>
 		<infolink>https://en.wikipedia.org/wiki/United_States</infolink>
-		<titleimg1>US_400000.jpg</titleimg1>
+		<titleimg>US_Flag.png</titleimg>
+		<sideimg1>US_400000.jpg</sideimg1>
 		<sideimg2>US_Superbowl.jpg</sideimg2>
+		<sideimg3>US_San_Fran.jpg</sideimg3>
 		<nextevent href="l483e003" />
 	</event>
 
