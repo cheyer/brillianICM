@@ -49,7 +49,7 @@ function loadAllocationFour() {
 		var check = true;
 		var allDragged = true;
 		var dragItems = $('.drag');
-		
+
 		$('.phaseFour').css('background-color', '');
 
 		// Check if Items are allocated in the right column
@@ -61,7 +61,7 @@ function loadAllocationFour() {
 				}
 			});
 		});
-		
+
 		$('.draggableContainerFour').find('.drag').each(function() {
 			check = false;
 			allDragged = false;
@@ -80,27 +80,27 @@ function loadAllocationFour() {
 	showAllocationFour();
 
 	// Drag Funktionalität
-	$('.drag').draggable(
-			{
-				proxy : 'clone',
-				revert : true,
-				cursor : 'auto',
-				onStartDrag : function() {
-					$(this).draggable('options').cursor = 'not-allowed';
-					$(this).draggable('proxy').addClass('dp');
+	$('.drag').draggable({
+		proxy : 'clone',
+		revert : true,
+		cursor : 'auto',
+		onStartDrag : function() {
+			$(this).draggable('options').cursor = 'not-allowed';
+			$(this).draggable('proxy').addClass('dp');
 
-					$('.dragInfoContainerTwo').html('');
-					/*if ((itemInfo !== '') && (itemInfo !== undefined)) {
-						loadInfoButton($('.dragInfoContainerTwo'), itemInfo,
-								itemDescription);
-					}*/
+			$('.dragInfoContainerTwo').html('');
+			/*
+			 * if ((itemInfo !== '') && (itemInfo !== undefined)) {
+			 * loadInfoButton($('.dragInfoContainerTwo'), itemInfo,
+			 * itemDescription); }
+			 */
 
-					$(this).removeClass('dragIncorrect');
-				},
-				onStopDrag : function() {
-					$(this).draggable('options').cursor = 'auto';
-				}
-			});
+			$(this).removeClass('dragIncorrect');
+		},
+		onStopDrag : function() {
+			$(this).draggable('options').cursor = 'auto';
+		}
+	});
 
 	// Drop Funktionalität
 	$('.phaseFour').droppable({
@@ -142,103 +142,87 @@ function loadMapAllocation() {
 		$('#mapContainer').append(
 				'<div class="square target" id="tid' + i + '"></div>');
 	}
-	// create items array to save item object with corresponding targets
-	var items = [];
 
-	$xml.find('item').each(
-			function(index) {
-				// load XML data
-				var name = $(this).children("name").text();
-				var picture = $(this).children("picture").text();
-				// create targets array to save many targetIDs
-				var targets = [];
-				// create description box
-				$('#itemDescription').append(
-						'<div><img src="images/' + picture + '" height="40">'
-								+ name + '</div>');
-				// create draggable items
-				$('#src').append(
-						'<div id="item' + index
-								+ '" class="dragsquare"><img src="images/'
-								+ picture + '" height="40" alt="' + name
-								+ '"></div>');
-				$(this).children("targets").children().each(function(index) {
-					// get targetid and push to id item target array
-					var targetid = {
-						tid : $(this).text()
-					};
-					targets.push(targetid);
-				});
-				// create item object with name, id and targets array and push
-				// this new object to the items array
-				var item = {
-					name : name,
-					id : "item" + index,
-					targets : targets
-				};
-				items.push(item);
+	$xml
+			.find('item')
+			.each(
+					function(index) {
+						// load XML data
+						var name = $(this).children("name").text();
+						var picture = $(this).children("picture").text();
+						var targets = $(this).children("targets").text();
+						// console.log(name);
+						// console.log(picture);
+						// console.log(targets);
+						// console.log("..........")
 
-			});
-	// console.log(items);
+						// create description box
+						$('#itemDescription').append(
+								'<div class="itemdescription"><img src="images/' + picture
+										+ '" height="40"> ' + name + ' </div>');
+
+						// create draggable items with datatarget attribute, where targets read from xml are saved
+						$('#src')
+								.append(
+										'<div id="item'
+												+ index
+												+ '" class="dragsquare" style="background-image: url(images/'
+												+ picture + ');" dataTargets="'
+												+ targets + '" name="' + name
+												+ '"></div>');
+
+					});
 
 	// location.jsp auslesen und xml text dort einsetzen
 	var container = $('.mapAllocationContainer');
 	container.find('#mapAllocationTitle').html(title);
 	var continueButton = $('#continueButtonMapAllocation');
 
-	// check allocation bool
-	var checkMap = true;
-
 	// click button to invoke checking method
 	continueButton.unbind('click');
 	continueButton.bind('click', function() {
+		var checkMap = true;
+		var allDragged = true;
+
+		// checks if there are elements of class dragsquare in src
+		$('#src').find('.dragsquare').each(function() {
+			allDragged = false;
+		});
 
 		// get all items with class .dragsquare
 		var dragitems = $('.dragsquare');
-		// console.log(dragitems);
 
-		for (var i = 0; i < items.length; i++) {
-
-			// console.log(items[i].id);
-
+		//for each element, check if it is located in one of the targets described in the items datatarget attribute
+		for (var i = 0; i < dragitems.length; i++) {
 			var item = dragitems[i];
-			// get id of parent element, which is defined in the input field
+			// get id of parent element
 			var parentId = item.closest('.target').id;
+			// get name and target attribute
+			var solution = $(item).context.attributes.datatargets.value;
+			//var name = $(item).context.attributes.name.value;
 
-			// console.log(item.id + " in " + parentId);
+			//console.log(name + " (" + item.id + ")" + " is in " + parentId+ " [" + solution + "]");
 
-			for (j = 0; j < items[i].targets.length; j++) {
-				var target = items[i].targets[j];
-				// console.log(parentId + " + " + target.tid);
-				// if location is correct, removeClass false, set checkMap to
-				// true and break from inner loop
-				// else addClass false and show Notification
-				if (parentId == target.tid) {
-					// console.log("richtig");
-					$("#" + item.id).removeClass('false');
-					checkMap = true;
-					break;
-				} else {
-					// console.log("falsch");
-					$("#" + item.id).addClass('false');
-					showMsg('Info', 'Incorrect Allocation');
-				}
-			}
-		}
-
-		// check for errors by looking, if an item hasClass "false"
-		for (var i = 0; i < items.length; i++) {
-			var item = items[i];
-			if ($("#" + item.id).hasClass('false')) {
+			// if parentID (position where item is located) is not a substring of targets saved in solution
+			// it's wrong, so checkMap will be setted to false and class "false" will be added to the item
+			if (solution.indexOf(parentId) > -1) {
+				console.log("correct");
+				$(item).removeClass('false');
+			} else {
+				console.log("wrong");
 				checkMap = false;
+				$(item).addClass('false');
 			}
-
 		}
-
-		// if check is true, go to next page
+		
 		if (checkMap) {
 			getXml(href);
-		}
+		} else if (allDragged == false) {
+			showMsg('Info', 'You have not allocated all elements');
+		} else if (checkMap == false) {
+			showMsg('Info', 'Incorrect Allocation');
+		}	
+		
 	});
 
 	showMapAllocation();
@@ -256,7 +240,7 @@ function loadMapAllocation() {
 			console.log("id of parent element: " + idParentElement);
 			if ($(parentElement).hasClass('occupied')) {
 				$(parentElement).removeClass('occupied');
-				console.log($(parentElement).hasClass('occupied'));
+				// console.log($(parentElement).hasClass('occupied'));
 			}
 			$(this).draggable('options').cursor = 'not-allowed';
 			$(this).draggable('proxy').addClass('dp');
