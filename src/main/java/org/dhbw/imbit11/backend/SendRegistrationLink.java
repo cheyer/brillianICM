@@ -64,13 +64,24 @@ import javax.servlet.annotation.WebServlet;
 		
 		/*
 		 * Nikolas K.
+		 * 04.03.2016
+		 * Replace "," with ";"
+
+		 */
+		
+		String newMailAddress = mailAddress.replaceAll(",", ";");
+		
+
+		
+		/*
+		 * Nikolas K.
 		 * 29.02.2016
 		 * Seperate the mailAddress String in single mail adresses, seperated by ";"
 
 		 */
 		
-	    toMail = mailAddress.split(";");
-
+	    toMail = newMailAddress.split(";");
+		
 
 	    /*
 		 * Nikolas K.
@@ -78,12 +89,13 @@ import javax.servlet.annotation.WebServlet;
 		 * Send the registration mail seperated to every mail address provided
 
 		 */
-
+	  
 		for (int i=0; i<=101; i++){
+			
 			
 			//email without using HTML
 			String content = "Welcome to brillianICM!\n\n Please use the following link to register to your course: " + link + "\n\n With best regards, \n\n" +
-			"your brillianCRM team \n\n\n Note that this is a system generated e-mail. Please do not reply.";
+			"your brillianICM team \n\n\n Note that this is a system generated e-mail. Please do not reply.";
 			
 			//send the mail
 			MailClient mailclient = new MailClient();
