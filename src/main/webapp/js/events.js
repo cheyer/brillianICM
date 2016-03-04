@@ -957,31 +957,31 @@ function loadConversation() {
 		 * 4.3.16
 		 * Updated TTS so it speaks every sentence as a single object. 
 		 * If Speech Syntehsis is undefined the user gets a console log
+		 * If the browser cannot load the voices, the user gets an console log instead of a wrong voice
 		 */
+		
 		if(window.SpeechSynthesisUtterance === undefined) {
 			console.log("Text to speech is not available");
 		}else if(text != undefined){
-			if(ttsSettings == "true" && readVoice =="male") {	
-				var ttstext = text.split(".");
-				for(var i=0; i < ttstext.length; i++){
-					console.log(ttstext[i]);
-					var tts = new SpeechSynthesisUtterance(ttstext[i]);
-					var voices = speechSynthesis.getVoices();
-					tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
-					speechSynthesis.speak(tts);
+			var ttstext = text.split(".");
+			var voices = speechSynthesis.getVoices();
+			console.log(voices);
+			if(voices[0] != undefined){
+				if(ttsSettings == "true" && readVoice =="male") {	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+						speechSynthesis.speak(tts);
+					}
+				}
+				if(ttsSettings == "true" && readVoice =="female") {	
+					for(var j=0; j < ttstext.length; j++){
+						var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+						speechSynthesis.speak(tts);
 				}
 			}
-			if(ttsSettings == "true" && readVoice =="female") {	
-				var ttstext = text.split(".");
-				for(var i=0; i < ttstext.length; i++){
-					console.log(ttstext[i]);
-					var tts = new SpeechSynthesisUtterance(ttstext[i]);
-					var voices = speechSynthesis.getVoices();
-					tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
-					speechSynthesis.speak(tts);
-				}
-			}
-		}
+		}}
 
 		var messageBoxContainer = $('.dialogBox');
 		
@@ -1022,30 +1022,31 @@ function loadConversation() {
 		 * 4.3.16
 		 * Updated TTS so it speaks every sentence as a single object. 
 		 * If Speech Syntehsis is undefined the user gets a console log
+		 * If the browser cannot load the voices, the user gets a console log instead of a wrong voice
 		 */
 		if(window.SpeechSynthesisUtterance === undefined) {
 			console.log("Text to speech is not available");
 		}else if(text != undefined){
+			var ttstext = text.split(".");
+			var voices = speechSynthesis.getVoices();
+			if(voices[0] != undefined){
 			if(ttsSettings == "true" && readVoice =="male") {	
-				var ttstext = text.split(".");
-				console.log(ttstext);
-				for(var i=0; i < ttstext.length; i++){
-					console.log(ttstext[i]);
-					var tts = new SpeechSynthesisUtterance(ttstext[i]);
-					var voices = speechSynthesis.getVoices();
-					tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
-					speechSynthesis.speak(tts);
+				for(var j=0; j < ttstext.length; j++){
+					var tts = new SpeechSynthesisUtterance(ttstext[j]);
+						tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+						speechSynthesis.speak(tts);
+						
 				}
 			}
 			if(ttsSettings == "true" && readVoice =="female") {	
-				var ttstext = text.split(".");
-				for(var i=0; i < ttstext.length; i++){
-					console.log(ttstext[i]);
-					var tts = new SpeechSynthesisUtterance(ttstext[i]);
-					var voices = speechSynthesis.getVoices();
+				for(var j=0; j < ttstext.length; j++){
+					var tts = new SpeechSynthesisUtterance(ttstext[j]);
 					tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 					speechSynthesis.speak(tts);
 				}
+			}
+			}else{
+				console.log("Could not load voices - Text2Speech disabled"); 
 			}
 		}
 		
@@ -1059,7 +1060,8 @@ function loadConversation() {
 		var dialogButton = $('.messageBoxB').eq(indexAB);
 		if (hrefB == undefined) {
 			i++;
-			if (i == hrefNumber) {
+
+			if (i == hrefNumber) {	
 				var nextButton = $('.buttonContainer');
 				nextButton.append('<div class="nextButton">NEXT</div>');
 				nextButton.linkbutton({});
@@ -1093,8 +1095,8 @@ function loadConversation() {
 			});
 		}
 	}
-
 	if (hrefNumber == "0") {
+		
 		var nextButton = $('.buttonContainer');
 
 		nextButton.append('<div class="nextButton">NEXT</div>');
@@ -1104,7 +1106,7 @@ function loadConversation() {
 		});
 		nextButton.bind('click', function() {
 			getXml(href);
-			// // speechSynthesis.cancel();
+			speechSynthesis.cancel();
 		});
 	}
 
