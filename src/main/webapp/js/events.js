@@ -948,99 +948,106 @@ function loadConversation() {
 		ttsSettings = getCookie("tts");
 
 		var text = $xml.find('messageBoxA').eq(indexAB).text();
-
-		// NEW LINE 657
 		var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
-
 		var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');
-		// text to speech for HTML5 support
-		if (ttsSettings == "true" && readVoice == "male"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Alex';
-			})[0];
-			// tts.voice = speechSynthesis.getVoices().filter(function(voice) {
-			// return voice.name == 'Alex'; });
-			speechSynthesis.speak(tts);
-		}
-		if (ttsSettings == "true" && readVoice == "female"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Samantha';
-			})[0];
-			speechSynthesis.speak(tts);
-		}
-
-		// google voice
+		
+		//text to speech for HTML5 support
 		/*
-		 * var audio = new Audio(); audio.src
-		 * ="http://www.translate.google.com/translate_tts?tl=en&q=" + text;
-		 * audio.play();
+		 * Philipp K.
+		 * 4.3.16
+		 * Updated TTS so it speaks every sentence as a single object. 
+		 * If Speech Syntehsis is undefined the user gets a console log
 		 */
+		if(window.SpeechSynthesisUtterance === undefined) {
+			console.log("Text to speech is not available");
+		}else {
+			if(ttsSettings == "true" && readVoice =="male") {	
+				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				for(var i=0; i < ttstext.length; i++){
+					console.log(ttstext[i]);
+					var tts = new SpeechSynthesisUtterance(ttstext[i]);
+					var voices = speechSynthesis.getVoices();
+					tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+					speechSynthesis.speak(tts);
+				}
+			}
+			if(ttsSettings == "true" && readVoice =="female") {	
+				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				for(var i=0; i < ttstext.length; i++){
+					console.log(ttstext[i]);
+					var tts = new SpeechSynthesisUtterance(ttstext[i]);
+					var voices = speechSynthesis.getVoices();
+					tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+					speechSynthesis.speak(tts);
+				}
+			}
+		}
 
 		var messageBoxContainer = $('.dialogBox');
-
-		messageBoxContainer
-				.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
+		
+		messageBoxContainer.append('<div class="bc messageBoxAContainer"><div class="messageBoxA bc"></div><div class="bc messageBoxATriangle"></div><div class="bc messageBoxATriangle2"></div></div>');
 		$('.messageBoxA').eq(indexAB).text(text);
+
 
 		// NEW LINE 672 - 681
 		var dialogButton = $('.messageBoxA').eq(indexAB);
-
-		if (href == undefined) {
-
-		} else {
-			dialogButton.linkbutton({
-				text : text
-			});
-			dialogButton.bind('click', function() {
-				getXml(href);
-				if (ttsSettings == "true"
-						&& typeof SpeechSynthesisUtterance !== 'undefined') {
-					speechSynthesis.cancel();
-				}
-			});
+	
+		if(href == undefined){
+				
+		}else{
+		dialogButton.linkbutton({
+			text:text
+		});
+		dialogButton.bind('click', function(){	
+		getXml(href);
+		if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+			speechSynthesis.cancel();
 		}
-	}
+		});	
+		} 
+	 }
 
-	function messageBoxB() {
-		// check for tts-cookie
-		var ttsSettings = "false";
-		ttsSettings = getCookie("tts");
-
+	function messageBoxB(){
+		//check for tts-cookie
+		var ttsSettings="false";
+		ttsSettings=getCookie("tts");
+		
 		var text = $xml.find('messageBoxB').eq(indexAB).text();
-		// NEW LINE 688
 		var hrefB = $xml.find('messageBoxB').eq(indexAB).attr('href');
-
 		var readVoice = $xml.find('messageBoxB').eq(indexAB).attr('voice');
-
-		// text to speech for HTML5 support
-		if (ttsSettings == "true" && readVoice == "male"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Alex';
-			})[0];
-
-			// tts.voice = speechSynthesis.getVoices().filter(function(voice) {
-			// return voice.name == 'Alex'; });
-			speechSynthesis.speak(tts);
+		
+		//Implementing TTS for message Box B
+		/*
+		 * Philipp K.
+		 * 4.3.16
+		 * Updated TTS so it speaks every sentence as a single object. 
+		 * If Speech Syntehsis is undefined the user gets a console log
+		 */
+		if(window.SpeechSynthesisUtterance === undefined) {
+			console.log("Text to speech is not available");
+		}else {
+			if(ttsSettings == "true" && readVoice =="male") {	
+				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				for(var i=0; i < ttstext.length; i++){
+					console.log(ttstext[i]);
+					var tts = new SpeechSynthesisUtterance(ttstext[i]);
+					var voices = speechSynthesis.getVoices();
+					tts.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+					speechSynthesis.speak(tts);
+				}
+			}
+			if(ttsSettings == "true" && readVoice =="female") {	
+				var ttstext = text.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+				for(var i=0; i < ttstext.length; i++){
+					console.log(ttstext[i]);
+					var tts = new SpeechSynthesisUtterance(ttstext[i]);
+					var voices = speechSynthesis.getVoices();
+					tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
+					speechSynthesis.speak(tts);
+				}
+			}
 		}
-		if (ttsSettings == "true" && readVoice == "female"
-				&& typeof SpeechSynthesisUtterance !== 'undefined') {
-			var tts = new SpeechSynthesisUtterance(text);
-			var voices = speechSynthesis.getVoices();
-			tts.voice = voices.filter(function(voice) {
-				return voice.name == 'Samantha';
-			})[0];
-			speechSynthesis.speak(tts);
-		}
-
+		
 		var messageBoxContainer = $('.dialogBox');
 		messageBoxContainer
 				.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
