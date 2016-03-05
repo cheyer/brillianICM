@@ -25,6 +25,16 @@ import java.util.regex.Pattern;
  * @version 1.0
  * 
  */
+/*
+ * Philipp K.
+ * 29.2.16
+ * Update new ProgressQuery so users start with 0,0,0 progress  
+ *
+ * 3.3.16
+ * Insert new setProgressQueryWithoutKPI so the user KPI's are not effected anymore
+ */
+
+
 public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
@@ -33,7 +43,7 @@ public class UserRealm extends JdbcRealm {
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
-	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,50,50,50,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
+	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,0,0,0,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
 
 	protected String deleteUserQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String deleteGroupQuery = "DELETE FROM `group` WHERE `group_id`=?";
@@ -44,6 +54,7 @@ public class UserRealm extends JdbcRealm {
 	protected String updateEmailQuery = "UPDATE `user`SET `email`=? WHERE `email`=?";
 	protected String updatePasswordQuery = "UPDATE `user`SET `password`=? WHERE `email`=?";
 	protected String setProgressQuery = "UPDATE `user_progress` SET `cost`=?, `quality`=?, `time`=?, `path`=? WHERE `user_id` = ?";
+	protected String setProgressQueryWithoutKPI = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setCountryTrueQuery = "UPDATE `user_progress` SET %%=true WHERE `user_id` = ?";
 	protected String resetCountriesQuery = "UPDATE `user_progress` SET l1=FALSE, l2=FALSE, l3=FALSE, l4=FALSE, l5=FALSE, l6=FALSE, l7=FALSE WHERE `user_id` = ?";
@@ -593,6 +604,28 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 
+	/*
+	 * Philipp K.
+	 * 3.3.16
+	 * New function to set the User progress without KPIs 
+	 */
+	public void setUserProgressWithoutKPI(String userid, String path) throws SQLException {
+		//TODO rename with correct parameter name according to database scheme #402
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		try {
+			ps = conn.prepareStatement(setProgressQueryWithoutKPI);
+			ps.setString(1, path);
+			ps.setString(2, userid);
+			ps.executeUpdate();
+			// System.out.println("executed the following statement on DB: " +
+			// setProgressQuery);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+	}
+	
 	public void setUserCountry(String userId, String gamepath) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
@@ -611,6 +644,7 @@ public class UserRealm extends JdbcRealm {
 		JdbcUtils.closeStatement(ps);
 		conn.close();
 	}
+	
 	public void resetUserCountry(String userid) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
@@ -897,15 +931,21 @@ public class UserRealm extends JdbcRealm {
 	 * @throws SQLException
 	 *             - returns a database access error
 	 */
+	/*
+	* Philipp K.
+	* 29.2.16
+	* Update so user start with 0,0,0 progress after reset
+	*/
 	public void resetUserProgress(String userEmail) throws SQLException {
 
 		String userid = getUserByEmail(userEmail);
-		setUserProgress(userid, 50, 50, 50, "l000e000");
+		setUserProgress(userid, 0, 0, 0, "l000e000");
 		resetUserCountry(userid);
 
 
 	}
-
+	/*end*/ 
+	
 	/**
 	 * 
 	 * gets the User Progress and checks whether the path ends with the ending

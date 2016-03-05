@@ -59,7 +59,20 @@
 		hideWorldmap();
 		hideScrollBar();
 		hideMatrixAllocationAlternate();
+		hideFactsheet();
+		/*
+		 *Christian Heyer
+		 *02.03.2016
+		 */
+		hideMapAllocation();
+		/* END */
 		
+		/*
+		 *Anastasia Reimer
+		 *03.03.2016
+		 */
+		hideAllocationFour();
+		/* END */
 		showLocation();
 if(id == lastEvent){
 			showResult();

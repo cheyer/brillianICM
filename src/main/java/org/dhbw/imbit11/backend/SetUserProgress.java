@@ -58,8 +58,13 @@ import org.apache.shiro.subject.Subject;
 		String url;		
 		
 		Subject subject = SecurityUtils.getSubject();
-		
-	if(subject.hasRole("professor")){
+	
+		/* 
+		 * Philipp K 
+		 * 5.3.16
+		 * Not needed in BrillianICM
+		 */
+ // 	if(subject.hasRole("professor")){
 			
 			//TODO: Validate and catch Integer to String conversion #403
 			String lvlId = request.getParameter("lvlId");
@@ -68,19 +73,20 @@ import org.apache.shiro.subject.Subject;
 			int time = new Integer(request.getParameter("time"));
 			int quality = new Integer(request.getParameter("quality"));
 			
+			
 			UserRealm realm = new UserRealm();
 			
 			try{ 
 				ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
 				for(String userid:users){
 				if(realm.getUserGenderByID(userid) == 0){
-				realm.setUserProgress(userid, cost, quality, time, lvlId);	
+				realm.setUserProgress(userid,cost,quality,time,lvlId);	
 				}
 				else{
 				String lvlIdShort = lvlId.substring(0, lvlId.length()-1);
 				char c =  '1';
 				String newlvlId = lvlIdShort + c;
-				realm.setUserProgress(userid, cost, quality, time, newlvlId);	
+				realm.setUserProgress(userid,cost,quality,time,newlvlId);	
 				}
 				
 				}
@@ -94,7 +100,12 @@ import org.apache.shiro.subject.Subject;
 			url = "/Professor";
 			
 			
-		}else{
+	/*
+	 * Philipp K.
+	 * 5.3.16
+	 * The following Code is not needed in BrillianICM because the user is not able to set its progress by its own 
+	 */
+	/*	}else{
 			String email;
 			String lvlId;
 			
@@ -114,7 +125,7 @@ import org.apache.shiro.subject.Subject;
 				e.printStackTrace();
 			}
 		
-		}
+		} */ 
 		
 		
 	    // forward the request and response to the view
