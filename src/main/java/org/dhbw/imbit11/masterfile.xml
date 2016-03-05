@@ -4405,6 +4405,9 @@
 
 <bgimg>CN_Abschied.jpg</bgimg>
 
+<option href="l399e999">To the End</option>
+<progressValue>100</progressValue>
+
 </event>
 
 <event loc="4" imtime="+10" imqual="+5" imcost="+10" eventtype="18" id="l300e239" element="0" level="300">
@@ -6180,6 +6183,9 @@
 <option href="l300e039">Start Quiz</option>
 
 <bgimg>CN_Abschied.jpg</bgimg>
+
+<option href="l399e999">To the End</option>
+<progressValue>100</progressValue>
 
 </event>
 
