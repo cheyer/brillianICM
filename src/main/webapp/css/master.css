@@ -1585,6 +1585,7 @@ a.link-factsheet {
 	width: 420px;
 	background: white;
 	border: 1px solid #2c3e50;
+	min-height: 50px;
 }
 
 /* END */
