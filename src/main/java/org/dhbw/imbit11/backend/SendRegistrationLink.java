@@ -37,7 +37,7 @@ import javax.servlet.annotation.WebServlet;
 		request.setAttribute("link", request.getParameter("link"));
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         
-        //dispatcher.forward(request, response); 
+        dispatcher.forward(request, response); 
 		  
 	}  	
 	
@@ -100,19 +100,20 @@ import javax.servlet.annotation.WebServlet;
 			//send the mail
 			MailClient mailclient = new MailClient();
 			mailclient.sendMail(toMail[i], "Registration Link brillianCRM", content, request);
-				
 			request.setAttribute("status", "Your e-mail was sent to the entered address.");
 			
 			//request.setAttribute("status", "Repeated password does not match.");
 				
-		     // forward the request and response to the view
-			request.setAttribute("link", request.getParameter("link"));
-	        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-	        
+			// forward the request and response to the view
+	       if (i==0){
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 	        dispatcher.forward(request, response);
+			request.setAttribute("link", request.getParameter("link"));
+	       }
 		
 		}
-		
+
+	
 	}   	  	    
 
 }
