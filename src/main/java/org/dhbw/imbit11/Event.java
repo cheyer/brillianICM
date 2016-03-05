@@ -101,6 +101,41 @@ public class Event extends HttpServlet {
 				}
 				break;
 			}
+			/*
+			 * Philipp K.
+			 * 5.3.16
+			 * Added Cases that handles the certification sending and resets the KPI to 0
+			 */
+			case "sendCertificate": {
+				/*
+				 * System.out.println("Space forcertifcate sendges ");
+				 */
+				UserRealm userRealm = new UserRealm();
+				try{
+					String email = userRealm.getUserEmailByID(userid);
+					userRealm.resetUserProgress(email);
+					
+				}catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 5.3.16
+			 * Added Cases that returns the email of the User with the given ID 
+			 */
+			case "getEmail": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					data += userRealm.getUserEmailByID(userid);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
 			default: response.sendError(HttpServletResponse.SC_NOT_FOUND);
 		}
 		response.getWriter().print(data);

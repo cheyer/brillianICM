@@ -53,8 +53,12 @@
 			</div>-->
 		
 		<div class="center" data-options="region:'center'" style="background-color: #d5edf3; height:100%">
-		
-			<h1>You completed the game!</h1>
+			<!-- 
+			Philipp K.
+			5.3.16
+			Added two div containers to add more dynamic content  
+			 Updated the text to better represent the game style-->
+			<h1>Congratulations<div id=name></div>You completed the game!</h1>
 			<h3>Check out how brilliant you have been:</h3>
 			<table>
 				<tr>
@@ -79,14 +83,14 @@
 				<tr>
 					<td colspan="2">
 						<p>
-							If you want to play again please press the button below. Be aware that this step cannot be undone!<br /><br />
-							<a class="btn btn-default" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Restart game and start from the beginning</a>
+							For your certification, please press the button below<br /><br />
+							<a class="btn btn-default" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Send Certificate and restart from the beginning</a>
 						</p>
 					</td>
 				</tr>
 			</table>
-			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
-				Are you sure you want to restart your game? This step cannot be undone!
+			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+				Your Certificate will be send to <div id=email></div>
 			</div>
 		</div>
 	
