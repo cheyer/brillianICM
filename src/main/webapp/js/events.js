@@ -1,6 +1,6 @@
 /*
  *Anastasia reimer
- *03.03.2016
+ *05.03.2016
  */
 //eventtype 30
 function loadAllocationFour() {
@@ -8,6 +8,8 @@ function loadAllocationFour() {
 	// XML auslesen
 	var href = $xml.find('nextevent').attr('href');
 	var title = $xml.find('title').text();
+	
+	loadBackground();
 
 	// location.jsp auslesen und xml text dort einsetzen
 	var container = $('.allocationContainerFour');
