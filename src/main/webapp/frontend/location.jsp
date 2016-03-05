@@ -607,7 +607,6 @@ top: 50%;-->">Please
 			<div class="row">
 				<div class="col-md-6">
 
-
 					<div id="mapContainer"
 						style="background-image: url('images/DE_SoccerMap.jpg')"></div>
 				</div>
@@ -616,13 +615,14 @@ top: 50%;-->">Please
 					<div id="src" class="target"></div>
 				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="buttonContainer">
-				<div id="continueButtonMapAllocation"
-					class="easyui-linkbutton allocationButton">Done</div>
+			<div class="row">
+				<div class="buttonContainer">
+					<div id="continueButtonMapAllocation"
+						class="easyui-linkbutton allocationButton">Done</div>
+				</div>
 			</div>
 		</div>
+
 	</div>
 
 

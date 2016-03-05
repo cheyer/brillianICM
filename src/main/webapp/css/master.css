@@ -1221,9 +1221,15 @@ keyframes blink { 0% {
 50%
 {
 background-color
+
+
 :
+
  
+
 #6699ff
+
+
 }
 }
 @
@@ -1234,9 +1240,15 @@ background-color
 50%
 {
 background-color
+
+
 :
+
  
+
 #6699ff
+
+
 }
 }
 .tabs-tool {
@@ -1501,7 +1513,7 @@ a.link-factsheet {
 	display: block;
 	width: 402px;
 	padding: 0;
-	border: 1px solid green;
+	border: 1px solid rgba(255, 255, 255, 0.4);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1520,47 +1532,59 @@ a.link-factsheet {
 	font-size: 15px;
 	letter-spacing: auto;
 	/*word-spacing: 2em;*/
-	border: solid 1px rgba(255, 255, 255, 0.9);
+	border: solid 1px rgba(255, 255, 255, 0.4);
 	overflow: hidden;
 	position: static;
 }
 
-#src > div.drag{
-    margin: 10px;
-}
-.dragsquare {
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    color: white;
-    background: #3498db;
-    position: static;
-    margin: 0;
-    /*display: inline-block;*/
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 40px; 
-    overflow: hidden;
-}
-.dragsquare.false{
-    border: 2px solid red;
+#src>div.dragsquare {
+	margin: 10px;
 }
 
-#itemDescription{
-    margin-top: 10px;
-    width: 420px;
-    border: 1px solid red;
-    min-height: 200px;
+.dragsquare {
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	color: white;
+	background: #3498db;
+	position: static;
+	margin: 0;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 40px;
+	overflow: hidden;
+	/* new for background */
+	background-position: center;
+	background-size: contain;
+	background-repeat: none;
+}
+
+.dragsquare.false {
+	/* overlay */
+	background-color: red;
+	background-blend-mode: multiply;
+}
+
+#itemDescription {
+	margin-top: 10px;
+	width: 420px;
+	background: white;
+	border: 1px solid #2c3e50;
+}
+#itemDescription>div.itemdescription{
+	margin: 10px;
+	text-align: left;
 }
 
 #src {
-    margin-top: 10px;
-    width: 420px;
-    border: 1px solid red;
-    min-height: 200px;
+	margin-top: 10px;
+	width: 420px;
+	background: white;
+	border: 1px solid #2c3e50;
 }
 
 /* END */
@@ -1581,9 +1605,11 @@ div.phaseTitleFour {
 	text-align: center;
 	border-right-width: 1px;
 }
+
 div.phaseContainerFour {
 	height: 280px;
 }
+
 div.phaseFour {
 	border-width: 1px;
 	width: 33%;
@@ -1598,6 +1624,7 @@ div.phaseFour {
 	overflow-y: auto;
 	padding-bottom: 5px;
 }
+
 div.draggableContainerFour {
 	border-width: 1px;
 	height: 99px !important;
