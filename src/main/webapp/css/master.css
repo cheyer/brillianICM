@@ -974,11 +974,12 @@ div.outerrightMessage {
 div.draggableTilesContainer, div.draggableTilesContainerAlternate {
 	border-width: 1px;
 	height: 135px !important;
-	width: 820px;
+	width: 656px; 	/*EDIT BY ADRIAN ON MAR 03,2016. Old: "width: 820px;"*/
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-left: 1px;
 	overflow-y: auto;
+	display: inline-block; /*EDIT BY ADRIAN ON MAR 03, 2016. Added attribute for centered drag-box*/
 }
 
 div.draggableTilesContainerStandard {
@@ -1016,9 +1017,9 @@ div.messageBox {
 /* tiles to be dragged and dropped*/
 div.dragTile {
 	float: center;
-	width: 147px;
-	height: 147px;
-	padding: 0 0 0 0px;
+	width: 157px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "width: 147px;"*/
+	height: 157px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "height: 147px;"*/
+	padding: 0 10px 10px 10px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "0 0 0 0px;"*/
 	vertical-align: baseline;
 	border-width: 1px;
 	overflow: hidden;
@@ -1027,7 +1028,7 @@ div.dragTile {
 	cursor: pointer !important;
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;
+	text-align: left; /* EDIT BY ADRIAN ON MAR 03, 3016. Old: "text-align: center;"*/
 	/* break line for different browsers*/
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
