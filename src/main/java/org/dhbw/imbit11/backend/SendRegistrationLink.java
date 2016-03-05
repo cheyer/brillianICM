@@ -37,7 +37,7 @@ import javax.servlet.annotation.WebServlet;
 		request.setAttribute("link", request.getParameter("link"));
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         
-        dispatcher.forward(request, response); 
+        //dispatcher.forward(request, response); 
 		  
 	}  	
 	
