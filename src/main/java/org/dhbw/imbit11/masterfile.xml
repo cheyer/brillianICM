@@ -9981,7 +9981,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<title>Emotional Entry Video</title>
 		<content>While your are flying to Madrid you can watch the following video</content>
 		<option href="l200e030">Skip video</option>
-		<bgvid>ES_MadridVideo .mp4</bgvid>
+		<bgvid>ES_MadridVideo.mp4</bgvid>
 	</event>
 	<!-- Ankunft am Flughafen -->
 	<event level="1" element="0" id="l200e030" eventtype="3" imcost="0"
@@ -10125,7 +10125,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxB voice="male" href="l200e095">I’m sorry but I would rather like to prepare for the meeting later. Thank you anyways! </messageBoxB>
 		<messageBoxB voice="male" href="l200e100">Yeah sure, that sounds great.</messageBoxB>
 		<messageBoxB voice="male" href="l200e105">I’m sorry but I don’t eat in between breakfast and lunch. </messageBoxB>
-		<bgimg>ES_empfangm.png</bgimg>
+		<bgimg>ES_empfangm.jpg</bgimg>
 	</event>
 	
 	<!-- ADVICES Einladung zur Bar -->
@@ -10423,7 +10423,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<event level="1" element="0" id="l200e265" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
-		<description> Evening at Tapas Bar</description>
+		<description>Evening at Tapas Bar</description>
 		<nextevent href="l200e270"/>
 		<bgimg>ES_tapas.jpg</bgimg>
 	</event>
@@ -10790,7 +10790,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<title>Emotional Entry Video</title>
 		<content>While your are flying to Madrid you can watch the following video</content>
 		<option href="l210e030">Skip video</option>
-		<bgvid>ES_MadridVideo .mp4</bgvid>
+		<bgvid>ES_MadridVideo.mp4</bgvid>
 	</event>
 	<!-- Ankunft am Flughafen -->
 	<event level="1" element="0" id="l210e030" eventtype="3" imcost="0"
