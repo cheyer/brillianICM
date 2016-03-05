@@ -2440,17 +2440,35 @@
 		<nextevent href="l110e052"/>
 		<bgimg>BR_hotel_m.jpg</bgimg>
 	</event>
-
-	<event level="1" element="5" id="l110e052" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
+	
+	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+	<!-- Removing the old 4 ears model (eventtype 27)-->
+	<!-- Start of line -->
+	<!--<event level="1" element="5" id="l110e052" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">-->
 		<!-- <title>Invitation by your colleague to pub night</title> -->
 		<!-- <description>Invitation by your colleague to pub night</description> -->
-		<option rank="1" fdesc="Self-revelation" description="I am disappointed that you don’t want to join.">1</option>
-		<option rank="2" fdesc="Relationship" description="I wanted to get to know you better.">2</option>
-		<option rank="3" fdesc="Appeal" description="Oh come on, join us!">3</option>
-		<option rank="4" fdesc="Factual Side" description="It is a pity but I accept that you do not come along.">4</option>
-		<nextevent href="l110e053"/>
+		<!--<option rank="1" fdesc="Self-revelation" description="I am disappointed that you don’t want to join.">1</option>-->
+		<!--<option rank="2" fdesc="Relationship" description="I wanted to get to know you better.">2</option>-->
+		<!--<option rank="3" fdesc="Appeal" description="Oh come on, join us!">3</option>-->
+		<!--<option rank="4" fdesc="Factual Side" description="It is a pity but I accept that you do not come along.">4</option>-->
+		<!--<nextevent href="l110e053"/>-->
+		<!--<bgimg>white.png</bgimg>-->
+	<!-- </event> -->
+	<!-- End of line -->
+	
+	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+	<!-- Adding the new 4 ears model (eventtype 21)-->
+	<!-- Start of line -->
+	<event level="1" element="5" id="l110e052" eventtype="21" imtime="0" imqual="0" imcost="0" loc="4">
+		<description>Invitation by your colleague to pub night</description>
+			<option rank="1" fdesc="Explanation">I am disappointed that you don’t want to join.</option>
+			<option rank="2" fdesc="Explanation">I wanted to get to know you better.</option>	
+			<option rank="3" fdesc="Explanation">Oh come on, join us!</option>
+			<option rank="4" fdesc="Explanation">It is a pity but I accept that you do not come along.</option>
 		<bgimg>white.png</bgimg>
+		<nextevent href="l110e053" />
 	</event>
+	<!-- End of line -->
 
 	<event level="1" element="6" id="l110e053" eventtype="24" imcost="+5" imqual="+10" imtime="+5" loc="4">
 		<description>Advice</description>
@@ -3238,18 +3256,36 @@
 		<nextevent href="l110e002"/>
 		<bgimg>BR_hotel_f.jpg</bgimg>
 	</event>
-
-	<event level="1" element="5" id="l110e002" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
+	
+	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+	<!-- Removing the old 4 ears model (eventtype 27)-->
+	<!-- Start of line -->
+	<!-- <event level="1" element="5" id="l110e002" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">-->
 		<!-- <title>Invitation by your colleague to pub night</title> -->
 		<!-- <description>Invitation by your colleague to pub night</description> -->
-		<option rank="1" fdesc="Self-revelation" description="I am disappointed that you don’t want to join.">1</option>
-		<option rank="2" fdesc="Relationship" description="I wanted to get to know you better.">2</option>
-		<option rank="3" fdesc="Appeal" description="Oh come on, join us!">3</option>
-		<option rank="4" fdesc="Factual Side" description="It is a pity but I accept that you do not come along.">4</option>
-		<nextevent href="l110e003"/>
-		<bgimg>white.png</bgimg>
-	</event>
+		<!-- <option rank="1" fdesc="Self-revelation" description="I am disappointed that you don’t want to join.">1</option>-->
+		<!-- <option rank="2" fdesc="Relationship" description="I wanted to get to know you better.">2</option>-->
+		<!-- <option rank="3" fdesc="Appeal" description="Oh come on, join us!">3</option>-->
+		<!-- <option rank="4" fdesc="Factual Side" description="It is a pity but I accept that you do not come along.">4</option>-->
+		<!-- <nextevent href="l110e003"/>-->
+		<!-- <bgimg>white.png</bgimg>-->
+	<!-- </event>-->
+	<!-- End of line -->
 
+	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+	<!-- Adding the new 4 ears model (eventtype 21)-->
+	<!-- Start of line -->
+	<event level="1" element="5" id="l110e002" eventtype="21" imtime="0" imqual="0" imcost="0" loc="4">
+		<description>Invitation by your colleague to pub night</description>
+			<option rank="1" fdesc="Explanation">I am disappointed that you don’t want to join.</option>
+			<option rank="2" fdesc="Explanation">I wanted to get to know you better.</option>	
+			<option rank="3" fdesc="Explanation">Oh come on, join us!</option>
+			<option rank="4" fdesc="Explanation">It is a pity but I accept that you do not come along.</option>
+		<bgimg>white.png</bgimg>
+		<nextevent href="l110e003" />
+	</event>
+	<!-- End of line -->	
+	
 	<event level="1" element="6" id="l110e003" eventtype="24" imcost="+5" imqual="+5" imtime="+10" loc="4">
 		<description>Advice</description>
 		<message>Correct! Brazilians value socializing a lot, so he will rather not be too happy about you refusing his well-meant offer.
@@ -4364,7 +4400,10 @@
 <!-- 4 OHREN MODELL!-->
 
 
-
+<!-- EDIT BY ADRIAN ON MAR 04, 2016 -->
+<!-- Removing the old 4 ears model -->
+<!-- Start of line -->
+<!--  
 -<event loc="4" imtime="+5" imqual="+10" imcost="+5" eventtype="21" id="l300e236" element="0" level="300">
 
 <title>Four Ear Model</title>
@@ -4384,7 +4423,23 @@
 <bgimg>CN_desk_earmodel.png</bgimg>
 
 </event>
+-->
+<!-- End of line -->
 
+<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+<!--  -->
+<!-- Start of line -->
+<event level="300" loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="21" id="l300e236">
+	<title>4-Ohren-Modell</title>
+	<description>Four Ear Model - Please assign the thoughts of the Project Manager to the corresponding field of the four ear model:</description>
+	<option rank="1" fdesc="Self-Revalation-Side">He is telling me that he is impatient and does not want anything to come into his way, so he can go back home as early as possible.</option>
+	<option rank="2" fdesc="Relationship">He thinks he is higher than me (hierarchically). I work for him and I am responsible for making his work here as smooth as possible.</option>
+	<option rank="3" fdesc="Appeal">He wants me to remind everyone to be on time and prepared for the meeting.</option>
+	<option rank="4" fdesc="Fact">He is simply asking whether the meeting is still on and he wants to work as efficiently as possible while he is here.</option>
+	<nextevent href="l300e237" />
+	<bgimg>white.png</bgimg>
+</event>
+<!-- End of line -->
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l300e237" element="0" level="300">
 
@@ -6144,7 +6199,10 @@
 <!-- 4 OHREN MODELL!-->
 
 
-
+<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
+<!-- Removing the old 4 ears model-->
+<!-- Start of line -->
+<!--  
 -<event loc="4" imtime="+5" imqual="+10" imcost="+5" eventtype="21" id="l300e036" element="0" level="300">
 
 <title>Four Ear Model</title>
@@ -6164,7 +6222,23 @@
 <bgimg>CN_desk_earmodel.png</bgimg>
 
 </event>
+-->
+<!-- End of line -->
 
+<!-- EDIT BY ADRIAN ON MAR 04, 2016 -->
+<!-- Adding the new 4 ears model-->
+<!-- Start of line -->
+<event level="300" loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="21" id="l300e036">
+	<title>4-Ohren-Modell</title>
+	<description>Four Ear Model - Please assign the phrases to the corresponding field of the four ear model:</description>
+	<option rank="1" fdesc="Self-Revalation-Side">He is telling me that he is impatient and does not want anything to come into his way, so he can go back home as early as possible.</option>
+	<option rank="2" fdesc="Relationship">He thinks he is higher than me (hierarchically). I work for him and I am responsible for making his work here as smooth as possible.</option>
+	<option rank="3" fdesc="Appeal">He wants me to remind everyone to be on time and prepared for the meeting.</option>
+	<option rank="4" fdesc="Fact">He is simply asking whether the meeting is still on and he wants to work as efficiently as possible while he is here.</option>
+	<nextevent href="l300e037" />
+	<bgimg>white.png</bgimg>
+</event>
+<!-- End of line -->
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l300e037" element="0" level="300">
 
@@ -12532,7 +12606,11 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxB voice="male" href="l561e006">Well, yes I do, but … </messageBoxB>
 		<bgimg>SE_apartment_3m.jpg</bgimg>
 	</event>
-
+	
+	<!-- EDIT BY MANH ON MAR 06, 2016 -->
+	<!-- Removing eventtype 27 -->
+	<!-- Start of line -->
+ 	<!--  
 	<event level="0" element="0" id="l561e006" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Self-revelation" description="I don't want to talk about princess Victoria.">1</option>
 		<option rank="2" fdesc="Relationship" description="This is not a topic I want to talk to you about.">2</option>
@@ -12540,6 +12618,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option rank="4" fdesc="Factual" description="Do you watch soccer?">4</option>
 		<nextevent href="l561e007"/>
 	</event>
+	-->
+	<!-- End of line -->
+	
+	<!-- EDIT BY MANH ON MAR 06, 2016 -->
+	<!-- Adding eventtype 21 -->
+	<!-- Start of line -->
+	<event level="0" element="0" id="l561e006" eventtype="21" imcost="0" imqual="0" imtime="0" loc="4">
+		<option rank="1" fdesc="Explanation">I don't want to talk about princess Victoria.</option>
+		<option rank="2" fdesc="Explanation">This is not a topic I want to talk to you about.</option>
+		<option rank="3" fdesc="Explanation">Let's change the subject.</option>
+		<option rank="4" fdesc="Explanation">Do you watch soccer?</option>
+		<nextevent href="l561e007"/>
+	</event>
+	<!-- End of line -->
 	
 	<event level="0" element="0" id="l561e007" eventtype="18" imcost="0" imqual="+10" intime="0" loc="4">
 		<title>Why did Pontus change the subject so quickly?</title>
@@ -13811,6 +13903,10 @@ In China it is highly important to show respect to your guest. With inviting you
 		<bgimg>SE_apartment_3w.jpg</bgimg>
 	</event>
 
+	<!-- EDIT BY MANH ON MAR 06, 2016 -->
+	<!-- Removing eventtype 27 -->
+	<!-- Start of line -->
+	<!--  
 	<event level="0" element="0" id="l562e006" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Self-revelation" description="I don't want to talk about princess Victoria.">1</option>
 		<option rank="2" fdesc="Relationship" description="This is not a topic I want to talk to you about.">2</option>
@@ -13818,6 +13914,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option rank="4" fdesc="Factual" description="Do you watch soccer?">4</option>
 		<nextevent href="l562e007"/>
 	</event>
+	-->
+	<!-- End of line -->
+	
+	<!-- EDIT BY MANH ON MAR 06, 2016 -->
+	<!-- Adding eventtype 21 -->
+	<!-- Start of line -->
+	<event level="0" element="0" id="l562e006" eventtype="21" imcost="0" imqual="0" imtime="0" loc="4">
+		<option rank="1" fdesc="Explanation">I don't want to talk about princess Victoria.</option>
+		<option rank="2" fdesc="Explanation">This is not a topic I want to talk to you about.</option>
+		<option rank="3" fdesc="Explanation">Let's change the subject.</option>
+		<option rank="4" fdesc="Explanation">Do you watch soccer?</option>
+		<nextevent href="l562e007"/>
+	</event>
+	<!-- End of line -->
 	
 	<event level="0" element="0" id="l562e007" eventtype="18" imcost="0" imqual="+10" intime="0" loc="4">
 		<title>Why did Pontus change the subject so quickly?</title>
