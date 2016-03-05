@@ -72,9 +72,10 @@ function changeSelect() {
 	   $('#logout').trigger('click');
 	   
    } else if (selectedValue=='Imprint')
-       
-	   window.location = "login.jsp#imprint";
-    
+	   
+	   // Letzte Änderung 05.03.16 von Tanja: Imprint Feld im Dropdown öffnet einen neuen Tab in dem die Imprint.jsp angezeigt wird.
+	   window.open ("frontend/imprint.jsp", "_blank");
+   
    }
    </script>	
 	
