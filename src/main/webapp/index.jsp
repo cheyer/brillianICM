@@ -14,7 +14,7 @@
 <script type="text/javascript" src="js/frameworks/bootstrap.min.js"></script>
 <!-- <script type="text/javascript" src="js/frameworks/jGravity-min.js"></script> -->
 <style type="text/css">
-.heart {
+.heart, #counter {
 	color: #E74C3C;
 }
 
@@ -58,6 +58,10 @@ body {
 	padding: 30px;
 }
 
+.card-image.hearty {
+	background-color: #e74c3c;
+}
+
 .card .card-image img {
 	border-radius: 2px 2px 0 0;
 	background-clip: padding-box;
@@ -91,10 +95,55 @@ body {
 #server-indicator {
 	cursor: pointer;
 }
+
+.heart-shape {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: #c0392b;
+}
+
+.heart-shape:before, .heart-shape:after {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: '';
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #c0392b;
+}
+
+.heart-shape:before {
+	bottom: 0px;
+	left: -10px;
+}
+
+.heart-shape:after {
+	top: -10px;
+	right: 0px;
+}
+
+#site {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	position: fixed;
+	overflow: hidden;
+}
 </style>
 </head>
 
 <body>
+	<div id="site">
+		<div id="heartZone"></div>
+	</div>
 	<div class="container">
 		<div class="page-header">
 			<h1>
@@ -203,8 +252,7 @@ body {
 						</div>
 					</div>
 				</div>
-			</a>
-			<a
+			</a> <a
 				href="http://ec2-54-191-39-238.us-west-2.compute.amazonaws.com:8080/"
 				target="_blank">
 				<div class="col-md-2 col-sm-3 ">
@@ -217,10 +265,7 @@ body {
 						</div>
 					</div>
 				</div>
-			</a>
-			
-			
-			 <a href="<%out.print(application.getContextPath());%>/Main">
+			</a> <a href="<%out.print(application.getContextPath());%>/Main">
 				<div class="col-md-2 col-sm-3 ">
 					<div class="card">
 						<div class="card-image">
@@ -245,48 +290,103 @@ body {
 	<footer class="footer ignoreMe">
 		<div class="container ignoreMe">
 			<p class="text-margin ignoreMe">
-				brillianICM 2016 - Development Console - {{version}} - 20.02.2016 -
-				developed with <span id="easter-heart" class="heart">♥</span> in
-				Mannheim
+				brillianICM 2016 - Development Console - 4.0.0 - 06.03.2016 -
+				developed with <span id="counter"></span> <span id="easter-heart"
+					class="heart">♥</span> in Mannheim
 			</p>
 		</div>
 	</footer>
 	<script>
-        $(document).ready(function () {
-            function checkServerStatus(url) {
-                var online = false;
-                var script = document.body.appendChild(document.createElement("script"));
-                script.onload = function () {
-                    console.log(url + " is online");
-                    $('#server-indicator').removeClass('label-default');
-                    $('#server-indicator').addClass('label-success');
-                    $('#server-indicator').html("Running");
-                };
-                script.onerror = function () {
-                    console.log(url + " is offline");
-                    $('#server-indicator').removeClass('label-default');
-                    $('#server-indicator').addClass('label-danger');
-                    $('#server-indicator').html("Error");
-                };
-                script.src = url;
-                return online;
-            }
+		$(document)
+				.ready(
+						function() {
+							var counter = 0;
+							function checkServerStatus(url) {
+								var online = false;
+								var script = document.body.appendChild(document
+										.createElement("script"));
+								script.onload = function() {
+									console.log(url + " is online");
+									$('#server-indicator').removeClass(
+											'label-default');
+									$('#server-indicator').addClass(
+											'label-success');
+									$('#server-indicator').html("Running");
+								};
+								script.onerror = function() {
+									console.log(url + " is offline");
+									$('#server-indicator').removeClass(
+											'label-default');
+									$('#server-indicator').addClass(
+											'label-danger');
+									$('#server-indicator').html("Error");
+								};
+								script.src = url;
+								return online;
+							}
 
-            var prodServer = "https://www.brillianicm.com/";
-            setTimeout(checkServerStatus(prodServer), 1500);
-            $('#easter-heart').click(function(){
-            	console.log("clicked heart");
-            	/*
-            	$('body').jGravity({
-                    target: 'everything',
-                    ignoreClass: 'ignoreMe',
-                    weight: 25,
-                    depth: 2,
-                    drag: true
-               });*/
-            });
-        });
-    </script>
+							var prodServer = "https://www.brillianicm.com/";
+							setTimeout(checkServerStatus(prodServer), 1500);
+							$('#easter-heart').click(function() {
+								counter++;
+								$('#counter').html(counter);
+								if (counter == 2) {
+									$('#easter-heart').append("s");
+								}
+								if (counter == 10) {
+									fallingHearts();
+									$('.card-image').addClass('hearty');
+									//$('.row').html("");
+								}
+
+								/*
+								$('body').jGravity({
+								    target: 'everything',
+								    ignoreClass: 'ignoreMe',
+								    weight: 25,
+								    depth: 2,
+								    drag: true
+								});*/
+							});
+							function fallingHearts() {
+
+								var $hearts = $(), qt = Math.floor((Math
+										.random() * 100) + 1);
+								;
+
+								for (var i = 0; i < qt; ++i) {
+									var $heart = $('<div class="heart-shape"></div>');
+									$heart.css({
+										'left' : (Math.random() * $('#site')
+												.width())
+												+ 'px',
+										'top' : (-Math.random() * $('#site')
+												.height())
+												+ 'px'
+									});
+									// add this heart to the set of hearts
+									$hearts = $hearts.add($heart);
+									counter++;
+									$('#counter').html(counter);
+									$('#server-indicator').html(
+											counter + " fallen ♥s");
+								}
+
+								$('#heartZone').prepend($hearts);
+
+								$hearts.animate({
+									top : "500px",
+									opacity : "0",
+								}, Math.random() + 5000, function() {
+									$(this).remove();
+									// run again when all 100 hearts hit the floor
+									if (--qt < 1) {
+										fallingHearts();
+									}
+								});
+							}
+						});
+	</script>
 </body>
 
 </html>
