@@ -89,8 +89,8 @@ import javax.servlet.annotation.WebServlet;
 		 * Send the registration mail seperated to every mail address provided
 
 		 */
-	  
-		for (int i=0; i<=101; i++){
+	    
+		for (int i=0; i<toMail.length; i++){
 			
 			
 			//email without using HTML
@@ -109,6 +109,7 @@ import javax.servlet.annotation.WebServlet;
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
 	        dispatcher.forward(request, response);
 			request.setAttribute("link", request.getParameter("link"));
+			
 	       }
 		
 		}
