@@ -532,11 +532,72 @@ function showResult() {
 			audiosetting=getCookie("audio");
 			if (audiosetting == "true") {
 			audioElement.play();	}*/
+			/*
+			 * Philipp K. 
+			 * 5.3.16
+			 * Added ajax to import game date so the result page can use dynamic content 
+			 * First function added the name of the User and makes the 
+			 */
+			$.ajax({
+				url: 'Event',
+				type: 'get',
+				dataType: 'html',
+				data: {userid : userid, type : 'loadGame'},
+				async: true,
+				success: function(data) {
+					try{
+						var list = data.split("[")[1].split(']')[0].split(', ');
+										
+						lastName = list[0];
+						firstName = list[1];
+						gender = list[2];
+						imcost = list[3];
+						imqual = list[4];
+						imtime = list[5];	
+						gamePath = list[6];
+						idArray = gamePath.split(';');
+						id = idArray[idArray.length-1];
+						setTCQImages(imtime, imcost, imqual);
 
-			document.getElementById("cost").innerHTML = "100%";
-			document.getElementById("time").innerHTML = "100%";
-			document.getElementById("quality").innerHTML = "100%";
+					}catch(err){
+						lastName = 'Mustermann';
+						firstName = 'Max';
+						gender = '1';
+						imcost = '100';
+						imqual = '100';
+						imtime = '100';				
+						gamePath = $.getUrlVar('gamePath');
+						if(typeof gamePath == 'undefined'){
+							gamePath = 'l000e000';
+						}
+						idArray = gamePath.split(';');
+						id = idArray[idArray.length-1];
+						
 
+					}
+					document.getElementById("name").innerHTML = firstName + " " + lastName;
+					document.getElementById("cost").innerHTML = " " + imcost + "%";
+					document.getElementById("time").innerHTML = " " + imtime + "%";
+					document.getElementById("quality").innerHTML = " " + imqual + "%";
+				} 
+			});
+
+			$.ajax({
+				url: 'Event',
+				type: 'get',
+				dataType: 'html',
+				data: {userid : userid, type : 'getEmail'},
+				async: true,
+				success: function(data) {
+					try{
+						user_email = data;
+
+					}catch(err){
+						user_email = "";
+					}
+					document.getElementById("email").innerHTML = user_email;
+				}
+			});	
 			$(this).find('#imprint').bind('click', function() {
 				showImprint();
 			});
@@ -544,7 +605,6 @@ function showResult() {
 			$(this).find('#help').bind('click', function() {
 				showPdf('documents/BA_notizblock.pdf');
 			});
-
 			$(this).find('#logout').bind('click', function() {
 				sessionStorage.removeItem('userid');
 				window.location.href = 'LogoutUser';
