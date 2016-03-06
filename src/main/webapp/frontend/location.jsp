@@ -523,8 +523,21 @@ top: 50%;-->">Please
 				<img id="sideimg3" src="" class="img-factsheet2" alt="Frau mit Tütü">
 			</p>
 		</div>
+		
+		<!-- EDIT BY MARVIN ON MAR 6, 2016 -->
+		<!-- Place this div into an anchor -->
+		<!-- Start of line -->
+		<!-- <div id="titletext" class="title-factsheet"></div> -->
+		<!-- End of line  -->
 
-		<div id="titletext" class="title-factsheet"></div>
+		<!-- EDIT BY MARVIN ON MAR 6, 2016 -->
+		<!-- Wrap anchor around div (id:titletext) for map link on country name -->
+		<!-- Start of line -->
+		<a id = "showMap">
+			<div id="titletext" class="title-factsheet"></div>
+		</a>
+		<!-- End of line -->
+		
 		<img id="flag" src="" class="img-factsheet1" alt="BR_flag">
 
 		<div>

@@ -311,6 +311,13 @@
 		<sideimg1>DE_facts_img1.jpg</sideimg1>
 		<sideimg2>DE_facts_img2.jpg</sideimg2>
 		<sideimg3>DE_facts_img3.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Germany&amp;ll=51.0851254,5.9679745&amp;sll=51.0851254,5.9679745&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l700e206"/>
 	</event>
 
@@ -1449,6 +1456,13 @@
 		<sideimg1>DE_facts_img1.jpg</sideimg1>
 		<sideimg2>DE_facts_img2.jpg</sideimg2>
 		<sideimg3>DE_facts_img3.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Germany&amp;ll=51.0851254,5.9679745&amp;sll=51.0851254,5.9679745&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l700e205"/>
 	</event>
 
@@ -2306,6 +2320,13 @@
 		<sideimg1>BR_jesus_02.jpg</sideimg1>
 		<sideimg2>BR_pele_02.jpg</sideimg2>
 		<sideimg3>BR_frau_02.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Brazil&amp;ll=-11.441572,-52.248184&amp;sll=-11.441572,-52.248184&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l100e050"/>
 		<progressValue>0</progressValue>
 	</event>
@@ -3122,6 +3143,13 @@
 		<sideimg1>BR_jesus_02.jpg</sideimg1>
 		<sideimg2>BR_pele_02.jpg</sideimg2>
 		<sideimg3>BR_frau_02.jpg</sideimg3>
+
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Brazil&amp;ll=-11.441572,-52.248184&amp;sll=-11.441572,-52.248184&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l100e010"/>
 		<progressValue>0</progressValue>
 	</event>
@@ -3946,6 +3974,12 @@
 <sideimg2>CN_factsheet2.jpg</sideimg2>
 
 <sideimg3>CN_factsheet3.jpg</sideimg3>
+
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=China&amp;ll=37.515810,101.104759&amp;sll=37.515810,101.104759&amp;z=4&amp;t=k</maplink>
+		<!-- End of line -->
 
 <nextevent href="l300e201"/>
 <progressValue>0</progressValue>
@@ -5708,6 +5742,12 @@
 <sideimg2>CN_factsheet2.jpg</sideimg2>
 
 <sideimg3>CN_factsheet3.jpg</sideimg3>
+
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=China&amp;ll=37.515810,101.104759&amp;sll=37.515810,101.104759&amp;z=4&amp;t=k</maplink>
+		<!-- End of line -->
 
 <nextevent href="l300e101"/>
 <progressValue>0</progressValue>
@@ -7487,7 +7527,14 @@ In China it is highly important to show respect to your guest. With inviting you
 	<sideimg1>IN_TajMahalFact.png</sideimg1>
 	<sideimg2>IN_Ghandi.png</sideimg2>
 	<sideimg3>IN_Cricket.png</sideimg3>
+	
+	<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+	<!-- Map link für Kartenfunktion -->
+	<!-- Start of line -->
+	<maplink>http://maps.apple.com/?q=India&amp;ll=20.9125665,73.7492666&amp;sll=20.9125665,73.7492666&amp;z=5&amp;t=k</maplink>
+	<!-- End of line -->
 	<nextevent href="l601e004"/>	
+	
 	<progressValue>0</progressValue>
 	</event>
 
@@ -7552,7 +7599,14 @@ In China it is highly important to show respect to your guest. With inviting you
 	<sideimg1>IN_TajMahalFact.png</sideimg1>
 	<sideimg2>IN_Ghandi.png</sideimg2>
 	<sideimg3>IN_Cricket.png</sideimg3>
+	
+	<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+	<!-- Map link für Kartenfunktion -->
+	<!-- Start of line -->
+	<maplink>http://maps.apple.com/?q=India&amp;ll=20.9125665,73.7492666&amp;sll=20.9125665,73.7492666&amp;z=5&amp;t=k</maplink>
+	<!-- End of line -->
 	<nextevent href="l601e103"/>
+	
 	<progressValue>0</progressValue>
 </event>
 
@@ -10017,6 +10071,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>ES_bullfight.jpg</sideimg1>
 		<sideimg2>ES_SpainTeamFootball.jpg</sideimg2>
 		<sideimg3>ES_penelopecruz.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Spain&amp;ll=40.1301072,-8.2031357&amp;sll=40.1301072,-8.2031357&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l200e005" />
 		<progressValue>0</progressValue>
 	</event>
@@ -10827,6 +10888,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>ES_bullfight.jpg</sideimg1>
 		<sideimg2>ES_SpainTeamFootball.jpg</sideimg2>
 		<sideimg3>ES_penelopecruz.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Spain&amp;ll=40.1301072,-8.2031357&amp;sll=40.1301072,-8.2031357&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l210e005" />
 	</event>
 	
@@ -11647,6 +11715,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>SE_fs_Hockey.jpg</sideimg1>
 		<sideimg2>SE_fs_RedHouse.jpg</sideimg2>
 		<sideimg3>SE_fs_Stockholm.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Sweden&amp;ll=61.787021,15.509393&amp;sll=61.787021,15.509393&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l501e001"/>
 		<progressValue>0</progressValue>
 	</event>
@@ -12943,6 +13018,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>SE_fs_Hockey.jpg</sideimg1>
 		<sideimg2>SE_fs_RedHouse.jpg</sideimg2>
 		<sideimg3>SE_fs_Stockholm.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Sweden&amp;ll=61.787021,15.509393&amp;sll=61.787021,15.509393&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l502e001"/>
 		<progressValue>0</progressValue>
 	</event>
@@ -14262,6 +14344,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>US_400000.jpg</sideimg1>
 		<sideimg2>US_Superbowl.jpg</sideimg2>
 		<sideimg3>US_San_Fran.jpg</sideimg3>
+
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=USA&amp;ll=37.762925,-103.524195&amp;sll=37.762925,-103.524195&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+
 		<nextevent href="l433e003"/>
 	</event> 
 	
@@ -15777,6 +15866,13 @@ about not or at least giving fewer tips than usual.
 		<sideimg1>US_400000.jpg</sideimg1>
 		<sideimg2>US_Superbowl.jpg</sideimg2>
 		<sideimg3>US_San_Fran.jpg</sideimg3>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=USA&amp;ll=37.762925,-103.524195&amp;sll=37.762925,-103.524195&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l483e003"/>
 	</event> 
 
@@ -17289,6 +17385,13 @@ about not or at least giving fewer tips than usual.
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
 			<progressValue>0</progressValue>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 			<nextevent href="l800e006"/>
 			</event>
 
@@ -18363,6 +18466,13 @@ about not or at least giving fewer tips than usual.
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
 			<progressValue>0</progressValue>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
 			<nextevent href="l800e005"/>
 		</event>
 	      
@@ -19434,6 +19544,13 @@ about not or at least giving fewer tips than usual.
 		<sideimg2>AU_facts_img2.jpg</sideimg2>
 		<sideimg3>AU_facts_img3.jpg</sideimg3>
 		<progressValue>0</progressValue>
+
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Australia&amp;ll=-25.2431378,120.0671503&amp;sll=-25.2431378,120.0671503&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+
 		<nextevent href="l900e006"/>
 	</event>
 	
@@ -20414,6 +20531,13 @@ about not or at least giving fewer tips than usual.
 		<sideimg2>AU_facts_img2.jpg</sideimg2>
 		<sideimg3>AU_facts_img3.jpg</sideimg3>
 		<progressValue>0</progressValue>
+		
+		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+		<!-- Map link für Kartenfunktion -->
+		<!-- Start of line -->
+		<maplink>http://maps.apple.com/?q=Australia&amp;ll=-25.2431378,120.0671503&amp;sll=-25.2431378,120.0671503&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
 		<nextevent href="l900e005"/>
 	</event>
 		

@@ -1638,3 +1638,32 @@ div.draggableContainerFour {
 	overflow-y: scroll;
 }
 /*End*/
+
+
+/* EDIT BY MARVIN ON MAR 05, 2016*/
+/* Pulse titletext and flag in factsheet when loaded to make user aware of links */
+/* Start of line*/
+#flag, #titletext{
+       animation: scale 1s 1 alternate;
+}
+
+#titletext{
+	animation-delay: 1s;
+}
+#flag{
+	animation-delay: 2.3s;
+}
+
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+    }
+  50% {
+    transform: scale(1.33);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* End of line */

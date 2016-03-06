@@ -1114,3 +1114,15 @@ function fields() {
     return Shake;
 }));
 /* End of line */
+
+
+/* EDIT BY MARVIN ON MAR 5, 2016*/
+/* Lade Kartendienstlinks aus XML und gebe sie dem anchor Tag im location jsp als href mit. target: _blank oeffnet Link in neumen Tab Funktion wird in events.jsp aufgerufen */
+/* Start of line */
+function titlePressed(){
+	var aCountrymap = document.getElementById("showMap");
+	var mapLinkXML =  $xml.find('maplink').text();
+	aCountrymap.setAttribute("href", mapLinkXML);
+	aCountrymap.setAttribute("target", "_blank");
+}
+/* End of line */

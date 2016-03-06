@@ -350,6 +350,12 @@ function loadFactsheet() {
 	continueButton.bind('click', function() {
 		getXml(href);
 	});
+	
+	/* EDIT BY MARVIN ON MAR 5, 2016 */
+	/* titlePressed() aus master.js, wird aufgerufen fuer Kartendienst */
+	/* Start of line */
+	titlePressed();
+	/* End of line */
 
 	showFactsheet();
 }
