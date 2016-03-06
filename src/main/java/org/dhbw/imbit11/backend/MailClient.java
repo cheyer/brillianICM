@@ -49,7 +49,6 @@ public class MailClient extends HttpServlet
 	 	/*added by Christopher Krah on 2016-03-03*/
 	 	public void sendCertificateMail(String username, String useremail, int score1, int score2, int score3, String completedCountry, HttpServletRequest request){
 	 		ServletContext sc = request.getServletContext();
-	 		System.out.println("Test");
 	 		Properties props = new Properties();
 	 		props.put("mail.smtp.auth", sc.getInitParameter("smtpauth"));
 			props.put("mail.smtp.starttls.enable", sc.getInitParameter("smtptls"));
@@ -59,8 +58,6 @@ public class MailClient extends HttpServlet
 	 		final String mailusername = sc.getInitParameter("mailuser");
 	 		final String mailpassword = sc.getInitParameter("mailpw");
 	 		
-	 		System.out.println(mailusername);
-	 		System.out.println(mailpassword);
 	 		
 	 		Session session = Session.getInstance(props,
 	 				  new javax.mail.Authenticator() {
@@ -102,7 +99,7 @@ public class MailClient extends HttpServlet
 	             
 	            //send the email
 	            Transport.send(mimeMessage);
-	            System.out.println("MEssage SEND");
+	            System.out.println("Certificate Send");
 	                   
 	        } catch(Exception ex) {
 	            ex.printStackTrace();

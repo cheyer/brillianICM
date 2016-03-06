@@ -188,7 +188,6 @@ public class PDFCreator extends HttpServlet {
 		printc(PDFWriter, "/Filter [/ASCIIHexDecode /DCTDecode]\n");
 //		printc(PDFWriter, "/DecodeParms [null << /Predictor 15 /Colors 3 /BitsPerComponent 8 /Columns 800 >>]\n");
 		printc(PDFWriter, "/Length "+(calculatedContentLength-18));
-		System.out.println(calculatedContentLength);
 		printc(PDFWriter, "\n>>\n");
 		printc(PDFWriter, ToBeStreamed);
 		printc(PDFWriter, "endobj\n");
@@ -211,7 +210,6 @@ public class PDFCreator extends HttpServlet {
 		printc(PDFWriter, "/Filter [/ASCIIHexDecode /DCTDecode]\n");
 //		printc(PDFWriter, "/DecodeParms [null << /Predictor 15 /Colors 3 /BitsPerComponent 8 /Columns 800 >>]\n");
 		printc(PDFWriter, "/Length "+(calculatedContentLength-18));
-		System.out.println(calculatedContentLength);
 		printc(PDFWriter, "\n>>\n");
 		printc(PDFWriter, ToBeStreamed);
 		printc(PDFWriter, "endobj\n");
@@ -234,7 +232,6 @@ public class PDFCreator extends HttpServlet {
 		printc(PDFWriter, "/Filter [/ASCIIHexDecode /DCTDecode]\n");
 //		printc(PDFWriter, "/DecodeParms [null << /Predictor 15 /Colors 3 /BitsPerComponent 8 /Columns 800 >>]\n");
 		printc(PDFWriter, "/Length "+(calculatedContentLength-18));
-		System.out.println(calculatedContentLength);
 		printc(PDFWriter, "\n>>\n");
 		printc(PDFWriter, ToBeStreamed);
 		printc(PDFWriter, "endobj\n");
@@ -257,7 +254,6 @@ public class PDFCreator extends HttpServlet {
 		printc(PDFWriter, "/Filter [/ASCIIHexDecode /DCTDecode]\n");
 //		printc(PDFWriter, "/DecodeParms [null << /Predictor 15 /Colors 3 /BitsPerComponent 8 /Columns 800 >>]\n");
 		printc(PDFWriter, "/Length "+(calculatedContentLength-18));
-		System.out.println(calculatedContentLength);
 		printc(PDFWriter, "\n>>\n");
 		printc(PDFWriter, ToBeStreamed);
 		printc(PDFWriter, "endobj\n");
