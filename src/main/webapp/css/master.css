@@ -1640,30 +1640,28 @@ div.draggableContainerFour {
 /*End*/
 
 
-/* EDIT BY MARVIN ON MAR 05, 2016*/
-/* Pulse titletext and flag in factsheet when loaded to make user aware of links */
-/* Start of line*/
-#flag, #titletext{
-       animation: scale 1s 1 alternate;
+/* EDIT BY MANH ON MAR 6, 2016 */
+/* Modified the animation of Marvin in order to display the effect on mobile devices*/
+@-webkit-keyframes scale {
+    0% {-webkit-transform: scale(1);}
+    50% {-webkit-transform: scale(1.33);}
+    100% {-webkit-transform: scale(1);}
 }
 
-#titletext{
-	animation-delay: 1s;
-}
-#flag{
-	animation-delay: 2.3s;
+#titletext {
+    -webkit-animation-name: scale;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 1s;
 }
 
-
-@keyframes scale {
-  0% {
-    transform: scale(1);
-    }
-  50% {
-    transform: scale(1.33);
-  }
-  100% {
-    transform: scale(1);
-  }
+#flag {
+    -webkit-animation-name: scale;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 2.3s;
+ 	
+ 	cursor: pointer;   
 }
-/* End of line */
+
+/* END OF LINE */
