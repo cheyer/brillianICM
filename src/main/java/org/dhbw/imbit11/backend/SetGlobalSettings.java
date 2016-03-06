@@ -2,6 +2,8 @@ package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -86,7 +88,16 @@ import javax.servlet.http.HttpServletResponse;
 			
 			}
 		
-		
+			UserRealm userRealm = new UserRealm();
+			;
+			try {
+				ArrayList<ArrayList<String>> professors = userRealm.getProfessors();
+				request.setAttribute("professors", professors);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+			}		
 	    // forward the request and response to the view
         RequestDispatcher dispatcher =
              getServletContext().getRequestDispatcher(url);

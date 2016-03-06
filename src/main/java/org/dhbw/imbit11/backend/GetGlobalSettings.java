@@ -101,6 +101,16 @@ import org.apache.shiro.subject.Subject;
 		request.setAttribute("subtitles", d);
 		
 		
+		UserRealm userRealm = new UserRealm();
+		;
+		try {
+			ArrayList<ArrayList<String>> professors = userRealm.getProfessors();
+			request.setAttribute("professors", professors);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}		
 	    // forward the request and response to the view
         RequestDispatcher dispatcher =
              getServletContext().getRequestDispatcher(url);
