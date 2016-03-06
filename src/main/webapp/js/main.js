@@ -26,10 +26,20 @@
 		var eventtype = $xml.find('event').attr('eventtype');
 		var loc = $xml.find('event').attr('loc');
 		var level = $xml.find('event').attr('level');
+		
+		/* EDIT BY CHRIS ON FEB 27, 2016*/
+		/* Reading the progress value from masterfile.xml*/
+		/*Start of line*/
+		getProgress();
+		/*End of line*/
 	
 		// Display background-image
-			$('.mainWindow').css('background-image', 'url(images/background/'+level+'.png)');
-			$('.mainWindow').show();
+		/* EDIT BY JONAS ON FEB 27, 2016 */
+		/* Removing the following line of code since it causes errors */
+		/* Start of line*/
+		//$('.mainWindow').css('background-image', 'url(images/background/'+level+'.png)');
+		/* End of line*/
+		$('.mainWindow').show();
 		
 		//Wird nur beim ersten Mal zu Beginn des Spiels ausgef�hrt (Get Name and set Level etc.)
 		if (firstFlag == false){			
@@ -255,3 +265,29 @@ $(document).ready(function(){
 		});
 	}		
 });
+
+
+//EDIT BY CHRIS ON FEB 27, 2016
+//Get the defined progress value from the XML
+//START OF LINE
+function getProgress() {
+	if ($xml.find('progressValue').text() != '' ) {
+		if ($xml.find('progressValue').text() == '0' ) {	
+			progressValue = 0;	// Indicate new progress value "0%"
+			tick();
+		} else if ($xml.find('progressValue').text() == '25' ) {
+			progressValue = 25;	// Indicate new progress value "25%"
+			tick();
+		} else if ($xml.find('progressValue').text() == '50' ) {
+			progressValue = 50; 	// Indicate new progress value "50%"
+			tick();
+		} else if ($xml.find('progressValue').text() == '75' ) {		
+			progressValue = 75;  // Indicate new progress value "75%"
+			tick();
+		} else if 	($xml.find('progressValue').text() == '100' ) {		
+			progressValue = 100; 	// Indicate new progress value "100%"
+			tick();
+		}	
+	}
+}
+//END OF LINE
