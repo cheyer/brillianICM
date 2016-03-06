@@ -2366,7 +2366,7 @@
 		<natholiday>September 7th, Independence Day</natholiday>
 		<natsport>Soccer</natsport>
 		<uheardof>Pelé (world's most popular soccer player)</uheardof>
-		<diduknow>that Brazil is … countries</diduknow>
+		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
 		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
 		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/br.html</infolink>
 		<titleimg>BR_flag_02.jpg</titleimg>
@@ -9191,7 +9191,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxA href="l650e001" voice="male">Bharat, you assured me that everything is going fine with the negotiation of the commodity prices for the upcoming fiscal year! According to what you said, I proceed on the assumption that the prices will remain stable. So, how do you explain that they have reduplicated?</messageBoxA>
 		<messageBoxA href="l650e002" voice="male">Should I really say that or better write an e-mail and ask for a meeting?</messageBoxA>
 		<messageBoxA href="l650e003" voice="male">Or maybe I should talk to him after the next meeting?</messageBoxA>
-		<bgimg>IN_Call_Bharat_Mann.png</bgimg>
+		<bgimg>IN_Call_Bharat_Mann_rechts.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l650e001" eventtype="23" imcost="-5" imqual="-5" imtime="-5" loc="4">
@@ -20037,7 +20037,7 @@ about not or at least giving fewer tips than usual.
 	<event level="1" element="3" id="l901e021" eventtype="24" imcost="0" imqual="-6" imtime="-9" loc="4">
 		<description>Advice</description>
 		<message>Australians do not separate much between personal and work life and it is appropriate to talk about the personal life with colleagues. 
-				James will feel offended if you are not going to talk with him about it."</message>
+				James will feel offended if you are not going to talk with him about it.</message>
 		<nextevent href="l902e001"/>
 		<bgimg>AU_advice.jpg</bgimg>
 	</event>
@@ -21051,7 +21051,7 @@ about not or at least giving fewer tips than usual.
 	<event level="1" element="3" id="l901e020" eventtype="24" imcost="0" imqual="-6" imtime="-9" loc="4">
 		<description>Advice</description>
 		<message>Australians do not separate much between personal and work life and it is appropriate to talk about the personal life with colleagues. 
-				James will feel offended if you are not going to talk with him about it."</message>
+				James will feel offended if you are not going to talk with him about it.</message>
 		<nextevent href="l902e000"/>
 		<bgimg>AU_advice.jpg</bgimg>
 	</event>
