@@ -1,6 +1,7 @@
 package org.dhbw.imbit11.backend;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -55,14 +56,16 @@ public class SendCertificate extends HttpServlet {
 		
 		
 	
-		String url;		
+		String url= "/Professor";
 		String group_id = request.getParameter("group_id");
 		String group_name = request.getParameter("group_name");
 
 		String data = "";
+		char countryID;
 		ArrayList<Object> list = null;
 		
 		UserRealm realm = new UserRealm();
+		MailClient mailclient = new MailClient();
 		
 		try{ 
 			ArrayList<String> users = realm.getUserIdsByGroupId(group_id);
@@ -70,30 +73,52 @@ public class SendCertificate extends HttpServlet {
 				String email = realm.getUserEmailByID(userid);
 				list = realm.getUserProgress(userid);
 				
-				System.out.println("Certificate is send to User with Email " +email);
-				System.out.println("Firstname: " + list.get(1));
-				System.out.println("Lastname: " + list.get(0));
-				System.out.println("Gender: " + list.get(2));
-				System.out.println("cost: " + list.get(3));
-				System.out.println("quality: " + list.get(4));
-				System.out.println("time: " + list.get(5));
-			
+				String lastName =  (String) list.get(0);
+				String firstName = (String) list.get(1);
+				int imcost = (int) list.get(3);
+				int imqual = (int) list.get(4);
+				int imtime = (int) list.get(5);
+				
+				
+				String path = (String) list.get(6);
+				String[] arr = path.split(";");
+				if(arr[arr.length-1]!="l000e000"){
+				if(arr[arr.length-1]=="l999e999"){
+				String countryevent = arr[arr.length-2];
+				countryID = countryevent.charAt(1);}
+				else{
+					String countryevent = arr[arr.length-1];
+					countryID = countryevent.charAt(1);	
+				}
+				
+				String country;
+				switch (countryID){
+					case '1': { country = "Brazil"; break;}
+					case '2': { country = "Spain"; break;}
+					case '3': { country = "China"; break;}
+					case '4': { country = "USA"; break;}
+					case '5': { country = "Sweden"; break;}
+					case '6': { country = "India"; break;}
+					case '7': { country = "Germany"; break;}
+					case '8': { country = "Turkey"; break;}
+					case '9': { country = "Australia"; break;}
+					default:{ country = ""; break;}
+				}
+				
+				String username= firstName + " " + lastName; 
+				
+				realm.resetUserProgress(email);
+				mailclient.sendCertificateMail(username, email, imcost, imqual, imtime, country, request);
+				}
 			}
 			request.setAttribute("status", "Certificate Send to group: " + group_name);
 			}
 		catch(SQLException e){
 			e.printStackTrace();
 		}			
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+	    dispatcher.forward(request, response);   
 		
-			
-				
-			
-		url = "/Professor";
-		
-		 RequestDispatcher dispatcher =
-	             getServletContext().getRequestDispatcher(url);
-	        
-	        dispatcher.forward(request, response);
 		}
 
 }
