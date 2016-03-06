@@ -322,7 +322,12 @@
 		<!-- <nationalhymne>../brillianicm/audio/DE_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
 		<nationalhymne>../audio/DE_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
-
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/DE_goodie1_germanwall.png</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie1_germanwall.png</goodieSource> <!-- For server -->
 		
 		<nextevent href="l700e206"/>
 	</event>
@@ -1067,7 +1072,15 @@
 					 Where is the loop of a Dirndl dress tied if a lady is single and open for flirts?</messageBoxA>
 		<nextevent href="l704e036"/>
 		<bgimg>DE_4_InsideBrewhouse.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/DE_goodie3_germanbeer.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie3_germanbeer.jpg</goodieSource> <!-- For server -->
+		
 	</event>
+	
 	<event level="4" element="7" id="l704e036" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>Choose the Loop</title>
 		<option href="l704e041" img="DE_4_Dirndl_left.jpg">Left Side</option>
@@ -1116,7 +1129,15 @@
 		<option column="1" title="Time is money">Time is money</option>
 		<bgimg>DE_5_Phone.jpg</bgimg>
 		<nextevent href="l705e011"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/DE_goodie2_comic.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie2_comic.jpg</goodieSource> <!-- For server -->
+		
 	</event>
+	
 	<event level="5" element="3" id="l705e011" eventtype="24" imcost="0" imqual="+5" imtime="+20" loc="4">
 		<description>We Need Assistance!</description>
 		<message>After Paul has returned to Canada and given an account of his cultural experiences, the management board decides to make some adjustments: 
@@ -1474,6 +1495,11 @@
 		<nationalhymne>../audio/DE_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!--  <goodieSource>../brillianicm/images/DE_goodie1_germanwall.png</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie1_germanwall.png</goodieSource> <!-- For server -->
 		
 		<nextevent href="l700e205"/>
 	</event>
@@ -2218,7 +2244,15 @@
 					 Where is the loop of a Dirndl dress tied if a lady is single and open for flirts?</messageBoxA>
 		<nextevent href="l704e035"/>
 		<bgimg>DE_4_InsideBrewhouse.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/DE_goodie3_germanbeer.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie3_germanbeer.jpg</goodieSource> <!-- For server -->
+		
 	</event>
+	
 	<event level="4" element="7" id="l704e035" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>Choose the Loop</title>
 		<option href="l704e040" img="DE_4_Dirndl_left.jpg">Left Side</option>
@@ -2268,6 +2302,13 @@
 		<option column="1" title="Time is money">Time is money</option>
 		<bgimg>DE_5_Phone.jpg</bgimg>
 		<nextevent href="l705e010"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/DE_goodie2_comic.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/DE_goodie2_comic.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	<event level="5" element="3" id="l705e010" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>We Need Assistance!</description>
@@ -2530,6 +2571,12 @@
 		<option href="l115e052" img="BR_shorts_m.jpg">Shorts</option>
 		<option href="l115e053" img="BR_suit_m.jpg">Suit</option>
 		<option href="l115e054" img="BR_jeans_m.jpg" >Jeans</option>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/BR_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/BR_goodie1_facts.jpg</goodieSource> <!-- For server -->
 	</event>
 
 	<event level="2" element="2" id="l115e052" eventtype="24" imcost="-3" imqual="0" imtime="-3" loc="4">
@@ -2940,6 +2987,11 @@
 		<option href="l165e052">I write Fernando another email in the hope that he returns this one.</option>
 		<option href="l165e053">I pass by Fernando’s workplace and talk to him directly.</option>
 		<bgimg>BR_communication.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Alpha FM</goodieHeading>
+		<goodieSource>http://206-217-212-88.webnow.net.br:80/alphafmmobile64.mp3</goodieSource>
 	</event>
 
 	<event level="3" element="17" id="l165e051" eventtype="24" imtime="+1" imqual="0" imcost="+3" loc="4">
@@ -3087,6 +3139,12 @@
 		<messageBoxB>(while watching pictures): This looks like a lot of fun. You know, I am really looking forward to it!</messageBoxB>
 		<nextevent href="l190e050"/>
 		<bgimg>BR_carnival_m.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/BR_goodie3_samba.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/BR_goodie3_samba.mp4</goodieSource> <!-- For server -->
 	</event>
 
 	<event level="5" element="0" id="l190e050" eventtype="18" imcost="0" imqual="0" imtime="0" loc="4">
@@ -3377,6 +3435,12 @@
 		<message>A long-sleeve shirt or blouse is okay, but jeans are too informal.</message>
 		<nextevent href="l120e000"/>
 		<bgimg>BR_advice.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/BR_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/BR_goodie1_facts.jpg</goodieSource> <!-- For server -->
 	</event>
 
 	<event level="2" element="3" id="l120e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -3766,6 +3830,11 @@
 		<option href="l165e002">I write Fernando another email in the hope that he returns this one.</option>
 		<option href="l165e003">I pass by Fernando’s workplace and talk to him directly.</option>
 		<bgimg>BR_communication.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Alpha FM</goodieHeading>
+		<goodieSource>http://206-217-212-88.webnow.net.br:80/alphafmmobile64.mp3</goodieSource>
 	</event>
 
 	<event level="3" element="17" id="l165e001" eventtype="24" imtime="+3" imqual="0" imcost="+1" loc="4">
@@ -3913,6 +3982,12 @@
 		<messageBoxB>(while watching pictures): This looks like a lot of fun. You know, I am really looking forward to it!</messageBoxB>
 		<nextevent href="l190e000"/>
 		<bgimg>BR_carnival_f.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/BR_goodie3_samba.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/BR_goodie3_samba.mp4</goodieSource> <!-- For server -->
 	</event>
 
 	<event level="5" element="0" id="l190e000" eventtype="18" imtime="0" imqual="0" imcost="0" loc="4">
@@ -4566,6 +4641,13 @@
 <nextevent href="l320e201"/>
 <bgimg>CN_advicequiz.jpg</bgimg>
 <progressValue>25</progressValue>
+
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Image</goodieType>
+<goodieHeading></goodieHeading>
+<!-- <goodieSource>../brillianicm/images/CN_goodie1_counting.gif</goodieSource> --> <!-- For local testing -->
+<goodieSource>../images/CN_goodie1_counting.gif</goodieSource> <!-- For server -->
+
 </event>
 
 
@@ -5000,6 +5082,11 @@
 
 <option href="l340e215">Start the day!</option>
 
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Audio</goodieType>
+<goodieHeading>RTHK Radio 2</goodieHeading>
+<goodieSource>http://stm1.rthk.hk/radio2</goodieSource>
+
 </event>
 
 
@@ -5176,6 +5263,12 @@
 
 <option href="l360e201"> Good night! </option>
 <progressValue>75</progressValue>
+
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Image</goodieType>
+<goodieHeading></goodieHeading>
+<!-- <goodieSource>../brillianicm/images/CN_goodie3_facts.jpg</goodieSource> --> <!-- For local testing -->
+<goodieSource>../images/CN_goodie3_facts.jpg</goodieSource> <!-- For server -->
 
 </event>
 
@@ -6378,6 +6471,12 @@
 <bgimg>CN_advicequiz.jpg</bgimg>
 <progressValue>25</progressValue>
 
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Image</goodieType>
+<goodieHeading></goodieHeading>
+<!-- <goodieSource>../brillianicm/images/CN_goodie1_counting.gif</goodieSource> --> <!-- For local testing -->
+<goodieSource>../images/CN_goodie1_counting.gif</goodieSource> <!-- For server -->
+
 </event>
 
 
@@ -6796,7 +6895,6 @@
 
 <bgimg>CN_Rezeption.jpg</bgimg>
 <progressValue>50</progressValue>
-
 </event>
 
 <!-- SITUATION 3 female -->
@@ -6812,6 +6910,11 @@
 <bgimg>CN_desk.png</bgimg>
 
 <option href="l340e015">Start the day!</option>
+
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Audio</goodieType>
+<goodieHeading>RTHK Radio 2</goodieHeading>
+<goodieSource>http://stm1.rthk.hk/radio2</goodieSource>
 
 </event>
 
@@ -6989,6 +7092,13 @@
 
 <option href="l360e001"> Good night! </option>
 <progressValue>75</progressValue>
+
+<!-- EDIT BY MANH ON MAR 5, 2016 -->
+<goodieType>Image</goodieType>
+<goodieHeading></goodieHeading>
+<!-- <goodieSource>../brillianicm/images/CN_goodie3_facts.png</goodieSource> --> <!-- For local testing -->
+<goodieSource>../images/CN_goodie3_facts.png</goodieSource> <!-- For server -->
+
 </event>
 
 <!-- SITUATION 4 female-->
@@ -8309,6 +8419,13 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option column="1" rank="5" title="Politics">Politics</option>
 	<nextevent href="l630e002" />
 	<bgimg>IN_Flagge.png</bgimg>
+	
+	<!-- EDIT BY MANH ON MAR 5, 2016 -->
+	<goodieType>Image</goodieType>
+	<goodieHeading></goodieHeading>
+	<!-- <goodieSource>../brillianicm/images/IN_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
+	<goodieSource>../images/IN_goodie1_facts.jpg</goodieSource> <!-- For server -->
+	
 	</event>
 	
 	<!-- Small Talk Woman -->
@@ -8330,6 +8447,13 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option column="1" rank="5" title="Politics">Politics</option>
 	<nextevent href="l630e102" />
 	<bgimg>IN_Flagge.png</bgimg>
+	
+	<!-- EDIT BY MANH ON MAR 5, 2016 -->
+	<goodieType>Image</goodieType>
+	<goodieHeading></goodieHeading>
+	<!-- <goodieSource>../brillianicm/images/IN_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
+	<goodieSource>../images/IN_goodie1_facts.jpg</goodieSource> <!-- For server -->
+	
 	</event>
 	
   <!-- First Teammeeting Man-->
@@ -9221,6 +9345,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		</content>
 		<bgimg>IN_Platz.jpg</bgimg>
 		<option href="l665e000">To the pyramides.</option>
+				
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Mukil FM</goodieHeading>
+		<goodieSource>http://37.130.224.90:80/live</goodieSource>
+
 	</event>
 
 	<event level="100" id="l665e000" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -9284,6 +9414,11 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option href="l663e101" img="IN_Pyramid_01.png">Option 1</option>
 		<option href="l663e102" img="IN_Pyramid_02.png">Option 2</option>
 		<option href="l663e103" img="IN_Pyramid_03.png">Option 3</option>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Mukil FM</goodieHeading>
+		<goodieSource>http://37.130.224.90:80/live</goodieSource>
 	</event>
 
 	<event level="100" id="l663e101" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
@@ -9802,6 +9937,13 @@ In China it is highly important to show respect to your guest. With inviting you
     </content>
     <bgimg>IN_Meetingraum.png</bgimg>
     <option href="l686e000">To the bar.</option>
+    
+	<!-- EDIT BY MANH ON MAR 5, 2016 -->
+	<goodieType>Video</goodieType>
+	<goodieHeading></goodieHeading>
+	<!-- <goodieSource>../brillianicm/videos/IN_goodie3_video.mp4</goodieSource> --> <!-- For local testing -->
+	<goodieSource>../videos/IN_goodie3_video.mp4</goodieSource> <!-- For server -->
+
   </event>
 
 	<event level="1" element="0" id="l686e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -9862,6 +10004,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxA href="l685e102" voice="female">Ok, let's have something else.</messageBoxA>
 		<messageBoxA href="l685e103" voice="female">Shame, but I will still have my beer.</messageBoxA>
 		<bgimg>IN_Bar_Bharat_Frau.png</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/IN_goodie3_video.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/IN_goodie3_video.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 
 	<event level="3" element="0" id="l685e101" eventtype="23" imcost="-5" imqual="-5" imtime="-5" loc="4">
@@ -10316,6 +10465,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxB voice="male" href="l200e100">Yeah sure, that sounds great.</messageBoxB>
 		<messageBoxB voice="male" href="l200e105">I’m sorry but I don’t eat in between breakfast and lunch. </messageBoxB>
 		<bgimg>ES_empfangm.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/ES_goodie1_funfacts.png</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/ES_goodie1_funfacts.png</goodieSource> <!-- For server -->
+
 	</event>
 	
 	<!-- ADVICES Einladung zur Bar -->
@@ -10507,7 +10663,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to interrupt the meeting and criticize the others in front of each other.
 		Furthermore, in countries with high power distance, it is the projectmanager's task to advice the other team members of their behaviour.</message>
 		<nextevent href="l200e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_adivce.jpg</bgimg>	
 	</event>
 	
 	<!-- Teammeeting auf Spanisch -->
@@ -10523,6 +10679,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option href="l200e230">I should interrupt him to tell him angrily that he has to continue in English</option>
 		<bgimg>ES_ConferenceFull.png</bgimg>
 		<progressValue>50</progressValue>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Energy Latino</goodieHeading>
+		<goodieSource>http://adwzg2.tdf-cdn.com/7994/nrj_111510.mp3</goodieSource>
+		
 	</event>
 	
 	<!-- ADVICES -->
@@ -10872,7 +11034,16 @@ In China it is highly important to show respect to your guest. With inviting you
 			<option column="1" rank="6" finfo="" fdesc="Explanation" title="Beispiel">Politeness</option>
 			<option column="2" rank="1" finfo="" fdesc="Explanation" title="Beispiel">Attitude: Avoid conflicts</option>
 		<bgimg>iceberg.jpg</bgimg>
-	<nextevent href="l200e405" /> </event>
+		<nextevent href="l200e405" /> 
+	
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/ES_goodie3_soccer.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/ES_goodie3_soccer.mp4</goodieSource> <!-- For server -->
+	
+	</event>
+	
 	
 	<!--lessons learned-->
 	<event level="1" element="3" id="l200e405" eventtype="18" imcost="+10" imqual="+10" imtime="+10" loc="4">
@@ -11138,6 +11309,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<messageBoxB voice="female" href="l210e100">Yeah sure, that sounds great.</messageBoxB>
 		<messageBoxB voice="female" href="l210e105">I’m sorry but I don’t eat in between breakfast and lunch. </messageBoxB>
 		<bgimg>ES_empfangf.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/ES_goodie1_funfacts.png</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/ES_goodie1_funfacts.png</goodieSource> <!-- For server -->
 	</event>
 	
 	<!-- ADVICES Einladung zur Bar -->
@@ -11346,6 +11523,11 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option href="l210e230">I should interrupt him to tell him angrily that he has to continue in English</option>
 		<bgimg>ES_ConferenceFull1.png</bgimg>
 		<progressValue>50</progressValue>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Energy Latino</goodieHeading>
+		<goodieSource>http://adwzg2.tdf-cdn.com/7994/nrj_111510.mp3</goodieSource>
 	</event>
 	
 	<!-- ADVICES -->
@@ -11694,7 +11876,15 @@ In China it is highly important to show respect to your guest. With inviting you
 			<option column="1" rank="6" finfo="" fdesc="Explanation" title="Beispiel">Politeness</option>
 			<option column="2" rank="1" finfo="" fdesc="Explanation" title="Beispiel">Attitude: Avoid conflicts</option>
 		<bgimg>iceberg.jpg</bgimg>
-	<nextevent href="l210e405" /> </event>
+		<nextevent href="l210e405" /> 
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/ES_goodie3_soccer.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/ES_goodie3_soccer.mp4</goodieSource> <!-- For server -->
+		
+	</event>
 	
 	<!--lessons learned-->
 	<event level="1" element="3" id="l210e405" eventtype="18" imcost="+10" imqual="+10" imtime="+10" loc="4">
@@ -12026,6 +12216,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option href="l526e001" img="SE_shorts_m.jpg">Shorts</option>
 		<option href="l526e002" img="Se_suit_m.jpg">Suit</option>
 		<option href="l526e003" img="SE_jeans_m.jpg" >Jeans</option>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/SE_goodie1_funfacts.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/SE_goodie1_funfacts.jpg</goodieSource> <!-- For server -->
 	</event>
 	
 	<event level="0" element="0" id="l526e001" eventtype="24" imcost="-10" imqual="0" imtime="-10" loc="4">
@@ -12691,6 +12887,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Today is your birthday. You are planning a party at your apartment and wonder who you should invite. Besides your colleagues you already met your neighbors and made some friends outside the office. You plan to meet your guests at your place and go out afterwards.</message>
 		<bgimg>SE_zimtschnecke.jpg</bgimg>
 		<nextevent href="l561e001"/>
+
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Rix FM</goodieHeading>
+		<goodieSource>http://stream-ice.mtgradio.com:8080/stat_rix_fm</goodieSource>
+		
     </event>
 
 	<event level="0" element="0" id="l561e001" eventtype="18" imcost="0" imqual="0" intime="0" loc="4">
@@ -12974,6 +13176,13 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="male" href="l570e001">Send a formal letter to all of them at once.</messageBoxB>
 		<messageBoxB voice="male" href="l570e002">Call them one by one and have a personal conversation.</messageBoxB>
         <bgimg>SE_office_1m.jpg</bgimg>
+        
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/SE_goodie3_kanelbullar.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/SE_goodie3_kanelbullar.jpg</goodieSource> <!-- For server -->
+
     </event>	
 	
 	<event level="0" element="0" id="l570e001" eventtype="24" imcost="0" imqual="-5" imtime="-5" loc="4">
@@ -13332,6 +13541,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option href="l527e001" img="SE_shorts_f.jpg">Shorts</option>
 		<option href="l527e002" img="SE_suit_f.jpg">Suit</option>
 		<option href="l527e003" img="SE_jeans_f.jpg" >Jeans</option>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/SE_goodie1_funfacts.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/SE_goodie1_funfacts.jpg</goodieSource> <!-- For server -->
 	</event>
 	
 	<event level="0" element="0" id="l527e001" eventtype="24" imcost="-10" imqual="0" imtime="-10" loc="4">
@@ -13997,6 +14212,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Today is your birthday. You are planning a party at your apartment and wonder who you should invite. Besides your colleagues you already met your neighbors and made some friends outside the office. You plan to meet your guests at your place and go out afterwards.</message>
 		<bgimg>SE_zimtschnecke.jpg</bgimg>
 		<nextevent href="l562e001"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Audio</goodieType>
+		<goodieHeading>Rix FM</goodieHeading>
+		<goodieSource>http://stream-ice.mtgradio.com:8080/stat_rix_fm</goodieSource>
+		
     </event>
 
 	<event level="0" element="0" id="l562e001" eventtype="18" imcost="0" imqual="0" intime="0" loc="4">
@@ -14280,6 +14501,13 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="female" href="l571e001">Send a formal letter to all of them at once.</messageBoxB>
 		<messageBoxB voice="female" href="l571e002">Call them one by one and have a personal conversation.</messageBoxB>
         <bgimg>SE_office_1w.jpg</bgimg>
+        
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/SE_goodie3_kanelbullar.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/SE_goodie3_kanelbullar.jpg</goodieSource> <!-- For server -->
+        
     </event>
 
 	<event level="0" element="0" id="l571e001" eventtype="24" imcost="0" imqual="-5" imtime="-5" loc="4">
@@ -15203,6 +15431,13 @@ about not or at least giving fewer tips than usual.
 		<description>Did You Know...?</description>
 		<nextevent href="l407e111">Next</nextevent>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<!-- end business talk and meal -->
@@ -15512,6 +15747,13 @@ about not or at least giving fewer tips than usual.
 		<description>Now Lean back and Enjoy!</description>
 		<nextevent href="l433e113">Next</nextevent>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/US_goodie1_football.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/US_goodie1_football.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 
 		 	
@@ -15819,6 +16061,13 @@ about not or at least giving fewer tips than usual.
 		<description>Did you know...?</description>
 		<nextevent href="l443e999"/>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/US_goodie3_statistics.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/US_goodie3_statistics.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<!-- Game3 -->
@@ -16734,6 +16983,13 @@ about not or at least giving fewer tips than usual.
 		<description>Did You Know...?</description>
 	<nextevent href="l455e001">Next</nextevent>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		
 	</event>
 
 <!-- end business talk and meal -->
@@ -17043,6 +17299,13 @@ about not or at least giving fewer tips than usual.
 		<description>Lean back and Enjoy!</description>
 		<nextevent href="l450e293">Next</nextevent>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/US_goodie1_football.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/US_goodie1_football.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 
 		 	
@@ -17349,6 +17612,13 @@ about not or at least giving fewer tips than usual.
 		<description>Did You Know...?</description>
 		<nextevent href="l402e111"/>
 		<bgimg>US_400000.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/US_goodie3_statistics.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/US_goodie3_statistics.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 
 <!-- Game3 -->
@@ -17520,6 +17790,13 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e006">Next</option>
 		<bgimg>TR_Airplain_m.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	
@@ -18060,7 +18337,12 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxB voice="male">"Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations"</messageBoxB>
                                 <messageBoxA voice="male">"Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends."</messageBoxA>                                 
                                 <nextevent href="l809e006"/>
-                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg>     
+                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg>
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->     
     </event>
     
      
@@ -18415,6 +18697,13 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e026">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="12" element="3" id="l812e026" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -18606,6 +18895,13 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e005">Next</option>
 		<bgimg>TR_Airplain_f.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<!-- Welcome 3 options -->
@@ -19149,7 +19445,13 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="male">"Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends."</messageBoxA>                                 
                                 <nextevent href="l809e005"/>
                                 <bgimg>TR_Business_Call_Manager_female.jpg</bgimg>
-                                    
+    
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->
+
     </event>
     
     
@@ -19506,6 +19808,12 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e025">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
 	</event>
 	
 	<event level="12" element="3" id="l812e025" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -19786,6 +20094,13 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="The Dutch were the first Europeans to discover Australia.">The Dutch were the first Europeans to discover Australia.</option>
 		<bgimg>AU_firstDay_australiaDay.jpg</bgimg>
 		<nextevent href="l902e021"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/AU_goodie1_animals.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/AU_goodie1_animals.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="2" element="4" id="l902e021" eventtype="24" imcost="0" imqual="+8" imtime="+8" loc="4">
@@ -20059,6 +20374,13 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="Tim Tam (Sweets)">Tim Tam (Sweets)</option>
 		<bgimg>AU_lunch_mall.jpg</bgimg>
 		<nextevent href="l908e021"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/AU_goodie2_food.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/AU_goodie2_food.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="8" element="4" id="l908e021" eventtype="24" imcost="+7" imqual="0" imtime="+8" loc="4">
@@ -20306,7 +20628,14 @@ about not or at least giving fewer tips than usual.
 		<messageBoxB voice="male" href="l913e006">It really was an intense game. I didn't know that rugby can be that exciting – I'll definitely tell my friends about that back home. </messageBoxB>
 		<messageBoxB voice="male" href="l913e011">I guess the better team won. I liked New Zealand more anyway, especially their haka. That was pretty cool! 
 				Why is the Australian team even called the wallabies – that sounds extremely lame.</messageBoxB>			
-		<bgimg>AU_rugby_pub_m.jpg</bgimg>     
+		<bgimg>AU_rugby_pub_m.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/AU_goodie3_rugby.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/AU_goodie3_rugby.jpg</goodieSource> <!-- For server -->
+		     
     </event>
 	
 	<event level="13" element="1" id="l913e006" eventtype="24" imcost="+9" imqual="+10" imtime="0" loc="4">
@@ -20779,6 +21108,13 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="The Dutch were the first Europeans to discover Australia.">The Dutch were the first Europeans to discover Australia.</option>
 		<bgimg>AU_firstDay_australiaDay.jpg</bgimg>
 		<nextevent href="l902e020"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/AU_goodie1_animals.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/AU_goodie1_animals.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="2" element="4" id="l902e020" eventtype="24" imcost="0" imqual="+8" imtime="+8" loc="4">
@@ -21052,6 +21388,12 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="Tim Tam (Sweets)">Tim Tam (Sweets)</option>
 		<bgimg>AU_lunch_mall.jpg</bgimg>
 		<nextevent href="l908e020"/>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/AU_goodie2_food.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/AU_goodie2_food.jpg</goodieSource> <!-- For server -->
 	</event>
 	
 	<event level="8" element="4" id="l908e020" eventtype="24" imcost="+7" imqual="0" imtime="+8" loc="4">
@@ -21299,7 +21641,13 @@ about not or at least giving fewer tips than usual.
 		<messageBoxB voice="female" href="l913e005">It really was an intense game. I didn't know that rugby can be that exciting – I'll definitely tell my friends about that back home. </messageBoxB>
 		<messageBoxB voice="female" href="l913e010">I guess the better team won. I liked New Zealand more anyway, especially their haka. That was pretty cool! 
 				Why is the Australian team even called the wallabies – that sounds extremely lame.</messageBoxB>			
-		<bgimg>AU_rugby_pub_f.jpg</bgimg>     
+		<bgimg>AU_rugby_pub_f.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/AU_goodie3_rugby.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/AU_goodie3_rugby.jpg</goodieSource> <!-- For server -->     
     </event>
 	
 	<event level="13" element="1" id="l913e005" eventtype="24" imcost="+9" imqual="+10" imtime="0" loc="4">
