@@ -131,8 +131,14 @@ function checkBrowserName(name) {
 	}
 	return false;
 }
-
+/*
+ * Philipp K. 
+ * 6.3.16
+ * Added gamaData reset to reset KPIs when changing country 
+ */
 function changeFunc() {
+	
+		
 	var selectBox = document.getElementById("contry-list");
 	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
 	var nextEvent = "";
@@ -143,7 +149,12 @@ function changeFunc() {
 			nextEvent = $(this).attr('href');
 		}
 	});
+	
+	gameData.imtime = 0;
+	gameData.imqual = 0; 
+	gameData.imcost = 0;
 	getXml(nextEvent);
+	
 }
 
 function setDescription(container, itemRank, itemDescription) {
