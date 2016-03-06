@@ -78,12 +78,105 @@ function changeSelect() {
 	  
 	   $('#logout').trigger('click');
 	   
-   } else if (selectedValue=='Imprint')
+   } else if (selectedValue=='Imprint'){
 	   
 	   // Letzte Änderung 05.03.16 von Tanja: Imprint Feld im Dropdown öffnet einen neuen Tab in dem die Imprint.jsp angezeigt wird.
 	   window.open ("frontend/imprint.jsp", "_blank");
+   }
+   /*
+	* Kristin K.
+	*6.3.16
+	* Function to remove & set the tts cookie depending on the given value of the drop down 
+	*/
+	else if (selectedValue=='TextToSpeech On'){ 
+		
+		
+	  	eraseCookie("tts");
+		setCookie("tts","true")
+		checkTTS();
+  
+   }else if (selectedValue=='TextToSpeech Off'){
+		
+	  	eraseCookie("tts");
+		setCookie("tts","false")
+		checkTTS();
    
    }
+}
+/*
+* Kristin K.
+*6.3.16
+* Function to remove the cookie with the handed in name 
+*/ 
+function eraseCookie( name ) {
+	  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
+
+/*
+* Kristin K.
+*6.3.16
+* Function to set a cookie with the handed in name and value 
+*/ 
+function setCookie(name,value) {
+	var date = new Date();
+	date.setTime(date.getTime()+(12 * 60 * 60));
+	document.cookie = name + "=" + value + "; expires=" +date;
+	
+	
+}	   
+/*
+ * Kristin K.
+ * 6.3.16
+ * checkTTS() adds a option in the dropdown menu depending on the value of the tts cookie 
+ * 
+ * Philipp K. 
+ * Added ajax to check if TTs is gloabally turned on or off. 
+ */
+function checkTTS() {
+	$.ajax({
+		url: 'Event',
+		type: 'get',
+		dataType: 'html',
+		data: {userid : userid, type : 'getSettings'},
+		async: true,
+		success: function(data) {
+	var list = data.split("[")[1].split(']')[0].split(', ');
+	
+	if(list[2]=="true"){
+	
+	var ttsSettings= "";
+		ttsSettings=getCookie("tts");
+	if(ttsSettings=="true") {
+		if(document.getElementById("TTS Off")){}
+		else{
+			var x = document.getElementById("selectBox");
+			var option = document.createElement("option");
+			option.id = "TTS Off"
+			option.text = "TextToSpeech Off";
+			x.add(option);
+			var element = document.getElementById("TTS On");
+			element.parentNode.removeChild(element);
+			}
+	}else {
+		if(document.getElementById("TTS On")){}
+		else{
+			var x = document.getElementById("selectBox");
+			var option = document.createElement("option");
+			option.id = "TTS On"
+			option.text = "TextToSpeech On";
+			x.add(option);
+			var element = document.getElementById("TTS Off");
+			element.parentNode.removeChild(element);
+			}
+		}
+	} else{
+		console.log("a")
+	}
+	
+	
+	}});
+}
+   
    </script>
 
 	<!-- EDIT BY ANIL ON FEB 29, 2016 -->
@@ -111,7 +204,7 @@ function changeSelect() {
 	<!-- End of line -->   	
 	
 </head>
-<body class="easyui-layout" data-options="fit:true">
+<body class="easyui-layout" data-options="fit:true" onload ="checkTTS()">
   <script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
 
     <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">

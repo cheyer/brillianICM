@@ -136,6 +136,22 @@ public class Event extends HttpServlet {
 				}
 				break;
 			}
+			/*
+			 * Philipp K.
+			 * 6.3.16
+			 * Added Cases that returns the global settings to the request 
+			 */
+			case "getSettings": {
+				UserRealm realm = new UserRealm();
+				try {
+					ArrayList<Boolean> settings = realm.getSettings();
+					data = settings.toString();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
 			default: response.sendError(HttpServletResponse.SC_NOT_FOUND);
 		}
 		response.getWriter().print(data);
