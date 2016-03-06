@@ -314,9 +314,15 @@
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Germany&amp;ll=51.0851254,5.9679745&amp;sll=51.0851254,5.9679745&amp;z=6&amp;t=k</maplink>
 		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/DE_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/DE_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 		
 		<nextevent href="l700e206"/>
 	</event>
@@ -1459,9 +1465,15 @@
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Germany&amp;ll=51.0851254,5.9679745&amp;sll=51.0851254,5.9679745&amp;z=6&amp;t=k</maplink>
 		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/DE_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/DE_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 		
 		<nextevent href="l700e205"/>
 	</event>
@@ -2323,8 +2335,13 @@
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Brazil&amp;ll=-11.441572,-52.248184&amp;sll=-11.441572,-52.248184&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/BR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/BR_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 		<nextevent href="l100e050"/>
@@ -2466,7 +2483,6 @@
 	
 	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 	<!-- Removing the old 4 ears model (eventtype 27)-->
-	<!-- Start of line -->
 	<!--<event level="1" element="5" id="l110e052" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">-->
 		<!-- <title>Invitation by your colleague to pub night</title> -->
 		<!-- <description>Invitation by your colleague to pub night</description> -->
@@ -2481,7 +2497,6 @@
 	
 	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 	<!-- Adding the new 4 ears model (eventtype 21)-->
-	<!-- Start of line -->
 	<event level="1" element="5" id="l110e052" eventtype="21" imtime="0" imqual="0" imcost="0" loc="4">
 		<description>Invitation by your colleague to pub night</description>
 			<option rank="1" fdesc="Explanation">I am disappointed that you don’t want to join.</option>
@@ -3146,8 +3161,13 @@
 
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Brazil&amp;ll=-11.441572,-52.248184&amp;sll=-11.441572,-52.248184&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/BR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/BR_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 		<nextevent href="l100e010"/>
@@ -3289,7 +3309,6 @@
 	
 	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 	<!-- Removing the old 4 ears model (eventtype 27)-->
-	<!-- Start of line -->
 	<!-- <event level="1" element="5" id="l110e002" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">-->
 		<!-- <title>Invitation by your colleague to pub night</title> -->
 		<!-- <description>Invitation by your colleague to pub night</description> -->
@@ -3304,7 +3323,6 @@
 
 	<!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 	<!-- Adding the new 4 ears model (eventtype 21)-->
-	<!-- Start of line -->
 	<event level="1" element="5" id="l110e002" eventtype="21" imtime="0" imqual="0" imcost="0" loc="4">
 		<description>Invitation by your colleague to pub night</description>
 			<option rank="1" fdesc="Explanation">I am disappointed that you don’t want to join.</option>
@@ -3977,8 +3995,13 @@
 
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=China&amp;ll=37.515810,101.104759&amp;sll=37.515810,101.104759&amp;z=4&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/CN_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/CN_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 
 <nextevent href="l300e201"/>
@@ -4438,7 +4461,6 @@
 
 <!-- EDIT BY ADRIAN ON MAR 04, 2016 -->
 <!-- Removing the old 4 ears model -->
-<!-- Start of line -->
 <!--  
 -<event loc="4" imtime="+5" imqual="+10" imcost="+5" eventtype="21" id="l300e236" element="0" level="300">
 
@@ -4464,7 +4486,6 @@
 
 <!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 <!--  -->
-<!-- Start of line -->
 <event level="300" loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="21" id="l300e236">
 	<title>4-Ohren-Modell</title>
 	<description>Four Ear Model - Please assign the thoughts of the Project Manager to the corresponding field of the four ear model:</description>
@@ -4499,7 +4520,6 @@
 <option href="l399e999">To the End</option>
 <!-- EDIT BY MANH ON MAR 06, 2016 -->
 <!-- Wrong placement of progressValue -->
-<!-- Start of line -->
 <!--  <progressValue>100</progressValue> -->
 <!-- End of line -->
 
@@ -5745,8 +5765,13 @@
 
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=China&amp;ll=37.515810,101.104759&amp;sll=37.515810,101.104759&amp;z=4&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/CN_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/CN_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 
 <nextevent href="l300e101"/>
@@ -6247,7 +6272,6 @@
 
 <!-- EDIT BY ADRIAN ON MAR 03, 2016 -->
 <!-- Removing the old 4 ears model-->
-<!-- Start of line -->
 <!--  
 -<event loc="4" imtime="+5" imqual="+10" imcost="+5" eventtype="21" id="l300e036" element="0" level="300">
 
@@ -6273,7 +6297,6 @@
 
 <!-- EDIT BY ADRIAN ON MAR 04, 2016 -->
 <!-- Adding the new 4 ears model-->
-<!-- Start of line -->
 <event level="300" loc="4" imtime="+5" imqual="+5" imcost="+5" eventtype="21" id="l300e036">
 	<title>4-Ohren-Modell</title>
 	<description>Four Ear Model - Please assign the phrases to the corresponding field of the four ear model:</description>
@@ -6307,7 +6330,6 @@
 <option href="l399e999">To the End</option>
 <!-- EDIT BY MANH ON MAR 06, 2016 -->
 <!-- Wrong placement of progressValue -->
-<!-- Start of line -->
 <!--  <progressValue>100</progressValue> -->
 <!-- End of line -->
 
@@ -7530,9 +7552,15 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 	<!-- Map link für Kartenfunktion -->
-	<!-- Start of line -->
 	<maplink>http://maps.apple.com/?q=India&amp;ll=20.9125665,73.7492666&amp;sll=20.9125665,73.7492666&amp;z=5&amp;t=k</maplink>
 	<!-- End of line -->
+	
+	<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+	<!-- Path to the national anthem -->
+	<!-- <nationalhymne>../brillianicm/audio/IN_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+	<nationalhymne>../audio/IN_nationalhymne.mp3</nationalhymne> <!-- For server -->
+	<!-- End of line -->
+	
 	<nextevent href="l601e004"/>	
 	
 	<progressValue>0</progressValue>
@@ -7602,9 +7630,15 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 	<!-- Map link für Kartenfunktion -->
-	<!-- Start of line -->
 	<maplink>http://maps.apple.com/?q=India&amp;ll=20.9125665,73.7492666&amp;sll=20.9125665,73.7492666&amp;z=5&amp;t=k</maplink>
 	<!-- End of line -->
+	
+	<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+	<!-- Path to the national anthem -->
+	<!-- <nationalhymne>../brillianicm/audio/IN_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+	<nationalhymne>../audio/IN_nationalhymne.mp3</nationalhymne> <!-- For server -->
+	<!-- End of line -->
+	
 	<nextevent href="l601e103"/>
 	
 	<progressValue>0</progressValue>
@@ -10074,8 +10108,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Spain&amp;ll=40.1301072,-8.2031357&amp;sll=40.1301072,-8.2031357&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/ES_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/ES_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 		<nextevent href="l200e005" />
@@ -10891,10 +10930,15 @@ In China it is highly important to show respect to your guest. With inviting you
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Spain&amp;ll=40.1301072,-8.2031357&amp;sll=40.1301072,-8.2031357&amp;z=6&amp;t=k</maplink>
 		<!-- End of line -->
 		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/ES_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/ES_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 		<nextevent href="l210e005" />
 	</event>
 	
@@ -11718,9 +11762,15 @@ In China it is highly important to show respect to your guest. With inviting you
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Sweden&amp;ll=61.787021,15.509393&amp;sll=61.787021,15.509393&amp;z=5&amp;t=k</maplink>
 		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/SE_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/SE_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 		
 		<nextevent href="l501e001"/>
 		<progressValue>0</progressValue>
@@ -12694,7 +12744,6 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<!-- EDIT BY MANH ON MAR 06, 2016 -->
 	<!-- Removing eventtype 27 -->
-	<!-- Start of line -->
  	<!--  
 	<event level="0" element="0" id="l561e006" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Self-revelation" description="I don't want to talk about princess Victoria.">1</option>
@@ -12708,7 +12757,6 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<!-- EDIT BY MANH ON MAR 06, 2016 -->
 	<!-- Adding eventtype 21 -->
-	<!-- Start of line -->
 	<event level="0" element="0" id="l561e006" eventtype="21" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Explanation">I don't want to talk about princess Victoria.</option>
 		<option rank="2" fdesc="Explanation">This is not a topic I want to talk to you about.</option>
@@ -13021,8 +13069,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Sweden&amp;ll=61.787021,15.509393&amp;sll=61.787021,15.509393&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/SE_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/SE_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 		<nextevent href="l502e001"/>
@@ -13997,7 +14050,6 @@ In China it is highly important to show respect to your guest. With inviting you
 
 	<!-- EDIT BY MANH ON MAR 06, 2016 -->
 	<!-- Removing eventtype 27 -->
-	<!-- Start of line -->
 	<!--  
 	<event level="0" element="0" id="l562e006" eventtype="27" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Self-revelation" description="I don't want to talk about princess Victoria.">1</option>
@@ -14011,7 +14063,6 @@ In China it is highly important to show respect to your guest. With inviting you
 	
 	<!-- EDIT BY MANH ON MAR 06, 2016 -->
 	<!-- Adding eventtype 21 -->
-	<!-- Start of line -->
 	<event level="0" element="0" id="l562e006" eventtype="21" imcost="0" imqual="0" imtime="0" loc="4">
 		<option rank="1" fdesc="Explanation">I don't want to talk about princess Victoria.</option>
 		<option rank="2" fdesc="Explanation">This is not a topic I want to talk to you about.</option>
@@ -14347,8 +14398,13 @@ In China it is highly important to show respect to your guest. With inviting you
 
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=USA&amp;ll=37.762925,-103.524195&amp;sll=37.762925,-103.524195&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/US_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/US_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 
 		<nextevent href="l433e003"/>
@@ -15869,8 +15925,13 @@ about not or at least giving fewer tips than usual.
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=USA&amp;ll=37.762925,-103.524195&amp;sll=37.762925,-103.524195&amp;z=5&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/US_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/US_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 		<nextevent href="l483e003"/>
@@ -17388,8 +17449,13 @@ about not or at least giving fewer tips than usual.
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 			<nextevent href="l800e006"/>
@@ -18469,8 +18535,13 @@ about not or at least giving fewer tips than usual.
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
 		<!-- End of line -->
 		
 			<nextevent href="l800e005"/>
@@ -19547,9 +19618,15 @@ about not or at least giving fewer tips than usual.
 
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Australia&amp;ll=-25.2431378,120.0671503&amp;sll=-25.2431378,120.0671503&amp;z=5&amp;t=k</maplink>
 		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/AU_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/AU_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 
 		<nextevent href="l900e006"/>
 	</event>
@@ -20534,9 +20611,15 @@ about not or at least giving fewer tips than usual.
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
-		<!-- Start of line -->
 		<maplink>http://maps.apple.com/?q=Australia&amp;ll=-25.2431378,120.0671503&amp;sll=-25.2431378,120.0671503&amp;z=5&amp;t=k</maplink>
 		<!-- End of line -->
+		
+		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+		<!-- Path to the national anthem -->
+		<!-- <nationalhymne>../brillianicm/audio/AU_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+		<nationalhymne>../audio/AU_nationalhymne.mp3</nationalhymne> <!-- For server -->
+		<!-- End of line -->
+
 		
 		<nextevent href="l900e005"/>
 	</event>

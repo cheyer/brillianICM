@@ -508,6 +508,13 @@ top: 50%;-->">Please
 	</div>
 
 	<!-- eventtype 28: Factsheet-->
+	<!-- EDIT BY ANIL ON MAR 04, 2016 -->
+	<!-- Adding an invisible audiocontrol for the national anthem -->
+	<audio controls id="audioHymne" style="display:none;">
+		Your browser does not support the audio tag.
+	</audio>
+	<!-- End of line -->
+	
 	<div class="factsheetContainer easyui-panel"
 		style="background-color: #D5ECF2;"
 		data-options="fit:true,border:false">
@@ -526,13 +533,11 @@ top: 50%;-->">Please
 		
 		<!-- EDIT BY MARVIN ON MAR 6, 2016 -->
 		<!-- Place this div into an anchor -->
-		<!-- Start of line -->
 		<!-- <div id="titletext" class="title-factsheet"></div> -->
 		<!-- End of line  -->
 
 		<!-- EDIT BY MARVIN ON MAR 6, 2016 -->
 		<!-- Wrap anchor around div (id:titletext) for map link on country name -->
-		<!-- Start of line -->
 		<a id = "showMap">
 			<div id="titletext" class="title-factsheet"></div>
 		</a>
