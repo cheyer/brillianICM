@@ -84,7 +84,31 @@ function changeSelect() {
 	   window.open ("frontend/imprint.jsp", "_blank");
    
    }
-   </script>	
+   </script>
+
+	<!-- EDIT BY ANIL ON FEB 29, 2016 -->
+	<!-- Implementation of the shake function -->
+	<!-- Start of line -->
+	<script type="text/javascript">
+		window.onload = function() {
+		    var myShakeEvent = new Shake({
+		        threshold: 15
+		    });
+		    
+		    myShakeEvent.start();	// start listening to device motion
+		    window.addEventListener('shake', shakeEventDidOccur, false);  // register a shake event
+		    function shakeEventDidOccur () {  //shake event callback
+
+				var box = window.confirm ("Are you sure you want to leave this page?")
+				if (box == true){
+					window.open("https://brillianicm.com", "_self");}
+				else if (box==false){
+				}	
+			}
+		
+		};
+	</script>
+	<!-- End of line -->   	
 	
 </head>
 <body class="easyui-layout" data-options="fit:true">
