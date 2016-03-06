@@ -11052,7 +11052,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		what are the names of dishes. For each dish there is a photo provided - Choose the right answer!</message>
 		<nextevent href="l210e115"/>
 		<bgimg>ES_adivce.jpg</bgimg>
-		<progressValue>50</progressValue>
+		<progressValue>25</progressValue>
 	</event>
 	<event level="1" element="0" id="l210e115" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -12133,7 +12133,7 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="male" href="l532e001">I can wait, I am not starving.</messageBoxB>
         <messageBoxB voice="male" href="l532e002">I am starving, why did you wait so long?</messageBoxB>
 	    <bgimg>SE_cafeteria_m_h.jpg</bgimg>
-		<progressValue>25</progressValue>
+		<progressValue>50</progressValue>
     </event>
 
 	<event level="0" element="0" id="l532e001" eventtype="24" imcost="+3" imqual="+5" imtime="0" loc="4">
@@ -12177,7 +12177,7 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="male" href="l533e001">I can wait, I am not starving.</messageBoxB>
         <messageBoxB voice="male" href="l533e002">I am starving, why did you wait so long?</messageBoxB>
 	    <bgimg>SE_cafeteria_m_h.jpg</bgimg>
-		<progressValue>25</progressValue>
+		<progressValue>50</progressValue>
     </event>
 	
 	<event level="0" element="0" id="l533e001" eventtype="24" imcost="+3" imqual="+5" imtime="0" loc="4">
@@ -12647,7 +12647,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option column="1">Countryside</option>
 		<bgimg>SE_apartment.jpg</bgimg>
 		<nextevent href="l561e008"/>
-		<progressValue>50</progressValue>
+		<progressValue>75</progressValue>
     </event>
 	
 	<event level="0" element="0" id="l561e008" eventtype="24" imcost="0" imqual="+10" imtime="0" loc="4">
@@ -13429,7 +13429,7 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="female" href="l542e001">I can wait, I am not starving.</messageBoxB>
         <messageBoxB voice="female" href="l542e002">I am starving, why did you wait so long?</messageBoxB>
 	    <bgimg>SE_cafeteria_f_h.jpg</bgimg>
-		<progressValue>25</progressValue>
+		<progressValue>50</progressValue>
 	</event>
 	
 	<event level="0" element="0" id="l542e001" eventtype="24" imcost="+3" imqual="+5" imtime="0" loc="4">
@@ -13473,7 +13473,7 @@ In China it is highly important to show respect to your guest. With inviting you
         <messageBoxB voice="female" href="l543e001">I can wait, I am not starving.</messageBoxB>
         <messageBoxB voice="female" href="l543e002">I am starving, why did you wait so long?</messageBoxB>
 	    <bgimg>SE_cafeteria_f_h.jpg</bgimg>
-		<progressValue>25</progressValue>
+		<progressValue>50</progressValue>
 	</event>
 
 	<event level="0" element="0" id="l543e001" eventtype="24" imcost="+3" imqual="+5" imtime="0" loc="4">
@@ -13943,7 +13943,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<option column="1">Countryside</option>
 		<bgimg>SE_apartment.jpg</bgimg>
 		<nextevent href="l562e008"/>
-		<progressValue>50</progressValue>
+		<progressValue>75</progressValue>
     </event>
 	
 	<event level="0" element="0" id="l562e008" eventtype="24" imcost="0" imqual="+10" imtime="0" loc="4">
@@ -14310,6 +14310,7 @@ In China it is highly important to show respect to your guest. With inviting you
 			with your luggage.  </message>
 		<bgimg>US_400002.jpg</bgimg>
 		<nextevent href="l400e333"/>
+		<progressValue>0</progressValue>
 	</event>
 	
 	<event level="1" element="0" id="l400e333" eventtype="23" imcost="0"
@@ -15827,6 +15828,7 @@ about not or at least giving fewer tips than usual.
 			with your luggage.  </message>
 		<bgimg>US_400002.jpg</bgimg>
 		<nextevent href="l455e333"/>
+		<progressValue>0</progressValue>
 	</event>
 	
 	<event level="1" element="0" id="l455e333" eventtype="23" imcost="0"
