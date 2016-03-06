@@ -344,6 +344,11 @@ function loadFactsheet() {
 	container.find('#sideimg2').attr("src", uri2);
 	container.find('#sideimg3').attr("src", uri3);
 
+	/* EDIT BY ANIL ON MAR 4, 2016 */
+	/* Referencing the flag and add an onclick event*/
+	container.find('#flag').attr("onclick", "buttonPressed()");
+	/* End of line*/
+
 	var continueButton = $('#continueButtonFactsheet');
 
 	continueButton.unbind('click');
@@ -353,7 +358,6 @@ function loadFactsheet() {
 	
 	/* EDIT BY MARVIN ON MAR 5, 2016 */
 	/* titlePressed() aus master.js, wird aufgerufen fuer Kartendienst */
-	/* Start of line */
 	titlePressed();
 	/* End of line */
 

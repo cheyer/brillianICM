@@ -785,7 +785,6 @@ function setTCQImages(imtime, imcost, imqual) {
 	
 	/* EDIT BY JONAS ON FEB 27, 2016 */
 	/* New code for the polarclock*/
-	/* Start of line*/
 	var kpi_competence = imtime;
 	var kpi_behaviour = imcost;
 	var kpi_communication = imqual;
@@ -799,7 +798,6 @@ function setTCQImages(imtime, imcost, imqual) {
 	
 	/* EDIT BY JONAS ON FEB 27, 2016*/
 	/* Removing the logic for the outdated KPI buttons */
-	/* Start of line */
 	/*
 	var svg_competence = document.getElementById("icon_competence");
 	var svg_communication = document.getElementById("icon_communication");
@@ -899,7 +897,6 @@ function updateTCQValues(imtime, imcost, imqual) {
 
 /* EDIT BY JONAS ON FEB 27, 2016*/
 /* Functions of the polarclock */
-/* Start of line */
 function tick() {
   if (!document.hidden) field
       .each(function(d) { this._value = d.value; })
@@ -996,7 +993,6 @@ function fields() {
 
 /* EDIT BY ANIL ON FEB 29, 2016*/
 /* Functions for the shake functionality*/
-/* Start of line */
 (function(global, factory) {
     if (typeof define === 'function' && define.amd) {
         define(function() {
@@ -1118,11 +1114,29 @@ function fields() {
 
 /* EDIT BY MARVIN ON MAR 5, 2016*/
 /* Lade Kartendienstlinks aus XML und gebe sie dem anchor Tag im location jsp als href mit. target: _blank oeffnet Link in neumen Tab Funktion wird in events.jsp aufgerufen */
-/* Start of line */
 function titlePressed(){
 	var aCountrymap = document.getElementById("showMap");
 	var mapLinkXML =  $xml.find('maplink').text();
 	aCountrymap.setAttribute("href", mapLinkXML);
 	aCountrymap.setAttribute("target", "_blank");
 }
+/* End of line */
+
+
+/* EDIT BY ANIL ON MAR 4, 2016*/
+/* Function in order to play the national anthem*/
+function buttonPressed(){
+	if ($xml.find('nationalhymne').text() != '' ) {
+		
+	var audio = document.getElementById("audioHymne");
+	var pathAnthem = $xml.find('nationalhymne').text();
+	
+	if(audio.paused == false){
+		audio.pause();
+	} else{
+		audio.setAttribute("src", pathAnthem);
+	audio.setAttribute("type", "audio/mpeg");
+		audio.play();
+	}	
+}}
 /* End of line */
