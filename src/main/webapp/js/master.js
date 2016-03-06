@@ -782,9 +782,25 @@ $.extend({
 // Veränderung der TCQ IMAGES auf der Seite
 function setTCQImages(imtime, imcost, imqual) {
 	//Grenzen Rot:0-49 Grenzen Gelb 50-85 Grenzen Grün:86-100
+	
+	/* EDIT BY JONAS ON FEB 27, 2016 */
+	/* New code for the polarclock*/
+	/* Start of line*/
 	var kpi_competence = imtime;
 	var kpi_behaviour = imcost;
 	var kpi_communication = imqual;
+	KPIValues[0] = kpi_competence;
+	KPIValues[1] = kpi_behaviour;
+	KPIValues[2] = kpi_communication;
+	
+	tick();
+	/* End of line*/
+	
+	
+	/* EDIT BY JONAS ON FEB 27, 2016*/
+	/* Removing the logic for the outdated KPI buttons */
+	/* Start of line */
+	/*
 	var svg_competence = document.getElementById("icon_competence");
 	var svg_communication = document.getElementById("icon_communication");
 	var svg_behaviour = document.getElementById("icon_behaviour");
@@ -827,6 +843,8 @@ function setTCQImages(imtime, imcost, imqual) {
 		svg_behaviour.setAttribute("fill", color_red);
 
 	}
+	*/
+	/* End of line */
 }
 
 // Veränderung der TCQ WERTE
@@ -877,3 +895,98 @@ function updateTCQValues(imtime, imcost, imqual) {
 		gameData.imqual = 0;
 	}
 }
+
+
+/* EDIT BY JONAS ON FEB 27, 2016*/
+/* Functions of the polarclock */
+/* Start of line */
+function tick() {
+  if (!document.hidden) field
+      .each(function(d) { this._value = d.value; })
+      .data(fields)
+      .each(function(d) { d.previousValue = this._value; })
+    .transition()
+      .ease("elastic")
+      .duration(500)
+      .each(fieldTransition);
+
+  //setTimeout(tick, 1000 - Date.now() % 1000);
+}
+
+
+function fieldTransition() {
+	var field = d3.select(this).transition();
+	  
+	if(this.childNodes[1].id=="arc-center-3"){
+		field.select(".arc-body")
+	      .attrTween("d", arcTween(arcBody))
+	      .style("fill", 
+		  function(d) { return color(d.value); });}  //1stKPI
+	
+ 	if(this.childNodes[1].id=="arc-center-2"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(182, 100%, 14%,0.25)"; });} //1st KPI complement 
+	
+	if(this.childNodes[1].id=="arc-center-1"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsl(226, 100%, 50%)"; });} //progressValue
+	  
+ 	if(this.childNodes[1].id=="arc-center-0"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(226, 100%, 14%,0.25)"; });} //progressValue complement 
+	  
+  	if(this.childNodes[1].id=="arc-center-4"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(323, 100%, 14%,0.25)"; });} //3rd KPI complement 
+	  
+	  	if(this.childNodes[1].id=="arc-center-5"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return color3(d.value);; });} // 3rd KPIValue
+	  
+	  if(this.childNodes[1].id=="arc-center-6"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(82, 100%, 14%,0.25)"; });} //2nd KPI complement
+	
+	  if(this.childNodes[1].id=="arc-center-7"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return color2(d.value); });} // 2nd KPIValue
+
+  field.select(".arc-center")
+      .attrTween("d", arcTween(arcCenter));
+
+  field.select(".arc-text")
+      .text(function(d) { return d.text; });
+}
+
+
+function arcTween(arc) {
+  return function(d) {
+    var i = d3.interpolateNumber(d.previousValue, d.value);
+    return function(t) {
+      d.value = i(t);
+      return arc(d);
+    };
+  };
+}
+
+
+function fields() {
+  return [
+  {index: .1,     value: 1},
+	{index: .1,   value: progressValue/100},
+   {index: .3,   value: 1},
+    {index: .3,   value: KPIValues[2]/100}, 
+	{index: .5, value: 1},
+	{index: .5,  value: KPIValues[0]/100},
+	{index: .4,  value: 1},
+    {index: .4,  value: KPIValues[1]/100}, 
+  ];
+}
+/* End of line*/

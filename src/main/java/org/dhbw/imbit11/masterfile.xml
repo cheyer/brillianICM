@@ -954,6 +954,7 @@
 		by tomorrow. Thank you again for your outstanding work! </messageBoxA>
 		<nextevent href="l703e151"/>
 		<bgimg>DE_3_Schmittoffice_mit_Schmitt.jpg</bgimg>
+		<progressValue>75</progressValue>
 	</event>
 	
 	<event level="3" element="31" id="l703e151" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -2091,6 +2092,7 @@
 		by tomorrow. Thank you again for your outstanding work! </messageBoxA>
 		<nextevent href="l703e150"/>
 		<bgimg>DE_3_Schmittoffice_mit_Schmitt.jpg</bgimg>
+		<progressValue>75</progressValue>
 	</event>
 	
 	<event level="3" element="31" id="l703e150" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -4461,7 +4463,11 @@
 <bgimg>CN_Abschied.jpg</bgimg>
 
 <option href="l399e999">To the End</option>
-<progressValue>100</progressValue>
+<!-- EDIT BY MANH ON MAR 06, 2016 -->
+<!-- Wrong placement of progressValue -->
+<!-- Start of line -->
+<!--  <progressValue>100</progressValue> -->
+<!-- End of line -->
 
 </event>
 
@@ -6259,7 +6265,11 @@
 <bgimg>CN_Abschied.jpg</bgimg>
 
 <option href="l399e999">To the End</option>
-<progressValue>100</progressValue>
+<!-- EDIT BY MANH ON MAR 06, 2016 -->
+<!-- Wrong placement of progressValue -->
+<!-- Start of line -->
+<!--  <progressValue>100</progressValue> -->
+<!-- End of line -->
 
 </event>
 
@@ -17278,7 +17288,7 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue> 0 </progressValue>
+			<progressValue>0</progressValue>
 			<nextevent href="l800e006"/>
 			</event>
 
@@ -17508,7 +17518,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<nextevent href="l803e001"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -17797,7 +17807,7 @@ about not or at least giving fewer tips than usual.
                                  <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence</messageBoxA>
                                 <messageBoxB voice="male">"Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…"</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue> 50 </progressValue>
+                                <progressValue>50</progressValue>
 								<nextevent href="l807e006"/>
                                 <bgimg>TR_Restaurant_male.jpg</bgimg>     
     </event>
@@ -18043,7 +18053,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e021" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk. </content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l811e026">Next</option>
 		<bgimg>TR_MeetingRoom3_m.jpg</bgimg>
 	</event>
@@ -18299,7 +18309,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l814e001"/>
 	</event>
 
@@ -18352,7 +18362,7 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue> 0 </progressValue>
+			<progressValue>0</progressValue>
 			<nextevent href="l800e005"/>
 		</event>
 	      
@@ -18586,7 +18596,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<nextevent href="l803e000"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -18874,7 +18884,7 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence</messageBoxA>
                                 <messageBoxB voice="female">"Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…"</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue> 50 </progressValue>
+                                <progressValue>50</progressValue>
 								<nextevent href="l807e005"/>
                                 <bgimg>TR_Restaurant_female.jpg</bgimg>     
     </event>
@@ -19120,7 +19130,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e020" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk.</content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l811e025">Next</option>
 		<bgimg>TR_MeetingRoom3_f.jpg</bgimg>
 	</event>
@@ -19377,7 +19387,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l814e000"/>
 	</event>
 	
@@ -19423,7 +19433,7 @@ about not or at least giving fewer tips than usual.
 		<sideimg1>AU_facts_img1.jpg</sideimg1>
 		<sideimg2>AU_facts_img2.jpg</sideimg2>
 		<sideimg3>AU_facts_img3.jpg</sideimg3>
-		<progressValue> 0 </progressValue>
+		<progressValue>0</progressValue>
 		<nextevent href="l900e006"/>
 	</event>
 	
@@ -19673,7 +19683,7 @@ about not or at least giving fewer tips than usual.
 		<partner>First Team Meeting</partner>
 		<content>You are working in a presales infrastructure project for a financial customer. As you arrive at the meeting room, you see that the whole team has been waiting for you. 
 				Since you already know James, he greets you with a hug. Everybody else is greeted separately with a hand shake.</content>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<option href="l905e006">Next</option>
 		<bgimg>AU_theTeam_meetingroomFull.jpg</bgimg>
 	</event>
@@ -19901,7 +19911,7 @@ about not or at least giving fewer tips than usual.
 				&lt;br&gt;
 				Several hours later, you still did not get any feedback on your invitation despite all team members being at the office. 
 				You are curious why and ask Tina's assistant.</content>
-		<progressValue> 50 </progressValue>
+		<progressValue>50</progressValue>
 		<option href="l910e006">Talk to Kitel</option>
 		<bgimg>AU_prepMeeting_office_m.jpg</bgimg>
 	</event>
@@ -20185,7 +20195,7 @@ about not or at least giving fewer tips than usual.
 		<partner>Farewell Dinner</partner>
 		<content>One evening in your last week you are going out for dinner with your team. Richard proposes a well-known restaurant near Circular Quay from where you have a perfect view of the Opera House. 
 				Its chef is well known for his excellent food and you really like the menu selection.</content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l915e006">Next</option>
 		<bgimg>AU_farewell_circularQuay.jpg</bgimg>
 	</event>
@@ -20362,7 +20372,7 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="Rugby is one of the country’s favorite sports.">Rugby is one of the country’s favorite sports.</option>
 		<option column="1" title="The Australian cuisine is very diverse.">The Australian cuisine is very diverse.</option>
 		<bgimg>AU_finalReport_flight.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l920e001"/>
 	</event>
 	
@@ -20403,7 +20413,7 @@ about not or at least giving fewer tips than usual.
 		<sideimg1>AU_facts_img1.jpg</sideimg1>
 		<sideimg2>AU_facts_img2.jpg</sideimg2>
 		<sideimg3>AU_facts_img3.jpg</sideimg3>
-		<progressValue> 0 </progressValue>
+		<progressValue>0</progressValue>
 		<nextevent href="l900e005"/>
 	</event>
 		
@@ -20653,7 +20663,7 @@ about not or at least giving fewer tips than usual.
 		<partner>First Team Meeting</partner>
 		<content>You are working in a presales infrastructure project for a financial customer. As you arrive at the meeting room, you see that the whole team has been waiting for you. 
 				Since you already know James, he greets you with a hug. Everybody else is greeted separately with a hand shake.</content>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<option href="l905e005">Next</option>
 		<bgimg>AU_theTeam_meetingroomFull.jpg</bgimg>
 	</event>
@@ -20881,7 +20891,7 @@ about not or at least giving fewer tips than usual.
 				&lt;br&gt;
 				Several hours later, you still did not get any feedback on your invitation despite all team members being at the office. 
 				You are curious why and ask Tina's assistant.</content>
-		<progressValue> 50 </progressValue>
+		<progressValue>50</progressValue>
 		<option href="l910e005">Talk to Kitel</option>
 		<bgimg>AU_prepMeeting_office_f.jpg </bgimg>
 	</event>
@@ -21165,7 +21175,7 @@ about not or at least giving fewer tips than usual.
 		<partner>Farewell Dinner</partner>
 		<content>One evening in your last week you are going out for dinner with your team. Richard proposes a well-known restaurant near Circular Quay from where you have a perfect view of the Opera House. 
 				Its chef is well known for his excellent food and you really like the menu selection.</content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l915e005">Next</option>
 		<bgimg>AU_farewell_circularQuay.jpg</bgimg>
 	</event>
@@ -21342,7 +21352,7 @@ about not or at least giving fewer tips than usual.
 		<option column="1" title="Rugby is one of the country’s favorite sports.">Rugby is one of the country’s favorite sports.</option>
 		<option column="1" title="The Australian cuisine is very diverse.">The Australian cuisine is very diverse.</option>
 		<bgimg>AU_finalReport_flight.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l920e000"/>
 	</event>
 	
