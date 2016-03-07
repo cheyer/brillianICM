@@ -15,7 +15,7 @@
 		<option href="l400e000">USA</option>
 		<option href="l800e000">Turkey</option>
 		<option href="l900e000">Australia</option>
-		<bgimg>default_colour.jpg</bgimg>
+		
 	</event>
 
 
@@ -2409,7 +2409,7 @@
 		<uncertaintyAvoidance>3.5</uncertaintyAvoidance>
 		<assertiveness>4</assertiveness>
 		<humaneOrientation>3.5</humaneOrientation>
-		<bgimg>default_colour.jpg</bgimg>
+		
 		<nextevent href="l100e052" />
 	</event>
 
@@ -2481,16 +2481,16 @@
 		<description>What, in Your Opinion are Topics You Can Address in Brazil? Drag and Drop the Topics in the Appropriate Columns. In total, 4 Topics Should Be Avoided during the Conversation.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="weather">weather</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="traveling and course of day">traveling and course of day</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="family">family</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="food">food</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="origin">origin</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="income">income</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="sports">sports</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="status at work">status at work</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="culture and sightseeing">culture and sightseeing</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="news">news</option>
+		<option column="1" title="weather">weather</option>
+		<option column="1" title="traveling and course of day">traveling and course of day</option>
+		<option column="2" title="family">family</option>
+		<option column="1" title="food">food</option>
+		<option column="2" title="origin">origin</option>
+		<option column="2" title="income">income</option>
+		<option column="1" title="sports">sports</option>
+		<option column="2" title="status at work">status at work</option>
+		<option column="1" title="culture and sightseeing">culture and sightseeing</option>
+		<option column="1" title="news">news</option>
 		<bgimg>BR_transportTaxi.jpg</bgimg>
 		<nextevent href="l105e052"/>
 	</event>
@@ -3189,7 +3189,7 @@
 		<partner>Congratulations</partner>
 		<content>Great! Hopefully you've learned a few things about the Brazilian culture and how to behave
 			in certain situations. Don't hesitate to try out the other country modules!</content>
-		<option href="l99e999">End Game</option>
+		<option href="l999e999">End Game</option>
 		<option href="l199e998">Link to documentation</option>
 		<bgimg>BR_congratulations.jpg</bgimg>
 	</event>
@@ -3252,7 +3252,7 @@
 		<uncertaintyAvoidance>3.5</uncertaintyAvoidance>
 		<assertiveness>4</assertiveness>
 		<humaneOrientation>3.5</humaneOrientation>
-		<bgimg>default_colour.jpg</bgimg>
+		
 		<nextevent href="l100e012" />
 	</event>
 
@@ -4109,7 +4109,7 @@
 <uncertaintyAvoidance>5.3</uncertaintyAvoidance>
 <assertiveness>5.4</assertiveness>
 <humaneOrientation>5.3</humaneOrientation>
-<bgimg>default_colour.jpg</bgimg>
+
 <nextevent href="l300e203"/>
 </event>
 
@@ -5787,7 +5787,7 @@
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l399e999" element="0" level="360">
 
-<message>You have completed the game for China! Congratulations!</message>
+<content>You have completed the game for China! Congratulations!</content>
 
 <bgimg>CN_advice.jpg</bgimg>
 
@@ -5914,7 +5914,7 @@
 
 <humaneOrientation>5.3</humaneOrientation>
 
-<bgimg>default_colour.jpg</bgimg>
+
 
 <nextevent href="l300e003"/>
 
@@ -7702,7 +7702,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>4</uncertaintyAvoidance>
 		<assertiveness>3.5</assertiveness>
 		<humaneOrientation>4.5</humaneOrientation>
-		<bgimg>default_colour.jpg</bgimg>
+		
 		<nextevent href="l601e003" />
 	</event>
 
@@ -7779,7 +7779,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>4</uncertaintyAvoidance>
 		<assertiveness>3.5</assertiveness>
 		<humaneOrientation>4.5</humaneOrientation>
-		<bgimg>default_colour.jpg</bgimg>
+		
 		<nextevent href="l601e102" />
 	</event>
 
@@ -10291,13 +10291,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>4</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>3.5</humaneOrientation> 
-		<bgimg>default_colour.jpg</bgimg>
+		
 		<nextevent href="l200e015" />
 	</event>
 	<!-- Cultural Wrap-Up -->
-	<event level="1" element="0" id="l200e015" eventtype="24" imcost="0"
+	<event level="1" element="0" id="l200e015" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
-		<description></description>
 		<message></message>
 		<bgimg>ES_9Dimensions.jpg</bgimg> 
 		<nextevent href="l200e020" />
@@ -11134,13 +11133,12 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>4</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>3.5</humaneOrientation> 
-	<bgimg>default_colour.jpg</bgimg>
+	
 		<nextevent href="l210e015" />
 	</event>
 	<!-- Cultural Wrap-Up -->
-	<event level="1" element="0" id="l210e015" eventtype="24" imcost="0"
+	<event level="1" element="0" id="l210e015" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
-		<description></description>
 		<message></message>
 		<bgimg>ES_9Dimensions.jpg</bgimg> 
 		<nextevent href="l210e020" />
@@ -11987,7 +11985,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>5.5</uncertaintyAvoidance>
 		<assertiveness>3.5</assertiveness>
 		<humaneOrientation>4</humaneOrientation>
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l501e003" />
 	</event>
 <!-- ENDE SCHIEBEREGLER -->
@@ -13078,17 +13076,17 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>"Lunch" Beat Is a Rather New Tradition in Swedish Culture. Sort Traditions and other Aspects of Culture in the Iceberg Model.</description>
 		<column>Visible</column>
 		<column>Invisible</column>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Clothing">Clothing</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Norms">Norms</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Food">Food</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Thought patterns">Thought patterns</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Language">Language</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Belief and assumptions">Belief and assumptions</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Values">Values</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Work ethic">Work ethic</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Time orientation">Time orientation</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Eating habits">Eating habits</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Religion's importance">Religion's importance</option>
+			<option column="1" rank="6" title="Clothing">Clothing</option>
+			<option column="2" rank="1" title="Norms">Norms</option>
+			<option column="1" rank="6" title="Food">Food</option>
+			<option column="2" rank="1" title="Thought patterns">Thought patterns</option>
+			<option column="1" rank="6" title="Language">Language</option>
+			<option column="2" rank="1" title="Belief and assumptions">Belief and assumptions</option>
+			<option column="2" rank="1" title="Values">Values</option>
+			<option column="2" rank="1" title="Work ethic">Work ethic</option>
+			<option column="2" rank="1" title="Time orientation">Time orientation</option>
+			<option column="1" rank="6" title="Eating habits">Eating habits</option>
+			<option column="2" rank="1" title="Religion's importance">Religion's importance</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l565e011"/> 
 	</event>
@@ -13312,7 +13310,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<uncertaintyAvoidance>5.5</uncertaintyAvoidance>
 		<assertiveness>3.5</assertiveness>
 		<humaneOrientation>4</humaneOrientation>		
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l502e003" />
 	</event>
 <!-- ENDE SCHIEBEREGLER -->
@@ -14660,14 +14658,14 @@ In China it is highly important to show respect to your guest. With inviting you
 		<assertiveness>4,5</assertiveness>
 		<humaneOrientation>4</humaneOrientation> 
 		<nextevent href="l433e007" />
-		<bgimg>default_colour.jpg</bgimg>
+		
 	</event>
 
 
 <event level="1" element="0" id="l433e007" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>USA_Wrap_Up.jpg</bgimg>
+		<bgimg>US_Wrap_Up.jpg</bgimg>
 		<nextevent href="l400e002"/>
 	</event>
 
@@ -15434,7 +15432,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 	
@@ -16208,7 +16206,7 @@ about not or at least giving fewer tips than usual.
 		<assertiveness>4,5</assertiveness>
 		<humaneOrientation>4</humaneOrientation> 
 		<nextevent href="l483e007" />
-		<bgimg>default_colour.jpg</bgimg>
+		
 	</event>
 
 
@@ -16217,7 +16215,7 @@ about not or at least giving fewer tips than usual.
 <event level="1" element="0" id="l483e007" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>USA_Wrap_Up.jpg</bgimg>
+		<bgimg>US_Wrap_Up.jpg</bgimg>
 		<nextevent href="l450e002"/>
 	</event>
 	 
@@ -17754,7 +17752,7 @@ about not or at least giving fewer tips than usual.
 		<uncertaintyAvoidance>3.5</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>4</humaneOrientation> 
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l800e016" />
 	</event>
 	
@@ -18842,7 +18840,7 @@ about not or at least giving fewer tips than usual.
 		<uncertaintyAvoidance>3.5</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>4</humaneOrientation>  
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l800e015" />
 	</event>
 	
@@ -18972,7 +18970,7 @@ about not or at least giving fewer tips than usual.
 					Mr. Yilmaz guides you into one of the meeting rooms. Suddenly, there are coming more and more people and Cay ("black tea") and some Simits ("sesame rings") are served. 
 			</content>
 		<option href="l802e005">Next</option>
-		<bgimg>TR_TeaTeamf.jpg</bgimg>		
+		<bgimg>TR_Tea_Teamf.jpg</bgimg>		
 		</event>
 		
 		<event level="2" element="1" id="l802e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -19932,7 +19930,7 @@ about not or at least giving fewer tips than usual.
 		<uncertaintyAvoidance>4.5</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>4.5</humaneOrientation> 
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l900e016" />
 	</event>
 	
@@ -20946,7 +20944,7 @@ about not or at least giving fewer tips than usual.
 		<uncertaintyAvoidance>4.5</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>4.5</humaneOrientation>  
-		<bgimg>default_colour.jpg</bgimg> 
+		 
 		<nextevent href="l900e015" />
 	</event>
 	
