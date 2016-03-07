@@ -1169,7 +1169,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	
 	<!-- END LEVEL 5 -->
@@ -2344,7 +2344,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	<!-- END LEVEL 5 -->
 	<!-- End female -->
