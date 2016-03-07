@@ -103,6 +103,7 @@ function changeSelect() {
 		checkTTS();
    
 }
+}
 /*
 * Kristin K.
 *6.3.16
