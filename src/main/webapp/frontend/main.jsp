@@ -82,13 +82,14 @@ function changeSelect() {
 	   
 	   // Letzte Änderung 05.03.16 von Tanja: Imprint Feld im Dropdown öffnet einen neuen Tab in dem die Imprint.jsp angezeigt wird.
 	   window.open ("frontend/imprint.jsp", "_blank");
-   }
+  		 var selectBox = document.getElementById("selectBox");
+   			selectBox.options[0].selected = true;   
    /*
 	* Kristin K.
 	*6.3.16
 	* Function to remove & set the tts cookie depending on the given value of the drop down 
 	*/
-	else if (selectedValue=='TextToSpeech On'){ 
+	}else if (selectedValue=='TextToSpeech On'){ 
 		
 		
 	  	eraseCookie("tts");
@@ -101,7 +102,6 @@ function changeSelect() {
 		setCookie("tts","false")
 		checkTTS();
    
-   }
 }
 /*
 * Kristin K.
