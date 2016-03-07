@@ -33,8 +33,18 @@ public class PDFCreator extends HttpServlet {
 	private static long currentContentObjectCounter = 0;
 	
 	public static ByteArrayOutputStream createCertificate(String name, String gameName, int scoreA, int scoreB, int scoreC, String scoreAd, String scoreBd, String scoreCd, String usermail, String completedCountry) throws IOException{
-		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+		 currentObjectCount = 0;
+		 objectPositions = new ArrayList<Long>();
+		 currentPositionCount = 0;
+		 infoObject = 0;
+		 catalogObject = 0;
+		 fontObjects = new ArrayList<Long>();
+		 imageObjects = new ArrayList<Long>();
+		 fontNames = new ArrayList<String>();
+		 content = new ArrayList<List<PDFContent>>();
+		 currentContentObjectCounter = 0;
 		
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 		writeVersion(outputStream, "1.6");
 		
 		saveInfoObject();
@@ -48,7 +58,7 @@ public class PDFCreator extends HttpServlet {
 		fontNames.add("Courier");
 		fontNames.add("Times-Roman");
 		
-					List<PDFContent> page1 = new ArrayList<PDFContent>();
+	List<PDFContent> page1 = new ArrayList<PDFContent>();
 		page1.add(new PDFContent("image", "4",-27,150,260,200, 0 ,0,0,0, 0, ""));
 		page1.add(new PDFContent("text", name, 203, 450, 1, 20,0,0,0,0,0, ""));
 		page1.add(new PDFContent("text", "has earned this certificate of completion for:", 203, 410, 1, 20,0,0,0,0,0, ""));
