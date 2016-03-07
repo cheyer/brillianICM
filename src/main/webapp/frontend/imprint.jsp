@@ -84,7 +84,7 @@ Please feel free to contact IMBIT, if you are working in the field of education 
 <h3>We, the WIMBIT 13C course, are proud to present our game:</h3>
 
 <img src="../images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
-Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann, Sabrina Weniger, Christian Marheine, Viviane Schmitt, Lena Bauer, Eansalatta Ravindren, Prof. Harald Bendl, Anne Heister, Kristin Köfler, Jennifer Malz, Robyn Dedmon, Max Kossielny, Tanja Henkel, Yannik Riedl, Jonas Bender, Nikolas Krybus, Cora Albert, Arnold Roth, Felix Schüch, Manh Phi Nguyen, Adrian Bettag, Jan Scheerer, Florian Menzel, Astrid Beutel, Julia Hain, Christopher Krah, Joana Haase, Anastasia Reimer, Christian Heyer, Aline Ulrich, Prof. Peter Mayr
+Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann, Sabrina Weniger, Christian Marheine, Viviane Schmitt, Lena Bauer, Eansalatta Ravindren, Prof. Dr. Harald Bendl, Anne Heister, Kristin Köfler, Jennifer Malz, Robyn Dedmon, Max Kossielny, Tanja Henkel, Yannik Riedl, Jonas Bender, Nikolas Krybus, Cora Albert, Arnold Roth, Felix Schüch, Manh Phi Nguyen, Adrian Bettag, Jan Scheerer, Florian Menzel, Astrid Beutel, Julia Hain, Christopher Krah, Joana Haase, Anastasia Reimer, Christian Heyer, Aline Ulrich, Prof. Peter Mayr
 </div>
             </div>
     </section>
