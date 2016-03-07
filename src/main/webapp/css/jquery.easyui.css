@@ -9,7 +9,7 @@ border-radius: 0 0 0 0;
 }
 .panel-header,
 .panel-body {
-border-width: 2px; /* EDIT BY EANGEL ON FEB 17. Old: 1px --> Show a thicker border for infoboxes (eventtype 3) */
+border-width: 1px; /* EDIT MANH. Orig: 1px. Eangel: 2px --> Show a thicker border for infoboxes (eventtype 3) */
 border-style: solid;
 }
 .panel-header {
@@ -808,10 +808,10 @@ vertical-align: top;
 display: inline-block;
 vertical-align: top;
 width: auto;
-line-height: 29px; /* EDIT BY EANGEL ON FEB 17, 2016. Old: 24px --> Modifying the design of the buttons of eventtype 3*/
-font-size: 24px; /* EDIT BY EANGEL ON FEB 17, 2016. 18px*/
+line-height: 24px; /*EDIT MANH. Orig: 24px. Eangel: 29px*/ /* Modifying the design of the buttons of eventtype 3*/
+font-size: 18px; /*EDIT MANH. Orig: 18px. Eangel: 24px */ 
 padding: 0;
-margin: 0 4px; /* EDIT BY EANGEL ON FEB 17, 2016. Old: 0 4px*/
+margin: 0 4px; /* EDIT MANH. Orig: 0 4px. Eangel: 0 10px*/ 
 }
 .l-btn-icon {
 display: inline-block;
