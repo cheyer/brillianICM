@@ -175,8 +175,9 @@
        <p style="color: red; text-align: left;">${error}</p>
        		<!-- EDIT BY MANH ON MAR 7, 2016 -->
        		<!-- Remove the old login section -->
-       		<!--   
+       		   
              <form action="LoginUser" method="post" >
+             <!--  
 			<table style="width:30%; bottom:0px; padding:0; text-align:center">
 			<tr>
 				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
@@ -201,37 +202,35 @@
 				</td>				
 			</tr>
 		</table>
-        -->     
+        -->
         <!-- End of line -->
              
              <!-- EDIT BY MANH ON MAR 7, 2016 -->
              <!-- Redesign of the login screen -->
-			<table style="width:30%; bottom:0px; padding:0; text-align:center">
-				<tr>
-					<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
-				</tr>
-				
-				<tr>
-					<td><input class="form-control" type="password" name="password" maxlength="50" placeholder="Password" /></td>
-				</tr>
-				
-				<tr >
-					<td><input class="btn btn-default"  type="submit"
-						name="submit" value="Login" style="width:100%" /></td>
-				</tr>
+		<table style="width:30%; bottom:0px; padding:0; text-align:center">
+			<tr>
+				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
+			</tr>
 			
-				<tr>
-					<td align="left">
-						<a class ="login" href='resetpw.jsp'>Forgot your password?</a>
-					</td>
-				</tr>
+			<tr>
+				<td><input class="form-control" type="password" name="password" maxlength="50" placeholder="Password" /></td>
+			</tr>
 			
-				<tr>
-					<td align="left">
-						<a href='<%out.print(application.getContextPath());%>/Registration?g=000' >Register</a>
-					</td>
-				</tr>
-			</table>
+			<tr >
+				<td><input class="btn btn-default"  type="submit"
+					name="submit" value="Login" style="width:100%"/></td>
+			</tr>
+			<tr>
+				<td align="left">
+					<a class="login" href='resetpw.jsp'>Forgot your password?</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<a class="login" href='<%out.print(application.getContextPath());%>/Registration?g=000' >Register</a>
+				</td>				
+			</tr>
+		</table>
 			<!-- End of line -->
 		
 		</form>
