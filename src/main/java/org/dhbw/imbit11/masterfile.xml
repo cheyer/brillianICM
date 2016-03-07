@@ -10295,9 +10295,8 @@ In China it is highly important to show respect to your guest. With inviting you
 		<nextevent href="l200e015" />
 	</event>
 	<!-- Cultural Wrap-Up -->
-	<event level="1" element="0" id="l200e015" eventtype="24" imcost="0"
+	<event level="1" element="0" id="l200e015" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
-		<description></description>
 		<message></message>
 		<bgimg>ES_9Dimensions.jpg</bgimg> 
 		<nextevent href="l200e020" />
@@ -11138,9 +11137,8 @@ In China it is highly important to show respect to your guest. With inviting you
 		<nextevent href="l210e015" />
 	</event>
 	<!-- Cultural Wrap-Up -->
-	<event level="1" element="0" id="l210e015" eventtype="24" imcost="0"
+	<event level="1" element="0" id="l210e015" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
-		<description></description>
 		<message></message>
 		<bgimg>ES_9Dimensions.jpg</bgimg> 
 		<nextevent href="l210e020" />
@@ -14667,7 +14665,7 @@ In China it is highly important to show respect to your guest. With inviting you
 <event level="1" element="0" id="l433e007" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>USA_Wrap_Up.jpg</bgimg>
+		<bgimg>US_Wrap_Up.jpg</bgimg>
 		<nextevent href="l400e002"/>
 	</event>
 
@@ -16217,7 +16215,7 @@ about not or at least giving fewer tips than usual.
 <event level="1" element="0" id="l483e007" eventtype="23" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<message></message>
-		<bgimg>USA_Wrap_Up.jpg</bgimg>
+		<bgimg>US_Wrap_Up.jpg</bgimg>
 		<nextevent href="l450e002"/>
 	</event>
 	 
