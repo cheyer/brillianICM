@@ -115,11 +115,6 @@
 				<tr>
 					<td colspan="2">
 						
-							
-							
-							<script type="text/javascript">
-									checkCertificate();
-								</script>
 								
 							<p><div id="certificationText"></div>
 							<br /><br />
