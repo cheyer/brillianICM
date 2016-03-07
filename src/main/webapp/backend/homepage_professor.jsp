@@ -73,7 +73,7 @@
 											out.println("<form action=\""+ application.getContextPath()+"/RegistrationPage\" method=\"post\">"
 												+ "<input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "
 												+ "value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>"
-												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(3) +"\" style=\"display:none\"/>"
 												+ "</form></td><td>");
 											//delete group without members button
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
