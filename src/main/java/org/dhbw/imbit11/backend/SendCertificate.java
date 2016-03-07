@@ -82,8 +82,10 @@ public class SendCertificate extends HttpServlet {
 				
 				String path = (String) list.get(6);
 				String[] arr = path.split(";");
-				if(arr[arr.length-1]!="l000e000"){
-				if(arr[arr.length-1]=="l999e999"){
+				System.out.println(arr[arr.length-1]);
+				if(arr[arr.length-1].equals("l000e000")){}
+				else{
+				if(arr[arr.length-1].equals("l999e999")){
 				String countryevent = arr[arr.length-2];
 				countryID = countryevent.charAt(1);}
 				else{
@@ -106,7 +108,6 @@ public class SendCertificate extends HttpServlet {
 				}
 				
 				String username= firstName + " " + lastName; 
-				
 				realm.resetUserProgress(email);
 				mailclient.sendCertificateMail(username, email, imcost, imqual, imtime, country, request);
 				}
