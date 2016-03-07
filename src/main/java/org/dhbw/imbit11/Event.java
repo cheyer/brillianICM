@@ -176,10 +176,38 @@ public class Event extends HttpServlet {
 			 * Added Cases that returns the global settings to the request 
 			 */
 			case "getSettings": {
-				UserRealm realm = new UserRealm();
+				UserRealm userRealm = new UserRealm();
 				try {
-					ArrayList<Boolean> settings = realm.getSettings();
+					ArrayList<Boolean> settings = userRealm.getSettings();
 					data = settings.toString();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 6.3.16
+			 * Added Cases that returns the certificate settings for the users group 
+			 */
+			case "getCertificateSettings": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					String group_id = userRealm.getUserGroupByID(userid);
+					String certificate = userRealm.getCertificate(group_id);
+					data = certificate;
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			case "resetUserProgress": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					String email = userRealm.getUserEmailByID(userid);
+					userRealm.resetUserProgress(email);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

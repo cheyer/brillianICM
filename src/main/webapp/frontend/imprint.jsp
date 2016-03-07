@@ -40,6 +40,27 @@
        <!-- Overwriting Font -->
      <link href="../css/font.css" rel="stylesheet">
      
+     
+	<!-- EDIT BY EANGEL (re-edit Manh) ON FEB 17, 2016 -->
+	<!-- Text nicht mehr zentriert, sondern linksbündig darstellen -->
+	<style>
+		.col-lg-8.col-lg-offset-2 {
+		    text-align: left;
+		    margin-left: 40px;
+		    width: 100%;
+		}
+
+		element.style {
+		    padding-right: 245px;
+		}
+
+		@media (min-width: 767px)
+		.content-section {
+		    padding-top: 220px;
+		}
+	</style>
+	<!-- End of line -->
+	
      </head>
      <body>
       

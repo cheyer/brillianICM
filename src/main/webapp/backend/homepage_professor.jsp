@@ -54,7 +54,7 @@
 				<br />
 				
 				<%
-					
+
 					if(request.getAttribute("groups")!=null){
 											
 											//students = new String[((String [][]) request.getAttribute("students")).length][request.getAttribute("students")[0].length];
@@ -73,7 +73,7 @@
 											out.println("<form action=\""+ application.getContextPath()+"/RegistrationPage\" method=\"post\">"
 												+ "<input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "
 												+ "value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>"
-												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(3) +"\" style=\"display:none\"/>"
 												+ "</form></td><td>");
 											//delete group without members button
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
@@ -110,10 +110,23 @@
 												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
 												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set progress</a></td></form></td><td>");
 											out.println("<td><form action=\""+ application.getContextPath()+"/SendCertificate\" method=\"post\">"
-													+ "<input style=\"display:none\" id=\"SendCertificatesNowButton"+i+"\" type=\"submit\" value=\"SendcertificatesNow\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#SendCertificatesNowButton"+ i +"').trigger('click')\">send certificates now</a>"
+													+ "<input style=\"display:none\" id=\"SendCertificatesNowButton"+i+"\" type=\"submit\" value=\"SendcertificatesNow\"/> <a class= \"easyui-linkbutton\" onclick=confirmCertificationSend("+i+",\""+groups.get(i).get(1)+"\")>send certificates now</a>"
 													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
 													+ "<input type=\"text\" name=\"group_name\" value=\""+ groups.get(i).get(1) +"\" style=\"display:none\"/>" 
 													+ "</form></td><td>");
+											if(groups.get(i).get(2).equals("1")){
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOff"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOff"+ i +"').trigger('click')\">Disable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"0\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}else{
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOn"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOn"+ i +"').trigger('click')\">Enable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"1\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}
 											out.println("</td></tr></table> ");
 											
 											
@@ -256,7 +269,20 @@
 		var box = window.confirm("Click OK if you want to delete group: "
 				+ groupname);
 		if (box) {
+			console.log("test");
 			$('#deleteGroupButton' + i).trigger('click');
+		}
+	}
+	/*
+	* Philipp K.
+	* 6.3.16
+	* Add function to check if Prof wants to send the certificates
+	*/
+	function confirmCertificationSend(i, groupname) {
+		var box = window.confirm("Click OK if you want to send a certificate to all users of the following group: "
+				+ groupname);
+		if (box) {
+			$('#SendCertificatesNowButton' + i ).trigger('click');
 		}
 	}
 	function confirmPasswordChange()

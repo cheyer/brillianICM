@@ -72,7 +72,44 @@
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
 	<script type="text/javascript" src="js/grayscale.js"></script>
 
-
+	<!-- EDIT BY EANGEL ON FEB 17, 2016 -->
+	<!-- Text nicht mehr zentriert, sondern linksbündig darstellen -->
+	<style>
+		.col-lg-8.col-lg-offset-2 {
+		    text-align: left;
+		    margin-left: 40px;
+		    width: 100%;
+		}
+		
+		.btn-default {
+		    border: 1px solid black;
+		    color: black;
+		    background-color: hsl(30,90%,50%);
+		    margin-top: 10px;
+		    margin-right: 255px;
+		}
+		
+		table a:not(.btn), .table a:not(.btn) {
+		    text-decoration: underline;
+		    margin-right: 40%;
+		}
+		
+		element.style {
+		    padding-right: 245px;
+		}
+		
+		/*
+		.container{   
+			margin-left:0px;
+		}
+		*/
+	     
+		@media (min-width: 767px)
+		.content-section {
+		    padding-top: 220px;
+		}
+	</style>
+	<!-- End of line -->
 </head>
 <body  id="page-top"  data-spy="scroll" data-target=".navbar-fixed-top">
 	<script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
@@ -85,14 +122,18 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class=" page-scroll" href="#page-top">
+                
                     <div style="width:120px;"> <img src="img/logo_klein.png" alt="" style="width:100%">  </img></div>
                 </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- EDIT BY EANGEL ON FEB 17, 2016 -->
+            <!-- Removing the About, Imprint and Contact buttons -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <!-- 
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -109,8 +150,10 @@
                     </li>
                 </ul>
             </div>
+            -->
             <!-- /.navbar-collapse -->
-        </div>
+        <!-- </div> -->
+        <!-- End of line -->
         <!-- /.container -->
     </nav>
 
@@ -129,8 +172,12 @@
                 </div>
             
         
-       <p style="color: red; text-align: left;">${error}</p>  
+       <p style="color: red; text-align: left;">${error}</p>
+       		<!-- EDIT BY MANH ON MAR 7, 2016 -->
+       		<!-- Remove the old login section -->
+       		   
              <form action="LoginUser" method="post" >
+             <!--  
 			<table style="width:30%; bottom:0px; padding:0; text-align:center">
 			<tr>
 				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
@@ -155,6 +202,37 @@
 				</td>				
 			</tr>
 		</table>
+        -->
+        <!-- End of line -->
+             
+             <!-- EDIT BY MANH ON MAR 7, 2016 -->
+             <!-- Redesign of the login screen -->
+		<table style="width:30%; bottom:0px; padding:0; text-align:center">
+			<tr>
+				<td><input class="form-control" type="text" name="username" maxlength="50"  placeholder="Email"/></td>
+			</tr>
+			
+			<tr>
+				<td><input class="form-control" type="password" name="password" maxlength="50" placeholder="Password" /></td>
+			</tr>
+			
+			<tr >
+				<td><input class="btn btn-default"  type="submit"
+					name="submit" value="Login" style="width:100%"/></td>
+			</tr>
+			<tr>
+				<td align="left">
+					<a class="login" href='resetpw.jsp'>Forgot your password?</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="left">
+					<a class="login" href='<%out.print(application.getContextPath());%>/Registration?g=000' >Register</a>
+				</td>				
+			</tr>
+		</table>
+			<!-- End of line -->
+		
 		</form>
       </div>  
    </div>     

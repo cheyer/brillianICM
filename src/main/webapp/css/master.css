@@ -340,8 +340,8 @@ div.dialogMoodContainer {
 }
 
 div.dialogTextContainer {
-	opacity: 0.7;
-	line-height: 20px;
+	opacity: 0.7; /*EDIT MANH MAR 7, 2016. Orig: 0.7. Eangel: 0.9*/ /*transparency of eventtype 3*/
+	line-height: 20px; /*EDIT MANH MAR 7, 2016. Orig: 20px. Eangel: 25px */ 
 	float: left;
 	position: absolute;
 	display: block;
@@ -357,12 +357,12 @@ div.dialogTextContainerTwo {
 }
 
 div.dialogPartner {
-	padding: 10px;
+	padding: 10px; /*EDIT MANH MAR 7, 2016. Orig: 10px. Eangel: 15px*/ /*Padding of text of eventtype 3*/
 }
 
 div.dialogPartnerName {
 	height: initial;
-	margin-bottom: 10px;
+	margin-bottom: 10px; /*EDIT MANH MAR 7, 2016. Orig: 10px. Eangel: 25px*/ /*Size of heading of eventtype 3 */
 }
 
 div.dialogPartnerText {
@@ -485,6 +485,7 @@ div.centerContainer {
 	text-align: center;
 	position: absolute;
 	overflow-y: auto;
+	/*EDIT MANH 7, 2016. Original: Nothing. Eangel: margin-top:15px */ 
 }
 
 div.laptopContainer {
@@ -673,12 +674,12 @@ div.draggableContainer {
 
 div.draggableContainerTwo {
 	border-width: 1px;
-	height: 99px !important;
+	height: 99px !important; /*EIDT MANH MAR 7, 2016. Orig: 99px. Eangel: 130px*/
 	width: 99%;
-	margin-top: 10px;
-	margin-bottom: 15px;
-	padding-bottom: 5px;
-	padding-left: 1px;
+	margin-top: 10 px; /*EDIT MANH MAR 7, 2016. Orig: 10px. Eangel: 0px*/ 
+	margin-bottom: 15x; /*EDIT MANH MAR 7, 2016. Orig: 15px. Eangel: 0px*/ 
+	padding-bottom: 5px; /*EDIT MANH MAR 7, 2016. Orig: 5px. Eangel: 0px*/ 
+	padding-left: 0px; 
 	overflow-y: scroll;
 }
 
@@ -704,19 +705,19 @@ div.button-bottom {
 	margin: 0 auto;
 	display: block;
 	width: 100%;
-	bottom: 1%;
+	bottom: 1%; /* EDIT MANH MAR 7, 2016. Orig: 1%. Eangel: 5%*/
 }
 
 div.drag {
 	float: left;
-	width: 200px;
-	height: 26px;
-	padding: 0 0 0 5px;
+	width: 200px; /*EDIT MANH MAR 7, 2016. Orig: 200px. Eangel: auto*/ 
+	height: 26px; 
+	padding: 0 5px 0 5px; /*EDIT MANH MAR 7, 2016. Orig: 0 5px 0 5px. Lena: 0 10px 0 10px*/ 
 	margin: 5px 6px 0 5px;
 	border-width: 1px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: nowrap; /*EDIT MANH MAR 7, 2016. Orig: nowrap. Eangel: normal*/ 
 	cursor: pointer !important;
 }
 
@@ -996,22 +997,23 @@ div.draggableTilesContainerStandard {
 div.description {
 	display: inline-block;
 	font-weight: bold;
-	font-size: 35px;
+	font-size: 35px; /*EDIT MANH MAR 7, 2016. Orig: 35px. Eangel: 20px*/ /* Size of heading in the middle of the screen*/
 	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 100%;
+	margin-bottom: 20px; /*EDIT MANH MAR 7, 2016. Orig: 20px. Eangel: 40px*/ 
+	width: 100%; /*EDIT MANH MAR 7, 2016. Orig: 100%. Eangel: auto*/
 	text-align: center;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.8); /*EDIT MANH MAR 7, 2016. Orig: rgba(255, 255, 255, 0.8). Eangel: #e6edfa*/ 
+	/*EDIT MANH MAR 7, 2016. Orig: Nothing. Eangel: padding: 5px 10px 5px 10px*/
 }
 
 div.messageBox {
-	width: 50%;
+	width: 50%; /*EDIT MANH MAR 7, 2016. Orig: 50%. Eangel: 70% */ 
 	text-align: justify;
 	border-width: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.8); /*EDIT MANH MAR 7, 2016. Orig: rgba(255, 255, 255, 0.8). Eangel: #e6edfa*/ 
 }
 
 /* tiles to be dragged and dropped*/
@@ -1260,7 +1262,7 @@ background-color
 
 div.dialogBox {
 	width: 50%;
-	height: inherit;
+	height: 82%; /*EDIT BY LENA ON FEB 17, 2016. Old: inherit*/
 	border-width: 0px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1285,7 +1287,7 @@ div.messageBoxB {
 	-moz-border-radius: 20px;
 	border-width: 2px;
 	border-color: #63a8b7;
-	background-color: #d5edf3;
+	background-color: #63A8B7; /*EDIT BY LENA ON FEB 17, 2016. Old: #d5edf3*/
 }
 
 div.messageBoxATriangle {
@@ -1305,6 +1307,7 @@ div.messageBoxATriangle2 {
 	border: 7px solid #63a8b7;
 	margin-right: 100%;
 	border-radius: 20px;
+	/*EDIT MANH MAR 7, 2016. Orig: Nothing. Eangel: border-color: d5edf3;*/
 }
 
 div.messageBoxBTriangle {

@@ -44,6 +44,7 @@ public class UserRealm extends JdbcRealm {
 	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE `group` = ?";
 	protected String getUserEmailByID = "SELECT `email` FROM `user` WHERE `user_id` = ?";
 	protected String getUserGenderByID = "SELECT `gender` FROM `user` WHERE `user_id` = ?";
+	protected String getUserGroupByID = "SELECT `group` FROM `user` WHERE `user_id` = ?";
 	
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
@@ -73,6 +74,8 @@ public class UserRealm extends JdbcRealm {
 	
 	protected String getSettings = "SELECT * FROM `settings`";
 	protected String setSettings = "UPDATE `settings` SET `audio`=?, `video`=?, `tts`=?, `subtitles`=?";
+	protected String setCertificate = "Update `group` SET `certificate`=? WHERE `group_id`=?";
+	protected String getCertificate = "SELECT `certificate` FROM `group` WHERE `group_id`=?";
 
 	
 	
@@ -174,7 +177,60 @@ public class UserRealm extends JdbcRealm {
 			}
 			
 		}
+		/*
+		 * Philipp K.
+		 * 7.3.16
+		 * Query to set the Certificate Value for a specific group 
+		 * Is needed to enable and disable certificate sending 
+		 */
+		
+		protected void setCertificate(String group_id, String certificate)
+				throws SQLException {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement ps = null;
+			// what about null values?
+			try {
+				ps = conn.prepareStatement(setCertificate);
+				ps.setString(1, certificate);
+				ps.setString(2, group_id);
+				ps.executeUpdate();
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
+			}
+			
+		}
 
+		/*
+		 * Philipp K.
+		 * 7.3.16
+		 * Query to get the Certificate Value for a specific group 
+		 * Is needed to enable and disable certificate sending 
+		 */
+		
+		public String getCertificate(String group_id)
+				throws SQLException {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			String certificate = "";
+			// what about null values?
+			try {
+				ps = conn.prepareStatement(getCertificate);
+				ps.setString(1, group_id);
+				
+				rs = ps.executeQuery();
+				
+				while (rs.next()) {		
+					certificate = rs.getString(1);
+					}
+				
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
+			}
+			return certificate;
+		}	
 	/**
 	 * Invoked in java class ProfessorMain does not work if the user has no
 	 * corresponding entry in the user_progress table returns an array list with
@@ -330,16 +386,16 @@ public class UserRealm extends JdbcRealm {
 		try {
 			ps = conn.prepareStatement(getGroupsForProfessorQuery);
 			ps.setString(1, professor);
-
+			
 			// Execute query
 			rs = ps.executeQuery();
-			// System.out.println("executed the following statement on DB: " +
-			// getGroupsForProfessorQuery);
-
+			//System.out.println("executed the following statement on DB: " +
+			//ps);
 			while (rs.next()) {
 				ArrayList<String> groupRow = new ArrayList<String>();
 				groupRow.add(rs.getString(1));
 				groupRow.add(rs.getString(2));
+				groupRow.add(rs.getString(4));
 				groups.add(groupRow);
 			}
 		} finally {
@@ -910,7 +966,42 @@ public class UserRealm extends JdbcRealm {
 		return genderint;
 	}
 	
+	/**
+	 *Returns the grouptfor the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param groupint
+	 *            - contains the group as an int
+	 * 
+	 * @return group - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
+	public String getUserGroupByID(String user_id) throws SQLException {
 
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String group = "";
+		try {
+			ps = conn.prepareStatement(getUserGroupByID);
+			ps.setString(1, user_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				group += rs.getString(1);
+			}
+			// System.out.println("executed the following statement on DB: " +
+			// getUserByEmail);
+			// System.out.println("the userid was "+userid);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return group;
+	}
 	/**
 	 * 
 	 * Returns an ArrayList containing the User Progress for the user
