@@ -32,6 +32,9 @@ import java.util.regex.Pattern;
  *
  * 3.3.16
  * Insert new setProgressQueryWithoutKPI so the user KPI's are not effected anymore
+ * 
+ * 5.3.16
+ * Insert new getUserEmailByID query  so the email can be loaded
  */
 
 
@@ -39,7 +42,9 @@ public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
 	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE `group` = ?";
+	protected String getUserEmailByID = "SELECT `email` FROM `user` WHERE `user_id` = ?";
 	protected String getUserGenderByID = "SELECT `gender` FROM `user` WHERE `user_id` = ?";
+	
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
@@ -129,7 +134,7 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 	
-	protected ArrayList<Boolean> getSettings()
+	public ArrayList<Boolean> getSettings()
 				throws SQLException {
 			Connection conn = dataSource.getConnection();
 			PreparedStatement ps = null;
@@ -547,6 +552,8 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 	}
+	
+
 
 	/**
 	 * 
@@ -603,7 +610,7 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 	}
-
+	
 	/*
 	 * Philipp K.
 	 * 3.3.16
@@ -824,6 +831,61 @@ public class UserRealm extends JdbcRealm {
 		return userid;
 	}
 	
+	/**
+	 * Philipp K.
+	 * 5.3.16
+	 *Returns the user email for the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param email
+	 *            - contains the email address of a student that is saved to
+	 *            field "username"
+	 * 
+	 * @return userid - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
+	public String getUserEmailByID(String user_id) throws SQLException {
+
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String email = "";
+		try {
+			ps = conn.prepareStatement(getUserEmailByID);
+			ps.setString(1, user_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				email += rs.getString(1);
+			}
+			
+			// System.out.println("executed the following statement on DB: " +
+			// getUserByEmail);
+			// System.out.println("the userid was "+userid);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return email;
+	}
+	
+	/**
+	 *Returns the gender for the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param genderint
+	 *            - contains the gender as an int
+	 * 
+	 * @return userid - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
 	public int getUserGenderByID(String user_id) throws SQLException {
 
 		Connection conn = dataSource.getConnection();
@@ -941,7 +1003,6 @@ public class UserRealm extends JdbcRealm {
 		String userid = getUserByEmail(userEmail);
 		setUserProgress(userid, 0, 0, 0, "l000e000");
 		resetUserCountry(userid);
-
 
 	}
 	/*end*/ 

@@ -131,8 +131,14 @@ function checkBrowserName(name) {
 	}
 	return false;
 }
-
+/*
+ * Philipp K. 
+ * 6.3.16
+ * Added gamaData reset to reset KPIs when changing country 
+ */
 function changeFunc() {
+	
+		
 	var selectBox = document.getElementById("contry-list");
 	var selectedValue = selectBox.options[selectBox.selectedIndex].value;
 	var nextEvent = "";
@@ -143,7 +149,12 @@ function changeFunc() {
 			nextEvent = $(this).attr('href');
 		}
 	});
+	
+	gameData.imtime = 0;
+	gameData.imqual = 0; 
+	gameData.imcost = 0;
 	getXml(nextEvent);
+	
 }
 
 function setDescription(container, itemRank, itemDescription) {
@@ -532,11 +543,72 @@ function showResult() {
 			audiosetting=getCookie("audio");
 			if (audiosetting == "true") {
 			audioElement.play();	}*/
+			/*
+			 * Philipp K. 
+			 * 5.3.16
+			 * Added ajax to import game date so the result page can use dynamic content 
+			 * First function added the name of the User and makes the 
+			 */
+			$.ajax({
+				url: 'Event',
+				type: 'get',
+				dataType: 'html',
+				data: {userid : userid, type : 'loadGame'},
+				async: true,
+				success: function(data) {
+					try{
+						var list = data.split("[")[1].split(']')[0].split(', ');
+										
+						lastName = list[0];
+						firstName = list[1];
+						gender = list[2];
+						imcost = list[3];
+						imqual = list[4];
+						imtime = list[5];	
+						gamePath = list[6];
+						idArray = gamePath.split(';');
+						id = idArray[idArray.length-1];
+						setTCQImages(imtime, imcost, imqual);
 
-			document.getElementById("cost").innerHTML = "100%";
-			document.getElementById("time").innerHTML = "100%";
-			document.getElementById("quality").innerHTML = "100%";
+					}catch(err){
+						lastName = 'Mustermann';
+						firstName = 'Max';
+						gender = '1';
+						imcost = '100';
+						imqual = '100';
+						imtime = '100';				
+						gamePath = $.getUrlVar('gamePath');
+						if(typeof gamePath == 'undefined'){
+							gamePath = 'l000e000';
+						}
+						idArray = gamePath.split(';');
+						id = idArray[idArray.length-1];
+						
 
+					}
+					document.getElementById("name").innerHTML = firstName + " " + lastName;
+					document.getElementById("cost").innerHTML = " " + imcost + "%";
+					document.getElementById("time").innerHTML = " " + imtime + "%";
+					document.getElementById("quality").innerHTML = " " + imqual + "%";
+				} 
+			});
+
+			$.ajax({
+				url: 'Event',
+				type: 'get',
+				dataType: 'html',
+				data: {userid : userid, type : 'getEmail'},
+				async: true,
+				success: function(data) {
+					try{
+						user_email = data;
+
+					}catch(err){
+						user_email = "";
+					}
+					document.getElementById("email").innerHTML = user_email;
+				}
+			});	
 			$(this).find('#imprint').bind('click', function() {
 				showImprint();
 			});
@@ -544,7 +616,6 @@ function showResult() {
 			$(this).find('#help').bind('click', function() {
 				showPdf('documents/BA_notizblock.pdf');
 			});
-
 			$(this).find('#logout').bind('click', function() {
 				sessionStorage.removeItem('userid');
 				window.location.href = 'LogoutUser';
@@ -722,9 +793,23 @@ $.extend({
 // Veränderung der TCQ IMAGES auf der Seite
 function setTCQImages(imtime, imcost, imqual) {
 	//Grenzen Rot:0-49 Grenzen Gelb 50-85 Grenzen Grün:86-100
+	
+	/* EDIT BY JONAS ON FEB 27, 2016 */
+	/* New code for the polarclock*/
 	var kpi_competence = imtime;
 	var kpi_behaviour = imcost;
 	var kpi_communication = imqual;
+	KPIValues[0] = kpi_competence;
+	KPIValues[1] = kpi_behaviour;
+	KPIValues[2] = kpi_communication;
+	
+	tick();
+	/* End of line*/
+	
+	
+	/* EDIT BY JONAS ON FEB 27, 2016*/
+	/* Removing the logic for the outdated KPI buttons */
+	/*
 	var svg_competence = document.getElementById("icon_competence");
 	var svg_communication = document.getElementById("icon_communication");
 	var svg_behaviour = document.getElementById("icon_behaviour");
@@ -767,6 +852,8 @@ function setTCQImages(imtime, imcost, imqual) {
 		svg_behaviour.setAttribute("fill", color_red);
 
 	}
+	*/
+	/* End of line */
 }
 
 // Veränderung der TCQ WERTE
@@ -817,3 +904,250 @@ function updateTCQValues(imtime, imcost, imqual) {
 		gameData.imqual = 0;
 	}
 }
+
+
+/* EDIT BY JONAS ON FEB 27, 2016*/
+/* Functions of the polarclock */
+function tick() {
+  if (!document.hidden) field
+      .each(function(d) { this._value = d.value; })
+      .data(fields)
+      .each(function(d) { d.previousValue = this._value; })
+    .transition()
+      .ease("elastic")
+      .duration(500)
+      .each(fieldTransition);
+
+  //setTimeout(tick, 1000 - Date.now() % 1000);
+}
+
+
+function fieldTransition() {
+	var field = d3.select(this).transition();
+	  
+	if(this.childNodes[1].id=="arc-center-3"){
+		field.select(".arc-body")
+	      .attrTween("d", arcTween(arcBody))
+	      .style("fill", 
+		  function(d) { return color(d.value); });}  //1stKPI
+	
+ 	if(this.childNodes[1].id=="arc-center-2"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(182, 100%, 14%,0.25)"; });} //1st KPI complement 
+	
+	if(this.childNodes[1].id=="arc-center-1"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsl(226, 100%, 50%)"; });} //progressValue
+	  
+ 	if(this.childNodes[1].id=="arc-center-0"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(226, 100%, 14%,0.25)"; });} //progressValue complement 
+	  
+  	if(this.childNodes[1].id=="arc-center-4"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(323, 100%, 14%,0.25)"; });} //3rd KPI complement 
+	  
+	  	if(this.childNodes[1].id=="arc-center-5"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return color3(d.value);; });} // 3rd KPIValue
+	  
+	  if(this.childNodes[1].id=="arc-center-6"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return "hsla(82, 100%, 14%,0.25)"; });} //2nd KPI complement
+	
+	  if(this.childNodes[1].id=="arc-center-7"){
+		  field.select(".arc-body")
+		      .attrTween("d", arcTween(arcBody))
+		      .style("fill", function(d) { return color2(d.value); });} // 2nd KPIValue
+
+  field.select(".arc-center")
+      .attrTween("d", arcTween(arcCenter));
+
+  field.select(".arc-text")
+      .text(function(d) { return d.text; });
+}
+
+
+function arcTween(arc) {
+  return function(d) {
+    var i = d3.interpolateNumber(d.previousValue, d.value);
+    return function(t) {
+      d.value = i(t);
+      return arc(d);
+    };
+  };
+}
+
+
+function fields() {
+  return [
+  {index: .1,     value: 1},
+	{index: .1,   value: progressValue/100},
+   {index: .3,   value: 1},
+    {index: .3,   value: KPIValues[2]/100}, 
+	{index: .5, value: 1},
+	{index: .5,  value: KPIValues[0]/100},
+	{index: .4,  value: 1},
+    {index: .4,  value: KPIValues[1]/100}, 
+  ];
+}
+/* End of line*/
+
+
+//Edit Anil On Feb 29, 2016 Schüttelfunktion
+
+/* EDIT BY ANIL ON FEB 29, 2016*/
+/* Functions for the shake functionality*/
+(function(global, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(function() {
+            return factory(global, global.document);
+        });
+    } else if (typeof module !== 'undefined' && module.exports) {
+        module.exports = factory(global, global.document);
+    } else {
+        global.Shake = factory(global, global.document);
+    }
+} (typeof window !== 'undefined' ? window : this, function (window, document) {
+
+    'use strict';
+
+    function Shake(options) {
+        this.hasDeviceMotion = 'ondevicemotion' in window; //feature detect
+
+        this.options = {
+            threshold: 15, //default velocity threshold for shake to register
+            timeout: 1000 //default interval between events
+        };
+
+        if (typeof options === 'object') {
+            for (var i in options) {
+                if (options.hasOwnProperty(i)) {
+                    this.options[i] = options[i];
+                }
+            }
+        }
+
+        this.lastTime = new Date();  //use date to prevent multiple shakes firing
+
+        //accelerometer values
+        this.lastX = null;
+        this.lastY = null;
+        this.lastZ = null;
+
+        //create custom event
+        if (typeof document.CustomEvent === 'function') {
+            this.event = new document.CustomEvent('shake', {
+                bubbles: true,
+                cancelable: true
+            });
+        } else if (typeof document.createEvent === 'function') {
+            this.event = document.createEvent('Event');
+            this.event.initEvent('shake', true, true);
+        } else {
+            return false;
+        }
+    }
+
+    Shake.prototype.reset = function () {     //reset timer values
+        this.lastTime = new Date();
+        this.lastX = null;
+        this.lastY = null;
+        this.lastZ = null;
+    };
+
+    Shake.prototype.start = function () {     //start listening for devicemotion
+        this.reset();
+        if (this.hasDeviceMotion) {
+            window.addEventListener('devicemotion', this, false);
+        }
+    };
+
+    Shake.prototype.stop = function () {     //stop listening for devicemotion
+        if (this.hasDeviceMotion) {
+            window.removeEventListener('devicemotion', this, false);
+        }
+        this.reset();
+    };
+
+    Shake.prototype.devicemotion = function (e) {      //calculates if shake has occured
+        var current = e.accelerationIncludingGravity;
+        var currentTime;
+        var timeDifference;
+        var deltaX = 0;
+        var deltaY = 0;
+        var deltaZ = 0;
+
+        if ((this.lastX === null) && (this.lastY === null) && (this.lastZ === null)) {
+            this.lastX = current.x;
+            this.lastY = current.y;
+            this.lastZ = current.z;
+            return;
+        }
+
+        deltaX = Math.abs(this.lastX - current.x);
+        deltaY = Math.abs(this.lastY - current.y);
+        deltaZ = Math.abs(this.lastZ - current.z);
+
+        if (((deltaX > this.options.threshold) && (deltaY > this.options.threshold)) || ((deltaX > this.options.threshold) && (deltaZ > this.options.threshold)) || ((deltaY > this.options.threshold) && (deltaZ > this.options.threshold))) {
+            //calculate time in milliseconds since last shake registered
+            currentTime = new Date();
+            timeDifference = currentTime.getTime() - this.lastTime.getTime();
+
+            if (timeDifference > this.options.timeout) {
+                window.dispatchEvent(this.event);
+                this.lastTime = new Date();
+            }
+        }
+
+        this.lastX = current.x;
+        this.lastY = current.y;
+        this.lastZ = current.z;
+
+    };
+
+    Shake.prototype.handleEvent = function (e) {	//event handler
+        if (typeof (this[e.type]) === 'function') {
+            return this[e.type](e);
+        }
+    };
+
+    return Shake;
+}));
+/* End of line */
+
+
+/* EDIT BY MARVIN ON MAR 5, 2016*/
+/* Lade Kartendienstlinks aus XML und gebe sie dem anchor Tag im location jsp als href mit. target: _blank oeffnet Link in neumen Tab Funktion wird in events.jsp aufgerufen */
+function titlePressed(){
+	var aCountrymap = document.getElementById("showMap");
+	var mapLinkXML =  $xml.find('maplink').text();
+	aCountrymap.setAttribute("href", mapLinkXML);
+	aCountrymap.setAttribute("target", "_blank");
+}
+/* End of line */
+
+
+/* EDIT BY ANIL ON MAR 4, 2016*/
+/* Function in order to play the national anthem*/
+function buttonPressed(){
+	if ($xml.find('nationalhymne').text() != '' ) {
+		
+	var audio = document.getElementById("audioHymne");
+	var pathAnthem = $xml.find('nationalhymne').text();
+	
+	if(audio.paused == false){
+		audio.pause();
+	} else{
+		audio.setAttribute("src", pathAnthem);
+	audio.setAttribute("type", "audio/mpeg");
+		audio.play();
+	}	
+}}
+/* End of line */

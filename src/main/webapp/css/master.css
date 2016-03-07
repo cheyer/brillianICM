@@ -974,11 +974,12 @@ div.outerrightMessage {
 div.draggableTilesContainer, div.draggableTilesContainerAlternate {
 	border-width: 1px;
 	height: 135px !important;
-	width: 820px;
+	width: 656px; 	/*EDIT BY ADRIAN ON MAR 03,2016. Old: "width: 820px;"*/
 	margin-top: 10px;
 	margin-bottom: 15px;
 	padding-left: 1px;
 	overflow-y: auto;
+	display: inline-block; /*EDIT BY ADRIAN ON MAR 03, 2016. Added attribute for centered drag-box*/
 }
 
 div.draggableTilesContainerStandard {
@@ -1016,9 +1017,9 @@ div.messageBox {
 /* tiles to be dragged and dropped*/
 div.dragTile {
 	float: center;
-	width: 147px;
-	height: 147px;
-	padding: 0 0 0 0px;
+	width: 157px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "width: 147px;"*/
+	height: 157px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "height: 147px;"*/
+	padding: 0 10px 10px 10px; /* EDIT BY ADRIAN ON MAR 03, 2016. Old: "0 0 0 0px;"*/
 	vertical-align: baseline;
 	border-width: 1px;
 	overflow: hidden;
@@ -1027,7 +1028,7 @@ div.dragTile {
 	cursor: pointer !important;
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;
+	text-align: left; /* EDIT BY ADRIAN ON MAR 03, 3016. Old: "text-align: center;"*/
 	/* break line for different browsers*/
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
@@ -1585,6 +1586,7 @@ a.link-factsheet {
 	width: 420px;
 	background: white;
 	border: 1px solid #2c3e50;
+	min-height: 50px;
 }
 
 /* END */
@@ -1636,3 +1638,89 @@ div.draggableContainerFour {
 	overflow-y: scroll;
 }
 /*End*/
+
+
+/* EDIT BY MANH ON MAR 6, 2016 */
+/* Modified animation of Marvin in order to display the effect on mobile devices*/
+@-webkit-keyframes scale {
+    0% {-webkit-transform: scale(1);}
+    50% {-webkit-transform: scale(1.33);}
+    100% {-webkit-transform: scale(1);}
+}
+
+#titletext {
+    -webkit-animation-name: scale;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 1s;
+}
+
+#flag {
+    -webkit-animation-name: scale;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-delay: 2.3s;
+ 	
+ 	cursor: pointer;   
+}
+/* END OF LINE */
+
+
+/* EDIT BY MANH ON FEB 17, 2016 */
+/* Style of the modal popup window for goodies */
+#divLayer {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 99999;
+
+	background: rgba(0,0,0,0.9);
+}
+
+#divClose {
+	top: 1%;
+	right: 1%;
+	position: fixed;
+	z-index: 100000;
+	font-size: xx-large;
+	font-family: Arial;
+	color: rgba(128,128,128,1);
+	cursor: pointer;
+}
+
+#divClose:hover {
+	color: white;
+}
+
+
+#divContent {
+	width: 80%;
+	height: 80%;
+	display: inline-block;
+	position: absolute;
+	z-index: 100001;
+	border-radius: 5px;
+	padding: 1%;
+	background: rgba(255,255,255,1);
+	text-align: center; 
+	overflow: auto;
+}
+/* END OF LINE */ 
+
+
+/* EDIT BY MANH ON FEB 27, 2016 */
+/* CSS animation in order to make the polarclock pulsate if there is a goodie on the page */
+@-webkit-keyframes pulse {
+    0% {-webkit-transform: scale(1, 1); opacity: 0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.1, 1.1); opacity: 0;}
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 8;
+}
+/* END OF LINE*/

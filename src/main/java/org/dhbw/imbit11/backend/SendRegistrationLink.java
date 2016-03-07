@@ -107,8 +107,9 @@ import javax.servlet.annotation.WebServlet;
 			// forward the request and response to the view
 	       if (i==0){
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-	        dispatcher.forward(request, response);
 			request.setAttribute("link", request.getParameter("link"));
+	        dispatcher.forward(request, response);
+			
 			
 	       }
 		

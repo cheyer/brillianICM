@@ -108,8 +108,14 @@
 												+ "<option value=\"l800e000\">anderes Land</option>"
 												+ "</select>"								
 												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>");
+												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set progress</a></td></form></td><td>");
+											out.println("<td><form action=\""+ application.getContextPath()+"/SendCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"SendCertificatesNowButton"+i+"\" type=\"submit\" value=\"SendcertificatesNow\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#SendCertificatesNowButton"+ i +"').trigger('click')\">send certificates now</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"group_name\" value=\""+ groups.get(i).get(1) +"\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
 											out.println("</td></tr></table> ");
+											
 											
 											//add students table beneath group header
 											

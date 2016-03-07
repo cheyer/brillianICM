@@ -1,6 +1,6 @@
 /*
  *Anastasia reimer
- *03.03.2016
+ *05.03.2016
  */
 //eventtype 30
 function loadAllocationFour() {
@@ -8,6 +8,8 @@ function loadAllocationFour() {
 	// XML auslesen
 	var href = $xml.find('nextevent').attr('href');
 	var title = $xml.find('title').text();
+	
+	loadBackground();
 
 	// location.jsp auslesen und xml text dort einsetzen
 	var container = $('.allocationContainerFour');
@@ -342,12 +344,22 @@ function loadFactsheet() {
 	container.find('#sideimg2').attr("src", uri2);
 	container.find('#sideimg3').attr("src", uri3);
 
+	/* EDIT BY ANIL ON MAR 4, 2016 */
+	/* Referencing the flag and add an onclick event*/
+	container.find('#flag').attr("onclick", "buttonPressed()");
+	/* End of line*/
+
 	var continueButton = $('#continueButtonFactsheet');
 
 	continueButton.unbind('click');
 	continueButton.bind('click', function() {
 		getXml(href);
 	});
+	
+	/* EDIT BY MARVIN ON MAR 5, 2016 */
+	/* titlePressed() aus master.js, wird aufgerufen fuer Kartendienst */
+	titlePressed();
+	/* End of line */
 
 	showFactsheet();
 }
