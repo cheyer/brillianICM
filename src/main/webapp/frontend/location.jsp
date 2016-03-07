@@ -620,7 +620,7 @@ top: 50%;-->">Please
 
 		<div class="container">
 			<div class="row">
-				<h1 id="mapAllocationTitle">HI</h1>
+				<h1 id="mapAllocationTitle" style="text-transform: none"></h1>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
