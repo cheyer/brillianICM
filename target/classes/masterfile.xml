@@ -210,7 +210,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">It's okay telling you this.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Go to the supermarket and buy some milk.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">We are out of milk.</option>
-		<bgimg>DE_4SidesMilk.jpg</bgimg>
+		<bgimg>DE_4SidesMilk.png</bgimg>
 		<nextevent href="l700e151" />
 	</event>
 	<event level="0" element="31" id="l700e151" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
@@ -558,7 +558,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to get to know you better.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Ask me to get a coffee with you later.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">No problem. We can talk later.</option>
-		<bgimg>DE_1_Canteen4Sides.jpg</bgimg>
+		<bgimg>DE_1_Canteen4Sides.png</bgimg>
 		<nextevent href="l702e026" />
 	</event>
 	<event level="2" element="6" id="l702e026" eventtype="24" imcost="0" imqual="+15" imtime="+20" loc="4">
@@ -1169,7 +1169,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	
 	<!-- END LEVEL 5 -->
@@ -2344,7 +2344,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	<!-- END LEVEL 5 -->
 	<!-- End female -->
@@ -10512,7 +10512,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		imqual="0" imtime="0" loc="4">
 		<description>What Is "Aceitunas"?</description>
 		<nextevent href="l200e120"/>
-		<bgimg>ES_advicejpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="1" id="l200e120" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>What dish is "aceitunas"?</title>
@@ -10803,7 +10803,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option rank="3" fdesc="Appeal">He wants me to put 30 Euros in the bowl.</option>
 	<option rank="4" fdesc="Fact">The price divided by all team members is 30 Euros.</option>
 	<nextevent href="l200e285" />
-	<bgimg>ES_vierOhren.jpg</bgimg>
+	<bgimg>ES_vierOhren.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l200e285" eventtype="3" imcost="0"
@@ -11646,7 +11646,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option rank="3" fdesc="Appeal">He wants me to put 30 Euros in the bowl.</option>
 	<option rank="4" fdesc="Fact">The price divided by all team members is 30 Euros.</option>
 	<nextevent href="l210e285" />
-	<bgimg>ES_vierOhren.jpg</bgimg>
+	<bgimg>ES_vierOhren.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l210e285" eventtype="3" imcost="0"
@@ -14403,17 +14403,17 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>"Lunch" Beat is a rather New Tradition in Swedish Culture. Sort Traditions and other Aspects of Culture in the Iceberg Model.</description>
 		<column>Visible</column>
 		<column>Invisible</column>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Clothing">Clothing</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Norms">Norms</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Food">Food</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Thought patterns">Thought patterns</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Language">Language</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Belief and assumptions">Belief and assumptions</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Values">Values</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Work ethic">Work ethic</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Time orientation">Time orientation</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Eating habits">Eating habits</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Religion's importance">Religion's importance</option>
+			<option column="1" rank="6" title="Clothing">Clothing</option>
+			<option column="2" rank="1" title="Norms">Norms</option>
+			<option column="1" rank="6" title="Food">Food</option>
+			<option column="2" rank="1" title="Thought patterns">Thought patterns</option>
+			<option column="1" rank="6" title="Language">Language</option>
+			<option column="2" rank="1" title="Belief and assumptions">Belief and assumptions</option>
+			<option column="2" rank="1" title="Values">Values</option>
+			<option column="2" rank="1" title="Work ethic">Work ethic</option>
+			<option column="2" rank="1" title="Time orientation">Time orientation</option>
+			<option column="1" rank="6" title="Eating habits">Eating habits</option>
+			<option column="2" rank="1" title="Religion's importance">Religion's importance</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l566e011"/> 
 	</event>
@@ -16986,7 +16986,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 
@@ -17700,7 +17700,7 @@ about not or at least giving fewer tips than usual.
 			<officiallang>Turkish</officiallang>
 			<currency>Turkish Lira TRY ₺</currency>
 			<government>Parliamentary Democracy</government>
-			<areainkm2>783.562</areainkm2>
+			<areainkm2>783.562 km²</areainkm2>
 			<population>79.414.269</population>
 			<ethgroups>Approx. 74% Turkish, 17% Kurds, 4% Zaza</ethgroups>
 			<natholiday>29th October, Day of the Republic</natholiday>
@@ -17713,21 +17713,21 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue>0</progressValue>
-		
-		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
-		<!-- Map link für Kartenfunktion -->
-		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
-		<!-- End of line -->
-		
-		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
-		<!-- Path to the national anthem -->
-		<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
-		<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
-		<!-- End of line -->
+			<progressValue> 0 </progressValue>
+			
+			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+			<!-- Map link für Kartenfunktion -->
+			<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+			<!-- End of line -->
+			
+			<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+			<!-- Path to the national anthem -->
+			<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+			<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
+			<!-- End of line -->
 		
 			<nextevent href="l800e006"/>
-			</event>
+		</event>
 
 			 
 	<!-- Globe Study Koordinatensystem -->
@@ -17788,13 +17788,6 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e006">Next</option>
 		<bgimg>TR_Airplain_m.jpg</bgimg>
-		
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Image</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
-		
 	</event>
 	
 	
@@ -17895,10 +17888,10 @@ about not or at least giving fewer tips than usual.
 		
 		<event level="2" element="1" id="l802e006" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Mr. Yilmaz Asks:</description>
-			<messageBoxA voice="male"> "Do you want some tea?".</messageBoxA>
-			<messageBoxB href="l802e011" voice="male">"Thanks, I don’t like tea."</messageBoxB>
-			<messageBoxB href="l802e016" voice="male">"I never tried it before but I think I will try it."</messageBoxB>
-			<messageBoxB href="l802e021" voice="male">"Yes, for sure."</messageBoxB>
+			<messageBoxA voice="male"> Do you want some tea?</messageBoxA>
+			<messageBoxB href="l802e011" voice="male">Thanks, I don’t like tea.</messageBoxB>
+			<messageBoxB href="l802e016" voice="male">I never tried it before but I think I will try it.</messageBoxB>
+			<messageBoxB href="l802e021" voice="male">Yes, for sure.</messageBoxB>
 		<bgimg>TR_Tea_m.jpg</bgimg>
 	</event>
 	
@@ -17937,8 +17930,8 @@ about not or at least giving fewer tips than usual.
 		
 		<event level="2" element="6" id="l802e031" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>After the Next Risky Overtaking Maneuver It’s Enough:</description>
-			<messageBoxA voice="male">"Sorry but can you slow down a bit, I´m afraid!".</messageBoxA>
-			<messageBoxB voice="male">The taxi driver is laughing and says: “No worries”.</messageBoxB>
+			<messageBoxA voice="male">Sorry but can you slow down a bit, I´m afraid!</messageBoxA>
+			<messageBoxB voice="male">The taxi driver is laughing and says: "No worries".</messageBoxB>
 			<messageBoxA voice="male">As the driver is continuing his fast and rapid driving style you reflect why he is not slowing down even after your comment. </messageBoxA>
 		<nextevent href="l802e036"/>
 		<bgimg>TR_Taxi_m.jpg</bgimg>
@@ -17962,7 +17955,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue>25</progressValue>
+		<progressValue> 25 </progressValue>
 		<nextevent href="l803e001"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -17981,12 +17974,12 @@ about not or at least giving fewer tips than usual.
 		
 		<event level="3" element="1" id="l803e006" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Conversation on the Bazar</description>
-			<messageBoxA voice="male">“Merhaba, how much is this belt?”</messageBoxA>
-			<messageBoxB voice="female">“30 ₺ each belt!”</messageBoxB>
-			<messageBoxA voice="male">“30 ₺ is too much, sorry, but then I will go to the next shop.”</messageBoxA>
-			<messageBoxB voice="female">“Wait, you can have 2 belts for 45 ₺.”</messageBoxB>
-			<messageBoxA voice="male">“Oh, that sounds like a good deal.”</messageBoxA>
-			<messageBoxB voice="female">“Okay then choose whatever you like.”</messageBoxB>
+			<messageBoxA voice="male">Merhaba, how much is this belt?</messageBoxA>
+			<messageBoxB voice="female">30 ₺ each belt!</messageBoxB>
+			<messageBoxA voice="male">30 ₺ is too much, sorry, but then I will go to the next shop.</messageBoxA>
+			<messageBoxB voice="female">Wait, you can have 2 belts for 45 ₺.</messageBoxB>
+			<messageBoxA voice="male">Oh, that sounds like a good deal.</messageBoxA>
+			<messageBoxB voice="female">Okay then choose whatever you like.</messageBoxB>
 				<nextevent href="l803e011"/>
 		<bgimg>TR_Bazar_m.jpg</bgimg>
 	</event>	
@@ -18172,10 +18165,10 @@ about not or at least giving fewer tips than usual.
 	<!-- Transer to Lunch-->
 	<event level="6" element="1" id="l806e001" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Small Talk with Aylin</description>                               
-                                <messageBoxA voice="male">"Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine."</messageBoxA>
-                                <messageBoxB voice="female">"No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that!" </messageBoxB>
-                                <messageBoxA voice="male">"Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?"</messageBoxA>                                 
-                                <messageBoxB voice="female">(laughing): "Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes."</messageBoxB>
+                                <messageBoxA voice="male">Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine.</messageBoxA>
+                                <messageBoxB voice="female">No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that! </messageBoxB>
+                                <messageBoxA voice="male">Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?</messageBoxA>                                 
+                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
                                 <bgimg>TR_Woman_Talk_male.jpg</bgimg> 
                                 <nextevent href="l806e006"/>                            
                                
@@ -18246,12 +18239,12 @@ about not or at least giving fewer tips than usual.
 	
 		<event level="7" element="1" id="l807e001" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                  <description>Business Talks</description>
-                                <messageBoxA voice="male">"%prename% , so what´s your opinion about the schedule we presented in the kick-off meeting? I´m aware that the company top management set the modernization of our production as a high priority goal for this year, however, I´m wondering if it is feasible for you back in the German office, in regards to logistic and the size of the machines?"</messageBoxA>
-                                <messageBoxB voice="male">"I´m sorry Mr. Öztürk, regarding the logistics I´m not prepared to present that topics during lunch. I have detailed files on my laptop, but no details in mind. However, I would be pleased to have a discussion with you later on."</messageBoxB>
-                                 <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence</messageBoxA>
-                                <messageBoxB voice="male">"Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…"</messageBoxB>                                 
+                                <messageBoxA voice="male">%prename% , so what´s your opinion about the schedule we presented in the kick-off meeting? I´m aware that the company top management set the modernization of our production as a high priority goal for this year, however, I´m wondering if it is feasible for you back in the German office, in regards to logistic and the size of the machines?</messageBoxA>
+                                <messageBoxB voice="male">I´m sorry Mr. Öztürk, regarding the logistics I´m not prepared to present that topics during lunch. I have detailed files on my laptop, but no details in mind. However, I would be pleased to have a discussion with you later on.</messageBoxB>
+                                 <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence.</messageBoxA>
+                                <messageBoxB voice="male">Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue>50</progressValue>
+                                <progressValue> 50 </progressValue>
 								<nextevent href="l807e006"/>
                                 <bgimg>TR_Restaurant_male.jpg</bgimg>     
     </event>
@@ -18329,18 +18322,13 @@ about not or at least giving fewer tips than usual.
 	
 	<event level="9" element="1" id="l809e001" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Business Call</description>
-                                <messageBoxA voice="male">"Hey %prename% ,how are you doing in Ankara? Have you already enjoyed the Turkish hospitality?"</messageBoxA>
-                                <messageBoxB voice="male">"Oh yes, definitely Daniel! Best restaurant in town, marvellous hotel and a warm welcome…Have never been more welcomed than with this customer."</messageBoxB>
-                                <messageBoxA voice="male">"Haha, you´re welcome. I had conversations and internal business stuff with Ismail Öztürk for years, it´s always a pleasure to be in Ankara, beside the pricing negotiations."</messageBoxA>                                 
-                                <messageBoxB voice="male">"Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations"</messageBoxB>
-                                <messageBoxA voice="male">"Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends."</messageBoxA>                                 
+                                <messageBoxA voice="male">Hey %prename% ,how are you doing in Ankara? Have you already enjoyed the Turkish hospitality?</messageBoxA>
+                                <messageBoxB voice="male">Oh yes, definitely Daniel! Best restaurant in town, marvellous hotel and a warm welcome…Have never been more welcomed than with this customer.</messageBoxB>
+                                <messageBoxA voice="male">Haha, you´re welcome. I had conversations and internal business stuff with Ismail Öztürk for years, it´s always a pleasure to be in Ankara, beside the pricing negotiations.</messageBoxA>                                 
+                                <messageBoxB voice="male">Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations.</messageBoxB>
+                                <messageBoxA voice="male">Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends.</messageBoxA>                                 
                                 <nextevent href="l809e006"/>
-                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg>
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Video</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->     
+                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg>     
     </event>
     
      
@@ -18380,9 +18368,9 @@ about not or at least giving fewer tips than usual.
      <event level="10" element="1" id="l810e001" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Shisha Bar</description>
                        
-                                <messageBoxA voice="male">"Oh my goodness %prename% ,never go with an orange shirt to a Fenerbahçe match! These are the colours of Galatasary Istanbul, the most hated club for Fenerbahçe supporters, they are like enemies to us. Does somebody has a Fenerbahçe shirt over? Or at least a scarf?"</messageBoxA>
-                                <messageBoxB voice="male">"Oh, well…" (Mehmet gives you a yellow-green Fenerbahçe jersey)</messageBoxB>
-                                <messageBoxA voice="female">(laughing) "Now you are dressed in an appropriate way. How are you doing? Are you in for a Cay tea and a shisha? Or do you rather prefer some Efes beer?"</messageBoxA>                                 
+                                <messageBoxA voice="male">Oh my goodness %prename% ,never go with an orange shirt to a Fenerbahçe match! These are the colours of Galatasary Istanbul, the most hated club for Fenerbahçe supporters, they are like enemies to us. Does somebody has a Fenerbahçe shirt over? Or at least a scarf?</messageBoxA>
+                                <messageBoxB voice="male">Oh, well… (Mehmet gives you a yellow-green Fenerbahçe jersey)</messageBoxB>
+                                <messageBoxA voice="female">(laughing) Now you are dressed in an appropriate way. How are you doing? Are you in for a Cay tea and a shisha? Or do you rather prefer some Efes beer?</messageBoxA>                                 
                                 <messageBoxB href="l810e006">You take the Cay tea.</messageBoxB>
                                 <messageBoxB href="l810e011">You take the Efes beer.</messageBoxB>                                                    
                                 <bgimg>TR_Shisha_male.jpg</bgimg>     
@@ -18502,7 +18490,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e021" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk. </content>
-		<progressValue>75</progressValue>
+		<progressValue> 75 </progressValue>
 		<option href="l811e026">Next</option>
 		<bgimg>TR_MeetingRoom3_m.jpg</bgimg>
 	</event>
@@ -18589,7 +18577,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="6" id="l811e071" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Later in the Meeting</partner>
 		<content>The situation has calmed down and the meeting is going well. Mr. Öztürk has already introduced the reason for your business trip and now you are going to present the machines you want to sell. As the machines are very innovative and you are proud that your company has developed them, you want to explain the technical details.</content>
-		<option href="l811e076">Next</option>
+		<option href="l811e076">Proceed to conversation</option>
 		<bgimg>TR_Vortrag_m.jpg</bgimg>
 	</event>
 	
@@ -18695,13 +18683,6 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e026">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
-		
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Video</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
-		
 	</event>
 	
 	<event level="12" element="3" id="l812e026" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -18765,7 +18746,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue>100</progressValue>
+		<progressValue> 100 </progressValue>
 		<nextevent href="l814e001"/>
 	</event>
 
@@ -18805,7 +18786,7 @@ about not or at least giving fewer tips than usual.
 			<officiallang>Turkish</officiallang>
 			<currency>Turkish Lira TRY ₺</currency>
 			<government>Parliamentary Democracy</government>
-			<areainkm2>783.562</areainkm2>
+			<areainkm2>783.562 km²</areainkm2>
 			<population>79.414.269</population>
 			<ethgroups>Approx. 74% Turkish, 17% Kurds, 4% Zaza</ethgroups>
 			<natholiday>29th October, Day of the Republic</natholiday>
@@ -18818,21 +18799,22 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue>0</progressValue>
-		
-		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
-		<!-- Map link für Kartenfunktion -->
-		<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
-		<!-- End of line -->
-		
-		<!-- EDIT BY ANIL ON MAR 4, 2016 -->
-		<!-- Path to the national anthem -->
-		<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
-		<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
-		<!-- End of line -->
-		
-			<nextevent href="l800e005"/>
-		</event>
+			<progressValue> 0 </progressValue>
+			
+			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+			<!-- Map link für Kartenfunktion -->
+			<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+			<!-- End of line -->
+			
+			<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+			<!-- Path to the national anthem -->
+			<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+			<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
+			<!-- End of line -->
+			
+				<nextevent href="l800e005"/>
+		</event>		
+			
 	      
 
 	
@@ -18893,13 +18875,6 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e005">Next</option>
 		<bgimg>TR_Airplain_f.jpg</bgimg>
-		
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Image</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
-		
 	</event>
 	
 	<!-- Welcome 3 options -->
@@ -18997,15 +18972,15 @@ about not or at least giving fewer tips than usual.
 					Mr. Yilmaz guides you into one of the meeting rooms. Suddenly, there are coming more and more people and Cay ("black tea") and some Simits ("sesame rings") are served. 
 			</content>
 		<option href="l802e005">Next</option>
-		<bgimg>TR_Tea_Teamf.jpg</bgimg>		
+		<bgimg>TR_TeaTeamf.jpg</bgimg>		
 		</event>
 		
 		<event level="2" element="1" id="l802e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Mr. Yilmaz Asks:</description>
-			<messageBoxA voice="male"> "Do you want some tea?".</messageBoxA>
-			<messageBoxB href="l802e010" voice="female">"Thanks, I don’t like tea."</messageBoxB>
-			<messageBoxB href="l802e015" voice="female">"I never tried it before but I think I will try it."</messageBoxB>
-			<messageBoxB href="l802e020" voice="female">"Yes, for sure."</messageBoxB>
+			<messageBoxA voice="male">Do you want some tea?</messageBoxA>
+			<messageBoxB href="l802e010" voice="female">Thanks, I don’t like tea.</messageBoxB>
+			<messageBoxB href="l802e015" voice="female">I never tried it before but I think I will try it.</messageBoxB>
+			<messageBoxB href="l802e020" voice="female">Yes, for sure.</messageBoxB>
 		<bgimg>TR_Tea_f.jpg</bgimg>
 	</event>
 	
@@ -19045,9 +19020,9 @@ about not or at least giving fewer tips than usual.
 		
 		<event level="2" element="6" id="l802e030" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>After the Next Overtaking Maneuver It’s Enough</description>
-			<messageBoxA voice="male"> "Sorry but can you slow down a bit, I´m afraid!".</messageBoxA>
-			<messageBoxB voice="male">The taxi driver is laughing and says: “No worries”.</messageBoxB>
-			<messageBoxA voice="male">As the driver is continuing his fast and rapid driving style you reflect why he is not slowing down even after your comment. </messageBoxA>
+			<messageBoxA voice="female"> Sorry but can you slow down a bit, I´m afraid!</messageBoxA>
+			<messageBoxB voice="male">The taxi driver is laughing and says: "No worries".</messageBoxB>
+			<messageBoxA voice="female">As the driver is continuing his fast and rapid driving style you reflect why he is not slowing down even after your comment. </messageBoxA>
 		<nextevent href="l802e035"/>
 		<bgimg>TR_Taxi_f.jpg</bgimg>
 	</event>	
@@ -19071,7 +19046,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue>25</progressValue>
+		<progressValue> 25 </progressValue>
 		<nextevent href="l803e000"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -19091,12 +19066,12 @@ about not or at least giving fewer tips than usual.
 		
 		<event level="3" element="1" id="l803e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Conversation on the Bazar</description>
-			<messageBoxA voice="female">“Merhaba, how much is this belt?”</messageBoxA>
-			<messageBoxB voice="female">“30 ₺ each belt!”</messageBoxB>
-			<messageBoxA voice="female">“30 ₺ is too much, sorry but then I will go to the next shop.”</messageBoxA>
-			<messageBoxB voice="female">“Wait, you can have 2 belts for 45 ₺.”</messageBoxB>
-			<messageBoxA voice="female">“Oh, that sounds like a good deal.”</messageBoxA>
-			<messageBoxB voice="female">“Okay then choose whatever you like.”</messageBoxB>
+			<messageBoxA voice="female">Merhaba, how much is this belt.</messageBoxA>
+			<messageBoxB voice="female">30 ₺ each belt!</messageBoxB>
+			<messageBoxA voice="female">30 ₺ is too much, sorry but then I will go to the next shop.</messageBoxA>
+			<messageBoxB voice="female">Wait, you can have 2 belts for 45 ₺.</messageBoxB>
+			<messageBoxA voice="female">Oh, that sounds like a good deal.</messageBoxA>
+			<messageBoxB voice="female">Okay then choose whatever you like.</messageBoxB>
 				<nextevent href="l803e010"/>
 		<bgimg>TR_Bazar_f.jpg</bgimg>
 	</event>	
@@ -19283,10 +19258,10 @@ about not or at least giving fewer tips than usual.
 	<!-- Transer to Lunch-->
 	<event level="6" element="1" id="l806e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Small Talk with Aylin</description>
-                                <messageBoxA voice="female">"Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine."</messageBoxA>
-                                <messageBoxB voice="female">"No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that!" </messageBoxB>
-                                <messageBoxA voice="female">"Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?"</messageBoxA>                                 
-                                <messageBoxB voice="female">(laughing): "Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes."</messageBoxB>
+                                <messageBoxA voice="female">Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine.</messageBoxA>
+                                <messageBoxB voice="female">No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that! </messageBoxB>
+                                <messageBoxA voice="female">Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?</messageBoxA>                                 
+                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
                                 <nextevent href="l806e005"/>
                                 <bgimg>TR_Woman_Talk_female.jpg</bgimg>   
     </event>
@@ -19354,12 +19329,12 @@ about not or at least giving fewer tips than usual.
 	
 		<event level="7" element="1" id="l807e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Business Talks</description>
-                                <messageBoxA voice="male" >"%prename% , so what´s your opinion about the schedule we presented in the kick-off meeting? I´m aware that the company top management set the modernization of our production as a high priority goal for this year, however, I´m wondering if it is feasible for you back in the German office, in regards to logistic and the size of the machines?"</messageBoxA>
-                                <messageBoxB voice="female">"I´m sorry Mr. Öztürk, regarding the logistics I´m not prepared to present that topics during lunch. I have detailed files on my laptop, but no details in mind. However, I would be pleased to have a discussion with you later on."</messageBoxB>
-                                <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence</messageBoxA>
-                                <messageBoxB voice="female">"Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…"</messageBoxB>                                 
+                                <messageBoxA voice="male" >%prename% , so what´s your opinion about the schedule we presented in the kick-off meeting? I´m aware that the company top management set the modernization of our production as a high priority goal for this year, however, I´m wondering if it is feasible for you back in the German office, in regards to logistic and the size of the machines?</messageBoxA>
+                                <messageBoxB voice="female">I´m sorry Mr. Öztürk, regarding the logistics I´m not prepared to present that topics during lunch. I have detailed files on my laptop, but no details in mind. However, I would be pleased to have a discussion with you later on.</messageBoxB>
+                                <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence.</messageBoxA>
+                                <messageBoxB voice="female">Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue>50</progressValue>
+                                <progressValue> 50 </progressValue>
 								<nextevent href="l807e005"/>
                                 <bgimg>TR_Restaurant_female.jpg</bgimg>     
     </event>
@@ -19436,20 +19411,14 @@ about not or at least giving fewer tips than usual.
 	<event level="9" element="1" id="l809e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Business Call</description>
                                 
-                                <messageBoxA voice="male">"Hey %prename% ,how are you doing in Ankara? Have you already enjoyed the Turkish hospitality?"</messageBoxA>
-                                <messageBoxB voice="female">"Oh yes, definitely Daniel! Best restaurant in town, marvellous hotel and a warm welcome…Have never been more welcomed than with this customer."</messageBoxB>
-                                <messageBoxA voice="male">"Haha, you´re welcome. I had conversations and internal business stuff with Ismail Öztürk for years, it´s always a pleasure to be in Ankara, beside the pricing negotiations."</messageBoxA>                                 
-                                <messageBoxB voice="female">"Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations"</messageBoxB>
-                                <messageBoxA voice="male">"Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends."</messageBoxA>                                 
+                                <messageBoxA voice="male">Hey %prename% ,how are you doing in Ankara? Have you already enjoyed the Turkish hospitality?</messageBoxA>
+                                <messageBoxB voice="female">Oh yes, definitely Daniel! Best restaurant in town, marvellous hotel and a warm welcome…Have never been more welcomed than with this customer.</messageBoxB>
+                                <messageBoxA voice="male">Haha, you´re welcome. I had conversations and internal business stuff with Ismail Öztürk for years, it´s always a pleasure to be in Ankara, beside the pricing negotiations.</messageBoxA>                                 
+                                <messageBoxB voice="female">Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations.</messageBoxB>
+                                <messageBoxA voice="male">Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends.</messageBoxA>                                 
                                 <nextevent href="l809e005"/>
                                 <bgimg>TR_Business_Call_Manager_female.jpg</bgimg>
-    
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Video</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->
-
+                                    
     </event>
     
     
@@ -19488,9 +19457,9 @@ about not or at least giving fewer tips than usual.
      
      <event level="10" element="1" id="l810e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
                                 <description>Shisha Bar</description>
-                                <messageBoxA voice="male">"Oh my goodness %prename% ,never go with an orange shirt to a Fenerbahçe match! These are the colours of Galatasary Istanbul, the most hated club for Fenerbahçe supporters, they are like enemies to us. Does somebody has a Fenerbahçe shirt over? Or at least a scarf?"</messageBoxA>
-                                <messageBoxB voice="female">"Oh, well…"(Mehmet gives you a yellow-green Fenerbahçe jersey)</messageBoxB>
-                                <messageBoxA voice="female">(laughing) "Now you are dressed in an appropriate way. How are you doing? Are you in for a Cay tea and a shisha? Or do you rather prefer some Efes beer?"</messageBoxA>                                 
+                                <messageBoxA voice="male">Oh my goodness %prename% ,never go with an orange shirt to a Fenerbahçe match! These are the colours of Galatasary Istanbul, the most hated club for Fenerbahçe supporters, they are like enemies to us. Does somebody has a Fenerbahçe shirt over? Or at least a scarf?</messageBoxA>
+                                <messageBoxB voice="female">Oh, well…"(Mehmet gives you a yellow-green Fenerbahçe jersey).</messageBoxB>
+                                <messageBoxA voice="female">(laughing) Now you are dressed in an appropriate way. How are you doing? Are you in for a Cay tea and a shisha? Or do you rather prefer some Efes beer?</messageBoxA>                                 
                                 <messageBoxB href="l810e005">You take the Cay tea.</messageBoxB>
                                 <messageBoxB href="l810e010">You take the Efes beer.</messageBoxB>                                                    
                                 <bgimg>TR_Shisha_female.jpg</bgimg>     
@@ -19611,7 +19580,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e020" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk.</content>
-		<progressValue>75</progressValue>
+		<progressValue> 75 </progressValue>
 		<option href="l811e025">Next</option>
 		<bgimg>TR_MeetingRoom3_f.jpg</bgimg>
 	</event>
@@ -19699,7 +19668,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="6" id="l811e070" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Later in the Meeting</partner>
 		<content>The situation has calmed down and the meeting is going well. Mr. Öztürk has already introduced the reason for your business trip and now you are going to present the machines you want to sell. As the machines are very innovative and you are proud that your company has developed them, you want to explain the technical details.</content>
-		<option href="l811e075">Next</option>
+		<option href="l811e075">Proceed to conversation</option>
 		<bgimg>TR_Vortrag_f.jpg</bgimg>
 	</event>
 	
@@ -19806,12 +19775,6 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e025">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
-		
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Video</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
 	</event>
 	
 	<event level="12" element="3" id="l812e025" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -19874,7 +19837,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue>100</progressValue>
+		<progressValue> 100 </progressValue>
 		<nextevent href="l814e000"/>
 	</event>
 	
@@ -19890,7 +19853,7 @@ about not or at least giving fewer tips than usual.
                  <bgimg>TR_LessonLearned.jpg</bgimg>
          </event>
 	
-	<!--End Turkey -->
+	
 	
 
 		<!-- Australien -->
