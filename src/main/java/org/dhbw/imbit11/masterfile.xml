@@ -18970,7 +18970,7 @@ about not or at least giving fewer tips than usual.
 					Mr. Yilmaz guides you into one of the meeting rooms. Suddenly, there are coming more and more people and Cay ("black tea") and some Simits ("sesame rings") are served. 
 			</content>
 		<option href="l802e005">Next</option>
-		<bgimg>TR_TeaTeamf.jpg</bgimg>		
+		<bgimg>TR_Tea_Teamf.jpg</bgimg>		
 		</event>
 		
 		<event level="2" element="1" id="l802e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
