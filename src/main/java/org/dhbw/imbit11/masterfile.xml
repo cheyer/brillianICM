@@ -17714,8 +17714,20 @@ about not or at least giving fewer tips than usual.
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
 			<progressValue> 0 </progressValue>
+			
+			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+			<!-- Map link für Kartenfunktion -->
+			<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+			<!-- End of line -->
+			
+			<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+			<!-- Path to the national anthem -->
+			<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+			<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
+			<!-- End of line -->
+		
 			<nextevent href="l800e006"/>
-			</event>
+		</event>
 
 			 
 	<!-- Globe Study Koordinatensystem -->
@@ -18788,8 +18800,21 @@ about not or at least giving fewer tips than usual.
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
 			<progressValue> 0 </progressValue>
-			<nextevent href="l800e005"/>
-			</event>
+			
+			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
+			<!-- Map link für Kartenfunktion -->
+			<maplink>http://maps.apple.com/?q=Turkey&amp;ll=38.6113364,26.2480393&amp;sll=38.6113364,26.2480393&amp;z=6&amp;t=k</maplink>
+			<!-- End of line -->
+			
+			<!-- EDIT BY ANIL ON MAR 4, 2016 -->
+			<!-- Path to the national anthem -->
+			<!-- <nationalhymne>../brillianicm/audio/TR_nationalhymne.mp3</nationalhymne> --> <!-- For local testing -->
+			<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
+			<!-- End of line -->
+			
+				<nextevent href="l800e005"/>
+		</event>		
+			
 	      
 
 	
