@@ -108,7 +108,6 @@ public class SendCertificate extends HttpServlet {
 				}
 				
 				String username= firstName + " " + lastName; 
-				realm.resetUserProgress(email);
 				mailclient.sendCertificateMail(username, email, imcost, imqual, imtime, country, request);
 				}
 			}
