@@ -197,7 +197,6 @@ public class Event extends HttpServlet {
 					String group_id = userRealm.getUserGroupByID(userid);
 					String certificate = userRealm.getCertificate(group_id);
 					data = certificate;
-					System.out.println(certificate);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
