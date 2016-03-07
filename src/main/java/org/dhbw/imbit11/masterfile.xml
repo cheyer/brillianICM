@@ -210,7 +210,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">It's okay telling you this.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Go to the supermarket and buy some milk.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">We are out of milk.</option>
-		<bgimg>DE_4SidesMilk.jpg</bgimg>
+		<bgimg>DE_4SidesMilk.png</bgimg>
 		<nextevent href="l700e151" />
 	</event>
 	<event level="0" element="31" id="l700e151" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
@@ -558,7 +558,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to get to know you better.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Ask me to get a coffee with you later.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">No problem. We can talk later.</option>
-		<bgimg>DE_1_Canteen4Sides.jpg</bgimg>
+		<bgimg>DE_1_Canteen4Sides.png</bgimg>
 		<nextevent href="l702e026" />
 	</event>
 	<event level="2" element="6" id="l702e026" eventtype="24" imcost="0" imqual="+15" imtime="+20" loc="4">
@@ -10803,7 +10803,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option rank="3" fdesc="Appeal">He wants me to put 30 Euros in the bowl.</option>
 	<option rank="4" fdesc="Fact">The price divided by all team members is 30 Euros.</option>
 	<nextevent href="l200e285" />
-	<bgimg>ES_vierOhren.jpg</bgimg>
+	<bgimg>ES_vierOhren.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l200e285" eventtype="3" imcost="0"
@@ -11646,7 +11646,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<option rank="3" fdesc="Appeal">He wants me to put 30 Euros in the bowl.</option>
 	<option rank="4" fdesc="Fact">The price divided by all team members is 30 Euros.</option>
 	<nextevent href="l210e285" />
-	<bgimg>ES_vierOhren.jpg</bgimg>
+	<bgimg>ES_vierOhren.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l210e285" eventtype="3" imcost="0"
@@ -14403,17 +14403,17 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>"Lunch" Beat is a rather New Tradition in Swedish Culture. Sort Traditions and other Aspects of Culture in the Iceberg Model.</description>
 		<column>Visible</column>
 		<column>Invisible</column>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Clothing">Clothing</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Norms">Norms</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Food">Food</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Thought patterns">Thought patterns</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Language">Language</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Belief and assumptions">Belief and assumptions</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Values">Values</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Work ethic">Work ethic</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Time orientation">Time orientation</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Eating habits">Eating habits</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Religion's importance">Religion's importance</option>
+			<option column="1" rank="6" title="Clothing">Clothing</option>
+			<option column="2" rank="1" title="Norms">Norms</option>
+			<option column="1" rank="6" title="Food">Food</option>
+			<option column="2" rank="1" title="Thought patterns">Thought patterns</option>
+			<option column="1" rank="6" title="Language">Language</option>
+			<option column="2" rank="1" title="Belief and assumptions">Belief and assumptions</option>
+			<option column="2" rank="1" title="Values">Values</option>
+			<option column="2" rank="1" title="Work ethic">Work ethic</option>
+			<option column="2" rank="1" title="Time orientation">Time orientation</option>
+			<option column="1" rank="6" title="Eating habits">Eating habits</option>
+			<option column="2" rank="1" title="Religion's importance">Religion's importance</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l566e011"/> 
 	</event>

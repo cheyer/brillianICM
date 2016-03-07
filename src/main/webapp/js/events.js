@@ -382,6 +382,7 @@ function loadWorldMap() {
 	targetQuadrant.setAttribute("onclick", "getXml('" + href + "')");
 
 }
+// VIDEO EVENT
 // Loading a dialog style event from the XML to perpare its content for display
 // evventtype 3
 function loadDialog() {
@@ -409,6 +410,7 @@ function loadDialog() {
 			text : text
 		});
 		dialogButton.bind('click', function() {
+			$('#background-video').get(0).pause();
 			getXml(href);
 		});
 	});

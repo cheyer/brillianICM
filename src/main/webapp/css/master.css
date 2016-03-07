@@ -704,7 +704,7 @@ div.button-bottom {
 	margin: 0 auto;
 	display: block;
 	width: 100%;
-	bottom: 1%;
+	padding: 20 0 0 0
 }
 
 div.drag {
