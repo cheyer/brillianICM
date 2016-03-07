@@ -16986,7 +16986,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 
