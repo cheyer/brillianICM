@@ -10512,7 +10512,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		imqual="0" imtime="0" loc="4">
 		<description>What Is "Aceitunas"?</description>
 		<nextevent href="l200e120"/>
-		<bgimg>ES_advicejpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="1" id="l200e120" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>What dish is "aceitunas"?</title>
