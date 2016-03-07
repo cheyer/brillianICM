@@ -5787,7 +5787,7 @@
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l399e999" element="0" level="360">
 
-<message>You have completed the game for China! Congratulations!</message>
+<content>You have completed the game for China! Congratulations!</content>
 
 <bgimg>CN_advice.jpg</bgimg>
 
