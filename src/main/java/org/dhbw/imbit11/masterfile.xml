@@ -4464,7 +4464,7 @@
 </event>
 
 
--<event loc="0" imtime="0" imqual="-5" imcost="-5" eventtype="23" id="l300e230" element="0" level="300">
+-<event loc="0" imtime="0" imqual="+5" imcost="+5" eventtype="23" id="l300e230" element="0" level="300">
 
 <messageBoxA voice="male">Great! You should be all set then.</messageBoxA>
 
@@ -6293,7 +6293,7 @@
 </event>
 
 
--<event loc="0" imtime="0" imqual="-5" imcost="-5" eventtype="23" id="l300e030" element="0" level="300">
+-<event loc="0" imtime="0" imqual="+5" imcost="+5" eventtype="23" id="l300e030" element="0" level="300">
 
 <messageBoxA voice="male">Great! You should be all set then.</messageBoxA>
 
@@ -18997,7 +18997,7 @@ about not or at least giving fewer tips than usual.
 					Mr. Yilmaz guides you into one of the meeting rooms. Suddenly, there are coming more and more people and Cay ("black tea") and some Simits ("sesame rings") are served. 
 			</content>
 		<option href="l802e005">Next</option>
-		<bgimg>TR_TeaTeamf.jpg</bgimg>		
+		<bgimg>TR_Tea_Teamf.jpg</bgimg>		
 		</event>
 		
 		<event level="2" element="1" id="l802e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
