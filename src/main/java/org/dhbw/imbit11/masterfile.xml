@@ -1169,7 +1169,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	
 	<!-- END LEVEL 5 -->
@@ -2344,7 +2344,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	<!-- END LEVEL 5 -->
 	<!-- End female -->
@@ -10512,7 +10512,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		imqual="0" imtime="0" loc="4">
 		<description>What Is "Aceitunas"?</description>
 		<nextevent href="l200e120"/>
-		<bgimg>ES_advicejpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="1" id="l200e120" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>What dish is "aceitunas"?</title>
@@ -16986,7 +16986,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 
@@ -18872,7 +18872,7 @@ about not or at least giving fewer tips than usual.
 		<bgimg>TR_Airport_f.jpg</bgimg>
 	</event>
 		
-				<event level="1" element="3" id="l801e015" eventtype="0" imcost="0" imqual="+4" imtime="-2" loc="4">
+				<event level="1" element="3" id="l801e015" eventtype="24" imcost="0" imqual="+4" imtime="-2" loc="4">
 					<description>Advice</description>
 					<message>If you’re not sure how to pronounce the words it’s better not to use them. After you get to know the colleagues better you can ask them how to pronounce the words.</message>
 					<nextevent href="l801e030"/>

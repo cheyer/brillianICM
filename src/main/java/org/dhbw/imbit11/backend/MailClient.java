@@ -72,8 +72,11 @@ public class MailClient extends HttpServlet
 	        try {           
 	            //construct the text body part
 	            MimeBodyPart textBodyPart = new MimeBodyPart();
-	            textBodyPart.setText("Sehr geehrter Spieler, "
-	            		+ "anbei finden Sie ihr Zertifikat. ");
+	            textBodyPart.setText("Dear " +username + ", \n"
+	            		+ "congratulations to the successfull completion of your project in "+completedCountry + "! \n"
+	            		+ "Please find attached your certificate. \n\n"
+	            		+ "Kind regards, \n"
+	            		+ "your brillianICM Team \n");
 	             
 	            //now write the PDF content to the output stream
 	            outputStream = PDFCreator.createCertificate(username,"brillianICM",score1, score2, score3, "Competence", "Communications", "Behavior", useremail, completedCountry);
