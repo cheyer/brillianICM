@@ -3189,7 +3189,7 @@
 		<partner>Congratulations</partner>
 		<content>Great! Hopefully you've learned a few things about the Brazilian culture and how to behave
 			in certain situations. Don't hesitate to try out the other country modules!</content>
-		<option href="l99e999">End Game</option>
+		<option href="l999e999">End Game</option>
 		<option href="l199e998">Link to documentation</option>
 		<bgimg>BR_congratulations.jpg</bgimg>
 	</event>
