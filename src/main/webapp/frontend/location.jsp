@@ -411,7 +411,7 @@ top: 50%;-->">Please
 				</div>
 			</div>
 
-			<div class="buttonContainer button-bottom">
+			<div class="buttonContainer button-bottom2">
 				<div id="continueButtonScrollButton"
 					class="easyui-linkbutton allocationButton">Done</div>
 			</div>

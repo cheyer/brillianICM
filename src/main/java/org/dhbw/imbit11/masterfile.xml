@@ -1169,7 +1169,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	
 	<!-- END LEVEL 5 -->
@@ -2344,7 +2344,7 @@
 		<message>You have successfully completed the tutorial! 
 		You can now choose where you want to start your journey. </message>
 		<bgimg>DE_5_StartGame.jpg</bgimg>
-		<option href="l999e999">Click to finish</option>		
+		<nextevent href="l999e999"/>		
 	</event>
 	<!-- END LEVEL 5 -->
 	<!-- End female -->
@@ -14403,17 +14403,17 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>"Lunch" Beat is a rather New Tradition in Swedish Culture. Sort Traditions and other Aspects of Culture in the Iceberg Model.</description>
 		<column>Visible</column>
 		<column>Invisible</column>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Clothing">Clothing</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Norms">Norms</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Food">Food</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Thought patterns">Thought patterns</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Language">Language</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Belief and assumptions">Belief and assumptions</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Values">Values</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Work ethic">Work ethic</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Time orientation">Time orientation</option>
-			<option column="1" rank="6" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Eating habits">Eating habits</option>
-			<option column="2" rank="1" finfo="BA_001_iceberg_explanation.pdf" fdesc="Explanation" title="Religion's importance">Religion's importance</option>
+			<option column="1" rank="6" title="Clothing">Clothing</option>
+			<option column="2" rank="1" title="Norms">Norms</option>
+			<option column="1" rank="6" title="Food">Food</option>
+			<option column="2" rank="1" title="Thought patterns">Thought patterns</option>
+			<option column="1" rank="6" title="Language">Language</option>
+			<option column="2" rank="1" title="Belief and assumptions">Belief and assumptions</option>
+			<option column="2" rank="1" title="Values">Values</option>
+			<option column="2" rank="1" title="Work ethic">Work ethic</option>
+			<option column="2" rank="1" title="Time orientation">Time orientation</option>
+			<option column="1" rank="6" title="Eating habits">Eating habits</option>
+			<option column="2" rank="1" title="Religion's importance">Religion's importance</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l566e011"/> 
 	</event>
@@ -16986,7 +16986,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 
