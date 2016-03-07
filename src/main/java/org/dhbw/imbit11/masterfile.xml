@@ -210,7 +210,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">It's okay telling you this.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Go to the supermarket and buy some milk.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">We are out of milk.</option>
-		<bgimg>DE_4SidesMilk.jpg</bgimg>
+		<bgimg>DE_4SidesMilk.png</bgimg>
 		<nextevent href="l700e151" />
 	</event>
 	<event level="0" element="31" id="l700e151" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
@@ -558,7 +558,7 @@
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to get to know you better.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Ask me to get a coffee with you later.</option>
 			<option rank="4" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">No problem. We can talk later.</option>
-		<bgimg>DE_1_Canteen4Sides.jpg</bgimg>
+		<bgimg>DE_1_Canteen4Sides.png</bgimg>
 		<nextevent href="l702e026" />
 	</event>
 	<event level="2" element="6" id="l702e026" eventtype="24" imcost="0" imqual="+15" imtime="+20" loc="4">
