@@ -2366,7 +2366,7 @@
 		<natholiday>September 7th, Independence Day</natholiday>
 		<natsport>Soccer</natsport>
 		<uheardof>Pelé (world's most popular soccer player)</uheardof>
-		<diduknow>that Brazil is … countries</diduknow>
+		<diduknow>that Brazil is one of the world's most biodiverse countries</diduknow>
 		<infolinktext>www.cia.gov (The World Factbook)</infolinktext>
 		<infolink>https://www.cia.gov/library/publications/the-world-factbook/geos/br.html</infolink>
 		<titleimg>BR_flag_02.jpg</titleimg>
@@ -5785,7 +5785,7 @@
 
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l399e999" element="0" level="360">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l399e999" element="0" level="360">
 
 <message>You have completed the game for China! Congratulations!</message>
 
@@ -9185,13 +9185,11 @@ In China it is highly important to show respect to your guest. With inviting you
 		<partner>Bharat</partner>
 		<date>2015-04-04 17:21:34</date>
 		<title>The Commodity Prices</title>
-		<description>Your German Boss is Calling</description>
-		<messageBoxA voice="male">Hello, Bharat?</messageBoxA>
-		<messageBoxB voice="male">Hello.</messageBoxB>
-		<messageBoxA href="l650e001" voice="male">Bharat, you assured me that everything is going fine with the negotiation of the commodity prices for the upcoming fiscal year! According to what you said, I proceed on the assumption that the prices will remain stable. So, how do you explain that they have reduplicated?</messageBoxA>
-		<messageBoxA href="l650e002" voice="male">Should I really say that or better write an e-mail and ask for a meeting?</messageBoxA>
-		<messageBoxA href="l650e003" voice="male">Or maybe I should talk to him after the next meeting?</messageBoxA>
-		<bgimg>IN_Call_Bharat_Mann.png</bgimg>
+		<messageBoxA voice="male">Hello?</messageBoxA>
+		<messageBoxB href="l650e001" voice="male">Bharat, you assured me that everything is going fine with the negotiation of the commodity prices for the upcoming fiscal year! According to what you said, I proceed on the assumption that the prices will remain stable. So, how do you explain that they have reduplicated?</messageBoxB>
+		<messageBoxB href="l650e002" voice="male">Should I really say that or better write an e-mail and ask for a meeting?</messageBoxB>
+		<messageBoxB href="l650e003" voice="male">Or maybe I should talk to him after the next meeting?</messageBoxB>
+		<bgimg>IN_Call_Bharat_Mann_rechts.png</bgimg>
 	</event>
 
 	<event level="1" element="0" id="l650e001" eventtype="23" imcost="-5" imqual="-5" imtime="-5" loc="4">
@@ -10389,7 +10387,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		Nevertheless it was a good decision to inform the projectmanager or the front desk. Spain is very performance oriented 
 		country and you have shown your engagement.</message>
 		<nextevent href="l200e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e055" eventtype="24" imcost="0"
@@ -10398,7 +10396,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to attack the projectmanager. Especially in Spain where power distance is rather high, it is 
 		inappropriate to attack your boss.</message>
 		<nextevent href="l200e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e065" eventtype="24" imcost="0"
@@ -10407,7 +10405,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It was a bad decision to waste time in front of the office. Spain is very performance oriented country so you 
 		have to show your engagement.</message>
 		<nextevent href="l200e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Begrüßung durch Kollegen -->
@@ -10431,7 +10429,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>That's almost right. Spanish people are very warm and for friends it is absolutely normal to hug or kiss the cheeks, but
 		in the business environment especially with a foreign person, a handshake will do.</message>
 		<nextevent href="l200e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e075" eventtype="24" imcost="+5"
 		imqual="+5" imtime="+5" loc="4">
@@ -10439,7 +10437,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Yes that's right - as you're a foreign person in the business environment a warm and gentle 
 		greeting and handshake are most common.</message>
 		<nextevent href="l200e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e080" eventtype="24" imcost="0"
@@ -10448,7 +10446,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> That's not right. Spanish people are very warm-hearted and friendly - a warm greeting and 
 		a handshake are most common in the business environment.</message>
 		<nextevent href="l200e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	
@@ -10481,7 +10479,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>This was a good decision - communication and social interaction play a big role in Spain. It is also not unusal 
 		to go to a bar before lunch to grab some tapas there.</message>
 		<nextevent href="l200e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e105" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -10489,7 +10487,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>You should not decline this invitation - even if you don't eat in between breakfast and lunch you should 
 		go for a drink. Communication and social interaction play a big role in Spain and a lot of this social interaction takes place in bars.</message>
 		<nextevent href="l200e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e095" eventtype="24" imcost="+5"
 		imqual="0" imtime="+5" loc="4">
@@ -10498,7 +10496,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		you should not decline the invitation. Communication and social interaction play a big role in Spain and a lot of this social interaction takes place 
 		in bars. </message>
 		<nextevent href="l200e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<!-- Tapas Game -->	
 	<event level="1" element="0" id="l200e110" eventtype="24" imcost="0"
@@ -10507,14 +10505,14 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>You decide to go to the bar with your colleagues. As the menu is in Spanish you have to guess
 		what are the names of dishes. For each dish there is a photo provided - Choose the right answer!</message>
 		<nextevent href="l200e115"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 		<progressValue>25</progressValue>
 	</event>
 	<event level="1" element="0" id="l200e115" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Is "Aceitunas"?</description>
 		<nextevent href="l200e120"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advicejpg</bgimg>
 	</event>
 	<event level="1" element="1" id="l200e120" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>What dish is "aceitunas"?</title>
@@ -10527,20 +10525,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's right! Aceitunas means "Olives" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e135"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e125" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's wrong - Aceitunas means "Olives" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e135"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e135" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Almendras"?</description>
 		<nextevent href="l200e140"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l200e140" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -10554,20 +10552,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Almendras are means "Almonds" and are a common tapas dish in Spain.</message>
 		<nextevent href="l200e155"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e150" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Almendras are "Almonds" and are a common tapas dish in Spain.</message>
 		<nextevent href="l200e155"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e155" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Gambas"?</description>
 		<nextevent href="l200e160"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l200e160" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -10581,20 +10579,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Gambas means "Prawns" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e175"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e170" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Gambas means "Prawns" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e175"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e175" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Tortilla"?</description>
 		<nextevent href="l200e180"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l200e180" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -10609,20 +10607,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Tortilla means "Omelet with Potatoes" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e195"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e190" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Tortilla means "Omelet with Potatoes" and is a common tapas dish in Spain.</message>
 		<nextevent href="l200e198"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>	
 	<event level="1" element="0" id="l200e195" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>You Go back to the Office to Be on Time for the Meeting. </description>
 		<nextevent href="l200e198"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Teammeeting -->
@@ -10647,7 +10645,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>This was a good decision - though open criticism should be avoided in Spain as the power distance is quite high
 		you politely show your engagement and try to improve further meetings.</message>
 		<nextevent href="l200e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e210" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -10655,7 +10653,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>  You could do that, but in order to improve further meetings and fulfill your tasks you should rather
 		politely ask your colleagues to be more on time. </message>
 		<nextevent href="l200e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e200" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -10663,7 +10661,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to interrupt the meeting and criticize the others in front of each other.
 		Furthermore, in countries with high power distance, it is the projectmanager's task to advice the other team members of their behaviour.</message>
 		<nextevent href="l200e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>	
+		<bgimg>ES_advice.jpg</bgimg>	
 	</event>
 	
 	<!-- Teammeeting auf Spanisch -->
@@ -10694,7 +10692,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is politey not to disturb the projectmanager while he is presenting. 
 		But the whole meeting will not make any sense for you in Spanish. </message>
 		<nextevent href="l200e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e225" eventtype="24" imcost="+10"
@@ -10703,7 +10701,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is appropriate to ask the projectmanager politely to continue in English. 
 		Otherwise the whole meeting will not make any sense for you.</message>
 		<nextevent href="l200e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e230" eventtype="24" imcost="0"
@@ -10712,7 +10710,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to attack the projektmanager in front of his team members. 
 		Especially in Spain where power distance is rather high, it is inappropriate to attack your boss.</message>
 		<nextevent href="l200e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!--PROJECT MEETING RULES -->
@@ -10738,7 +10736,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is impolite to interrupt the meeting. Furthermore, in countries with high power distance, 
 		it is the projectmanager's task to advice the other team members of their behaviour.</message>
 		<nextevent href="l200e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e245" eventtype="24" imcost="0"
@@ -10746,7 +10744,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is impolite to interrupt the meeting. But the introduction of meeting rules shows your engangement and will improve future meetings.</message>
 		<nextevent href="l200e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e250" eventtype="24" imcost="+5"
@@ -10754,7 +10752,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is very polite not to advise the other team members in front of the project manager.</message>
 		<nextevent href="l200e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e255" eventtype="24" imcost="0"
@@ -10762,7 +10760,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> Doing nothing is not appropriate. You need to intervene here!</message>
 		<nextevent href="l200e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Barabend -->
@@ -10827,21 +10825,21 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> In Spain you usually pay your bill together in a group. It is seen as impolite and not common to pay the bill individually. </message>
 		<nextevent href="l200e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e295" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Advice</description>
 		<message> In Spain you usually pay your bill together in a group. It is very common to divide the bill by the number of guests.</message>
 		<nextevent href="l200e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l200e300" eventtype="24" imcost="+10"
 		imqual="+10" imtime="+10" loc="4">
 		<description>Advice</description>
 		<message> Good decision - In Spain you usually pay your bill together in a group and divide the bill by the number of guests.</message>
 		<nextevent href="l200e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<!-- Select the right outfit -->
 	
@@ -10858,21 +10856,21 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Sorry, but this sort of casual outfit is not formal enough and you should avoid appearing in the office looking as if you were 
 		on holiday.</message>
 		<nextevent href="l200e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="2" id="l200e315" eventtype="24" imcost="+5" imqual="0" imtime="+5" loc="4">
 		<description>Advice</description>
 		<message>Correct. Most offices welcome and prefer an elegant business outfit even though the weather is hot.</message>
 		<nextevent href="l200e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="2" id="l200e320" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Advice</description>
 		<message>A long-sleeve shirt is okay, but jeans are too informal.</message>
 		<nextevent href="l200e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e325" eventtype="24" imcost="0"
@@ -10977,7 +10975,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> In performance oriented countries it is okay to ask when the supplier will arrive. 
 		With your question you politely remind him that he is late. </message>
 		<nextevent href="l200e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e375" eventtype="24" imcost="0"
@@ -10985,7 +10983,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is impolite to attack the furniture man. This will only make him arriving later.</message>
 		<nextevent href="l200e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l200e380" eventtype="24" imcost="0"
@@ -10994,7 +10992,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is too risky not to call the furniture man. If he arrives too late the whole removal cannot be completed. 
 		In performance oriented countries it is okay to ask when the supplier will arrive. </message>
 		<nextevent href="l200e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 
 	<!-- Clases de Espanol -->
@@ -11069,7 +11067,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		imqual="0" imtime="0" loc="4">
 		<description>You Have Finished Spain!</description>
 		<message></message>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 		<nextevent href="l999e999" />
 		<progressValue>100</progressValue>
 	</event>
@@ -11232,7 +11230,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		Nevertheless it was a good decision to inform the projectmanager or the front desk. Spain is very performance oriented 
 		country and you have shown your engagement.</message>
 		<nextevent href="l210e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e055" eventtype="24" imcost="0"
@@ -11241,7 +11239,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to attack the projectmanager. Especially in Spain where power distance is rather high, it is 
 		inappropriate to attack your boss.</message>
 		<nextevent href="l210e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e065" eventtype="24" imcost="0"
@@ -11250,7 +11248,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It was a bad decision to waste time in front of the office. Spain is very performance oriented country so you 
 		have to show your engagement.</message>
 		<nextevent href="l210e070"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Begrüßung durch Kollegen -->
@@ -11274,7 +11272,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>That's almost right. Spanish people are very warm and for friends it is absolutely normal to hug or kiss the cheeks, but
 		in the business environment especially with a foreign person, a handshake will do.</message>
 		<nextevent href="l210e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e075" eventtype="24" imcost="+5"
 		imqual="+5" imtime="+5" loc="4">
@@ -11282,7 +11280,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Yes that's right - as you're a foreign person in the business environment a warm and gentle 
 		greeting and handshake are most common.</message>
 		<nextevent href="l210e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e080" eventtype="24" imcost="0"
@@ -11291,7 +11289,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> That's not right. Spanish people are very warm-hearted and friendly - a warm greeting and 
 		a handshake are most common in the business environment.</message>
 		<nextevent href="l210e090"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	
@@ -11324,7 +11322,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>This was a good decision - communication and social interaction play a big role in Spain. It is also not unusal 
 		to go to a bar before lunch to grab some tapas there.</message>
 		<nextevent href="l210e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e105" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -11332,7 +11330,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>You should not decline this invitation - even if you don't eat in between breakfast and lunch you should 
 		go for a drink. Communication and social interaction play a big role in Spain and a lot of this social interaction takes place in bars.</message>
 		<nextevent href="l210e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e095" eventtype="24" imcost="+5"
 		imqual="0" imtime="+5" loc="4">
@@ -11341,7 +11339,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		you should not decline the invitation. Communication and social interaction play a big role in Spain and a lot of this social interaction takes place 
 		in bars. </message>
 		<nextevent href="l210e110"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<!-- Tapas Game -->	
 	<event level="1" element="0" id="l210e110" eventtype="24" imcost="0"
@@ -11350,14 +11348,14 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>You decide to go to the bar with your colleagues. As the menu is in Spanish you have to guess
 		what are the names of dishes. For each dish there is a photo provided - Choose the right answer!</message>
 		<nextevent href="l210e115"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 		<progressValue>25</progressValue>
 	</event>
 	<event level="1" element="0" id="l210e115" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Aceitunas"?</description>
 		<nextevent href="l210e120"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="1" id="l210e120" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>What dish is "aceitunas"?</title>
@@ -11370,20 +11368,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's right! Aceitunas means "Olives" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e135"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e125" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's wrong - Aceitunas means "Olives" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e135"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e135" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Almendras"?</description>
 		<nextevent href="l210e140"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l210e140" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -11397,20 +11395,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Almendras are means "Almonds" and are a common tapas dish in Spain.</message>
 		<nextevent href="l210e155"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e150" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Almendras are "Almonds" and are a common tapas dish in Spain.</message>
 		<nextevent href="l210e155"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e155" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Gambas"?</description>
 		<nextevent href="l210e160"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l210e160" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -11424,20 +11422,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Gambas means "Prawns" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e175"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e170" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Gambas means "Prawns" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e175"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e175" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>What Dish Is "Tortilla"?</description>
 		<nextevent href="l210e180"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="1" id="l210e180" eventtype="15" imcost="0" imqual="0" imtime="0" loc="4">
@@ -11452,20 +11450,20 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Solution</description>
 		<message>That's wrong! Tortilla means "Omelet with Potatoes" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e195"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e190" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Solution</description>
 		<message>That's right! Tortilla means "Omelet with Potatoes" and is a common tapas dish in Spain.</message>
 		<nextevent href="l210e198"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>	
 	<event level="1" element="0" id="l210e195" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>You Go back to the Office to Be on Time for the Meeting. </description>
 		<nextevent href="l210e198"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	
@@ -11491,7 +11489,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>This was a good decision - though open criticism should be avoided in Spain as the power distance is quite high
 		you politely show your engagement and try to improve further meetings.</message>
 		<nextevent href="l210e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e210" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -11499,7 +11497,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>  You could do that, but in order to improve further meetings and fulfill your tasks you should rather
 		politely ask your colleagues to be more on time. </message>
 		<nextevent href="l210e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e200" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
@@ -11507,7 +11505,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to interrupt the meeting and criticize the others in front of each other.
 		Furthermore, in countries with high power distance, it is the projectmanager's task to advice the other team members of their behaviour.</message>
 		<nextevent href="l210e215"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Teammeeting auf Spanisch -->
@@ -11537,7 +11535,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is politey not to disturb the projectmanager while he is presenting. 
 		But the whole meeting will not make any sense for you in Spanish. </message>
 		<nextevent href="l210e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e225" eventtype="24" imcost="+10"
@@ -11546,7 +11544,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is appropriate to ask the projectmanager politely to continue in English. 
 		Otherwise the whole meeting will not make any sense for you.</message>
 		<nextevent href="l210e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e230" eventtype="24" imcost="0"
@@ -11555,7 +11553,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is impolite to attack the projektmanager in front of his team members. 
 		Especially in Spain where power distance is rather high, it is inappropriate to attack your boss.</message>
 		<nextevent href="l210e235"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!--PROJECT MEETING RULES -->
@@ -11581,7 +11579,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> It is impolite to interrupt the meeting. Furthermore, in countries with high power distance, 
 		it is the projectmanager's task to advice the other team members of their behaviour.</message>
 		<nextevent href="l210e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e245" eventtype="24" imcost="0"
@@ -11589,7 +11587,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is impolite to interrupt the meeting. But the introduction of meeting rules shows your engangement and will improve future meetings.</message>
 		<nextevent href="l210e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e250" eventtype="24" imcost="+5"
@@ -11597,7 +11595,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is very polite not to advise the other team members in front of the project manager.</message>
 		<nextevent href="l210e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e255" eventtype="24" imcost="0"
@@ -11605,7 +11603,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> Doing nothing is not appropriate. You need to intervene here!</message>
 		<nextevent href="l210e260"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<!-- Barabend -->
@@ -11670,21 +11668,21 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> In Spain you usually pay your bill together in a group. It is seen as impolite and not common to pay the bill individually. </message>
 		<nextevent href="l210e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e295" eventtype="24" imcost="0"
 		imqual="0" imtime="0" loc="4">
 		<description>Advice</description>
 		<message> In Spain you usually pay your bill together in a group. It is very common to divide the bill by the number of guests.</message>
 		<nextevent href="l210e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<event level="1" element="0" id="l210e300" eventtype="24" imcost="+10"
 		imqual="+10" imtime="+10" loc="4">
 		<description>Advice</description>
 		<message> Good decision - In Spain you usually pay your bill together in a group and divide the bill by the number of guests.</message>
 		<nextevent href="l210e305"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	<!-- Select the right outfit -->
 	
@@ -11701,21 +11699,21 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>Sorry, but this sort of casual outfit is not formal enough and you should avoid appearing in the office looking as if you were 
 		on holiday.</message>
 		<nextevent href="l210e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="2" id="l210e315" eventtype="24" imcost="+5" imqual="0" imtime="+5" loc="4">
 		<description>Advice</description>
 		<message>Correct. Most offices welcome and prefer an elegant business outfit even though the weather is hot.</message>
 		<nextevent href="l210e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="2" id="l210e320" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Advice</description>
 		<message>A long-sleeve shirt is okay, but jeans are too informal.</message>
 		<nextevent href="l210e325"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e325" eventtype="24" imcost="0"
@@ -11820,7 +11818,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message> In performance oriented countries it is okay to ask when the supplier will arrive. 
 		With your question you politely remind him that he is late. </message>
 		<nextevent href="l210e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e375" eventtype="24" imcost="0"
@@ -11828,7 +11826,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>Advice</description>
 		<message> It is impolite to attack the furniture man. This will only make him arriving later.</message>
 		<nextevent href="l210e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 	
 	<event level="1" element="0" id="l210e380" eventtype="24" imcost="0"
@@ -11837,7 +11835,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<message>It is too risky not to call the furniture man. If he arrives too late the whole removal cannot be completed. 
 		In performance oriented countries it is okay to ask when the supplier will arrive. </message>
 		<nextevent href="l210e385"/>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 	</event>
 
 	<!-- Clases de Espanol -->
@@ -11911,7 +11909,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		imqual="0" imtime="0" loc="4">
 		<description>You Have Finished Spain!</description>
 		<message></message>
-		<bgimg>ES_adivce.jpg</bgimg>
+		<bgimg>ES_advice.jpg</bgimg>
 		<nextevent href="l999e999" />
 		<progressValue>100</progressValue>
 	</event>
@@ -20037,7 +20035,7 @@ about not or at least giving fewer tips than usual.
 	<event level="1" element="3" id="l901e021" eventtype="24" imcost="0" imqual="-6" imtime="-9" loc="4">
 		<description>Advice</description>
 		<message>Australians do not separate much between personal and work life and it is appropriate to talk about the personal life with colleagues. 
-				James will feel offended if you are not going to talk with him about it."</message>
+				James will feel offended if you are not going to talk with him about it.</message>
 		<nextevent href="l902e001"/>
 		<bgimg>AU_advice.jpg</bgimg>
 	</event>
@@ -21051,7 +21049,7 @@ about not or at least giving fewer tips than usual.
 	<event level="1" element="3" id="l901e020" eventtype="24" imcost="0" imqual="-6" imtime="-9" loc="4">
 		<description>Advice</description>
 		<message>Australians do not separate much between personal and work life and it is appropriate to talk about the personal life with colleagues. 
-				James will feel offended if you are not going to talk with him about it."</message>
+				James will feel offended if you are not going to talk with him about it.</message>
 		<nextevent href="l902e000"/>
 		<bgimg>AU_advice.jpg</bgimg>
 	</event>
