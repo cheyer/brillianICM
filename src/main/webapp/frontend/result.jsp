@@ -39,11 +39,43 @@
 	<script type="text/javascript" src="js/events.js"></script>
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
 	<script type="text/javascript" src="js/grayscale.js"></script>
+
+	
 	
 
 </head>
 <body class="easyui-layout">
-	
+		<!-- 
+			Philipp K.
+			5.3.16
+			Added Javascript so Buttons show different values depending on Certificate Settings-->
+
+		<script type="text/javascript">
+		$.ajax({
+			url: 'Event',
+			type: 'get',
+			dataType: 'html',
+			data: {userid : userid, type : 'getCertificateSettings'},
+			async: true,
+			success: function(data) {
+			 if(data == "1"){
+				 document.getElementById("certificationText").innerHTML = "For your certification, please press the button below";
+				 document.getElementById("SendButton").innerHTML = "Send Certificate and restart from the begininng";
+				 var button = document.getElementById("SendButton");
+				 button.onclick=function() { 
+					 $('#sendcertificate').dialog('open');
+			     	};
+			 }else{
+				 document.getElementById("certificationText").innerHTML = "To restart, please press the button below";
+				 document.getElementById("SendButton").innerHTML = "Restart the game from the beginning";
+				 var button = document.getElementById("SendButton");
+				 button.onclick=function() { 
+					$('#reset').dialog('open');
+			 		};
+				}
+			}
+		});
+		</script>
 		<!-- <div class="north" data-options="region:'north',border:false" style="border-bottom-width: 1px;">
 			<div class="div-header window">
 				<a id="logout" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
@@ -82,15 +114,26 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<p>
-							For your certification, please press the button below<br /><br />
-							<a class="btn btn-default" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Send Certificate and restart from the beginning</a>
+						
+							
+							
+							<script type="text/javascript">
+									checkCertificate();
+								</script>
+								
+							<p><div id="certificationText"></div>
+							<br /><br />
+							<a class="btn btn-default" id="SendButton" href="javascript:void(0)" ><div id="SendButtonText"></div></a>
 						</p>
 					</td>
 				</tr>
 			</table>
-			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+			
+			<div id="sendcertificate" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
 				Your Certificate will be send to <div id=email></div>
+			</div>
+			<div id="reset" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'resetUserProgress'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+				Are you sure you want to restart the game? </br> This step cannot be undone!
 			</div>
 		</div>
 	

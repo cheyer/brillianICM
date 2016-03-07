@@ -54,7 +54,7 @@
 				<br />
 				
 				<%
-					
+
 					if(request.getAttribute("groups")!=null){
 											
 											//students = new String[((String [][]) request.getAttribute("students")).length][request.getAttribute("students")[0].length];
@@ -114,6 +114,19 @@
 													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
 													+ "<input type=\"text\" name=\"group_name\" value=\""+ groups.get(i).get(1) +"\" style=\"display:none\"/>" 
 													+ "</form></td><td>");
+											if(groups.get(i).get(2).equals("1")){
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOff"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOff"+ i +"').trigger('click')\">Disable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"0\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}else{
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOn"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOn"+ i +"').trigger('click')\">Enable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"1\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}
 											out.println("</td></tr></table> ");
 											
 											
