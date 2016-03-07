@@ -976,8 +976,6 @@ function loadConversation() {
 						} else {
 							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
 						}
-						console.log(ttstext[j]);
-						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 					}
 				}
@@ -989,8 +987,6 @@ function loadConversation() {
 						} else {
 							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 						}
-						console.log(ttstext[j]);
-						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 				}
 				}
