@@ -18897,7 +18897,7 @@ about not or at least giving fewer tips than usual.
 		<bgimg>TR_Airport_f.jpg</bgimg>
 	</event>
 		
-				<event level="1" element="3" id="l801e015" eventtype="0" imcost="0" imqual="+4" imtime="-2" loc="4">
+				<event level="1" element="3" id="l801e015" eventtype="24" imcost="0" imqual="+4" imtime="-2" loc="4">
 					<description>Advice</description>
 					<message>If you’re not sure how to pronounce the words it’s better not to use them. After you get to know the colleagues better you can ask them how to pronounce the words.</message>
 					<nextevent href="l801e030"/>
