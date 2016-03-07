@@ -2481,16 +2481,16 @@
 		<description>What, in Your Opinion are Topics You Can Address in Brazil? Drag and Drop the Topics in the Appropriate Columns. In total, 4 Topics Should Be Avoided during the Conversation.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="weather">weather</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="traveling and course of day">traveling and course of day</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="family">family</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="food">food</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="origin">origin</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="income">income</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="sports">sports</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="status at work">status at work</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="culture and sightseeing">culture and sightseeing</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="news">news</option>
+		<option column="1" title="weather">weather</option>
+		<option column="1" title="traveling and course of day">traveling and course of day</option>
+		<option column="2" title="family">family</option>
+		<option column="1" title="food">food</option>
+		<option column="2" title="origin">origin</option>
+		<option column="2" title="income">income</option>
+		<option column="1" title="sports">sports</option>
+		<option column="2" title="status at work">status at work</option>
+		<option column="1" title="culture and sightseeing">culture and sightseeing</option>
+		<option column="1" title="news">news</option>
 		<bgimg>BR_transportTaxi.jpg</bgimg>
 		<nextevent href="l105e052"/>
 	</event>
@@ -15434,7 +15434,7 @@ about not or at least giving fewer tips than usual.
 		<goodieType>Image</goodieType>
 		<goodieHeading></goodieHeading>
 		<!-- <goodieSource>../brillianicm/images/US_goodie2_laws.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/US_goodie2_laws.png</goodieSource> <!-- For server -->
+		<goodieSource>../images/US_goodie2_laws.jpg</goodieSource> <!-- For server -->
 		
 	</event>
 	
