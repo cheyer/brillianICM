@@ -89,7 +89,11 @@ function changeSelect() {
 	*6.3.16
 	* Function to remove & set the tts cookie depending on the given value of the drop down 
 	*/
+<<<<<<< HEAD
+   }else if (selectedValue=='TextToSpeech On'){ 
+=======
 	}else if (selectedValue=='TextToSpeech On'){ 
+>>>>>>> branch 'master' of https://github.com/cheyer/brillianicm.git
 		
 		
 	  	eraseCookie("tts");
