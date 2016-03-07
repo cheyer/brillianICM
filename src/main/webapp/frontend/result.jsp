@@ -124,10 +124,10 @@
 				</tr>
 			</table>
 			
-			<div id="sendcertificate" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+			<div id="sendcertificate" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#sendcertificate').dialog('close');}}]">
 				Your Certificate will be send to <div id=email></div>
 			</div>
-			<div id="reset" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'resetUserProgress'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
+			<div id="reset" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'resetUserProgress'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#reset').dialog('close');}}]">
 				Are you sure you want to restart the game? </br> This step cannot be undone!
 			</div>
 		</div>
