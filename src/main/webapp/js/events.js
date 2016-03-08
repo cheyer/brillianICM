@@ -915,7 +915,8 @@ function loadConversation() {
 	speechSynthesis.cancel();}
 
 	var hrefNumber = $xml.find('messageBoxB').length;
-
+	var hrefNumberA = $xml.find('messageBoxA').length;
+	
 	var i = 0;
 	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
@@ -1006,7 +1007,6 @@ function loadConversation() {
 		// NEW LINE 672 - 681
 		var dialogButton = $('.messageBoxA').eq(indexAB);
 		
-		console.log("Message Box A" +i);
 		if(hrefA == undefined){
 			
 		}else{
@@ -1080,9 +1080,7 @@ function loadConversation() {
 		}
 		
 		var messageBoxContainer = $('.dialogBox');
-		console.log("Message Box B" +i);
-		messageBoxContainer
-				.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
+		messageBoxContainer.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
 		var messageBoxB = $('.messageBoxB').eq(indexAB);
 		messageBoxB.text(text);
 
@@ -1090,9 +1088,8 @@ function loadConversation() {
 		var dialogButton = $('.messageBoxB').eq(indexAB);
 		if (hrefB == undefined &&  href!= undefined) {
 			i++;
-			console.log(hrefNumber);
+			
 			if (i == hrefNumber) {
-				console.log("Message Box B TEST");
 				var nextButton = $('.buttonContainer');
 				nextButton.append('<div class="nextButton">NEXT</div>');
 				nextButton.linkbutton({});
@@ -1124,7 +1121,7 @@ function loadConversation() {
 			});
 		}
 	}
-	if (hrefNumber == "0") {
+	if (hrefNumber == "0" && hrefNumberA == "0") {
 		
 		var nextButton = $('.buttonContainer');
 
