@@ -919,6 +919,7 @@ function loadConversation() {
 	var i = 0;
 	// liest XML aus
 	var href = $xml.find('nextevent').attr('href');
+	console.log(href);
 	var description = $xml.find('description').text();
 	var containerConversation = $('.conversation');
 	var descriptionContainerConversation = containerConversation
@@ -928,6 +929,7 @@ function loadConversation() {
 	loadBackground();
 	// globale Variablen
 	var indexAB = 0;
+	
 
 	// dynamischer Ansatz
 	$xml.find('messageBoxA, messageBoxB').each(function(index) {
@@ -949,7 +951,7 @@ function loadConversation() {
 		ttsSettings = getCookie("tts");
 
 		var text = $xml.find('messageBoxA').eq(indexAB).text();
-		var href = $xml.find('messageBoxA').eq(indexAB).attr('href');
+		var hrefA = $xml.find('messageBoxA').eq(indexAB).attr('href');
 		var readVoice = $xml.find('messageBoxA').eq(indexAB).attr('voice');
 		
 		//text to speech for HTML5 support
@@ -1003,16 +1005,24 @@ function loadConversation() {
 
 		// NEW LINE 672 - 681
 		var dialogButton = $('.messageBoxA').eq(indexAB);
-	
-		if(href == undefined){
-				
+		
+		console.log("Message Box A" +i);
+		if(hrefA == undefined){
+			
 		}else{
+	
+		$('.messageBoxA').eq(indexAB).css('border-color', '#FF7700');
+		$('.messageBoxATriangle').eq(indexAB).css('border',
+				'11px solid #FF7700');
+		$('.messageBoxATriangle2').eq(indexAB).css('border',
+				'7px solid #FF7700');
 		dialogButton.linkbutton({
-			text:text
-		});
+			text : text
+		});	
+		
 		dialogButton.bind('click', function(){	
-		getXml(href);
-		if(ttsSettings == "true" && typeof SpeechSynthesisUtterance !== 'undefined') {	
+		getXml(hrefA);
+		if(typeof SpeechSynthesisUtterance !== 'undefined') {	
 			speechSynthesis.cancel();
 		}
 		});	
@@ -1041,7 +1051,6 @@ function loadConversation() {
 		}else if(text != undefined){
 			var ttstext = text.split(".");
 			var voices = speechSynthesis.getVoices();
-			console.log(voices);
 			if(voices[0] != undefined){
 				if(ttsSettings == "true" && readVoice =="male") {
 					for(var j=0; j < ttstext.length; j++){
@@ -1051,8 +1060,6 @@ function loadConversation() {
 						} else {
 							tts.voice = voices.filter(function(voice) { return voice.name == 'Daniel'; })[0];
 						}
-						console.log(ttstext[j]);
-						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 					}
 				}
@@ -1064,8 +1071,6 @@ function loadConversation() {
 						} else {
 							tts.voice = voices.filter(function(voice) { return voice.name == 'Samantha'; })[0];
 						}
-						console.log(ttstext[j]);
-						console.log(tts.voice);
 						speechSynthesis.speak(tts);
 				}
 				}
@@ -1075,6 +1080,7 @@ function loadConversation() {
 		}
 		
 		var messageBoxContainer = $('.dialogBox');
+		console.log("Message Box B" +i);
 		messageBoxContainer
 				.append('<div class="bc messageBoxBContainer"><div class="bc messageBoxB"></div><div class="bc messageBoxBTriangle"></div><div class="bc messageBoxBTriangle2"></div></div>');
 		var messageBoxB = $('.messageBoxB').eq(indexAB);
@@ -1082,17 +1088,15 @@ function loadConversation() {
 
 		// NEW LINE 700 - 709
 		var dialogButton = $('.messageBoxB').eq(indexAB);
-		if (hrefB == undefined) {
+		if (hrefB == undefined &&  href!= undefined) {
 			i++;
-
-			if (i == hrefNumber) {	
+			console.log(hrefNumber);
+			if (i == hrefNumber) {
+				console.log("Message Box B TEST");
 				var nextButton = $('.buttonContainer');
 				nextButton.append('<div class="nextButton">NEXT</div>');
 				nextButton.linkbutton({});
-				nextButton
-						.bind(
-								'click',
-								function() {
+				nextButton.bind( 'click', function() {
 									getXml(href);
 									if (ttsSettings == "true"
 											&& typeof SpeechSynthesisUtterance !== 'undefined') {
@@ -1100,6 +1104,8 @@ function loadConversation() {
 									}
 								});
 			}
+		} else if (hrefB == undefined){
+			
 		} else {
 
 			$('.messageBoxB').eq(indexAB).css('border-color', '#FF7700');
@@ -1112,8 +1118,7 @@ function loadConversation() {
 			});
 			dialogButton.bind('click', function() {
 				getXml(hrefB);
-				if (ttsSettings == "true"
-						&& typeof SpeechSynthesisUtterance !== 'undefined') {
+				if (typeof SpeechSynthesisUtterance !== 'undefined') {
 					speechSynthesis.cancel();
 				}
 			});

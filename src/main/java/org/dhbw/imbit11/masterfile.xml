@@ -32,7 +32,7 @@
 		FORWARD is sending you, Paul McGallwick, to Germany in order to lead an integration project. 
 		</content>
 		<progressValue>0</progressValue>
-		<option href="l700e006">Next</option>
+		<option href="l651e000">Next</option>
 		<bgimg>DE_0_Newspaper.jpg</bgimg>
 	</event>
 	<event level="0" element="2" id="l700e006" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -150,7 +150,6 @@
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>3</humaneOrientation> 
 		
-		<bgimg>DE_0_BGDimensions.jpg</bgimg> 
 		<nextevent href="l700e106" />
 	</event>
 	<event level="0" element="22" id="l700e106" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -205,7 +204,7 @@
 	</event>
 	<event level="0" element="30" loc="4" imtime="+5" imqual="+5" imcost="0" eventtype="21" id="l700e146">
 		<title>Communication</title>
-		<description>Your partner's statement: There is no milk in the fridge!</description>
+		<description>Your Partner's Statement: There Is no Milk in the Fridge!</description>
 			<option rank="1" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to drink some milk now.</option>
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">It's okay telling you this.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Go to the supermarket and buy some milk.</option>
@@ -551,8 +550,8 @@
 	</event>
 	<event level="2" element="5" loc="4" imtime="0" imqual="0" imcost="0" eventtype="21" id="l702e021">
 		<title>Four Sides of a Message</title>
-		<description>You interrupt Martin and excuse yourself. He responds:
-		 “Oh yes, sure. Let’s talk over coffee in the afternoon again!” What are the four sides of this message?
+		<description>You Interrupt and Excuse Yourself. 
+		He Responds: “Oh Yes, Sure. Let’s Talk over Coffee in the Afternoon again!” What are the Four Sides of This Message?
 		</description>
 			<option rank="1" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I know you need to be on time.</option>
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to get to know you better.</option>	
@@ -1147,7 +1146,7 @@
 		<nextevent href="l705e016"/>
 		<bgimg>DE_5_ColorsWorld.jpg</bgimg>
 	</event>
-	<event level="5" element="4" id="l705e016" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="5" element="4" id="l705e016" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<content/>
 		<bgimg>BA_007_Stellenausschreibung.jpg</bgimg>
 		<nextevent href="l705e021"/>
@@ -1187,7 +1186,7 @@
 		&lt;br&gt;
 		FORWARD is sending you, Paul McGallwick, to Germany in order to lead an integration project.</content>
 		<progressValue>0</progressValue>
-		<option href="l700e005">Next</option>
+		<option href="l300e035">Next</option>
 		<bgimg>DE_0_Newspaper.jpg</bgimg>
 	</event>
 
@@ -1309,8 +1308,6 @@
 		<uncertaintyAvoidance>5</uncertaintyAvoidance>
 		<assertiveness>4.5</assertiveness>
 		<humaneOrientation>3</humaneOrientation> 
-		
-		<bgimg>DE_0_BGDimensions.jpg</bgimg> 
 		<nextevent href="l700e105" />
 	</event>
 	<!-- neu -->
@@ -1367,7 +1364,7 @@
 	</event>
 	<event level="0" element="30" loc="4" imtime="+5" imqual="+5" imcost="0" eventtype="21" id="l700e145">
 		<title>Communication</title>
-		<description>Your partner's statement: There is no milk in the fridge!</description>
+		<description>Your Partner's Statement: There Is no Milk in the Fridge!</description>
 			<option rank="1" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to drink some milk now.</option>
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">It's okay telling you this.</option>	
 			<option rank="3" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">Go to the supermarket and buy some milk.</option>
@@ -1721,8 +1718,8 @@
 	</event>
 	<event level="2" element="5" loc="4" imtime="0" imqual="0" imcost="0" eventtype="21" id="l702e020">
 		<title>Four Sides of a Message</title>
-		<description>You interrupt and excuse yourself. He responds:
-		 “Oh yes, sure. Let’s talk over coffee in the afternoon again!” What are the four sides of this message?
+		<description>You Interrupt and Excuse Yourself. 
+		He Responds: “Oh Yes, Sure. Let’s Talk over Coffee in the Afternoon again!” What are the Four Sides of This Message?
 		</description>
 			<option rank="1" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I know you need to be on time.</option>
 			<option rank="2" finfo="BA_003_4_Ohren_explanation.pdf" fdesc="Explanation">I want to get to know you better.</option>	
@@ -2320,7 +2317,7 @@
 		<nextevent href="l705e015"/>
 		<bgimg>DE_5_ColorsWorld.jpg</bgimg>
 	</event>
-	<event level="5" element="4" id="l705e015" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="5" element="4" id="l705e015" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<content/>
 		<bgimg>BA_007_Stellenausschreibung.jpg</bgimg>
 		<nextevent href="l705e020"/>
@@ -2777,21 +2774,21 @@
 		<description>Create the Speech by Putting the Sentences in the Right Order via Drag-and-Drop (5 Sentences Are Correct and 5 Are Wrong).</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Hello everyone, I have to admit that I am quite disappointed.">Hello everyone, I have to admit that I am quite disappointed.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Hello everyone, I would like to welcome you to this meeting today.">Hello everyone, I would like to welcome you to this meeting today.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I thought we agreed to have a meeting on 10:00am and now it it already 10:30am.">I thought we agreed to have a meeting on 10:00am and now it is already 10:30am.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules, which we as a team need to follow.">I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules,
+		<option column="2" title="Hello everyone, I have to admit that I am quite disappointed.">Hello everyone, I have to admit that I am quite disappointed.</option>
+		<option column="1" title="Hello everyone, I would like to welcome you to this meeting today.">Hello everyone, I would like to welcome you to this meeting today.</option>
+		<option column="2" title="I thought we agreed to have a meeting on 10:00am and now it it already 10:30am.">I thought we agreed to have a meeting on 10:00am and now it is already 10:30am.</option>
+		<option column="1" title="I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules, which we as a team need to follow.">I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules,
 			which we as a team need to follow.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="In order to make this project a success, it is important that we all commit ourselves to team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.">In order to make this project a success, it is important that we all commit ourselves to
+		<option column="1" title="In order to make this project a success, it is important that we all commit ourselves to team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.">In order to make this project a success, it is important that we all commit ourselves to
 			team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I would appreciate if you could try to make it on time, so that neither of us is running late for their next meetings.">I would appreciate if you could
+		<option column="2" title="I would appreciate if you could try to make it on time, so that neither of us is running late for their next meetings.">I would appreciate if you could
 			try to make it on time, so that neither of us is running late for their next meetings.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I actually had quite a few important meetings scheduled for today, which I now have to reschedule due to this delay.">I actually had quite a few important
+		<option column="2" title="I actually had quite a few important meetings scheduled for today, which I now have to reschedule due to this delay.">I actually had quite a few important
 			meetings scheduled for today, which I now have to reschedule due to this delay.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="If we have the feeling that we are running late, we inform our teammates.">If we have the feeling that we are running late, we inform our teammates.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Thank you, anyway, I am really looking forward to the next couple of months working together with you.">Thank you, anyway, I am really looking forward
+		<option column="1" title="If we have the feeling that we are running late, we inform our teammates.">If we have the feeling that we are running late, we inform our teammates.</option>
+		<option column="2" title="Thank you, anyway, I am really looking forward to the next couple of months working together with you.">Thank you, anyway, I am really looking forward
 			to the next couple of months working together with you.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="In this way, we are informed, the other teammates can go to their other scheduled meetings on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?">In this way, we are informed, the other teammates can go to their other scheduled meetings
+		<option column="1" title="In this way, we are informed, the other teammates can go to their other scheduled meetings on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?">In this way, we are informed, the other teammates can go to their other scheduled meetings
 			on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?</option>
 		<nextevent href="l140e052"/>
 		<bgimg>BR_meetingRoom_o.jpg</bgimg>
@@ -2910,15 +2907,15 @@
 			Corresponding Columns.</description>
 		<column>Long-term</column>
 		<column>Short-term</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="protecting your face">protecting your face</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="emphasis on persistence, perseverance">emphasis on persistence, perseverance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="face considerations common but seen as a weakness">face considerations common but seen as a weakness</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="emphasis on quick results">emphasis on quick results</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="higher focus on tasks and issues than on relationships">higher focus on tasks and issues than on relationships</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="lower saving rates">lower saving rates</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="respect for tradition">respect for tradition</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="traditions are adaptable to changed circumstances">traditions are adaptable to changed circumstances</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="save, be thrifty">save, be thrifty</option>
+		<option column="2" title="protecting your face">protecting your face</option>
+		<option column="1" title="emphasis on persistence, perseverance">emphasis on persistence, perseverance</option>
+		<option column="1" title="face considerations common but seen as a weakness">face considerations common but seen as a weakness</option>
+		<option column="2" title="emphasis on quick results">emphasis on quick results</option>
+		<option column="1" title="higher focus on tasks and issues than on relationships">higher focus on tasks and issues than on relationships</option>
+		<option column="2" title="lower saving rates">lower saving rates</option>
+		<option column="2" title="respect for tradition">respect for tradition</option>
+		<option column="1" title="traditions are adaptable to changed circumstances">traditions are adaptable to changed circumstances</option>
+		<option column="1" title="save, be thrifty">save, be thrifty</option>
 		<bgimg>BR_futureOrientation.jpg</bgimg>
 		<nextevent href="l155e053"/>
 	</event>
@@ -3029,16 +3026,16 @@
 		<description>Pick Three Factors which Could Influence a Job Promotion in Brazil besides Social Favors.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="flexibility">flexibility</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="performance">performance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="age">age</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="group orientation">group orientation</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="good manners">good manners</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="gender">gender</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="reliability">reliability</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="origin">origin</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="punctuality">punctuality</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="power influence">power influence</option>
+		<option column="2" title="flexibility">flexibility</option>
+		<option column="2" title="performance">performance</option>
+		<option column="1" title="age">age</option>
+		<option column="2" title="group orientation">group orientation</option>
+		<option column="2" title="good manners">good manners</option>
+		<option column="1" title="gender">gender</option>
+		<option column="2" title="reliability">reliability</option>
+		<option column="1" title="origin">origin</option>
+		<option column="2" title="punctuality">punctuality</option>
+		<option column="2" title="power influence">power influence</option>
 		<bgimg>BR_afterLunch.jpg</bgimg>
 		<nextevent href="l170e052"/>
 	</event>
@@ -3153,18 +3150,18 @@
 			Drag and Drop into the box which values are meaningful in Brazilian organizations.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="loyalty">loyalty</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="tradition">tradition</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="uncertainty avoidance">uncertainty avoidance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="social integration">social integration</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="directness">directness</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="economy">economy</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="power distance and hierarchy">power distance and hierarchy</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="future orientation">future orientation</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="charisma">charisma</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="quality of life">quality of life</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="punctuality">punctuality</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="decision making">decision making</option>
+		<option column="1" title="loyalty">loyalty</option>
+		<option column="1" title="tradition">tradition</option>
+		<option column="2" title="uncertainty avoidance">uncertainty avoidance</option>
+		<option column="1" title="social integration">social integration</option>
+		<option column="2" title="directness">directness</option>
+		<option column="2" title="economy">economy</option>
+		<option column="1" title="power distance and hierarchy">power distance and hierarchy</option>
+		<option column="2" title="future orientation">future orientation</option>
+		<option column="1" title="charisma">charisma</option>
+		<option column="1" title="quality of life">quality of life</option>
+		<option column="2" title="punctuality">punctuality</option>
+		<option column="2" title="decision making">decision making</option>
 		<bgimg>BR_lessonsLearned.jpg</bgimg>
 		<nextevent href="l199e999"/>
 		<progressValue>100</progressValue>
@@ -3190,7 +3187,9 @@
 		<content>Great! Hopefully you've learned a few things about the Brazilian culture and how to behave
 			in certain situations. Don't hesitate to try out the other country modules!</content>
 		<option href="l999e999">End Game</option>
+		<!-- 
 		<option href="l199e998">Link to documentation</option>
+		 -->
 		<bgimg>BR_congratulations.jpg</bgimg>
 	</event>
 
@@ -3324,16 +3323,16 @@
 		<description>What, in Your Opinion are Topics You Can Address in Brazil? Drag and Drop the Topics in the Appropriate Columns. In total, 4 Topics Should Be Avoided during the Conversation.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="weather">weather</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="traveling and course of day">traveling and course of day</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="family">family</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="food">food</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="origin">origin</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="income">income</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="sports">sports</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="status at work">status at work</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="culture and sightseeing">culture and sightseeing</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="news">news</option>
+		<option column="1" title="weather">weather</option>
+		<option column="1" title="traveling and course of day">traveling and course of day</option>
+		<option column="2" title="family">family</option>
+		<option column="1" title="food">food</option>
+		<option column="2" title="origin">origin</option>
+		<option column="2" title="income">income</option>
+		<option column="1" title="sports">sports</option>
+		<option column="2" title="status at work">status at work</option>
+		<option column="1" title="culture and sightseeing">culture and sightseeing</option>
+		<option column="1" title="news">news</option>
 		<bgimg>BR_transportTaxi.jpg</bgimg>
 		<nextevent href="l105e002"/>
 	</event>
@@ -3621,21 +3620,21 @@
 		<description>Create the Speech by Putting the Sentences in the Right Order via Drag-and-Drop (5 Sentences Are Correct and 5 Are Wrong).</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Hello everyone, I have to admit that I am quite disappointed.">Hello everyone, I have to admit that I am quite disappointed.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Hello everyone, I would like to welcome you to this meeting today.">Hello everyone, I would like to welcome you to this meeting today.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I thought we agreed to have a meeting on 10:00am and now it it already 10:30am.">I thought we agreed to have a meeting on 10:00am and now it is already 10:30am.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules, which we as a team need to follow.">I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules,
+		<option column="2" title="Hello everyone, I have to admit that I am quite disappointed.">Hello everyone, I have to admit that I am quite disappointed.</option>
+		<option column="1" title="Hello everyone, I would like to welcome you to this meeting today.">Hello everyone, I would like to welcome you to this meeting today.</option>
+		<option column="2" title="I thought we agreed to have a meeting on 10:00am and now it it already 10:30am.">I thought we agreed to have a meeting on 10:00am and now it is already 10:30am.</option>
+		<option column="1" title="I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules, which we as a team need to follow.">I am really looking forward to the next couple of months working together with you, therefore I suggest that we all agree to some basic rules,
 			which we as a team need to follow.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="In order to make this project a success, it is important that we all commit ourselves to team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.">In order to make this project a success, it is important that we all commit ourselves to
+		<option column="1" title="In order to make this project a success, it is important that we all commit ourselves to team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.">In order to make this project a success, it is important that we all commit ourselves to
 			team work. With respect to other colleagues, who might have other meetings scheduled for the day, I suggest, for instance, that we meet deadlines.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I would appreciate if you could try to make it on time, so that neither of us is running late for their next meetings.">I would appreciate if you could
+		<option column="2" title="I would appreciate if you could try to make it on time, so that neither of us is running late for their next meetings.">I would appreciate if you could
 			try to make it on time, so that neither of us is running late for their next meetings.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="I actually had quite a few important meetings scheduled for today, which I now have to reschedule due to this delay.">I actually had quite a few important
+		<option column="2" title="I actually had quite a few important meetings scheduled for today, which I now have to reschedule due to this delay.">I actually had quite a few important
 			meetings scheduled for today, which I now have to reschedule due to this delay.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="If we have the feeling that we are running late, we inform our teammates.">If we have the feeling that we are running late, we inform our teammates.</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="Thank you, anyway, I am really looking forward to the next couple of months working together with you.">Thank you, anyway, I am really looking forward
+		<option column="1" title="If we have the feeling that we are running late, we inform our teammates.">If we have the feeling that we are running late, we inform our teammates.</option>
+		<option column="2" title="Thank you, anyway, I am really looking forward to the next couple of months working together with you.">Thank you, anyway, I am really looking forward
 			to the next couple of months working together with you.</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="In this way, we are informed, the other teammates can go to their other scheduled meetings on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?">In this way, we are informed, the other teammates can go to their other scheduled meetings
+		<option column="1" title="In this way, we are informed, the other teammates can go to their other scheduled meetings on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?">In this way, we are informed, the other teammates can go to their other scheduled meetings
 			on time and we will give the person who was running late a brief update afterwards. What do you think you about that? Do you have any suggestions?</option>
 		<nextevent href="l140e002"/>
 		<bgimg>BR_meetingRoom_o.jpg</bgimg>
@@ -3754,15 +3753,15 @@
 			Corresponding Columns.</description>
 		<column>Long-term</column>
 		<column>Short-term</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="protecting your face">protecting your face</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="emphasis on persistence, perseverance">emphasis on persistence, perseverance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="face considerations common but seen as a weakness">face considerations common but seen as a weakness</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="emphasis on quick results">emphasis on quick results</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="higher focus on tasks and issues than on relationships">higher focus on tasks and issues than on relationships</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="lower saving rates">lower saving rates</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="respect for tradition">respect for tradition</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="traditions are adaptable to changed circumstances">traditions are adaptable to changed circumstances</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="save, be thrifty">save, be thrifty</option>
+		<option column="2" title="protecting your face">protecting your face</option>
+		<option column="1" title="emphasis on persistence, perseverance">emphasis on persistence, perseverance</option>
+		<option column="1" title="face considerations common but seen as a weakness">face considerations common but seen as a weakness</option>
+		<option column="2" title="emphasis on quick results">emphasis on quick results</option>
+		<option column="1" title="higher focus on tasks and issues than on relationships">higher focus on tasks and issues than on relationships</option>
+		<option column="2" title="lower saving rates">lower saving rates</option>
+		<option column="2" title="respect for tradition">respect for tradition</option>
+		<option column="1" title="traditions are adaptable to changed circumstances">traditions are adaptable to changed circumstances</option>
+		<option column="1" title="save, be thrifty">save, be thrifty</option>
 		<bgimg>BR_futureOrientation.jpg</bgimg>
 		<nextevent href="l155e003"/>
 	</event>
@@ -3873,16 +3872,16 @@
 		<description>Pick Three Factors which Could Influence a Job Promotion in Brazil besides Social Favors.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="flexibility">flexibility</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="performance">performance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="age">age</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="group orientation">group orientation</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="good manners">good manners</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="gender">gender</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="reliability">reliability</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="origin">origin</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="punctuality">punctuality</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="power influence">power influence</option>
+		<option column="2"  title="flexibility">flexibility</option>
+		<option column="2"  title="performance">performance</option>
+		<option column="1"  title="age">age</option>
+		<option column="2"  title="group orientation">group orientation</option>
+		<option column="2"  title="good manners">good manners</option>
+		<option column="1"  title="gender">gender</option>
+		<option column="2"  title="reliability">reliability</option>
+		<option column="1"  title="origin">origin</option>
+		<option column="2"  title="punctuality">punctuality</option>
+		<option column="2"  title="power influence">power influence</option>
 		<bgimg>BR_afterLunch.jpg</bgimg>
 		<nextevent href="l170e002"/>
 	</event>
@@ -3997,18 +3996,18 @@
 			Drag and Drop into the box which values are meaningful in Brazilian organizations.</description>
 		<column>Correct</column>
 		<column>Wrong</column>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="loyalty">loyalty</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="tradition">tradition</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="uncertainty avoidance">uncertainty avoidance</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="social integration">social integration</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="directness">directness</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="economy">economy</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="power distance and hierarchy">power distance and hierarchy</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="future orientation">future orientation</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="charisma">charisma</option>
-		<option column="1" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="quality of life">quality of life</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="punctuality">punctuality</option>
-		<option column="2" finfo="BR_nothingHere.pdf" fdesc="Nothing here" title="decision making">decision making</option>
+		<option column="1"  title="loyalty">loyalty</option>
+		<option column="1"  title="tradition">tradition</option>
+		<option column="2"  title="uncertainty avoidance">uncertainty avoidance</option>
+		<option column="1"  title="social integration">social integration</option>
+		<option column="2"  title="directness">directness</option>
+		<option column="2"  title="economy">economy</option>
+		<option column="1"  title="power distance and hierarchy">power distance and hierarchy</option>
+		<option column="2"  title="future orientation">future orientation</option>
+		<option column="1"  title="charisma">charisma</option>
+		<option column="1"  title="quality of life">quality of life</option>
+		<option column="2"  title="punctuality">punctuality</option>
+		<option column="2"  title="decision making">decision making</option>
 		<bgimg>BR_lessonsLearned.jpg</bgimg>
 		<nextevent href="l199e999"/>
 		<progressValue>100</progressValue>
@@ -4570,13 +4569,13 @@
 	<option rank="3" fdesc="Appeal">He wants me to remind everyone to be on time and prepared for the meeting.</option>
 	<option rank="4" fdesc="Fact">He is simply asking whether the meeting is still on and he wants to work as efficiently as possible while he is here.</option>
 	<nextevent href="l300e237" />
-	<bgimg>white.png</bgimg>
+	<bgimg>CN_desk_earmodel.png</bgimg>
 </event>
 <!-- End of line -->
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l300e237" element="0" level="300">
 
-<content> Great job! As you see, there are different ways a person could understand this question... You and Zhang Hailong agree to meet at 9 am the next morning for the meeting with the whole project team. You spend the rest of the evening in your hotel room. The trip to Beijing was pretty exhausting...Good night! :) </content>
+<content> Great job! As you see, there are different ways a person could understand this question... You and Zhang Hailong agree to meet at 9 am the next morning for the meeting with the whole project team. You spend the rest of the evening in your hotel room. The trip to Beijing was pretty exhausting... </content>
 
 <option href="l300e238">Next</option>
 
@@ -4592,8 +4591,6 @@
 <option href="l300e239">Start Quiz</option>
 
 <bgimg>CN_Abschied.jpg</bgimg>
-
-<option href="l399e999">To the End</option>
 <!-- EDIT BY MANH ON MAR 06, 2016 -->
 <!-- Wrong placement of progressValue -->
 <!--  <progressValue>100</progressValue> -->
@@ -4757,7 +4754,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l320e222" element="0" level="320">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l320e222" element="0" level="320">
 
 <content/>
 
@@ -4779,7 +4776,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l320e226" element="0" level="320">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l320e226" element="0" level="320">
 
 <content/>
 
@@ -5172,7 +5169,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l340e233" element="0" level="340">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l340e233" element="0" level="340">
 
 <content/>
 
@@ -6400,13 +6397,13 @@
 	<option rank="3" fdesc="Appeal">He wants me to remind everyone to be on time and prepared for the meeting.</option>
 	<option rank="4" fdesc="Fact">He is simply asking whether the meeting is still on and he wants to work as efficiently as possible while he is here.</option>
 	<nextevent href="l300e037" />
-	<bgimg>white.png</bgimg>
+	<bgimg>CN_desk_earmodel.png</bgimg>
 </event>
 <!-- End of line -->
 
 -<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="3" id="l300e037" element="0" level="300">
 
-<content> Great job! As you see, there are different ways a person could understand this question... You and Zhang Hailong agree to meet at 9 am the next morning for the meeting with the whole project team. You spend the rest of the evening in your hotel room. The trip to Beijing was pretty exhausting...Good night! :) </content>
+<content> Great job! As you see, there are different ways a person could understand this question... You and Zhang Hailong agree to meet at 9 am the next morning for the meeting with the whole project team. You spend the rest of the evening in your hotel room. The trip to Beijing was pretty exhausting...</content>
 
 <option href="l300e038">Next</option>
 
@@ -6422,7 +6419,6 @@
 
 <bgimg>CN_Abschied.jpg</bgimg>
 
-<option href="l399e999">To the End</option>
 <!-- EDIT BY MANH ON MAR 06, 2016 -->
 <!-- Wrong placement of progressValue -->
 <!--  <progressValue>100</progressValue> -->
@@ -6588,7 +6584,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l320e022" element="0" level="320">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l320e022" element="0" level="320">
 
 <content/>
 
@@ -6610,7 +6606,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l320e026" element="0" level="320">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l320e026" element="0" level="320">
 
 <content/>
 
@@ -7002,7 +6998,7 @@
 </event>
 
 
--<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="24" id="l340e033" element="0" level="340">
+-<event loc="4" imtime="0" imqual="0" imcost="0" eventtype="23" id="l340e033" element="0" level="340">
 
 <content/>
 
@@ -8147,13 +8143,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>What are the Cultural Factors that are Directly Visible and which are Invisible for the Eye ?</description>
 		<column>Direct</column>
 		<column>Indirect</column>
-		<option column="2" rank="6" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Caste System">Caste System</option>
-		<option column="2" rank="1" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Values">Values</option>
-		<option column="2" rank="2" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Norms">Norms</option>
-		<option column="2" rank="3" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Income">Income</option>
-		<option column="1" rank="4" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Clothes">Clothes</option>
-		<option column="1" rank="4" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Language">Language</option>
-		<option column="1" rank="5" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Religion">Religion</option>
+		<option column="2" rank="6" fdesc="IcebergModel" title="Caste System">Caste System</option>
+		<option column="2" rank="1" fdesc="IcebergModel" title="Values">Values</option>
+		<option column="2" rank="2" fdesc="IcebergModel" title="Norms">Norms</option>
+		<option column="2" rank="3" fdesc="IcebergModel" title="Income">Income</option>
+		<option column="1" rank="4" fdesc="IcebergModel" title="Clothes">Clothes</option>
+		<option column="1" rank="4" fdesc="IcebergModel" title="Language">Language</option>
+		<option column="1" rank="5" fdesc="IcebergModel" title="Religion">Religion</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l630e007" />
 		 </event>
@@ -8176,13 +8172,13 @@ In China it is highly important to show respect to your guest. With inviting you
 		<description>What are the Cultural Factors that are Directly Visible and which are Invisible for the Eye ?</description>
 		<column>Direct</column>
 		<column>Indirect</column>
-		<option column="2" rank="6" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Caste System">Caste System</option>
-		<option column="2" rank="1" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Values">Values</option>
-		<option column="2" rank="2" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Norms">Norms</option>
-		<option column="2" rank="3" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Income">Income</option>
-		<option column="1" rank="4" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Clothes">Clothes</option>
-		<option column="1" rank="4" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Language">Language</option>
-		<option column="1" rank="5" finfo="IN_IcebergModel.pdf" fdesc="IcebergModel" title="Religion">Religion</option>
+		<option column="2" rank="6" fdesc="IcebergModel" title="Caste System">Caste System</option>
+		<option column="2" rank="1" fdesc="IcebergModel" title="Values">Values</option>
+		<option column="2" rank="2" fdesc="IcebergModel" title="Norms">Norms</option>
+		<option column="2" rank="3" fdesc="IcebergModel" title="Income">Income</option>
+		<option column="1" rank="4" fdesc="IcebergModel" title="Clothes">Clothes</option>
+		<option column="1" rank="4" fdesc="IcebergModel" title="Language">Language</option>
+		<option column="1" rank="5" fdesc="IcebergModel" title="Religion">Religion</option>
 		<bgimg>BA_002_iceberg.jpg</bgimg>
 		<nextevent href="l630e107" />
 	</event>
@@ -8310,7 +8306,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<event level="1" element="0" id="l632e001" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 	<partner>Bharat</partner>
 	<title>Reaction</title>
-	<description>How do You Respond?</description>
+	<description>How Do You Respond?</description>
 	<messageBoxA href="l632e002" voice="male">She just turned 6 and will go to school this summer. We are really proud. Her name is Marie. How old is your daughter and what's her name?</messageBoxA>
 	<messageBoxA href="l632e003" voice="male">Well, let us not talk about family now. We can do this tonight. Can you please explain what is planned for today?</messageBoxA>
 	<messageBoxA href="l632e004" voice="male">She must be the same age like yours. But I didn’t want to bring her here since I will be very busy with the project. I bet it will be quite time consuming and stressful.</messageBoxA> 
@@ -8366,7 +8362,7 @@ In China it is highly important to show respect to your guest. With inviting you
    <event level="1" element="0" id="l632e101" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 	<partner>Bharat</partner>
 	<title>Reaction</title>
-	<description>How do You Respond?</description>
+	<description>How Do You Respond?</description>
 	<messageBoxA href="l632e102" voice="female">She just turned 6 and will go to school this summer. We are really proud. Her name is Marie. How old is your daughter and what's her name?</messageBoxA>
 	<messageBoxA href="l632e103" voice="female">Well, let us not talk about family now. We can do this tonight. Can you please explain what is planned for today?</messageBoxA>
 	<messageBoxA href="l632e104" voice="female">She must be the same age like yours. But I didn’t want to bring her here since I will be very busy with the project. I bet it will be quite time consuming and stressful.</messageBoxA> 
@@ -8408,7 +8404,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<event level="1" element="0" eventtype="18" id="l633e000" imcost="+5" imqual="+5" imtime="0" loc="4">
 	<title>Small Talk</title>
 	<date>2016-02-10</date>
-	<description>In India, Small Talk is a Common Way to Gain Trust and Build Up a Relationship. What are the Four Topics that might be Problematic?</description>
+	<description>In India, Small Talk is a Common Way to Gain Trust and Build Up a Relationship. What are the Four Topics that might Be Problematic?</description>
 	<column>Positive</column>
 	<column>Negative</column>
 	<option column="1" rank="1" title="Sports">Sports</option>
@@ -8436,7 +8432,7 @@ In China it is highly important to show respect to your guest. With inviting you
 	<event level="1" element="0" eventtype="18" id="l633e100" imcost="+5" imqual="+5" imtime="0" loc="4">
 	<title>Small Talk</title>
 	<date>2016-02-10 21:33:45</date>
-	<description>In India, Small Talk is a Common Way to Gain Trust and Build up a Relationship. What are the Four Topics that might be Problematic?</description>
+	<description>In India, Small Talk is a Common Way to Gain Trust and Build up a Relationship. What are the Four Topics that might Be Problematic?</description>
 	<column>Positive</column>
 	<column>Negative</column>
 	<option column="1" rank="1" title="Sports">Sports</option>
@@ -18178,7 +18174,7 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="male">Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine.</messageBoxA>
                                 <messageBoxB voice="female">No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that! </messageBoxB>
                                 <messageBoxA voice="male">Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?</messageBoxA>                                 
-                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
+                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
                                 <bgimg>TR_Woman_Talk_male.jpg</bgimg> 
                                 <nextevent href="l806e006"/>                            
                                
@@ -19293,7 +19289,7 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="female">Oh sorry Aylin! How are you? Are you going to the restaurant as well? I´m really hungry, looking forward to try the excellent Turkish cuisine.</messageBoxA>
                                 <messageBoxB voice="female">No worries, I´m fine…Yes, looking forward for the restaurant as well. Have you heard that Mr. Öztürk reserved a table at one of Ankara’s finest restaurant right next to the Kurtuluş Parkı? It has a wonderful atmosphere and delicious meals, you will like that! </messageBoxB>
                                 <messageBoxA voice="female">Haven´t expected that, sounds great! Apparently, he´s a perfect example for Turkish hospitality as it is well renown all over the world. Excuse me for asking you that but I´m wondering: Despite the Islamic heritage of modern Turkey I have seen so many woman in business and office? Is it usual for woman in Turkey to work in businesses?</messageBoxA>                                 
-                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, Come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
+                                <messageBoxB voice="female">(laughing): Oh, You have to differentiate modern Turkey with its increasing service market and the rural areas Turkey still has. If you like to, come with us today, this evening we gather in a shisha bar, watch a Fenerbahçe soccer game and have a decent shisha. Once you are in Ankara, you need to enjoy a real Turkish shisha. Ah my friend, don´t dress in orange, for your own security purposes.</messageBoxB>
                                 <nextevent href="l806e005"/>
                                 <bgimg>TR_Woman_Talk_female.jpg</bgimg>   
     </event>
