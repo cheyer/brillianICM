@@ -32,7 +32,7 @@
 		FORWARD is sending you, Paul McGallwick, to Germany in order to lead an integration project. 
 		</content>
 		<progressValue>0</progressValue>
-		<option href="l651e000">Next</option>
+		<option href="l700e006">Next</option>
 		<bgimg>DE_0_Newspaper.jpg</bgimg>
 	</event>
 	<event level="0" element="2" id="l700e006" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -1186,7 +1186,7 @@
 		&lt;br&gt;
 		FORWARD is sending you, Paul McGallwick, to Germany in order to lead an integration project.</content>
 		<progressValue>0</progressValue>
-		<option href="l300e035">Next</option>
+		<option href="l700e005">Next</option>
 		<bgimg>DE_0_Newspaper.jpg</bgimg>
 	</event>
 
