@@ -44,7 +44,7 @@
 		<!--<option href="l700e196">Skip training</option>-->
 		<bgimg>DE_0_Plane.jpg</bgimg>
 	</event>
-	<event level="0" element="3" id="l700e011" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="3" id="l700e011" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<content/>
 		<bgimg>BA_training_9_0.JPG</bgimg>
 		<nextevent href="l700e016"/>
@@ -1202,7 +1202,7 @@
 	</event>
 
 	
-	<event level="0" element="3" id="l700e010" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="3" id="l700e010" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<content/>
 		<bgimg>BA_training_9_0.JPG</bgimg>
 		<nextevent href="l700e015"/>
@@ -3414,6 +3414,13 @@
 		<option href="l115e002" img="BR_shorts_f.jpg">Shorts</option>
 		<option href="l115e003" img="BR_suit_f.jpg">Suit</option>
 		<option href="l115e004" img="BR_jeans_f.jpg" >Jeans</option>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/BR_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/BR_goodie1_facts.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 
 	<event level="2" element="2" id="l115e002" eventtype="24" imcost="-3" imqual="0" imtime="-3" loc="4">
@@ -3435,12 +3442,6 @@
 		<message>A long-sleeve shirt or blouse is okay, but jeans are too informal.</message>
 		<nextevent href="l120e000"/>
 		<bgimg>BR_advice.jpg</bgimg>
-		
-		<!-- EDIT BY MANH ON MAR 5, 2016 -->
-		<goodieType>Image</goodieType>
-		<goodieHeading></goodieHeading>
-		<!-- <goodieSource>../brillianicm/images/BR_goodie1_facts.jpg</goodieSource> --> <!-- For local testing -->
-		<goodieSource>../images/BR_goodie1_facts.jpg</goodieSource> <!-- For server -->
 	</event>
 
 	<event level="2" element="3" id="l120e000" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
@@ -5079,6 +5080,7 @@
 <content>Good morning! You arrive in the office on time to do the last preparations for the meeting.</content>
 
 <bgimg>CN_desk.png</bgimg>
+<progressValue>50</progressValue>
 
 <option href="l340e215">Start the day!</option>
 
@@ -6908,6 +6910,7 @@
 <content>Good morning! You arrive in the office on time to do the last preparations for the meeting.</content>
 
 <bgimg>CN_desk.png</bgimg>
+<progressValue>50</progressValue>
 
 <option href="l340e015">Start the day!</option>
 
@@ -7097,7 +7100,7 @@
 <goodieType>Image</goodieType>
 <goodieHeading></goodieHeading>
 <!-- <goodieSource>../brillianicm/images/CN_goodie3_facts.png</goodieSource> --> <!-- For local testing -->
-<goodieSource>../images/CN_goodie3_facts.png</goodieSource> <!-- For server -->
+<goodieSource>../images/CN_goodie3_facts.jpg</goodieSource> <!-- For server -->
 
 </event>
 
@@ -10252,6 +10255,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<sideimg1>ES_bullfight.jpg</sideimg1>
 		<sideimg2>ES_SpainTeamFootball.jpg</sideimg2>
 		<sideimg3>ES_penelopecruz.jpg</sideimg3>
+		<progressValue>0</progressValue>
 		
 		<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 		<!-- Map link für Kartenfunktion -->
@@ -17711,7 +17715,7 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue> 0 </progressValue>
+			<progressValue>0</progressValue>
 			
 			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 			<!-- Map link für Kartenfunktion -->
@@ -17759,8 +17763,9 @@ about not or at least giving fewer tips than usual.
 	<!-- Cultural Dimensions Wrap-Up -->
 	
 	<event level="0" element="2" id="l800e016" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
+		<content/>
+		<bgimg>TR_wrapUp.jpg</bgimg>
 		<nextevent href="l800e021"/>
-		<bgimg>TR_wrapUp.jpg</bgimg> <!-- euer Bild einfügen -->
 	</event>
 	
 	<!-- Videoeinführung --> 
@@ -17960,7 +17965,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<nextevent href="l803e001"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -18249,7 +18254,7 @@ about not or at least giving fewer tips than usual.
                                  <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence.</messageBoxA>
                                 <messageBoxB voice="male">Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue> 50 </progressValue>
+                                <progressValue>50</progressValue>
 								<nextevent href="l807e006"/>
                                 <bgimg>TR_Restaurant_male.jpg</bgimg>     
     </event>
@@ -18502,7 +18507,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e021" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk. </content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l811e026">Next</option>
 		<bgimg>TR_MeetingRoom3_m.jpg</bgimg>
 	</event>
@@ -18765,7 +18770,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l814e001"/>
 	</event>
 
@@ -18818,7 +18823,7 @@ about not or at least giving fewer tips than usual.
 			<sideimg1>TR_facts_img1.jpg</sideimg1>
 			<sideimg2>TR_facts_img2.jpg</sideimg2>
 			<sideimg3>TR_facts_img3.jpg</sideimg3>
-			<progressValue> 0 </progressValue>
+			<progressValue>0</progressValue>
 			
 			<!-- EDIT BY MARVIN ON MAR 5, 2016 -->
 			<!-- Map link für Kartenfunktion -->
@@ -18831,7 +18836,7 @@ about not or at least giving fewer tips than usual.
 			<nationalhymne>../audio/TR_nationalhymne.mp3</nationalhymne> <!-- For server -->
 			<!-- End of line -->
 			
-				<nextevent href="l800e005"/>
+			<nextevent href="l800e005"/>
 		</event>		
 			
 	      
@@ -18868,8 +18873,9 @@ about not or at least giving fewer tips than usual.
 	<!-- Cultural Dimensions Wrap-Up -->
 
 	<event level="0" element="2" id="l800e015" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
+		<content/>
+		<bgimg>TR_wrapUp.jpg</bgimg>
 		<nextevent href="l800e020"/>
-		<bgimg>TR_wrapUp.jpg</bgimg> <!-- euer Bild einfügen -->
 	</event>
 	
 	<!-- Videoeinführung -->
@@ -19072,7 +19078,7 @@ about not or at least giving fewer tips than usual.
 		<message>First of all the Turks don’t care that much about official rules and regulations this is also justified due to the low uncertainty avoidance rank. 
 				They are more tolerant in breaking rules, that’s why it is self-evident for the taxi driver to drive faster as the limit is because no police would stop him. 
 				For the taxi driver it’s fun because he is used to the chaotic way of driving so he tries to show his customer the same.</message>
-		<progressValue> 25 </progressValue>
+		<progressValue>25</progressValue>
 		<nextevent href="l803e000"/>
 		<bgimg>TR_Flag.jpg</bgimg>
 	</event>
@@ -19360,7 +19366,7 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="male">Mr. Öztürk seems not to be happy about your lack of competence.</messageBoxA>
                                 <messageBoxB voice="female">Mr Öztürk, excuse my change in topic, but I heard so much about the famous Turkish leader Kemal Atatürk…</messageBoxB>                                 
                                 <messageBoxA voice="male">Mr. Öztürk looks up with a smile in his face starring at you.</messageBoxA>
-                                <progressValue> 50 </progressValue>
+                                <progressValue>50</progressValue>
 								<nextevent href="l807e005"/>
                                 <bgimg>TR_Restaurant_female.jpg</bgimg>     
     </event>
@@ -19612,7 +19618,7 @@ about not or at least giving fewer tips than usual.
 	<event level="11" element="2" id="l811e020" eventtype="3" imcost="0" imqual="0" imtime="0" loc="4">
 		<partner>Meeting</partner>
 		<content>After you know how you should welcome the Turks in the meeting room, the atmosphere is getting relaxed. Everyone starts chatting about the last days, private matters and is doing small talk.</content>
-		<progressValue> 75 </progressValue>
+		<progressValue>75</progressValue>
 		<option href="l811e025">Next</option>
 		<bgimg>TR_MeetingRoom3_f.jpg</bgimg>
 	</event>
@@ -19814,6 +19820,13 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e025">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="12" element="3" id="l812e025" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -19876,7 +19889,7 @@ about not or at least giving fewer tips than usual.
 		<option column="2" title="You can bargain in the shops like on markets, there is no difference">You can bargain in the shops like on markets, there is no difference</option>
 		<option column="1" title="Cay is an important part of Turkish culture">Cay is an important part of Turkish culture</option>
 		<bgimg>TR_Abflug.jpg</bgimg>
-		<progressValue> 100 </progressValue>
+		<progressValue>100</progressValue>
 		<nextevent href="l814e000"/>
 	</event>
 	
