@@ -17758,7 +17758,7 @@ about not or at least giving fewer tips than usual.
 	
 	<!-- Cultural Dimensions Wrap-Up -->
 	
-	<event level="0" element="2" id="l800e016" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="2" id="l800e016" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<nextevent href="l800e021"/>
 		<bgimg>TR_wrapUp.jpg</bgimg> <!-- euer Bild einfügen -->
 	</event>
@@ -17786,6 +17786,13 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e006">Next</option>
 		<bgimg>TR_Airplain_m.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	
@@ -18326,7 +18333,14 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxB voice="male">Oh yes, that´s why I´m calling. We´ve been to this restaurant and had lunch, however, it has been more business focussed than the actual business meeting. I managed to handle the situation, but do you have some advices and recommendations for pricing negotiations.</messageBoxB>
                                 <messageBoxA voice="male">Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends.</messageBoxA>                                 
                                 <nextevent href="l809e006"/>
-                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg>     
+                                <bgimg>TR_Business_Call_Manager_male.jpg</bgimg> 
+                                
+                                <!-- EDIT BY MANH ON MAR 5, 2016 -->
+								<goodieType>Video</goodieType>
+								<goodieHeading></goodieHeading>
+								<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
+								<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->
+                                    
     </event>
     
      
@@ -18681,6 +18695,13 @@ about not or at least giving fewer tips than usual.
 		<content>The next day, you do not need to go to the office because the negotiations have been completed successfully and you can enjoy the remaining hours until your departure. You decide to visit a mosque and think about the clothe you should choice for this occasion.</content>
 		<option href="l812e026">Next</option>
 		<bgimg>TR_Moschee.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="12" element="3" id="l812e026" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -18846,7 +18867,7 @@ about not or at least giving fewer tips than usual.
 	
 	<!-- Cultural Dimensions Wrap-Up -->
 
-	<event level="0" element="2" id="l800e015" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="0" element="2" id="l800e015" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<nextevent href="l800e020"/>
 		<bgimg>TR_wrapUp.jpg</bgimg> <!-- euer Bild einfügen -->
 	</event>
@@ -18873,6 +18894,13 @@ about not or at least giving fewer tips than usual.
 		</content>		
 		<option href="l801e005">Next</option>
 		<bgimg>TR_Airplain_f.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Image</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/images/TR_goodie1_vocabulary.jpg</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../images/TR_goodie1_vocabulary.jpg</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<!-- Welcome 3 options -->
@@ -18970,7 +18998,7 @@ about not or at least giving fewer tips than usual.
 					Mr. Yilmaz guides you into one of the meeting rooms. Suddenly, there are coming more and more people and Cay ("black tea") and some Simits ("sesame rings") are served. 
 			</content>
 		<option href="l802e005">Next</option>
-		<bgimg>TR_TeaTeamf.jpg</bgimg>		
+		<bgimg>TR_Tea_Teamf.jpg</bgimg>		
 		</event>
 		
 		<event level="2" element="1" id="l802e005" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
@@ -19416,6 +19444,12 @@ about not or at least giving fewer tips than usual.
                                 <messageBoxA voice="male">Well, keep in mind: Respect, Honour and Authority are very important in pricing negotiations. You need to show that you are equal in rank with your counterpart and that you can decide on prices and details and not only a marionette of mine. Prices are never fixed, it can be negotiated twenty times and in the last five minutes they start again. And one more advice: Harmony and trust are important foundations for a successfull partnership with our Turkish friends.</messageBoxA>                                 
                                 <nextevent href="l809e005"/>
                                 <bgimg>TR_Business_Call_Manager_female.jpg</bgimg>
+                                
+                                <!-- EDIT BY MANH ON MAR 5, 2016 -->
+								<goodieType>Video</goodieType>
+								<goodieHeading></goodieHeading>
+								<!-- <goodieSource>../brillianicm/videos/TR_goodie2_facts.mp4</goodieSource> --> <!-- For local testing -->
+								<goodieSource>../videos/TR_goodie2_facts.mp4</goodieSource> <!-- For server -->
                                     
     </event>
     
@@ -19756,6 +19790,13 @@ about not or at least giving fewer tips than usual.
 		<message>It is a good idea to put off your clothes and tie the towel around your hip but it’s not common to take a shower before you go into the Hamam. Furthermore, you should have put on bathing sandals.</message>
 		<nextevent href="l812e020"/>
 		<bgimg>TR_Flag.jpg</bgimg>
+		
+		<!-- EDIT BY MANH ON MAR 5, 2016 -->
+		<goodieType>Video</goodieType>
+		<goodieHeading></goodieHeading>
+		<!-- <goodieSource>../brillianicm/videos/TR_goodie3_bath.mp4</goodieSource> --> <!-- For local testing -->
+		<goodieSource>../videos/TR_goodie3_bath.mp4</goodieSource> <!-- For server -->
+		
 	</event>
 	
 	<event level="12" element="1" id="l812e015" eventtype="24" imcost="+10" imqual="0" imtime="+6" loc="4">
