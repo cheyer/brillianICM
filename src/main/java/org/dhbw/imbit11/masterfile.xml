@@ -2136,7 +2136,7 @@
 	
 	<event level="3" element="30" id="l703e145" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
 		<description>Back in Munich</description>
-		<messageBoxA voice="male">  job, Paul! This is our final stepping stone for a successful project outcome. Your team has outperformed all expectations. The management has 
+		<messageBoxA voice="male"> Great job, Paul! This is our final stepping stone for a successful project outcome. Your team has outperformed all expectations. The management has 
 		approved a bonus of 10000€ for your team which I will be happy to distribute according to your assessment. Please send me a list of how much everyone should receive 
 		by tomorrow. Thank you again for your outstanding work! </messageBoxA>
 		<nextevent href="l703e150"/>
@@ -8915,7 +8915,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<bgimg>IN_Essen.png</bgimg>
 	</event>
 
-	<event level="100" element="0" id="l636e000" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="100" element="0" id="l636e000" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>Explanation</title>
 		<bgimg>IN_Great_Job.png</bgimg>
 		<nextevent href="l637e000" />
@@ -8990,7 +8990,7 @@ In China it is highly important to show respect to your guest. With inviting you
 		<bgimg>IN_Essen.png</bgimg>
 	</event>
 
-	<event level="100" element="0" id="l636e101" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="100" element="0" id="l636e101" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
 		<title>Explanation</title>
 		<bgimg>IN_Great_Job.png</bgimg>
 		<nextevent href="l636e112" />
@@ -10193,7 +10193,9 @@ In China it is highly important to show respect to your guest. With inviting you
 		<nextevent href="l699e999" />
 	</event>
 
-	<event level="100" element="0" id="l699e999" eventtype="23" imcost="0" imqual="0" imtime="0" loc="4">
+	<event level="100" element="0" id="l699e999" eventtype="24" imcost="0" imqual="0" imtime="0" loc="4">
+		<message>
+		</message>
 		<bgimg>IN_Final_Bild.png</bgimg>
 		<nextevent href="l999e999" />
 		<progressValue>100</progressValue>
