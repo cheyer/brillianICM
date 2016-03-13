@@ -138,7 +138,10 @@ function loadMapAllocation() {
 	var href = $xml.find('nextevent').attr('href');
 	var title = $xml.find('title').text();
 	var background = $xml.find('mapBackground').text();
-
+	var imageUrl = "images/"+background;
+	// set map background image
+	$('#mapContainer').css('background-image', 'url("' + imageUrl + '")');
+	
 	// create .square.target elements in #container
 	for (var i = 0; i < 140; i++) {
 		$('#mapContainer').append(
