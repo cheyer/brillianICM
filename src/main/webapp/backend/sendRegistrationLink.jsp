@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
 <title><%=ApplicationConstants.PAGETITLE_PROFESSOR%></title>
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
@@ -49,13 +49,18 @@
 <div class="center" data-options="region:'center'">
 <h3>Welcome to brillianCRM</h3>
 <p>Please fill in the form below and hit the send button to register:</p>
+<p>Multiple addresses can be separated by ";".<p> 
 <p style="color:red">${status}</p>
+
 <form action="SendRegistrationLink" method="post">
- <input type="text" name="link" maxlength="50" value="${link}" style="display:none"/> <!-- Needed to post the groupnumber -->
- e-mail <input type="email" name="email" maxlength="50"/><br />
-<input id="sendRegistration" style="display:none" type="submit" value="Send registration link"></input>
-<a class= "easyui-linkbutton" onclick="$('#sendRegistration').trigger('click')">Send registration link</a>
- </form>
+	<input type="text" name="link" maxlength="5000" value="${link}" style="display:none"/>
+	<TEXTAREA type="email" NAME="email" cols="75" ROWS="10"></TEXTAREA>
+	<br>
+	<input id="sendRegistration" style="display:none" type="submit" value="Send registration link"></input>
+	<a class= "easyui-linkbutton" onclick="$('#sendRegistration').trigger('click')">Send registration link</a>
+ </form>	
+ 
+ <br>
  <form action="<%out.print(application.getContextPath());%>/Professor" method="post">
     <input id="backButton" style="display:none" type="submit" value="Back"><a class= "easyui-linkbutton" onclick="$('#backButton').trigger('click')">Back</a>
 </form>

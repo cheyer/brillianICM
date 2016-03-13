@@ -1,13 +1,16 @@
 package org.dhbw.imbit11;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.dhbw.imbit11.backend.MailClient;
 import org.dhbw.imbit11.backend.UserRealm;
 
 import java.sql.SQLException;
@@ -86,6 +89,7 @@ public class Event extends HttpServlet {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
 				break;
 			}
 			case "inbox": data = new EventExtractor().getMails(gamePath);break;
@@ -95,6 +99,115 @@ public class Event extends HttpServlet {
 				try {
 					list = userRealm.getUserProgress(userid);
 					data = list.toString();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 5.3.16
+			 * Added Cases that handles the certification sending and resets the KPI to 0
+			 */
+			case "sendCertificate": {
+				/*
+				 * System.out.println("Space forcertifcate sendges ");
+				 */
+				UserRealm userRealm = new UserRealm();
+				MailClient mailclient = new MailClient();
+				try{
+					String email = userRealm.getUserEmailByID(userid);
+					list = userRealm.getUserProgress(userid);
+					String lastName =  (String) list.get(0);
+					String firstName = (String) list.get(1);
+					imcost = (int) list.get(3);
+					imqual = (int) list.get(4);
+					imtime = (int) list.get(5);
+					
+					String path = (String) list.get(6);
+					String[] arr = path.split(";");
+					String countryevent = arr[arr.length-2];
+					char countryID = countryevent.charAt(1);
+					String country;
+					switch (countryID){
+						case '1': { country = "Brazil"; break;}
+						case '2': { country = "Spain"; break;}
+						case '3': { country = "China"; break;}
+						case '4': { country = "USA"; break;}
+						case '5': { country = "Sweden"; break;}
+						case '6': { country = "India"; break;}
+						case '7': { country = "Germany"; break;}
+						case '8': { country = "Turkey"; break;}
+						case '9': { country = "Australia"; break;}
+						default:{ country = ""; break;}
+					}
+					
+					String username= firstName + " " + lastName; 
+					
+					userRealm.resetUserProgress(email);
+					mailclient.sendCertificateMail(username, email, imcost, imqual, imtime, country, request);
+				
+					
+				}catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 5.3.16
+			 * Added Cases that returns the email of the User with the given ID 
+			 */
+			case "getEmail": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					data += userRealm.getUserEmailByID(userid);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 6.3.16
+			 * Added Cases that returns the global settings to the request 
+			 */
+			case "getSettings": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					ArrayList<Boolean> settings = userRealm.getSettings();
+					data = settings.toString();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			/*
+			 * Philipp K.
+			 * 6.3.16
+			 * Added Cases that returns the certificate settings for the users group 
+			 */
+			case "getCertificateSettings": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					String group_id = userRealm.getUserGroupByID(userid);
+					String certificate = userRealm.getCertificate(group_id);
+					data = certificate;
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			case "resetUserProgress": {
+				UserRealm userRealm = new UserRealm();
+				try {
+					String email = userRealm.getUserEmailByID(userid);
+					userRealm.resetUserProgress(email);
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

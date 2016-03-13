@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
 <title><%=ApplicationConstants.PAGETITLE_STUDENT%></title>
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
@@ -63,19 +63,43 @@
 			<div>
 				<h4 style="text-align:center">Change Password</h4>
 					<p style="color: red; padding-left: 32px; ">${error}</p>
-				<form action="ResetPassword" method="post">				
+				<!-- 
+					Philipp K.
+					29.2.16
+					Abänderung des Formulars auf Bootstrap
+				-->
+		
+				<form action="ResetPassword" method="post">	
 					<input class="form-control" type="text" name="username" maxlength="50" value="${username}" style="display: none"/>
 					<input class="form-control" type="text" name="role" maxlength="50" value="student" style="display: none"/><br /><br />
 					<!--  Password check -->
-					<div >Old Password:</div>
-					<input class="form-control" type="password" name="oldpassword" maxlength="50"/><br /><br />
-					<div >Password:</div>
-					<input class="form-control" type="password" name="password" maxlength="50"/><br /><br />
-					<div>Repeat Password:</div>
-					<input class="form-control" type="password" name="password_repeat" maxlength="50" /><br /><br />
+					<div class="form-group">
+    					<label for="oldPassword">Old Password:</label>
+    					<input class="form-control" type="password" name="oldpassword" maxlength="50" placeholder="Old Password">
+ 					</div>	
+ 					<div class="form-group">
+    					<label for="password">Password:</label>
+    					<input class="form-control" type="password" name="password" maxlength="50" placeholder="Password">
+ 					</div>	
+ 					<div class="form-group">
+    					<label for="password_repeat">Repeat Password:</label>
+    					<input class="form-control" type="password" name="password_repeat" maxlength="50" placeholder="Repeat Password">
+ 					</div>
+ 					<br><br>			
 					<input id="updatePassword" type="submit" name="updatePassword" value="Update password" hidden="hidden"/>
+					<div class="form-group">
 					<a  class="btn btn-default" onclick=confirmPasswordChange()>Update Password</a>
-					<br></br>
+					</div>
+				</form>
+				<!--
+				Philipp K.
+				29.2.16
+				Hinzufügen des deleteAccount Button
+				 -->
+				<form action="deleteAccount" method="post">
+					<input id="deleteAccount" type="submit" name="deleteAccount" value="Delete Account" hidden="hidden"/>
+					<a  class="btn btn-default" onclick=confirmDeleteAccount()>Delete Account</a>
+					<br><br>
 					<a href='login.jsp'>Back to Login</a>
 				</form>
 			</div>
@@ -118,17 +142,18 @@
 	    	$('#updatePassword').trigger('click');
 	    	
 			sessionStorage.removeItem('userid');
-			console.out("Ich wurde ausgeführt");
-
 			
 			
-		 	//window.location.href = 'LogoutUser';
 		 	
-			} else {
-		
-				window.location.href="meineseite.html";
+			}
+	}
 	
-    }
+	function confirmDeleteAccount(){
+		  if (confirm("Click OK if you want to delete your account. This action is permanantly and cannot be revoked!") == true) {
+			 $('#deleteAccount').trigger('click');
+			 sessionStorage.removeItem('userid');
+			  
+	}
 	}
 	
 	function changeViewUserProgress() {

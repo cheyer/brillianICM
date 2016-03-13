@@ -25,15 +25,31 @@ import java.util.regex.Pattern;
  * @version 1.0
  * 
  */
+/*
+ * Philipp K.
+ * 29.2.16
+ * Update new ProgressQuery so users start with 0,0,0 progress  
+ *
+ * 3.3.16
+ * Insert new setProgressQueryWithoutKPI so the user KPI's are not effected anymore
+ * 
+ * 5.3.16
+ * Insert new getUserEmailByID query  so the email can be loaded
+ */
+
+
 public class UserRealm extends JdbcRealm {
 
 	protected String getUserByEmail = "SELECT `user_id` FROM `user` WHERE `email` = ?";
 	protected String getUserIdsByGroupId = "SELECT `user_id` FROM `user` WHERE `group` = ?";
+	protected String getUserEmailByID = "SELECT `email` FROM `user` WHERE `user_id` = ?";
 	protected String getUserGenderByID = "SELECT `gender` FROM `user` WHERE `user_id` = ?";
+	protected String getUserGroupByID = "SELECT `group` FROM `user` WHERE `user_id` = ?";
+	
 
 	protected String newgroupQuery = "INSERT INTO `group`(`group_name`, `professor_id`) VALUES (?,(SELECT `user_id` FROM `user` WHERE `email` = ?))";
 	protected String newUserQuery = "INSERT INTO `user`(`email`, `last_name`, `first_name`, `password`, `role`, `group`,`gender`) VALUES (?,?,?,?,?,?,?)";
-	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,50,50,50,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
+	protected String newProgressQuery = "INSERT INTO `user_progress` VALUES (?,0,0,0,'l000e000', FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)";
 
 	protected String deleteUserQuery = "DELETE FROM `user` WHERE `email`=?";
 	protected String deleteGroupQuery = "DELETE FROM `group` WHERE `group_id`=?";
@@ -44,6 +60,7 @@ public class UserRealm extends JdbcRealm {
 	protected String updateEmailQuery = "UPDATE `user`SET `email`=? WHERE `email`=?";
 	protected String updatePasswordQuery = "UPDATE `user`SET `password`=? WHERE `email`=?";
 	protected String setProgressQuery = "UPDATE `user_progress` SET `cost`=?, `quality`=?, `time`=?, `path`=? WHERE `user_id` = ?";
+	protected String setProgressQueryWithoutKPI = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setLvlIdQuery = "UPDATE `user_progress` SET `path`=? WHERE `user_id` = ?";
 	protected String setCountryTrueQuery = "UPDATE `user_progress` SET %%=true WHERE `user_id` = ?";
 	protected String resetCountriesQuery = "UPDATE `user_progress` SET l1=FALSE, l2=FALSE, l3=FALSE, l4=FALSE, l5=FALSE, l6=FALSE, l7=FALSE WHERE `user_id` = ?";
@@ -57,6 +74,8 @@ public class UserRealm extends JdbcRealm {
 	
 	protected String getSettings = "SELECT * FROM `settings`";
 	protected String setSettings = "UPDATE `settings` SET `audio`=?, `video`=?, `tts`=?, `subtitles`=?";
+	protected String setCertificate = "Update `group` SET `certificate`=? WHERE `group_id`=?";
+	protected String getCertificate = "SELECT `certificate` FROM `group` WHERE `group_id`=?";
 
 	
 	
@@ -118,7 +137,7 @@ public class UserRealm extends JdbcRealm {
 		}
 	}
 	
-	protected ArrayList<Boolean> getSettings()
+	public ArrayList<Boolean> getSettings()
 				throws SQLException {
 			Connection conn = dataSource.getConnection();
 			PreparedStatement ps = null;
@@ -158,7 +177,60 @@ public class UserRealm extends JdbcRealm {
 			}
 			
 		}
+		/*
+		 * Philipp K.
+		 * 7.3.16
+		 * Query to set the Certificate Value for a specific group 
+		 * Is needed to enable and disable certificate sending 
+		 */
+		
+		protected void setCertificate(String group_id, String certificate)
+				throws SQLException {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement ps = null;
+			// what about null values?
+			try {
+				ps = conn.prepareStatement(setCertificate);
+				ps.setString(1, certificate);
+				ps.setString(2, group_id);
+				ps.executeUpdate();
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
+			}
+			
+		}
 
+		/*
+		 * Philipp K.
+		 * 7.3.16
+		 * Query to get the Certificate Value for a specific group 
+		 * Is needed to enable and disable certificate sending 
+		 */
+		
+		public String getCertificate(String group_id)
+				throws SQLException {
+			Connection conn = dataSource.getConnection();
+			PreparedStatement ps = null;
+			ResultSet rs = null;
+			String certificate = "";
+			// what about null values?
+			try {
+				ps = conn.prepareStatement(getCertificate);
+				ps.setString(1, group_id);
+				
+				rs = ps.executeQuery();
+				
+				while (rs.next()) {		
+					certificate = rs.getString(1);
+					}
+				
+			} finally {
+				JdbcUtils.closeStatement(ps);
+				conn.close();
+			}
+			return certificate;
+		}	
 	/**
 	 * Invoked in java class ProfessorMain does not work if the user has no
 	 * corresponding entry in the user_progress table returns an array list with
@@ -314,16 +386,16 @@ public class UserRealm extends JdbcRealm {
 		try {
 			ps = conn.prepareStatement(getGroupsForProfessorQuery);
 			ps.setString(1, professor);
-
+			
 			// Execute query
 			rs = ps.executeQuery();
-			// System.out.println("executed the following statement on DB: " +
-			// getGroupsForProfessorQuery);
-
+			//System.out.println("executed the following statement on DB: " +
+			//ps);
 			while (rs.next()) {
 				ArrayList<String> groupRow = new ArrayList<String>();
 				groupRow.add(rs.getString(1));
 				groupRow.add(rs.getString(2));
+				groupRow.add(rs.getString(4));
 				groups.add(groupRow);
 			}
 		} finally {
@@ -536,6 +608,8 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 	}
+	
+
 
 	/**
 	 * 
@@ -592,7 +666,29 @@ public class UserRealm extends JdbcRealm {
 			conn.close();
 		}
 	}
-
+	
+	/*
+	 * Philipp K.
+	 * 3.3.16
+	 * New function to set the User progress without KPIs 
+	 */
+	public void setUserProgressWithoutKPI(String userid, String path) throws SQLException {
+		//TODO rename with correct parameter name according to database scheme #402
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		try {
+			ps = conn.prepareStatement(setProgressQueryWithoutKPI);
+			ps.setString(1, path);
+			ps.setString(2, userid);
+			ps.executeUpdate();
+			// System.out.println("executed the following statement on DB: " +
+			// setProgressQuery);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+	}
+	
 	public void setUserCountry(String userId, String gamepath) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
@@ -611,6 +707,7 @@ public class UserRealm extends JdbcRealm {
 		JdbcUtils.closeStatement(ps);
 		conn.close();
 	}
+	
 	public void resetUserCountry(String userid) throws SQLException{
 		Connection conn = dataSource.getConnection();
 		PreparedStatement ps = null;
@@ -790,6 +887,61 @@ public class UserRealm extends JdbcRealm {
 		return userid;
 	}
 	
+	/**
+	 * Philipp K.
+	 * 5.3.16
+	 *Returns the user email for the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param email
+	 *            - contains the email address of a student that is saved to
+	 *            field "username"
+	 * 
+	 * @return userid - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
+	public String getUserEmailByID(String user_id) throws SQLException {
+
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String email = "";
+		try {
+			ps = conn.prepareStatement(getUserEmailByID);
+			ps.setString(1, user_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				email += rs.getString(1);
+			}
+			
+			// System.out.println("executed the following statement on DB: " +
+			// getUserByEmail);
+			// System.out.println("the userid was "+userid);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return email;
+	}
+	
+	/**
+	 *Returns the gender for the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param genderint
+	 *            - contains the gender as an int
+	 * 
+	 * @return userid - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
 	public int getUserGenderByID(String user_id) throws SQLException {
 
 		Connection conn = dataSource.getConnection();
@@ -814,7 +966,42 @@ public class UserRealm extends JdbcRealm {
 		return genderint;
 	}
 	
+	/**
+	 *Returns the grouptfor the user that
+	 * is defined by the Id handed to the function
+	 * 
+	 * @param groupint
+	 *            - contains the group as an int
+	 * 
+	 * @return group - contains the email of a student that was saved to the
+	 *         database
+	 * 
+	 * @throws SQLException
+	 *             - returns a database access error
+	 */
+	
+	public String getUserGroupByID(String user_id) throws SQLException {
 
+		Connection conn = dataSource.getConnection();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String group = "";
+		try {
+			ps = conn.prepareStatement(getUserGroupByID);
+			ps.setString(1, user_id);
+			rs = ps.executeQuery();
+			while (rs.next()) {
+				group += rs.getString(1);
+			}
+			// System.out.println("executed the following statement on DB: " +
+			// getUserByEmail);
+			// System.out.println("the userid was "+userid);
+		} finally {
+			JdbcUtils.closeStatement(ps);
+			conn.close();
+		}
+		return group;
+	}
 	/**
 	 * 
 	 * Returns an ArrayList containing the User Progress for the user
@@ -897,15 +1084,20 @@ public class UserRealm extends JdbcRealm {
 	 * @throws SQLException
 	 *             - returns a database access error
 	 */
+	/*
+	* Philipp K.
+	* 29.2.16
+	* Update so user start with 0,0,0 progress after reset
+	*/
 	public void resetUserProgress(String userEmail) throws SQLException {
 
 		String userid = getUserByEmail(userEmail);
-		setUserProgress(userid, 50, 50, 50, "l000e000");
+		setUserProgress(userid, 0, 0, 0, "l000e000");
 		resetUserCountry(userid);
 
-
 	}
-
+	/*end*/ 
+	
 	/**
 	 * 
 	 * gets the User Progress and checks whether the path ends with the ending

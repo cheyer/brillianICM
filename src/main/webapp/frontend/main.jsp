@@ -3,8 +3,8 @@
 <html>
 <head>
 	<title><%=ApplicationConstants.PAGETITLE_MAIN%></title>	
-	<meta charset="utf-8">
-	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
@@ -60,6 +60,13 @@
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
 	<script type="text/javascript" src="js/grayscale.js"></script>
 	
+	<!-- EDIT BY JONAS ON FEB 17, 2016 -->
+	<!-- Implementing libraries for the polarclock -->
+	<!-- Start of line -->
+		<script src="js/frameworks/d3.min.js"></script>
+		<script src="js/frameworks/d3.js"></script>	
+	<!-- End of line -->
+	
 	<script type="text/javascript">
 function changeSelect() {
     var selectBox = document.getElementById("selectBox");
@@ -71,15 +78,134 @@ function changeSelect() {
 	  
 	   $('#logout').trigger('click');
 	   
-   } else if (selectedValue=='Imprint')
-       
-	   window.location = "login.jsp#imprint";
-    
-   }
-   </script>	
+   } else if (selectedValue=='Imprint'){
+	   
+	   // Letzte Änderung 05.03.16 von Tanja: Imprint Feld im Dropdown öffnet einen neuen Tab in dem die Imprint.jsp angezeigt wird.
+	   window.open ("frontend/imprint.jsp", "_blank");
+  		 var selectBox = document.getElementById("selectBox");
+   			selectBox.options[0].selected = true;   
+   /*
+	* Kristin K.
+	*6.3.16
+	* Function to remove & set the tts cookie depending on the given value of the drop down 
+	*/
+	}else if(selectedValue=='TextToSpeech On'){ 
+		
+		
+	  	eraseCookie("tts");
+		setCookie("tts","true")
+		checkTTS();
+  
+   }else if (selectedValue=='TextToSpeech Off'){
+		
+	  	eraseCookie("tts");
+		setCookie("tts","false")
+		checkTTS();
+   
+}
+}
+/*
+* Kristin K.
+*6.3.16
+* Function to remove the cookie with the handed in name 
+*/ 
+function eraseCookie( name ) {
+	  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+	}
+
+/*
+* Kristin K.
+*6.3.16
+* Function to set a cookie with the handed in name and value 
+*/ 
+function setCookie(name,value) {
+	var date = new Date();
+	date.setTime(date.getTime()+(12 * 60 * 60));
+	document.cookie = name + "=" + value + "; expires=" +date;
+	
+	
+}	   
+/*
+ * Kristin K.
+ * 6.3.16
+ * checkTTS() adds a option in the dropdown menu depending on the value of the tts cookie 
+ * 
+ * Philipp K. 
+ * Added ajax to check if TTs is gloabally turned on or off. 
+ */
+function checkTTS() {
+	$.ajax({
+		url: 'Event',
+		type: 'get',
+		dataType: 'html',
+		data: {userid : userid, type : 'getSettings'},
+		async: true,
+		success: function(data) {
+	var list = data.split("[")[1].split(']')[0].split(', ');
+	
+	if(list[2]=="true"){
+	
+	var ttsSettings= "";
+		ttsSettings=getCookie("tts");
+	if(ttsSettings=="true") {
+		if(document.getElementById("TTS Off")){}
+		else{
+			var x = document.getElementById("selectBox");
+			var option = document.createElement("option");
+			option.id = "TTS Off"
+			option.text = "TextToSpeech Off";
+			x.add(option);
+			var element = document.getElementById("TTS On");
+			element.parentNode.removeChild(element);
+			}
+	}else {
+		if(document.getElementById("TTS On")){}
+		else{
+			var x = document.getElementById("selectBox");
+			var option = document.createElement("option");
+			option.id = "TTS On"
+			option.text = "TextToSpeech On";
+			x.add(option);
+			var element = document.getElementById("TTS Off");
+			element.parentNode.removeChild(element);
+			}
+		}
+	} else{
+		console.log("a")
+	}
+	
+	
+	}});
+}
+   
+   </script>
+
+	<!-- EDIT BY ANIL ON FEB 29, 2016 -->
+	<!-- Implementation of the shake function -->
+	<!-- Start of line -->
+	<script type="text/javascript">
+		window.onload = function() {
+		    var myShakeEvent = new Shake({
+		        threshold: 15
+		    });
+		    
+		    myShakeEvent.start();	// start listening to device motion
+		    window.addEventListener('shake', shakeEventDidOccur, false);  // register a shake event
+		    function shakeEventDidOccur () {  //shake event callback
+
+				var box = window.confirm ("Are you sure you want to leave this page?")
+				if (box == true){
+					window.open("https://brillianicm.com", "_self");}
+				else if (box==false){
+				}	
+			}
+		
+		};
+	</script>
+	<!-- End of line -->   	
 	
 </head>
-<body class="easyui-layout" data-options="fit:true">
+<body class="easyui-layout" data-options="fit:true" onload ="checkTTS()">
   <script type="text/javascript" src="js/frameworks/wz_tooltip.js"></script>
 
     <div id="container header-navbar" class="navbar-custom" data-options="region:'north'" style="height:70px;">
@@ -130,18 +256,36 @@ function changeSelect() {
             <ul class="nav navbar-nav second-button">            
                  <li><a href="#" id="account" onclick="window.location.assign('<%out.print(application.getContextPath());%>/StudentHomepage','_blank')"  data-options="plain:true"></a></li>   
 			</ul> -->
-		
+			
+			
+			<!-- EDIT BY JONAS ON FEB 27, 2016 -->
+			<!-- Removing the old KPI buttons -->
+			<!-- Start of line -->
+			<!--  
 			<ul class="nav navbar-nav second-button" style="margin-left: 100px">
 				<svg id= "iconsBox"height="50" width="200" >
 					<circle id="icon_competence" cx="25" cy="25" r="13" stroke="black" stroke-width="0.5" fill="red" onmouseover="Tip('Competence:&lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()" />
 						<text x="25" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black" onmouseover="Tip('Competence: &lt;&#47;br&gt;  WHY &lt;&#47;br&gt; This KPI is all about knowing WHY something is done &lt;&#47;br&gt; in a particular way respectively knowing according reasons why the answer was the right one. &lt;&#47;br&gt; This is based especially on knowledge that comes from the 9 cultural dimensions.')" onmouseout="UnTip()">C</text>
-				<circle id="icon_communication" cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Communications: &lt;&#47;br&gt; HOW &lt;&#47;br&gt; It’s about how individuals communicate &lt;&#47;br&gt; with each other based on known models, such as „iceberg model“ or „4-ears model“')" onmouseout="UnTip()" />
+					<circle id="icon_communication" cx="75" cy="25" r="13" stroke="black" stroke-width="0.5" fill="green" onmouseover="Tip('Communications: &lt;&#47;br&gt; HOW &lt;&#47;br&gt; It’s about how individuals communicate &lt;&#47;br&gt; with each other based on known models, such as „iceberg model“ or „4-ears model“')" onmouseout="UnTip()" />
 						<text x="75" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Communications: &lt;&#47;br&gt; HOW &lt;&#47;br&gt; It’s about how individuals communicate &lt;&#47;br&gt; with each other based on known models, such as „iceberg model“ or „4-ears model“')"onmouseout="UnTip()">C</text>
-				<circle id="icon_behaviour" cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('Behavior: &lt;&#47;br&gt;  WHAT &lt;&#47;br&gt; Behavior (Verhalten) is about WHAT was/is going on. &lt;&#47;br&gt; This is about what to do or how to behave in a certain situation. It includes Do’s & Dont’s. ')" onmouseout="UnTip()"/>
+					<circle id="icon_behaviour" cx="125" cy="25" r="13" stroke="black" stroke-width="0.5" fill="orange" onmouseover="Tip('Behavior: &lt;&#47;br&gt;  WHAT &lt;&#47;br&gt; Behavior (Verhalten) is about WHAT was/is going on. &lt;&#47;br&gt; This is about what to do or how to behave in a certain situation. It includes Do’s & Dont’s. ')" onmouseout="UnTip()"/>
 						<text x="125" y="32" font-family="sans-serif"  font-size="20px"  text-anchor="middle"  fill="black"onmouseover="Tip('Behavior: &lt;&#47;br&gt;  WHAT &lt;&#47;br&gt; Behavior (Verhalten) is about WHAT was/is going on. &lt;&#47;br&gt; This is about what to do or how to behave in a certain situation. It includes Do’s & Dont’s. ')"onmouseout="UnTip()">B</text>
-			</svg>
+				</svg>
 
-				</ul>
+			</ul>
+			-->
+			<!-- End of line -->
+			
+			<!-- EDIT BY JONAS ON 27 FEB, 2016 -->
+			<!-- Adding a new navbar element for the polarclock -->
+			<!-- Start of line -->
+			<ul class="nav navbar-nav second-button" style="margin-bottom:15px;">
+				<li>
+					<div style="margin-top:-25px;position:absolute;text-align:center;" id="polarclock">
+					</div>
+				</li>
+			</ul>
+			<!-- End of line -->
 			
         </div>
         </div>
@@ -172,6 +316,77 @@ function changeSelect() {
 		
 		</div>
 	</div>
-
 </body>
+
+
+<!-- EDIT BY JONAS ON FEB 28, 2016 -->
+<!-- Adding indicators for the polarclock -->
+<!-- Start of line -->
+<script>
+	var width = 100,
+	    height = 100,
+	    radius = Math.min(width, height) / 1.9,
+	    spacing = .09;
+		
+	var progressValue = 0,
+		KPIValues= new Array(0,0,0);
+		
+	var color = d3.scale.linear()
+	    .range(["hsl(182, 50%, 50%)", "hsl(182, 100%, 50%)"])
+	    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+	
+	var color2 = d3.scale.linear()
+	    .range(["hsl(82, 50%, 51%)", "hsl(82, 100%, 51%)"])
+	    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });
+		//hsl(85, 100%, 50%)
+	var color3 = d3.scale.linear()
+	    .range(["hsl(323, 50%, 50%)", "hsl(323, 100%, 50%)"])
+	    .interpolate(function(a, b) { var i = d3.interpolateString(a, b); return function(t) { return d3.hsl(i(t)); }; });	 
+		
+	var arcBody = d3.svg.arc()
+	    .startAngle(0)
+	    .endAngle(function(d) { return d.value * 2 * Math.PI; })
+	    .innerRadius(function(d) { return d.index * radius; })
+	    .outerRadius(function(d) { return (d.index + spacing) * radius; })
+	    .cornerRadius(6);
+	
+	var arcCenter = d3.svg.arc()
+	    .startAngle(0)
+	    .endAngle(function(d) { return d.value * 2 * Math.PI; })
+	    .innerRadius(function(d) { return (d.index + spacing / 2) * radius; })
+	    .outerRadius(function(d) { return (d.index + spacing / 2) * radius; });
+	
+	var svg = d3.select("#polarclock").append("svg")
+	    .attr("width", width)
+	    .attr("height", height)
+	  .append("g")
+	    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+		
+	
+	var field = svg.selectAll("g")
+	    .data(fields)
+	  .enter().append("g");
+	
+	field.append("path")
+	    .attr("class", "arc-body");
+	
+	field.append("path")
+	    .attr("id", function(d, i) { return "arc-center-" + i; })
+	    .attr("class", "arc-center");
+	
+	field.append("text")
+	    .attr("dy", ".35em")
+	    .attr("dx", ".75em")
+	    .style("text-anchor", "start")
+	  .append("textPath")
+	    .attr("startOffset", "50%")
+	    .attr("class", "arc-text")
+	    .attr("xlink:href", function(d, i) { return "#arc-center-" + i; });
+	tick();
+	d3.select(self.frameElement).style("height", height + "px");
+</script>
+<!-- End of line -->
+
+
+
 </html>

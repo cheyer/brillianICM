@@ -3,7 +3,7 @@
 <html>
 <head>
 <title><%=ApplicationConstants.PAGETITLE_MAIN%></title>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.css" />
 <link type="text/css" rel="stylesheet" href="css/jquery.easyui.icon.css" />
@@ -39,11 +39,43 @@
 	<script type="text/javascript" src="js/events.js"></script>
 	<script type="text/javascript" src="js/serverFunctions.js"></script>
 	<script type="text/javascript" src="js/grayscale.js"></script>
+
+	
 	
 
 </head>
 <body class="easyui-layout">
-	
+		<!-- 
+			Philipp K.
+			5.3.16
+			Added Javascript so Buttons show different values depending on Certificate Settings-->
+
+		<script type="text/javascript">
+		$.ajax({
+			url: 'Event',
+			type: 'get',
+			dataType: 'html',
+			data: {userid : userid, type : 'getCertificateSettings'},
+			async: true,
+			success: function(data) {
+			 if(data == "1"){
+				 document.getElementById("certificationText").innerHTML = "For your certification, please press the button below";
+				 document.getElementById("SendButton").innerHTML = "Send Certificate and restart from the begininng";
+				 var button = document.getElementById("SendButton");
+				 button.onclick=function() { 
+					 $('#sendcertificate').dialog('open');
+			     	};
+			 }else{
+				 document.getElementById("certificationText").innerHTML = "To restart, please press the button below";
+				 document.getElementById("SendButton").innerHTML = "Restart the game from the beginning";
+				 var button = document.getElementById("SendButton");
+				 button.onclick=function() { 
+					$('#reset').dialog('open');
+			 		};
+				}
+			}
+		});
+		</script>
 		<!-- <div class="north" data-options="region:'north',border:false" style="border-bottom-width: 1px;">
 			<div class="div-header window">
 				<a id="logout" class="easyui-linkbutton" data-options="plain:true"><%=ApplicationConstants.LOGOUT_BUTTON_TEXT%></a>
@@ -53,8 +85,12 @@
 			</div>-->
 		
 		<div class="center" data-options="region:'center'" style="background-color: #d5edf3; height:100%">
-		
-			<h1>You completed the game!</h1>
+			<!-- 
+			Philipp K.
+			5.3.16
+			Added two div containers to add more dynamic content  
+			 Updated the text to better represent the game style-->
+			<h1>Congratulations<div id=name></div>You completed the game!</h1>
 			<h3>Check out how brilliant you have been:</h3>
 			<table>
 				<tr>
@@ -78,15 +114,21 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<p>
-							If you want to play again please press the button below. Be aware that this step cannot be undone!<br /><br />
-							<a class="btn btn-default" href="javascript:void(0)" onclick="$('#dlg').dialog('open')">Restart game and start from the beginning</a>
+						
+								
+							<p><div id="certificationText"></div>
+							<br /><br />
+							<a class="btn btn-default" id="SendButton" href="javascript:void(0)" ><div id="SendButtonText"></div></a>
 						</p>
 					</td>
 				</tr>
 			</table>
-			<div id="dlg" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){window.location.href = '<%out.print(application.getContextPath());%>/ResetUserProgress';}},{text:'Cancel',handler:function(){$('#dlg').dialog('close');}}]">
-				Are you sure you want to restart your game? This step cannot be undone!
+			
+			<div id="sendcertificate" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Send certificate',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'sendCertificate'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#sendcertificate').dialog('close');}}]">
+				Your Certificate will be send to <div id=email></div>
+			</div>
+			<div id="reset" class="easyui-dialog" title="Restart game" style="width: 400px; height: 150px; padding: 10px" data-options="iconCls: 'icon-undo',closed:true,buttons: [{text:'Restart game',iconCls:'icon-ok',handler:function(){$.ajax({ url: 'Event', type: 'get', dataType: 'html', data: {userid : userid, type : 'resetUserProgress'}, async: true, success: function(data) {}}); window.location.href = '<%out.print(application.getContextPath());%>/Student';}},{text:'Cancel',handler:function(){$('#reset').dialog('close');}}]">
+				Are you sure you want to restart the game? </br> This step cannot be undone!
 			</div>
 		</div>
 	

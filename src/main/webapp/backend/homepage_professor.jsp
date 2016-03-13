@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
 <title><%= ApplicationConstants.PAGETITLE_PROFESSOR %></title>
 <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
@@ -54,7 +54,7 @@
 				<br />
 				
 				<%
-					
+
 					if(request.getAttribute("groups")!=null){
 											
 											//students = new String[((String [][]) request.getAttribute("students")).length][request.getAttribute("students")[0].length];
@@ -73,7 +73,7 @@
 											out.println("<form action=\""+ application.getContextPath()+"/RegistrationPage\" method=\"post\">"
 												+ "<input style=\"display:none\" id=\"invitationbutton"+i+"\" type=\"submit\" "
 												+ "value=\"Send email invitation\"/><a class= \"easyui-linkbutton\" onclick=\"$('#invitationbutton"+i+"').trigger('click')\">send email invitation</a>"
-												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(2) +"\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"link\" value=\""+ groups.get(i).get(3) +"\" style=\"display:none\"/>"
 												+ "</form></td><td>");
 											//delete group without members button
 											out.println("<td><form action=\""+ application.getContextPath()+"/DeleteGroup\" method=\"post\">"
@@ -86,11 +86,16 @@
 												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
 												+ "</form></td><td>");
 											//set progress dropdown and button with set TCQ progress
+											/*
+											* Philipp K.
+											* 3.3.16
+											* Deleted Cost Time and Quality because its not needed to be updated when beeing set to a new country
+											*/
 											out.println("<form action=\""+ application.getContextPath()+"/SetUserProgress\" method=\"post\">"
 												+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>"
-												+ "<input type=\"text\" name=\"cost\" value=\"71\" style=\"display:none\"/>" 
-												+ "<input type=\"text\" name=\"time\" value=\"71\" style=\"display:none\"/>"
-												+ "<input type=\"text\" name=\"quality\" value=\"71\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"cost\" value=\"0\" style=\"display:none\"/>" 
+												+ "<input type=\"text\" name=\"time\" value=\"0\" style=\"display:none\"/>"
+												+ "<input type=\"text\" name=\"quality\" value=\"0\" style=\"display:none\"/>"
 												/* Set the Level Name and Unique Level ID for the Dropdown in the Lecturer page here */
 												+ "<select name=\"lvlId\" id=\"lvlId\">"
 												+ "<option value=\"l700e000\">Tutorial</option>"
@@ -103,8 +108,27 @@
 												+ "<option value=\"l800e000\">anderes Land</option>"
 												+ "</select>"								
 												+ "<input id=\"setProgress"+i+"\" type=\"submit\" "+"value=\"setProgress\" style=\"display:none\" /></td><td>"
-												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set Progress</a></td></form></td><td>");
+												+ "<a class= \"easyui-linkbutton\" onclick=\"$('#setProgress"+ i +"').trigger('click')\")>Set progress</a></td></form></td><td>");
+											out.println("<td><form action=\""+ application.getContextPath()+"/SendCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"SendCertificatesNowButton"+i+"\" type=\"submit\" value=\"SendcertificatesNow\"/> <a class= \"easyui-linkbutton\" onclick=confirmCertificationSend("+i+",\""+groups.get(i).get(1)+"\")>send certificates now</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"group_name\" value=\""+ groups.get(i).get(1) +"\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											if(groups.get(i).get(2).equals("1")){
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOff"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOff"+ i +"').trigger('click')\">Disable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"0\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}else{
+												out.println("<td><form action=\""+ application.getContextPath()+"/ChangeCertificate\" method=\"post\">"
+													+ "<input style=\"display:none\" id=\"TurnCertificateOn"+i+"\" type=\"submit\" value=\"ChangeCertificate\"/> <a class= \"easyui-linkbutton\" onclick=\"$('#TurnCertificateOn"+ i +"').trigger('click')\">Enable Certificate</a>"
+													+ "<input type=\"text\" name=\"group_id\" value=\""+ groups.get(i).get(0) +"\" style=\"display:none\"/>" 
+													+ "<input type=\"text\" name=\"certificate\" value=\"1\" style=\"display:none\"/>" 
+													+ "</form></td><td>");
+											}
 											out.println("</td></tr></table> ");
+											
 											
 											//add students table beneath group header
 											
@@ -245,7 +269,20 @@
 		var box = window.confirm("Click OK if you want to delete group: "
 				+ groupname);
 		if (box) {
+			console.log("test");
 			$('#deleteGroupButton' + i).trigger('click');
+		}
+	}
+	/*
+	* Philipp K.
+	* 6.3.16
+	* Add function to check if Prof wants to send the certificates
+	*/
+	function confirmCertificationSend(i, groupname) {
+		var box = window.confirm("Click OK if you want to send a certificate to all users of the following group: "
+				+ groupname);
+		if (box) {
+			$('#SendCertificatesNowButton' + i ).trigger('click');
 		}
 	}
 	function confirmPasswordChange()
