@@ -5,7 +5,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Letzte Änderung 05.03.16 von Tanja: Aktuellen Code von login.jsp übernommen. -->
+<!-- Update 05.03.16 von Tanja: Aktuellen Code von login.jsp übernommen. -->
+<!-- Letzte Änderung 20.03.16 von Tanja: Update Inhalt in Imprint.jsp und Login.jsp -->
 
 <head>
 <meta charset="UTF-8">
@@ -84,7 +85,7 @@ Please feel free to contact IMBIT, if you are working in the field of education 
 <h3>We, the WIMBIT 13C course, are proud to present our game:</h3>
 
 <img src="../images/Gruppenfotos/Gruppenbild_About.png" style="width:100%">
-Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann, Sabrina Weniger, Christian Marheine, Viviane Schmitt, Lena Bauer, Eansalatta Ravindren, Prof. Dr. Harald Bendl, Anne Heister, Kristin Köfler, Jennifer Malz, Robyn Dedmon, Max Kossielny, Tanja Henkel, Yannik Riedl, Jonas Bender, Nikolas Krybus, Cora Albert, Arnold Roth, Felix Schüch, Manh Phi Nguyen, Adrian Bettag, Jan Scheerer, Florian Menzel, Astrid Beutel, Julia Hain, Christopher Krah, Joana Haase, Anastasia Reimer, Christian Heyer, Aline Ulrich, Prof. Peter Mayr
+Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann, Sabrina Weniger, Christian Marheine, Viviane Schmidt, Lena Bauer, Eansalatta Ravindren, Prof. Dr. Harald Bendl, Anne Heister, Kristin Köfler, Jennifer Malz, Robyn Dedmon, Max Kossielny, Philipp Klüter, Tanja Henkel, Yannik Riedl, Jonas Bender, Nikolas Krybus, Cora Albert, Arnold Roth, Felix Schüch, Manh Phi Nguyen, Adrian Bettag, Jan Scheerer, Florian Menzel, Astrid Beutel, Julia Hain, Christopher Krah, Joana Haase, Anastasia Reimer, Christian Heyer, Aline Ulrich, Prof. Peter Mayr
 </div>
             </div>
     </section>
@@ -104,7 +105,7 @@ Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann
 	</div>
 	<p>
 	<h3>Haftungsausschluss</h3>
-	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf der brillianICM Website. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
+	<p>Der Autor &uuml;bernimmt keine Gew&auml;hr f&uuml;r die Aktualit&auml;t, Richtigkeit und Vollst&auml;ndigkeit der bereitgestellten Informationen auf den brillianICM-Webseiten. Haftungsanspr&uuml;che gegen den Autor, welche sich auf Sch&auml;den materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollst&auml;ndiger Informationen verursacht wurden, sind grunds&auml;tzlich ausgeschlossen, sofern seitens des Autors kein nachweislich vors&auml;tzliches oder grob fahrl&auml;ssiges Verschulden vorliegt.<br>
 	Alle Angebote sind freibleibend und unverbindlich. Der Autor beh&auml;lt es sich ausdr&uuml;cklich vor, Teile der Seiten oder das gesamte Angebot ohne gesonderte Ank&uuml;ndigung zu ver&auml;ndern, zu erg&auml;nzen, zu l&ouml;schen oder die Ver&ouml;ffentlichung zeitweise oder endg&uuml;ltig einzustellen.</p>
 	
 	
@@ -115,7 +116,7 @@ Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann
  
 	
 <h3>Auskunft</h3>
-<p>Nach dem Bundesdatenschutzgesetz haben Sie das Recht auf eine unentgeltliche Auskunft über Ihre gespeicherten Daten. Zudem haben Sie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Fragen hierzu können über die im Impressum angegebenen Kontaktdaten stellen.</p>
+<p>Nach dem Bundesdatenschutzgesetz haben Sie das Recht auf eine unentgeltliche Auskunft über Ihre gespeicherten Daten. Zudem haben Sie ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Fragen hierzu können Sie über die im Impressum angegebenen Kontaktdaten stellen.</p>
 	
 	
 	<h3>Urheberrecht</h3>
@@ -125,7 +126,7 @@ Anil Balci, Franziska Müller, Marvin Diehl, Annalena von Rhein, Sophie Hagemann
 	
 	
 	<h3>Datenschutz</h3>
-	<p>Sofern innerhalb des Internetangebotes die M&ouml;glichkeit zur Eingabe pers&ouml;nlicher oder gesch&auml;ftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdr&uuml;cklich freiwilliger Basis. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur &uuml;bersendung von nicht ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten Spam-Mails bei Verst&ouml;&szlig;en gegen dieses Verbot sind ausdr&uuml;cklich vorbehalten.</p>
+	<p>Sofern auf den brillianICM-Webseiten die M&ouml;glichkeit zur Eingabe pers&ouml;nlicher oder gesch&auml;ftlicher Daten wie E-mail-Adressen, Namen, Kennworten oder dergleichen besteht, so erfolgt die Preisgabe dieser Daten seitens des Nutzers auf ausdr&uuml;cklich freiwilliger Basis. Die Nutzung der im Rahmen des Impressums oder vergleichbarer Angaben ver&ouml;ffentlichten Kontaktdaten wie Postanschriften, Telefon- und Faxnummern sowie Emailadressen durch Dritte zur &uuml;bersendung von nicht ausdr&uuml;cklich angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender von sogenannten Spam-Mails bei Verst&ouml;&szlig;en gegen dieses Verbot sind ausdr&uuml;cklich vorbehalten.</p>
 	
 	<h3>Anwendbares Recht </h3>
 	<p> Es gilt ausschlie&szlig;lich das ma&szlig;gebliche Recht der Bundesrepublik Deutschland. Diese Nutzungshinweise sind als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. </p>
